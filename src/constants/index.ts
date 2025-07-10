@@ -22,7 +22,7 @@ export const Products = [
   { key: 'rex', value: 'REX', label: 'Reg. Express' },
   { key: 'intercity', value: 'ICITY', label: 'Intercity' },
   { key: 'ave', value: 'AVE', label: 'AVE' },
-  { key: 'sserv', value: 'SSERV', label: 'Serv. Especiales' },
+  { key: 'sserv', value: 'SSERV,ESPECRF', label: 'Serv. Especiales' },
   { key: 'cercanias', value: 'CERCAN', label: 'Cercanías' },
   { key: 'ouigo', value: 'OUIGO', label: 'Ouigo' },
   { key: 'alvia', value: 'ALVIA', label: 'Alvia' },

@@ -4,7 +4,7 @@
       <div
         class="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-3 space-y-3 sm:space-y-0 mb-8"
       >
-        <div class="w-24 sm:w-30 h-12 sm:h-16 flex items-center justify-center flex-shrink-0 mr-4">
+        <div class="w-24 sm:w-30 h-12 sm:h-16 flex items-center justify-center flex-shrink-0 mr-5">
           <Adif class="adif-logo w-full h-full" />
         </div>
         <div class="text-center sm:text-left">

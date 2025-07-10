@@ -30,7 +30,7 @@
       </div>
 
       <div v-else>
-        <div class="pt-2 border-t border-slate-600" v-if="trainsLoaded">
+        <div class="pt-3 border-t border-slate-600" v-if="trainsLoaded">
           <!-- Desktop: single row with three sections, Mobile: two rows -->
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
             <!-- Conectado (always left) -->
@@ -57,7 +57,7 @@
         </div>
 
         <!-- Warning message for delays -->
-        <div v-if="isDelayed && trainsLoaded" class="flex items-center space-x-1.5">
+        <div v-if="isDelayed && trainsLoaded" class="pt-2 flex items-center space-x-1.5">
           <svg
             class="w-3 h-3 text-orange-400"
             fill="none"
@@ -75,7 +75,7 @@
         </div>
 
         <div
-          class="flex items-center space-x-2 pt-2 border-t border-slate-600"
+          class="pt-2 flex items-center space-x-2 border-t border-slate-600"
           v-if="!trainsLoaded"
         >
           <div class="w-1.5 h-1.5 bg-red-300 rounded-full animate-pulse"></div>
