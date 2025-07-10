@@ -9,7 +9,7 @@
         </div>
         <div class="text-center sm:text-left">
           <h1 class="text-2xl font-bold text-white leading-tight">Pantallas estaciones ADIF</h1>
-          <p class="text-slate-400 text-md mt-1">Configurador de modos</p>
+          <p class="text-slate-400 text-md mt-1">Configurador pantallas SIV</p>
         </div>
       </div>
 
@@ -30,75 +30,49 @@
             <!-- Interface Selection -->
             <div :class="{ 'opacity-50 pointer-events-none': !selectedStation }">
               <label class="block text-sm font-medium text-slate-300 mb-3">Pantalla</label>
-              <div class="grid grid-cols-1 gap-3">
-                <!-- First row: Salidas, Llegadas -->
-                <div class="grid grid-cols-2 gap-2">
-                  <div v-for="option in Interfaces.slice(0, 2)" :key="option.key" class="relative">
-                    <input
-                      :id="option.key"
-                      v-model="formData.interfaz"
-                      :value="option.key"
-                      type="radio"
-                      class="sr-only"
-                    />
-                    <label
-                      :for="option.key"
-                      class="flex items-center justify-center p-3 rounded-lg border cursor-pointer transition-all text-center"
-                      :class="
-                        formData.interfaz === option.key
-                          ? 'bg-blue-600 border-blue-500 text-white'
-                          : 'bg-slate-700 border-slate-600 text-slate-300 hover:bg-slate-600'
-                      "
-                    >
-                      <div
-                        class="w-3 h-3 rounded-full border-2 mr-2 flex items-center justify-center flex-shrink-0"
-                        :class="
-                          formData.interfaz === option.key ? 'border-white' : 'border-slate-400'
-                        "
-                      >
-                        <div
-                          v-if="formData.interfaz === option.key"
-                          class="w-1.5 h-1.5 rounded-full bg-white"
-                        ></div>
-                      </div>
-                      <span class="text-sm">{{ option.label }}</span>
-                    </label>
-                  </div>
-                </div>
-
-                <!-- Second row: Vía, Número, Reloj -->
-                <div class="grid grid-cols-3 gap-2">
-                  <div v-for="option in Interfaces.slice(2, 5)" :key="option.key" class="relative">
-                    <input
-                      :id="option.key"
-                      v-model="formData.interfaz"
-                      :value="option.key"
-                      type="radio"
-                      class="sr-only"
-                    />
-                    <label
-                      :for="option.key"
-                      class="flex items-center justify-center p-3 rounded-lg border cursor-pointer transition-all text-center"
-                      :class="
-                        formData.interfaz === option.key
-                          ? 'bg-blue-600 border-blue-500 text-white'
-                          : 'bg-slate-700 border-slate-600 text-slate-300 hover:bg-slate-600'
-                      "
-                    >
-                      <div
-                        class="w-3 h-3 rounded-full border-2 mr-2 flex items-center justify-center flex-shrink-0"
-                        :class="
-                          formData.interfaz === option.key ? 'border-white' : 'border-slate-400'
-                        "
-                      >
-                        <div
-                          v-if="formData.interfaz === option.key"
-                          class="w-1.5 h-1.5 rounded-full bg-white"
-                        ></div>
-                      </div>
-                      <span class="text-sm">{{ option.label }}</span>
-                    </label>
-                  </div>
+              <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
+                <div v-for="option in Interfaces" :key="option.key" class="relative">
+                  <input
+                    :id="option.key"
+                    v-model="formData.interfaz"
+                    :value="option.key"
+                    type="radio"
+                    class="sr-only"
+                  />
+                  <label
+                    :for="option.key"
+                    class="flex flex-col items-center justify-center p-4 rounded-lg border cursor-pointer transition-all text-center h-20"
+                    :class="
+                      formData.interfaz === option.key
+                        ? 'bg-[#ACDAC6] border-[#ACDAC6] text-[#102341]'
+                        : 'bg-slate-700 border-slate-600 text-slate-300 hover:bg-slate-600'
+                    "
+                  >
+                    <!-- Icon for each interface type -->
+                    <div class="mb-1">
+                      <!-- Departures icon -->
+                      <svg v-if="option.key === 'departures'" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                      </svg>
+                      <!-- Arrivals icon -->
+                      <svg v-else-if="option.key === 'arrivals'" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"/>
+                      </svg>
+                      <!-- Platform icon -->
+                      <svg v-else-if="option.key === 'platform'" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1"/>
+                      </svg>
+                      <!-- Number icon -->
+                      <svg v-else-if="option.key === 'number'" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"/>
+                      </svg>
+                      <!-- Clock icon -->
+                      <svg v-else-if="option.key === 'clock'" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                      </svg>
+                    </div>
+                    <span class="text-xs font-medium">{{ option.label }}</span>
+                  </label>
                 </div>
               </div>
             </div>
@@ -126,7 +100,7 @@
                       class="inline-flex items-center px-3 py-2 rounded-lg text-sm cursor-pointer transition-all"
                       :class="
                         formData.traffic.includes(option.key)
-                          ? 'bg-blue-600 text-white'
+                          ? 'bg-[#ACDAC6] text-[#102341]'
                           : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
                       "
                     >
@@ -153,7 +127,7 @@
                       class="inline-flex items-center px-3 py-2 rounded-lg text-sm cursor-pointer transition-all"
                       :class="
                         formData.language.includes(option.key)
-                          ? 'bg-blue-600 text-white'
+                          ? 'bg-[#ACDAC6] text-[#102341]'
                           : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
                       "
                     >
@@ -182,10 +156,10 @@
                   />
                   <label
                     :for="`platform-${platform}`"
-                    class="inline-flex items-center px-3 py-2 rounded-lg text-sm cursor-pointer transition-all"
+                    class="inline-flex items-center px-2 py-1 rounded text-sm cursor-pointer transition-all"
                     :class="
                       formData.platformFilter.includes(platform)
-                        ? 'bg-blue-600 text-white'
+                        ? 'bg-[#ACDAC6] text-[#102341]'
                         : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
                     "
                   >
@@ -203,7 +177,7 @@
                     v-model="manualPlatform"
                     type="text"
                     placeholder="Ej: 1,2,3 o 1-5"
-                    class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white placeholder-slate-400"
+                    class="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-[#ACDAC6] focus:border-[#ACDAC6] text-white placeholder-slate-400"
                   />
                   <button
                     @click.prevent="addManualPlatform"
@@ -216,12 +190,12 @@
                 <div v-if="formData.platformFilter.length > 0" class="flex flex-wrap gap-2 mt-3">
                   <div v-for="platform in formData.platformFilter" :key="platform" class="group">
                     <div
-                      class="inline-flex items-center px-3 py-2 rounded-lg text-sm bg-blue-600 text-white"
+                      class="inline-flex items-center px-2 py-1 rounded text-sm bg-[#ACDAC6] text-[#102341]"
                     >
                       {{ platform }}
                       <button
                         @click.prevent="removePlatform(platform)"
-                        class="ml-1 text-white opacity-50 hover:opacity-100 w-4 h-4 flex items-center justify-center"
+                        class="ml-1 text-[#102341] opacity-50 hover:opacity-100 w-4 h-4 flex items-center justify-center"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -263,7 +237,7 @@
                       class="inline-flex items-center px-3 py-2 rounded-lg text-sm cursor-pointer transition-all"
                       :class="
                         formData.productFilter.includes(product.key)
-                          ? 'bg-blue-600 text-white'
+                          ? 'bg-[#ACDAC6] text-[#102341]'
                           : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
                       "
                     >
@@ -290,7 +264,7 @@
                       class="inline-flex items-center px-3 py-2 rounded-lg text-sm cursor-pointer transition-all"
                       :class="
                         formData.companyFilter.includes(company.key)
-                          ? 'bg-blue-600 text-white'
+                          ? 'bg-[#ACDAC6] text-[#102341]'
                           : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
                       "
                     >
@@ -346,14 +320,14 @@
               <div :class="{ 'opacity-50 pointer-events-none': !selectedStation }">
                 <label class="block text-sm font-medium text-slate-300 mb-2">Subtítulo</label>
                 <div
-                  class="grid gap-3"
+                  class="grid gap-2"
                   :class="
-                    subtitleTakesParam ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1 md:grid-cols-2'
+                    subtitleTakesParam ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'
                   "
                 >
                   <select
                     v-model="formData.subtitle"
-                    class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white"
+                    class="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-[#ACDAC6] focus:border-[#ACDAC6] text-white"
                   >
                     <option value="">Seleccionar subtítulo</option>
                     <option
@@ -364,7 +338,6 @@
                       {{ subtitle.label }}
                     </option>
                   </select>
-                  <div v-if="!subtitleTakesParam" class="hidden md:block"></div>
                   <input
                     v-if="subtitleTakesParam"
                     v-model="formData.subtitleParam"
@@ -372,7 +345,7 @@
                     :placeholder="
                       formData.subtitle === 'operador:$' ? 'Nombre del operador' : 'Número de vía'
                     "
-                    class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white placeholder-slate-400"
+                    class="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-[#ACDAC6] focus:border-[#ACDAC6] text-white placeholder-slate-400"
                   />
                 </div>
               </div>
@@ -398,10 +371,10 @@
                     />
                     <label
                       :for="`platform-loc-${platform}`"
-                      class="inline-flex items-center px-3 py-2 rounded-lg text-sm cursor-pointer transition-all"
+                      class="inline-flex items-center px-2 py-1 rounded text-sm cursor-pointer transition-all"
                       :class="
                         formData.platformLocations.includes(platform)
-                          ? 'bg-blue-600 text-white'
+                          ? 'bg-[#ACDAC6] text-[#102341]'
                           : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
                       "
                     >
@@ -419,7 +392,7 @@
                       v-model="manualPlatform"
                       type="text"
                       placeholder="Ej: 1,2,3 o 1-5"
-                      class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white placeholder-slate-400"
+                      class="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-[#ACDAC6] focus:border-[#ACDAC6] text-white placeholder-slate-400"
                     />
                     <button
                       @click.prevent="addManualPlatformLocation"
@@ -439,12 +412,12 @@
                       class="group"
                     >
                       <div
-                        class="inline-flex items-center px-3 py-2 rounded-lg text-sm bg-blue-600 text-white"
+                        class="inline-flex items-center px-2 py-1 rounded text-sm bg-[#ACDAC6] text-[#102341]"
                       >
                         {{ platform }}
                         <button
                           @click.prevent="removePlatformLocation(platform)"
-                          class="ml-1 text-white opacity-50 hover:opacity-100 w-4 h-4 flex items-center justify-center"
+                          class="ml-1 text-[#102341] opacity-50 hover:opacity-100 w-4 h-4 flex items-center justify-center"
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -468,7 +441,7 @@
                   <label class="block text-sm font-medium text-slate-300 mb-2">Modo de andén</label>
                   <select
                     v-model="formData.platformMode"
-                    class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white"
+                    class="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-[#ACDAC6] focus:border-[#ACDAC6] text-white"
                   >
                     <option v-for="mode in PlatformModes" :key="mode.key" :value="mode.value">
                       {{ mode.label }}
@@ -481,7 +454,7 @@
                   >
                   <select
                     v-model="formData.platformTrigger"
-                    class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white"
+                    class="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-[#ACDAC6] focus:border-[#ACDAC6] text-white"
                   >
                     <option
                       v-for="trigger in PlatformTriggerList"
@@ -501,7 +474,7 @@
                   >
                   <select
                     v-model="formData.platformArrangement"
-                    class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white"
+                    class="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-[#ACDAC6] focus:border-[#ACDAC6] text-white"
                   >
                     <option
                       v-for="arrangement in PlatformArrangements"
@@ -569,7 +542,7 @@
                   type="number"
                   min="0"
                   max="99"
-                  class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white"
+                  class="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-[#ACDAC6] focus:border-[#ACDAC6] text-white"
                 />
               </div>
             </div>
@@ -678,11 +651,13 @@ import {
   VisualizationOptions,
   PlatformBooleanOptions,
 } from '../constants'
+import { Stations } from '../constants'
+import { onMounted } from 'vue'
 
 // Form data
 const formData = ref({
   interfaz: 'departures',
-  stationCode: '',
+  stationCode: '17000',
   traffic: [], // Default none selected in UI
   language: ['es'], // Default Spanish
   showHeader: true,
@@ -706,10 +681,19 @@ const formData = ref({
 })
 
 // Component state
-const selectedStation = ref(null)
+const selectedStation = ref(Stations.find(s => s.code === '17000') || null)
 const adifData = ref(null)
 const isPortrait = ref(false)
 const manualPlatform = ref('')
+
+// Set default station on mount
+onMounted(() => {
+  const defaultStation = Stations.find(s => s.code === '17000')
+  if (defaultStation) {
+    selectedStation.value = defaultStation
+    formData.value.stationCode = defaultStation.code
+  }
+})
 
 const availablePlatforms = computed(() => {
   return Object.keys(adifData.value?.station_settings?.platforms || {})

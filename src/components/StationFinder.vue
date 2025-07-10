@@ -35,7 +35,7 @@
         type="text"
         placeholder="Buscar estación..."
         :class="[
-          'w-full pl-10 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white placeholder-slate-400',
+          'w-full pl-10 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-[#ACDAC6] focus:border-[#ACDAC6] text-white placeholder-slate-400',
           selectedStation ? 'pr-12' : 'pr-4',
         ]"
       />
