@@ -620,7 +620,7 @@
       </div>
 
       <!-- Footer -->
-      <footer class="mt-12 text-center text-slate-500 text-xs">
+      <footer class="mt-12 pb-8 text-center text-slate-500 text-xs">
         <div class="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
           <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
             <path
@@ -723,7 +723,19 @@ onMounted(() => {
 })
 
 const availablePlatforms = computed(() => {
-  return Object.keys(adifData.value?.station_settings?.platforms || {})
+  const platforms = Object.keys(adifData.value?.station_settings?.platforms || {})
+  return platforms.sort((a, b) => {
+    // Try to sort numerically first
+    const numA = parseInt(a, 10)
+    const numB = parseInt(b, 10)
+    
+    if (!isNaN(numA) && !isNaN(numB)) {
+      return numA - numB
+    }
+    
+    // Fall back to string comparison
+    return a.localeCompare(b)
+  })
 })
 
 // Check if subtitle takes parameter
