@@ -32,6 +32,7 @@ const formData = ref({
   showComposition: false,
   showObservation: false,
   platformArrangement: 'ascending',
+  fontSize: 1,
 })
 
 // Parse URL parameters on mount

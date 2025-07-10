@@ -1,3 +1,5 @@
+@import 'tailwindcss';
+
 @font-face {
   font-family: 'AdifHauss';
   src:
@@ -5,7 +7,13 @@
     url('/fonts/AdifHauss-Medium.woff') format('woff');
 }
 
-@import 'tailwindcss';
+@theme {
+  --color-blue: #001b41;
+  --color-dark-blue: #102341;
+  --color-light-blue: #1a3254;
+  --color-light-green: #bfefd5;
+  --color-dark-green: #acdac6;
+}
 
 :root {
   font-family:
@@ -25,9 +33,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  --adif-blue: #001b41;
-  --adif-light-green: #bfefd5;
 }
 
 * {
@@ -47,17 +52,13 @@ input:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  ring: 2px;
-  ring-color: #3b82f6;
-  ring-offset: 2px;
+  @apply ring-2 ring-dark-green ring-offset-2;
 }
 
 input[type='checkbox']:checked {
-  background-color: #3b82f6;
-  border-color: #3b82f6;
+  @apply bg-dark-green border-dark-green;
 }
 
 input[type='radio']:checked {
-  background-color: #3b82f6;
-  border-color: #3b82f6;
+  @apply bg-dark-green border-dark-green;
 }

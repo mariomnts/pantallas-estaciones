@@ -35,7 +35,7 @@
         type="text"
         placeholder="Buscar estación..."
         :class="[
-          'w-full pl-10 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-[#ACDAC6] focus:border-[#ACDAC6] text-white placeholder-slate-400',
+          'w-full pl-10 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-dark-green focus:border-dark-green text-white placeholder-slate-400',
           selectedStation ? 'pr-12' : 'pr-4',
         ]"
       />
@@ -75,6 +75,22 @@ const emit = defineEmits(['update:modelValue', 'station-selected', 'station-clea
 const searchQuery = ref(props.modelValue)
 const showDropdown = ref(false)
 const selectedStation = ref(null)
+
+// Initialize selectedStation if modelValue matches a station
+const initializeSelectedStation = () => {
+  if (props.modelValue) {
+    const station = Stations.find((s) => s.name === props.modelValue)
+    if (station) {
+      selectedStation.value = station
+    }
+  }
+}
+
+// Initialize on mount
+import { onMounted } from 'vue'
+onMounted(() => {
+  initializeSelectedStation()
+})
 
 const filteredStations = computed(() => {
   if (!searchQuery.value) return Stations
@@ -132,8 +148,15 @@ watch(
       searchQuery.value = newValue
       if (!newValue) {
         selectedStation.value = null
+      } else {
+        // Find the station that matches the new value
+        const station = Stations.find((s) => s.name === newValue)
+        if (station) {
+          selectedStation.value = station
+        }
       }
     }
   },
+  { immediate: true },
 )
 </script>

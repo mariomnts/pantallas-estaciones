@@ -110,7 +110,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Antequera-Santa Ana',
+    name: 'Antequera - Santa Ana',
     code: '02003',
     location: {
       town: 'Antequera',
@@ -418,7 +418,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Zaragoza-Delicias',
+    name: 'Zaragoza - Delicias',
     code: '04040',
     location: {
       town: 'Zaragoza',
@@ -517,7 +517,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Illora-Lachar (APD)',
+    name: 'Illora - Lachar (APD)',
     code: '05007',
     location: {
       town: 'Illora',
@@ -583,7 +583,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Loja-San Francisco',
+    name: 'Loja - San Francisco',
     code: '05013',
     location: {
       town: 'Loja',
@@ -627,7 +627,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Antequera-Ciudad',
+    name: 'Antequera - Ciudad',
     code: '05019',
     location: {
       town: 'Antequera',
@@ -1793,7 +1793,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Piñera-Villaoril',
+    name: 'Piñera - Villaoril',
     code: '05281',
     location: {
       town: 'Navia',
@@ -2299,7 +2299,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Santana-Soto',
+    name: 'Santana - Soto',
     code: '05384',
     location: {
       town: 'Ribera De Arriba',
@@ -2497,7 +2497,7 @@ export const Stations = [
     },
   },
   {
-    name: 'La Felguera-Vega',
+    name: 'La Felguera - Vega',
     code: '05425',
     location: {
       town: 'Langreo',
@@ -2508,7 +2508,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Sama-Los Llerones',
+    name: 'Sama - Los Llerones',
     code: '05429',
     location: {
       town: 'Langreo',
@@ -3982,7 +3982,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Arla-Berrón',
+    name: 'Arla - Berrón',
     code: '05721',
     location: {
       town: 'Valle De Mena',
@@ -4950,7 +4950,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Lorca-San Diego (APD)',
+    name: 'Lorca - San Diego (APD)',
     code: '06005',
     location: {
       town: 'Lorca',
@@ -5335,7 +5335,7 @@ export const Stations = [
     },
   },
   {
-    name: 'A Gudiña-Porta De Galicia',
+    name: 'A Gudiña - Porta De Galicia',
     code: '08251',
     location: {
       town: 'Gudiña (A)',
@@ -5368,7 +5368,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Madrid-Principe Pio',
+    name: 'Madrid - Principe Pio',
     code: '10000',
     location: {
       town: 'Madrid',
@@ -5577,7 +5577,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Santa María De La Alameda-Peguerinos',
+    name: 'Santa María De La Alameda - Peguerinos',
     code: '10206',
     location: {
       town: 'Santa María De La Alameda',
@@ -5731,7 +5731,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Orbita-Espinosa (APD)',
+    name: 'Orbita - Espinosa (APD)',
     code: '10408',
     location: {
       town: 'Espinosa De Los Caballeros',
@@ -6207,7 +6207,7 @@ export const Stations = [
     name: 'Vitoria/Gasteiz',
     code: '11208',
     location: {
-      town: 'Vitoria-Gasteiz',
+      town: 'Vitoria - Gasteiz',
       province: 'Araba/Álava',
       country: 'España',
       lat: 42.841517,
@@ -6218,7 +6218,7 @@ export const Stations = [
     name: 'Estíbaliz-Oreitia',
     code: '11209',
     location: {
-      town: 'Vitoria-Gasteiz',
+      town: 'Vitoria - Gasteiz',
       province: 'Araba/Álava',
       country: 'España',
       lat: 42.853965,
@@ -6226,10 +6226,10 @@ export const Stations = [
     },
   },
   {
-    name: 'Alegría De Álava-Dulantzi',
+    name: 'Alegría De Álava - Dulantzi',
     code: '11210',
     location: {
-      town: 'Alegría-Dulantzi',
+      town: 'Alegría - Dulantzi',
       province: 'Araba/Álava',
       country: 'España',
       lat: 42.848723,
@@ -6240,7 +6240,7 @@ export const Stations = [
     name: 'Ezkerekotxa (APD)',
     code: '11211',
     location: {
-      town: 'Alegría-Dulantzi',
+      town: 'Alegría - Dulantzi',
       province: 'Araba/Álava',
       country: 'España',
       lat: 42.841288,
@@ -6303,7 +6303,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Altsasu/Alsasua-Estación',
+    name: 'Altsasu/Alsasua - Estación',
     code: '11300',
     location: {
       town: 'Altsasu/Alsasua',
@@ -6314,7 +6314,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Zegama-Otzaurte (APT)',
+    name: 'Zegama - Otzaurte (APT)',
     code: '11303',
     location: {
       town: 'Zegama',
@@ -6325,7 +6325,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Zegama-Otzaurte',
+    name: 'Zegama - Otzaurte',
     code: '11304',
     location: {
       town: 'Zegama',
@@ -6336,7 +6336,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Brinkola-Oñati',
+    name: 'Brinkola - Oñati',
     code: '11305',
     location: {
       town: 'Legazpi',
@@ -6501,7 +6501,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Villabona-Zizurkil',
+    name: 'Villabona - Zizurkil',
     code: '11503',
     location: {
       town: 'Villabona',
@@ -6853,7 +6853,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Cercedilla-Pueblo (APD)',
+    name: 'Cercedilla - Pueblo (APD)',
     code: '12015',
     location: {
       town: 'Cercedilla',
@@ -6996,7 +6996,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Armuna-Bernardos (APD)',
+    name: 'Armuna - Bernardos (APD)',
     code: '12104',
     location: {
       town: 'Bernardos',
@@ -7304,7 +7304,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Bidebieta-Basauri',
+    name: 'Bidebieta - Basauri',
     code: '13113',
     location: {
       town: 'Basauri',
@@ -7359,7 +7359,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Abaroa-Sm',
+    name: 'Abaroa - Sm',
     code: '13118',
     location: {
       town: 'Basauri',
@@ -7593,7 +7593,7 @@ export const Stations = [
     name: 'Trapaga',
     code: '13502',
     location: {
-      town: 'Valle De Trápaga-Trapagaran',
+      town: 'Valle De Trápaga - Trapagaran',
       province: 'Bizkaia',
       country: 'España',
       lat: 43.30335,
@@ -7604,7 +7604,7 @@ export const Stations = [
     name: 'Valle De Trapaga/Trapagaran',
     code: '13503',
     location: {
-      town: 'Valle De Trápaga-Trapagaran',
+      town: 'Valle De Trápaga - Trapagaran',
       province: 'Bizkaia',
       country: 'España',
       lat: 43.307763,
@@ -7626,7 +7626,7 @@ export const Stations = [
     name: 'Putxeta',
     code: '13505',
     location: {
-      town: 'Abanto Y Ciérvana-Abanto Zierbena',
+      town: 'Abanto Y Ciérvana - Abanto Zierbena',
       province: 'Bizkaia',
       country: 'España',
       lat: 43.31623,
@@ -7659,7 +7659,7 @@ export const Stations = [
     name: 'Gallarta (APD)',
     code: '13508',
     location: {
-      town: 'Abanto Y Ciérvana-Abanto Zierbena',
+      town: 'Abanto Y Ciérvana - Abanto Zierbena',
       province: 'Bizkaia',
       country: 'España',
       lat: 43.320472,
@@ -9207,7 +9207,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Madrid-Chamartín-Clara Campoamor',
+    name: 'Madrid - Chamartín-Clara Campoamor',
     code: '17000',
     location: {
       town: 'Madrid',
@@ -9361,7 +9361,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Gargantilla-Lozoya (APD)',
+    name: 'Gargantilla - Lozoya (APD)',
     code: '17103',
     location: {
       town: 'Gargantilla Del Lozoya Y Pinilla De Buitrago',
@@ -9372,7 +9372,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Navarredonda-S.Mames (APD)',
+    name: 'Navarredonda - S.Mames (APD)',
     code: '17104',
     location: {
       town: 'Navarredonda Y San Mamés',
@@ -9647,7 +9647,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Madrid-Recoletos',
+    name: 'Madrid - Recoletos',
     code: '18001',
     location: {
       town: 'Madrid',
@@ -9658,7 +9658,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Madrid-Nuevos Ministerios',
+    name: 'Madrid - Nuevos Ministerios',
     code: '18002',
     location: {
       town: 'Madrid',
@@ -9702,7 +9702,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Madrid-Sol',
+    name: 'Madrid - Sol',
     code: '18101',
     location: {
       town: 'Madrid',
@@ -9746,7 +9746,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Quintana-Raneros',
+    name: 'Quintana - Raneros',
     code: '20002',
     location: {
       town: 'Santovenia De La Valdoncina',
@@ -9823,7 +9823,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Coruna-San Diego',
+    name: 'Coruna - San Diego',
     code: '20046',
     location: {
       town: 'Coruña (A)',
@@ -9856,7 +9856,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Vega-Magaz',
+    name: 'Vega - Magaz',
     code: '20102',
     location: {
       town: 'Magaz De Cepeda',
@@ -10098,7 +10098,7 @@ export const Stations = [
     },
   },
   {
-    name: 'A Rúa-Petín',
+    name: 'A Rúa - Petín',
     code: '20213',
     location: {
       town: 'Rúa (A)',
@@ -10450,7 +10450,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Elviña-Universidade',
+    name: 'Elviña - Universidade',
     code: '20410',
     location: {
       town: 'Coruña (A)',
@@ -10703,7 +10703,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Pousa-Crecente',
+    name: 'Pousa - Crecente',
     code: '22105',
     location: {
       town: 'Crecente',
@@ -10879,7 +10879,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Redondela-Picota',
+    name: 'Redondela - Picota',
     code: '23000',
     location: {
       town: 'Redondela',
@@ -11044,7 +11044,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Villagarcia De Arousa-Playa',
+    name: 'Villagarcia De Arousa - Playa',
     code: '23017',
     location: {
       town: 'Vilagarcía De Arousa',
@@ -11055,7 +11055,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Pontevedra-Universidad',
+    name: 'Pontevedra - Universidad',
     code: '23018',
     location: {
       town: 'Pontevedra',
@@ -11209,7 +11209,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Oliva-Almendral (APD)',
+    name: 'Oliva - Almendral (APD)',
     code: '30003',
     location: {
       town: 'Oliva De Plasencia',
@@ -11495,7 +11495,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Salamanca-La Alamedilla',
+    name: 'Salamanca - La Alamedilla',
     code: '30110',
     location: {
       town: 'Salamanca',
@@ -11561,7 +11561,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Granja De Moreruela-Villafafila',
+    name: 'Granja De Moreruela - Villafafila',
     code: '30205',
     location: {
       town: 'Granja De Moreruela',
@@ -11990,7 +11990,7 @@ export const Stations = [
     },
   },
   {
-    name: 'A Mezquita-Vilavella',
+    name: 'A Mezquita - Vilavella',
     code: '31204',
     location: {
       town: 'Mezquita (A)',
@@ -12034,7 +12034,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Laza-Cerdedelo',
+    name: 'Laza - Cerdedelo',
     code: '31208',
     location: {
       town: 'Laza',
@@ -12045,7 +12045,7 @@ export const Stations = [
     },
   },
   {
-    name: 'A Alberguería-Prado',
+    name: 'A Alberguería - Prado',
     code: '31209',
     location: {
       town: 'Vilar De Barrio',
@@ -12144,7 +12144,7 @@ export const Stations = [
     },
   },
   {
-    name: 'A Friela-Maside',
+    name: 'A Friela - Maside',
     code: '31303',
     location: {
       town: 'Maside',
@@ -12243,7 +12243,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Vedra-Ribadulla',
+    name: 'Vedra - Ribadulla',
     code: '31312',
     location: {
       town: 'Vedra',
@@ -12298,7 +12298,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Garga-Trasmonte (APD)',
+    name: 'Garga - Trasmonte (APD)',
     code: '31403',
     location: {
       town: 'Oroso',
@@ -12419,7 +12419,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Cerceda-Meirama',
+    name: 'Cerceda - Meirama',
     code: '31416',
     location: {
       town: 'Cerceda',
@@ -12782,7 +12782,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Fregeneda-Frontera',
+    name: 'Fregeneda - Frontera',
     code: '33026',
     location: {
       town: 'Fregeneda (LA)',
@@ -12980,7 +12980,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Numancia-Yuncos (APD)',
+    name: 'Numancia - Yuncos (APD)',
     code: '35006',
     location: {
       town: 'Yuncos',
@@ -12991,7 +12991,7 @@ export const Stations = [
     },
   },
   {
-    name: 'La Serna-Fuenlabrada (APD)',
+    name: 'La Serna - Fuenlabrada (APD)',
     code: '35007',
     location: {
       town: 'Fuenlabrada',
@@ -13046,7 +13046,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Villaluenga-Yuncler',
+    name: 'Villaluenga - Yuncler',
     code: '35100',
     location: {
       town: 'Villaluenga De La Sagra',
@@ -13112,7 +13112,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Santa Olalla-Carmena (APD)',
+    name: 'Santa Olalla - Carmena (APD)',
     code: '35106',
     location: {
       town: 'Santa Olalla',
@@ -13398,7 +13398,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Valencia Alcantara-Frontera',
+    name: 'Valencia Alcantara - Frontera',
     code: '35407',
     location: {
       town: 'Valencia De Alcántara',
@@ -13409,7 +13409,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Madrid-Aluche',
+    name: 'Madrid - Aluche',
     code: '35600',
     location: {
       town: 'Madrid',
@@ -13651,7 +13651,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Madrid-Villaverde Alto',
+    name: 'Madrid - Villaverde Alto',
     code: '37001',
     location: {
       town: 'Madrid',
@@ -13816,7 +13816,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Mora-Orgaz',
+    name: 'Mora - Orgaz',
     code: '37104',
     location: {
       town: 'Mora',
@@ -14333,7 +14333,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Garrovilla-Las Vegas',
+    name: 'Garrovilla - Las Vegas',
     code: '37611',
     location: {
       town: 'Garrovilla (LA)',
@@ -14344,7 +14344,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Villanueva De Córdoba-Los Pedroches',
+    name: 'Villanueva De Córdoba - Los Pedroches',
     code: '37704',
     location: {
       town: 'Villanueva De Córdoba',
@@ -14531,7 +14531,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Cazalla-Constantina',
+    name: 'Cazalla - Constantina',
     code: '40113',
     location: {
       town: 'Constantina',
@@ -15103,7 +15103,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Huelva-Mercancias (APD)',
+    name: 'Huelva - Mercancias (APD)',
     code: '43023',
     location: {
       town: 'Huelva',
@@ -15114,7 +15114,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Huelva-Mercancias (APD)',
+    name: 'Huelva - Mercancias (APD)',
     code: '43024',
     location: {
       town: 'Huelva',
@@ -15125,7 +15125,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Valencina-Santiponce',
+    name: 'Valencina - Santiponce',
     code: '43026',
     location: {
       town: 'Valencina De La Concepción',
@@ -16236,7 +16236,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Cordoba-El Brillante',
+    name: 'Cordoba - El Brillante',
     code: '50416',
     location: {
       town: 'Córdoba',
@@ -16456,7 +16456,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Sevilla-Plaza De Armas',
+    name: 'Sevilla - Plaza De Armas',
     code: '50801',
     location: {
       town: 'Sevilla',
@@ -16467,7 +16467,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Sevilla-Santa Justa',
+    name: 'Sevilla - Santa Justa',
     code: '51003',
     location: {
       town: 'Sevilla',
@@ -16522,7 +16522,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Sevilla-San Bernardo',
+    name: 'Sevilla - San Bernardo',
     code: '51100',
     location: {
       town: 'Sevilla',
@@ -16588,7 +16588,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Sevilla-Virgen Del Rocío',
+    name: 'Sevilla - Virgen Del Rocío',
     code: '51110',
     location: {
       town: 'Sevilla',
@@ -17270,7 +17270,7 @@ export const Stations = [
     },
   },
   {
-    name: 'La Roda De Andalucia-La Nava',
+    name: 'La Roda De Andalucia - La Nava',
     code: '54302',
     location: {
       town: 'Roda De Andalucía (LA)',
@@ -17974,7 +17974,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Alamedilla-Guadahortuna',
+    name: 'Alamedilla - Guadahortuna',
     code: '56011',
     location: {
       town: 'Alamedilla',
@@ -18051,7 +18051,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Lacalahorra-Ferreira',
+    name: 'Lacalahorra - Ferreira',
     code: '56201',
     location: {
       town: 'Calahorra (LA)',
@@ -18062,7 +18062,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Hueneja-Dolar',
+    name: 'Hueneja - Dolar',
     code: '56300',
     location: {
       town: 'Huéneja',
@@ -18095,7 +18095,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Dona Maria-Ocana',
+    name: 'Dona Maria - Ocana',
     code: '56303',
     location: {
       town: 'María',
@@ -18480,7 +18480,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Madrid-Santa Catalina',
+    name: 'Madrid - Santa Catalina',
     code: '60001',
     location: {
       town: 'Madrid',
@@ -18491,7 +18491,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Madrid-Cerro Pl',
+    name: 'Madrid - Cerro Pl',
     code: '60002',
     location: {
       town: 'Madrid',
@@ -18502,7 +18502,7 @@ export const Stations = [
     },
   },
   // {
-  //   name: 'Madrid-Atocha',
+  //   name: 'Madrid - Atocha',
   //   code: '60005',
   //   location: {
   //     town: 'Madrid',
@@ -18513,7 +18513,7 @@ export const Stations = [
   //   },
   // },
   {
-    name: 'Madrid-Villaverde Bajo',
+    name: 'Madrid - Villaverde Bajo',
     code: '60100',
     location: {
       town: 'Madrid',
@@ -18997,7 +18997,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Elda-Petrer',
+    name: 'Elda - Petrer',
     code: '60905',
     location: {
       town: 'Elda',
@@ -19019,7 +19019,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Novelda-Aspe',
+    name: 'Novelda - Aspe',
     code: '60907',
     location: {
       town: 'Novelda',
@@ -19217,7 +19217,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Blanca-Abaran',
+    name: 'Blanca - Abaran',
     code: '61013',
     location: {
       town: 'Abarán',
@@ -19228,7 +19228,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Archena-Fortuna',
+    name: 'Archena - Fortuna',
     code: '61015',
     location: {
       town: 'Molina De Segura',
@@ -19382,7 +19382,7 @@ export const Stations = [
     },
   },
   {
-    name: 'La Palma-Pozo Estrecho (APT)',
+    name: 'La Palma - Pozo Estrecho (APT)',
     code: '61305',
     location: {
       town: 'Cartagena',
@@ -19426,7 +19426,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Orihuela-Miguel Hernández',
+    name: 'Orihuela - Miguel Hernández',
     code: '62002',
     location: {
       town: 'Orihuela',
@@ -19448,7 +19448,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Albatera-Catral',
+    name: 'Albatera - Catral',
     code: '62100',
     location: {
       town: 'San Isidro',
@@ -19723,7 +19723,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Valencia-Estaciò Del Nord',
+    name: 'Valencia - Estaciò Del Nord',
     code: '65000',
     location: {
       town: 'Valencia',
@@ -19734,7 +19734,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Roca-Cúper',
+    name: 'Roca - Cúper',
     code: '65001',
     location: {
       town: 'Meliana',
@@ -19756,7 +19756,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Valencia-Cabanyal',
+    name: 'Valencia - Cabanyal',
     code: '65003',
     location: {
       town: 'Valencia',
@@ -19833,7 +19833,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Valencia-Puerto',
+    name: 'Valencia - Puerto',
     code: '65010',
     location: {
       town: 'Valencia',
@@ -19943,7 +19943,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Burriana-Alquerías Niño Perdido',
+    name: 'Burriana - Alquerías Niño Perdido',
     code: '65207',
     location: {
       town: 'Borriana/Burriana',
@@ -19954,10 +19954,10 @@ export const Stations = [
     },
   },
   {
-    name: 'Vila-Real',
+    name: 'Vila - Real',
     code: '65208',
     location: {
-      town: 'Vila-Real',
+      town: 'Vila - Real',
       province: 'Castellón/Castelló',
       country: 'España',
       lat: 39.9330222,
@@ -20130,7 +20130,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Ulldecona-Alcanar-La Sénia',
+    name: 'Ulldecona - Alcanar-La Sénia',
     code: '65314',
     location: {
       town: 'Ulldecona',
@@ -20207,7 +20207,7 @@ export const Stations = [
     },
   },
   {
-    name: "L'Aldea-Amposta",
+    name: "L'Aldea - Amposta",
     code: '65402',
     location: {
       town: "Aldea (L')",
@@ -20229,7 +20229,7 @@ export const Stations = [
     },
   },
   {
-    name: "L'Ampolla-Perelló-Deltebre",
+    name: "L'Ampolla - Perelló-Deltebre",
     code: '65404',
     location: {
       town: "Ampolla (L')",
@@ -20331,7 +20331,7 @@ export const Stations = [
     name: 'La Pineda',
     code: '65413',
     location: {
-      town: 'Vila-Seca',
+      town: 'Vila - Seca',
       province: 'Tarragona',
       country: 'España',
       lat: 41.107179,
@@ -20603,7 +20603,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Yémeda-Cardenete',
+    name: 'Yémeda - Cardenete',
     code: '66108',
     location: {
       town: 'Yémeda',
@@ -20713,7 +20713,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Venta Mina-Siete Aguas',
+    name: 'Venta Mina - Siete Aguas',
     code: '66205',
     location: {
       town: 'Buñol',
@@ -20757,7 +20757,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Loriguilla-Reva',
+    name: 'Loriguilla - Reva',
     code: '66209',
     location: {
       town: 'Loriguilla',
@@ -20801,7 +20801,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Xirivella-Alqueries',
+    name: 'Xirivella - Alqueries',
     code: '66214',
     location: {
       town: 'Xirivella',
@@ -21241,7 +21241,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Jérica-Viver (APT)',
+    name: 'Jérica - Viver (APT)',
     code: '67212',
     location: {
       town: 'Jérica',
@@ -21285,7 +21285,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Algimia-C',
+    name: 'Algimia - C',
     code: '67216',
     location: {
       town: 'Algimia De Alfara',
@@ -21307,7 +21307,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Algimia De Alfara-Torres-Torres',
+    name: 'Algimia De Alfara - Torres-Torres',
     code: '67220',
     location: {
       town: 'Algimia De Alfara',
@@ -21318,7 +21318,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Estivella-Albalat Dels Tarongers',
+    name: 'Estivella - Albalat Dels Tarongers',
     code: '67221',
     location: {
       town: 'Estivella',
@@ -21593,7 +21593,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Platja-Gan',
+    name: 'Platja - Gan',
     code: '69111',
     location: {
       town: 'Gandia',
@@ -21673,7 +21673,7 @@ export const Stations = [
     name: 'Ribarroja Del Turia (APD-CGD)',
     code: '69206',
     location: {
-      town: 'Riba-Roja De Túria',
+      town: 'Riba - Roja De Túria',
       province: 'Valencia/València',
       country: 'España',
       lat: 39.544255,
@@ -21684,7 +21684,7 @@ export const Stations = [
     name: 'Masia Trav',
     code: '69207',
     location: {
-      town: 'Riba-Roja De Túria',
+      town: 'Riba - Roja De Túria',
       province: 'Valencia/València',
       country: 'España',
       lat: 39.537216,
@@ -22286,7 +22286,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Ricla-La Almunia',
+    name: 'Ricla - La Almunia',
     code: '70700',
     location: {
       town: 'Ricla',
@@ -22539,7 +22539,7 @@ export const Stations = [
     },
   },
   {
-    name: 'La Zaida-Sástago',
+    name: 'La Zaida - Sástago',
     code: '71108',
     location: {
       town: 'Zaida (LA)',
@@ -22660,10 +22660,10 @@ export const Stations = [
     },
   },
   {
-    name: "Riba-Roja D'Ebre",
+    name: "Riba - Roja D'Ebre",
     code: '71209',
     location: {
-      town: "Riba-Roja D'Ebre",
+      town: "Riba - Roja D'Ebre",
       province: 'Tarragona',
       country: 'España',
       lat: 41.248451,
@@ -22803,10 +22803,10 @@ export const Stations = [
     },
   },
   {
-    name: 'Vila-Seca',
+    name: 'Vila - Seca',
     code: '71401',
     location: {
-      town: 'Vila-Seca',
+      town: 'Vila - Seca',
       province: 'Tarragona',
       country: 'España',
       lat: 41.112744,
@@ -22836,7 +22836,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Altafulla-Tamarit',
+    name: 'Altafulla - Tamarit',
     code: '71502',
     location: {
       town: 'Tarragona',
@@ -23023,7 +23023,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Barcelona-Sants',
+    name: 'Barcelona - Sants',
     code: '71801',
     location: {
       town: 'Barcelona',
@@ -23034,7 +23034,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Barcelona-Passeig De Gracia',
+    name: 'Barcelona - Passeig De Gracia',
     code: '71802',
     location: {
       town: 'Barcelona',
@@ -23045,7 +23045,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Barcelona-Casa',
+    name: 'Barcelona - Casa',
     code: '71901',
     location: {
       town: 'Barcelona',
@@ -23056,7 +23056,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Barcelona-Morro',
+    name: 'Barcelona - Morro',
     code: '71902',
     location: {
       town: 'Barcelona',
@@ -23067,7 +23067,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Barcelona-Morro',
+    name: 'Barcelona - Morro',
     code: '71903',
     location: {
       town: 'Barcelona',
@@ -23078,7 +23078,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Barcelona-Morro',
+    name: 'Barcelona - Morro',
     code: '71905',
     location: {
       town: 'Barcelona',
@@ -23089,7 +23089,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Barcelona-Ca.A.',
+    name: 'Barcelona - Ca.A.',
     code: '71906',
     location: {
       town: 'Barcelona',
@@ -23111,7 +23111,7 @@ export const Stations = [
     },
   },
   {
-    name: 'La Secuita-Perafort',
+    name: 'La Secuita - Perafort',
     code: '72002',
     location: {
       town: 'Secuita (LA)',
@@ -23430,7 +23430,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Puigverd De Lleida-Artesa De Lleida',
+    name: 'Puigverd De Lleida - Artesa De Lleida',
     code: '73001',
     location: {
       town: 'Puigverd De Lleida',
@@ -23540,7 +23540,7 @@ export const Stations = [
     },
   },
   {
-    name: 'La Plana-Picamoixons',
+    name: 'La Plana - Picamoixons',
     code: '73100',
     location: {
       town: 'Valls',
@@ -23749,7 +23749,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Villanúa-Letranz',
+    name: 'Villanúa - Letranz',
     code: '74216',
     location: {
       town: 'Villanúa',
@@ -24002,7 +24002,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Montcada-Ripollet',
+    name: 'Montcada - Ripollet',
     code: '77002',
     location: {
       town: 'Montcada I Reixac',
@@ -24200,7 +24200,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Sant Quirze De Besora-Montesquiu',
+    name: 'Sant Quirze De Besora - Montesquiu',
     code: '77113',
     location: {
       town: 'Sant Quirze De Besora',
@@ -24541,7 +24541,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Lleida-Pirineus',
+    name: 'Lleida - Pirineus',
     code: '78400',
     location: {
       town: 'Lleida',
@@ -24970,7 +24970,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Barcelona-Fabra I Puig',
+    name: 'Barcelona - Fabra I Puig',
     code: '78802',
     location: {
       town: 'Barcelona',
@@ -24992,7 +24992,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Barcelona-Arc De Triomf',
+    name: 'Barcelona - Arc De Triomf',
     code: '78804',
     location: {
       town: 'Barcelona',
@@ -25003,7 +25003,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Barcelona-Plaça De Catalunya',
+    name: 'Barcelona - Plaça De Catalunya',
     code: '78805',
     location: {
       town: 'Barcelona',
@@ -25025,7 +25025,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Barcelona-Sagrera',
+    name: 'Barcelona - Sagrera',
     code: '79002',
     location: {
       town: 'Barcelona',
@@ -25036,7 +25036,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Barcelona-Sagre',
+    name: 'Barcelona - Sagre',
     code: '79003',
     location: {
       town: 'Barcelona',
@@ -25047,7 +25047,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Barcelona-Sant Andreu',
+    name: 'Barcelona - Sant Andreu',
     code: '79004',
     location: {
       town: 'Barcelona',
@@ -25091,7 +25091,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Barcelona-El Clot',
+    name: 'Barcelona - El Clot',
     code: '79009',
     location: {
       town: 'Barcelona',
@@ -25179,7 +25179,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Riells I Viabrea-Breda',
+    name: 'Riells I Viabrea - Breda',
     code: '79106',
     location: {
       town: 'Riells I Viabrea',
@@ -25487,7 +25487,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Barcelona-Estació De França',
+    name: 'Barcelona - Estació De França',
     code: '79400',
     location: {
       town: 'Barcelona',
@@ -25498,7 +25498,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Barcelona-Bogat',
+    name: 'Barcelona - Bogat',
     code: '79401',
     location: {
       town: 'Barcelona',
@@ -25509,7 +25509,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Barcelona-Poble Nou',
+    name: 'Barcelona - Poble Nou',
     code: '79402',
     location: {
       town: 'Barcelona',
@@ -25751,7 +25751,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Altsasu/Alsasua-Pueblo',
+    name: 'Altsasu/Alsasua - Pueblo',
     code: '80001',
     location: {
       town: 'Altsasu/Alsasua',
@@ -25817,7 +25817,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Izurdiaga-Irutzun',
+    name: 'Izurdiaga - Irutzun',
     code: '80007',
     location: {
       town: 'Arakil',
@@ -26455,7 +26455,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Albocabe-Gomara-Almenar (APT-CGD)',
+    name: 'Albocabe-Gomara - Almenar (APT-CGD)',
     code: '82009',
     location: {
       town: 'Gómara',
@@ -26796,7 +26796,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Lermilla-Quintanarruz (APD)',
+    name: 'Lermilla - Quintanarruz (APD)',
     code: '82205',
     location: {
       town: 'Merindad De Río Ubierna',
@@ -26876,7 +26876,7 @@ export const Stations = [
     name: 'Nofuentes (APD)',
     code: '82212',
     location: {
-      town: 'Merindad De Cuesta-Urria',
+      town: 'Merindad De Cuesta - Urria',
       province: 'Soria',
       country: 'España',
       lat: null,
@@ -26887,7 +26887,7 @@ export const Stations = [
     name: 'Moneo (APD)',
     code: '82213',
     location: {
-      town: 'Merindad De Cuesta-Urria',
+      town: 'Merindad De Cuesta - Urria',
       province: 'Soria',
       country: 'España',
       lat: null,
@@ -27269,10 +27269,10 @@ export const Stations = [
     },
   },
   {
-    name: 'Osma-La Rasa',
+    name: 'Osma - La Rasa',
     code: '85106',
     location: {
-      town: 'Burgo De Osma-Ciudad De Osma',
+      town: 'Burgo De Osma - Ciudad De Osma',
       province: 'Soria',
       country: 'España',
       lat: null,
@@ -27500,7 +27500,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Maluenda-Velilla (APD)',
+    name: 'Maluenda - Velilla (APD)',
     code: '86002',
     location: {
       town: 'Maluenda',
@@ -27632,7 +27632,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Calamocha-Vega (APD-CGD)',
+    name: 'Calamocha - Vega (APD-CGD)',
     code: '86014',
     location: {
       town: 'Calamocha',
@@ -27940,10 +27940,10 @@ export const Stations = [
     },
   },
   {
-    name: 'Aime-La-Plagne',
+    name: 'Aime-La - Plagne',
     code: '87150',
     location: {
-      town: 'Aime-La-Plagne',
+      town: 'Aime-La - Plagne',
       province: undefined,
       country: 'España',
       lat: null,
@@ -28204,7 +28204,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Gandía-Bus',
+    name: 'Gandía - Bus',
     code: '91696',
     location: {
       town: 'Gandia',
@@ -28248,7 +28248,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Marbella-Bus',
+    name: 'Marbella - Bus',
     code: '92124',
     location: {
       town: 'Marbella',
@@ -28259,7 +28259,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Estepona-Bus',
+    name: 'Estepona - Bus',
     code: '92157',
     location: {
       town: 'Estepona',
@@ -28270,7 +28270,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Denia-Bus',
+    name: 'Denia - Bus',
     code: '92201',
     location: {
       town: 'Dénia',
@@ -28721,10 +28721,10 @@ export const Stations = [
     },
   },
   {
-    name: 'Santa Comba-Dao',
+    name: 'Santa Comba - Dao',
     code: '94378',
     location: {
-      town: 'Santa Comba-Dao',
+      town: 'Santa Comba - Dao',
       province: undefined,
       country: 'España',
       lat: null,
@@ -28787,7 +28787,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Lisboa-Santa Apolonia',
+    name: 'Lisboa - Santa Apolonia',
     code: '94401',
     location: {
       town: 'Lisboa',
@@ -28798,7 +28798,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Lisboa-Estación Oriente',
+    name: 'Lisboa - Estación Oriente',
     code: '94404',
     location: {
       town: 'Lisboa',
@@ -28864,7 +28864,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Coímbra-B',
+    name: 'Coímbra - B',
     code: '94452',
     location: {
       town: 'Móstoles',
@@ -28889,7 +28889,7 @@ export const Stations = [
     name: 'Sta.Comba',
     code: '94524',
     location: {
-      town: 'Santa Comba-Dao',
+      town: 'Santa Comba - Dao',
       province: undefined,
       country: 'España',
       lat: 40.3910301,
@@ -28985,7 +28985,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Madrid-Paseo Im',
+    name: 'Madrid - Paseo Im',
     code: '95002',
     location: {
       town: 'Madrid',
@@ -28996,7 +28996,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Madrid-Peñuelas',
+    name: 'Madrid - Peñuelas',
     code: '95003',
     location: {
       town: 'Madrid',
@@ -29007,7 +29007,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Madrid-Peñuelas',
+    name: 'Madrid - Peñuelas',
     code: '95005',
     location: {
       town: 'Madrid',
@@ -29029,7 +29029,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Madrid-Abroñiga',
+    name: 'Madrid - Abroñiga',
     code: '95104',
     location: {
       town: 'Madrid',
@@ -29040,7 +29040,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Madrid-Abroñiga',
+    name: 'Madrid - Abroñiga',
     code: '95105',
     location: {
       town: 'Madrid',
@@ -29051,7 +29051,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Madrid-Abroñiga',
+    name: 'Madrid - Abroñiga',
     code: '95106',
     location: {
       town: 'Madrid',
@@ -29205,7 +29205,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Caldes De Malavella-Vichy Catalán',
+    name: 'Caldes De Malavella - Vichy Catalán',
     code: '97013',
     location: {
       town: 'Caldes De Malavella',
@@ -29293,7 +29293,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Mirasierra-Paco De Lucía',
+    name: 'Mirasierra - Paco De Lucía',
     code: '97200',
     location: {
       town: 'Canencia',
@@ -29304,7 +29304,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Madrid-Ramón Y Cajal',
+    name: 'Madrid - Ramón Y Cajal',
     code: '97201',
     location: {
       town: 'Madrid',
@@ -29315,7 +29315,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Jávea-Bus',
+    name: 'Jávea - Bus',
     code: '97639',
     location: {
       town: 'Jávea/Xàbia',
@@ -29414,7 +29414,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Madrid-Aeropuerto T4',
+    name: 'Madrid - Aeropuerto T4',
     code: '98305',
     location: {
       town: 'Madrid',
@@ -29436,7 +29436,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Santa Pola-Bus',
+    name: 'Santa Pola - Bus',
     code: '99001',
     location: {
       town: 'Santa Pola',
@@ -29513,7 +29513,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Jaca-Bus',
+    name: 'Jaca - Bus',
     code: '99103',
     location: {
       town: 'Jaca',
@@ -29557,7 +29557,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Panticosa-Bus',
+    name: 'Panticosa - Bus',
     code: '99107',
     location: {
       town: 'Panticosa',
@@ -29634,7 +29634,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Andorra-Bus',
+    name: 'Andorra - Bus',
     code: '99114',
     location: {
       town: 'Andorra',
@@ -29689,7 +29689,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Fisterra-Bus',
+    name: 'Fisterra - Bus',
     code: '99119',
     location: {
       town: 'Fisterra',
@@ -29700,7 +29700,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Torrevieja-Bus',
+    name: 'Torrevieja - Bus',
     code: '99120',
     location: {
       town: 'Torrevieja',
@@ -29722,7 +29722,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Torrevieja-Playa-Bus',
+    name: 'Torrevieja - Playa - Bus',
     code: '99122',
     location: {
       town: 'Torrevieja',
@@ -29733,7 +29733,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Benidorm- Playa-Bus',
+    name: 'Benidorm- Playa - Bus',
     code: '99123',
     location: {
       town: 'Benidorm',
@@ -29766,7 +29766,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Ceuta-Barco',
+    name: 'Ceuta - Barco',
     code: '99126',
     location: {
       town: 'Ceuta',
@@ -29821,7 +29821,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Ponferrada-Bus',
+    name: 'Ponferrada - Bus',
     code: '99131',
     location: {
       town: 'Ponferrada',
@@ -29832,7 +29832,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Madrid-Príncipe Pío Turístico',
+    name: 'Madrid - Príncipe Pío Turístico',
     code: '99132',
     location: {
       town: 'Madrid',
@@ -29865,7 +29865,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Peleas De Arriba-Bus',
+    name: 'Peleas De Arriba - Bus',
     code: '99135',
     location: {
       town: 'Corrales Del Vino',
@@ -29909,7 +29909,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Aldeaseca De La Armuña-Bus',
+    name: 'Aldeaseca De La Armuña - Bus',
     code: '99139',
     location: {
       town: 'Villares De La Reina',
@@ -29920,7 +29920,7 @@ export const Stations = [
     },
   },
   // {
-  //   name: 'Madrid-Chamartín-Clara Campoamor',
+  //   name: 'Madrid - Chamartín-Clara Campoamor',
   //   code: '99140',
   //   location: {
   //     town: 'Madrid',
@@ -29953,7 +29953,7 @@ export const Stations = [
     },
   },
   {
-    name: 'A Coruña-Turístico',
+    name: 'A Coruña - Turístico',
     code: '99143',
     location: {
       town: 'Coruña (A)',
@@ -29975,7 +29975,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Plasencia-Turístico',
+    name: 'Plasencia - Turístico',
     code: '99145',
     location: {
       town: 'Plasencia',
@@ -29997,7 +29997,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Sevilla-Turistico',
+    name: 'Sevilla - Turistico',
     code: '99149',
     location: {
       town: 'Sevilla',
@@ -30030,7 +30030,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Albufeira-Bus',
+    name: 'Albufeira - Bus',
     code: '99152',
     location: {
       town: 'Albufeira',
@@ -30063,7 +30063,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Tavira-Bus',
+    name: 'Tavira - Bus',
     code: '99155',
     location: {
       town: undefined,
@@ -30085,7 +30085,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Villajoyosa-Bus',
+    name: 'Villajoyosa - Bus',
     code: '99157',
     location: {
       town: 'Villajoyosa/Vila Joiosa (LA)',
@@ -30129,7 +30129,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Pontevedra-Turístico',
+    name: 'Pontevedra - Turístico',
     code: '99161',
     location: {
       town: 'Pontevedra',
@@ -30140,7 +30140,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Huesca-Bus',
+    name: 'Huesca - Bus',
     code: '99162',
     location: {
       town: 'Huesca',
@@ -30151,7 +30151,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Tarragona-Bus',
+    name: 'Tarragona - Bus',
     code: '99163',
     location: {
       town: 'Tarragona',
@@ -30206,7 +30206,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Salamanca-Bus',
+    name: 'Salamanca - Bus',
     code: '99171',
     location: {
       town: 'Salamanca',
@@ -30316,7 +30316,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Altea-Bus',
+    name: 'Altea - Bus',
     code: '99182',
     location: {
       town: 'Altea',
@@ -30536,7 +30536,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Vielha-Bus',
+    name: 'Vielha - Bus',
     code: '99853',
     location: {
       town: 'Andorra',

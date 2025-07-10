@@ -3,104 +3,33 @@ import { ref, onMounted, onBeforeUnmount, computed, defineProps, watch } from 'v
 import * as signalR from '@microsoft/signalr'
 import Adif from './Adif.vue'
 
-const props = defineProps({
-  stationCode: {
-    type: String,
-    required: true,
-  },
-  interfaz: {
-    type: String,
-    default: 'adif-gravita-departures',
-  },
-  countdown: {
-    type: Boolean,
-    default: true,
-  },
-  traffic: {
-    type: String,
-    default: 'C,L,R',
-  },
-  language: {
-    type: String,
-    default: 'ESP',
-  },
-  showHeader: {
-    type: Boolean,
-    default: true,
-  },
-  showAccess: {
-    type: Boolean,
-    default: true,
-  },
-  showPlatform: {
-    type: Boolean,
-    default: true,
-  },
-  showPlatformSign: {
-    type: Boolean,
-    default: true,
-  },
-  showProduct: {
-    type: Boolean,
-    default: true,
-  },
-  showNumber: {
-    type: Boolean,
-    default: true,
-  },
-  platformFilter: {
-    type: String,
-    default: undefined,
-  },
-  platformLocation: {
-    type: String,
-    default: undefined,
-  },
-  platformTrigger: {
-    type: String,
-    default: undefined,
-  },
-  trafficFilter: {
-    type: String,
-    default: undefined,
-  },
-  companyFilter: {
-    type: String,
-    default: undefined,
-  },
-  productFilter: {
-    type: String,
-    default: undefined,
-  },
-  showComposition: {
-    type: Boolean,
-    default: true,
-  },
-  showPlatformPreview: {
-    type: Boolean,
-    default: true,
-  },
-  showClosedCheckIn: {
-    type: Boolean,
-    default: true,
-  },
-  platformArrangement: {
-    type: String,
-    default: undefined,
-  },
-  platformMode: {
-    type: String,
-    default: undefined,
-  },
-  showObservation: {
-    type: Boolean,
-    default: undefined,
-  },
-  subtitle: {
-    type: String,
-    default: undefined,
-  },
-})
+const props = defineProps([
+  'stationCode',
+  'interfaz',
+  'countdown',
+  'traffic',
+  'language',
+  'showHeader',
+  'showAccess',
+  'showPlatform',
+  'showPlatformSign',
+  'showProduct',
+  'showNumber',
+  'platformFilter',
+  'platformLocation',
+  'platformTrigger',
+  'trafficFilter',
+  'companyFilter',
+  'productFilter',
+  'showComposition',
+  'showPlatformPreview',
+  'showClosedCheckIn',
+  'platformArrangement',
+  'platformMode',
+  'showObservation',
+  'subtitle',
+  'fontSize',
+])
 
 const emit = defineEmits(['data'])
 
@@ -113,38 +42,21 @@ const board = ref(null)
 const iframeSrc = computed(() => {
   const paramsObj = {
     rutaRecursos: '../../../recursos',
-    'font-size': 1,
-    interfaz: props.interfaz,
     IdEstacion: props.stationCode,
-    countdown: props.countdown,
-    traffic: props.traffic,
-    languages: props.language,
-    'show-header': props.showHeader,
-    'show-access': props.showAccess,
-    'show-platform': props.showPlatform,
-    'show-platform-sign': props.showPlatformSign,
-    'show-product': props.showProduct,
-    'show-number': props.showNumber,
-    'platform-filter': props.platformFilter,
-    'platform-location': props.platformLocation,
-    'platform-trigger': props.platformTrigger,
-    'traffic-filter': props.trafficFilter,
-    'company-filter': props.companyFilter,
-    'product-filter': props.productFilter,
-    'show-composition': props.showComposition,
-    'show-platform-preview': props.showPlatformPreview,
-    'show-closed-check-in': props.showClosedCheckIn,
-    'show-observation': props.showObservation,
-    'platform-arrangement': props.platformArrangement,
-    'platform-mode': props.platformMode,
-    subtitle: props.subtitle,
   }
 
-  const filteredParams = Object.fromEntries(
-    Object.entries(paramsObj).filter(([_, value]) => value !== undefined),
-  )
+  // Add all other props that are not undefined, converting camelCase to kebab-case
+  Object.keys(props).forEach((key) => {
+    if (key !== 'stationCode' && props[key] !== undefined) {
+      // Convert camelCase to kebab-case for URL params
+      const paramKey = key.replace(/([A-Z])/g, '-$1').toLowerCase()
+      paramsObj[paramKey] = props[key]
+    }
+  })
 
-  const params = new URLSearchParams(filteredParams)
+  console.log('paramsObj:', paramsObj)
+
+  const params = new URLSearchParams(paramsObj)
 
   return props.stationCode
     ? `https://info.adif.es/assets/gravita/gravita.html?${params.toString()}`
@@ -242,7 +154,7 @@ onBeforeUnmount(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--adif-blue, #0053a5);
+  background-color: var(--color-blue, #0053a5);
   z-index: 1;
 }
 
@@ -255,7 +167,7 @@ onBeforeUnmount(() => {
 
 .loader-logo {
   width: 40%;
-  fill: var(--adif-light-green, #8cc63f);
+  fill: var(--color-light-green, #8cc63f);
   animation: pulse-logo 2s ease-in-out infinite;
 }
 

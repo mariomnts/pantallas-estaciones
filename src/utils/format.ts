@@ -1,11 +1,4 @@
-import { 
-  Interfaces, 
-  Traffics, 
-  Languages, 
-  Companies, 
-  SubtitlesList,
-  Products
-} from '../constants'
+import { Interfaces, Traffics, Languages, Companies, SubtitlesList, Products } from '../constants'
 
 export interface FormData {
   interfaz: string
@@ -30,30 +23,36 @@ export interface FormData {
   showComposition: boolean
   showObservation: boolean
   platformArrangement: string
+  fontSize: string | number
 }
 
 export function convertFormDataToGravitaProps(formData: FormData) {
   // Find the interface to get its value
-  const interfaceObj = Interfaces.find(i => i.key === formData.interfaz)
-  
+  const interfaceObj = Interfaces.find((i) => i.key === formData.interfaz)
+
   // Handle traffic - if nothing selected in UI, send all to Gravita
-  const trafficValues = formData.traffic.length === 0
-    ? Traffics.map(t => t.value).join(',')
-    : formData.traffic.map(key => {
-        const traffic = Traffics.find(t => t.key === key)
-        return traffic?.value || key
-      }).join(',')
+  const trafficValues =
+    formData.traffic.length === 0
+      ? Traffics.map((t) => t.value).join(',')
+      : formData.traffic
+          .map((key) => {
+            const traffic = Traffics.find((t) => t.key === key)
+            return traffic?.value || key
+          })
+          .join(',')
 
   // Handle language - send selected ones
-  const languageValues = formData.language.map(key => {
-    const lang = Languages.find(l => l.key === key)
-    return lang?.value
-  }).join(',')
+  const languageValues = formData.language
+    .map((key) => {
+      const lang = Languages.find((l) => l.key === key)
+      return lang?.value
+    })
+    .join(',')
 
   // Handle subtitle with parameter replacement
   let subtitleValue = ''
   if (formData.subtitle) {
-    const subtitle = SubtitlesList.find(s => s.key === formData.subtitle)
+    const subtitle = SubtitlesList.find((s) => s.key === formData.subtitle)
 
     if (subtitle) {
       subtitleValue = subtitle.value
@@ -69,6 +68,7 @@ export function convertFormDataToGravitaProps(formData: FormData) {
     stationCode: formData.stationCode,
     traffic: trafficValues,
     language: languageValues,
+    fontSize: formData.fontSize || 1,
   }
 
   // Add conditional props based on interface
@@ -79,26 +79,30 @@ export function convertFormDataToGravitaProps(formData: FormData) {
     props.showProduct = formData.showProduct
     props.showNumber = formData.showNumber
     props.countdown = formData.countdown
-    props.platformFilter = Array.isArray(formData.platformFilter) 
-      ? formData.platformFilter.join(',') 
+    props.platformFilter = Array.isArray(formData.platformFilter)
+      ? formData.platformFilter.join(',')
       : formData.platformFilter
-    
+
     // Only add productFilter if products are selected
     if (formData.productFilter.length > 0) {
-      props.productFilter = formData.productFilter.map(key => {
-        const product = Products.find(p => p.key === key)
-        return product?.value || key
-      }).join(',')
+      props.productFilter = formData.productFilter
+        .map((key) => {
+          const product = Products.find((p) => p.key === key)
+          return product?.value || key
+        })
+        .join(',')
     }
-    
+
     // Only add companyFilter if companies are selected
     if (formData.companyFilter.length > 0) {
-      props.companyFilter = formData.companyFilter.map(key => {
-        const company = Companies.find(c => c.key === key)
-        return company?.value || key
-      }).join(',')
+      props.companyFilter = formData.companyFilter
+        .map((key) => {
+          const company = Companies.find((c) => c.key === key)
+          return company?.value || key
+        })
+        .join(',')
     }
-    
+
     if (subtitleValue) {
       props.subtitle = subtitleValue
     }
@@ -124,16 +128,16 @@ export function convertFormDataToGravitaProps(formData: FormData) {
 // Generate URL from form data and selected station
 export function generateUrl(formData: FormData, selectedStation: any): string {
   const baseUrl = window.location.origin + window.location.pathname + '~/'
-  
+
   // Create a filtered version of formData based on interface
   const filteredFormData = filterFormDataByInterface(formData)
   const params = new URLSearchParams()
-  
+
   // Add station code if station is selected
   if (selectedStation) {
     params.append('station', selectedStation.code)
   }
-  
+
   // Add form data as URL params with special handling
   Object.entries(filteredFormData).forEach(([key, value]: [string, any]) => {
     // Handle traffic - if empty (nothing selected in UI), don't add to URL (means all)
@@ -144,7 +148,7 @@ export function generateUrl(formData: FormData, selectedStation: any): string {
       params.append(key, value.join(','))
       return
     }
-    
+
     // Handle language - only add if not default Spanish
     if (key === 'language') {
       if (value.length === 1 && value[0] === 'es') {
@@ -153,7 +157,7 @@ export function generateUrl(formData: FormData, selectedStation: any): string {
       params.append(key, value.join(','))
       return
     }
-    
+
     // Handle productFilter and companyFilter - only add if selected
     if (key === 'productFilter' || key === 'companyFilter') {
       if (Array.isArray(value) && value.length > 0) {
@@ -161,10 +165,10 @@ export function generateUrl(formData: FormData, selectedStation: any): string {
       }
       return
     }
-    
+
     // Handle subtitle with parameter replacement
     if (key === 'subtitle' && value) {
-      const subtitle = SubtitlesList.find(s => s.key === value)
+      const subtitle = SubtitlesList.find((s) => s.key === value)
       if (subtitle) {
         let subtitleValue = subtitle.value
         if (subtitle.takesParam && formData.subtitleParam) {
@@ -174,12 +178,12 @@ export function generateUrl(formData: FormData, selectedStation: any): string {
       }
       return
     }
-    
+
     // Skip subtitleParam as it's handled with subtitle
     if (key === 'subtitleParam') {
       return
     }
-    
+
     // Handle platformLocations for platform interface
     if (key === 'platformLocations') {
       if (Array.isArray(value) && value.length > 0) {
@@ -187,7 +191,7 @@ export function generateUrl(formData: FormData, selectedStation: any): string {
       }
       return
     }
-    
+
     // Handle displayNumber for number interface
     if (key === 'displayNumber') {
       if (value) {
@@ -195,7 +199,7 @@ export function generateUrl(formData: FormData, selectedStation: any): string {
       }
       return
     }
-    
+
     // Handle arrays
     if (Array.isArray(value)) {
       if (value.length > 0) {
@@ -204,46 +208,68 @@ export function generateUrl(formData: FormData, selectedStation: any): string {
     } else if (value !== '' && value !== null && value !== undefined) {
       params.append(key, String(value))
     }
+
+    // Handle fontSize
+    if (key === 'fontSize' && value && value !== 1) {
+      params.append('fontSize', String(value))
+    }
   })
-  
+
   return `${baseUrl}?${params.toString()}`
 }
 
 // Helper function to filter form data by interface
 export function filterPropsByInterface(props: any, interfaceKey: string) {
+  const allAllowedProps = ['interfaz', 'stationCode', 'traffic', 'language', 'fontSize']
   const allowedProps = {
-    'departures': [
-      'interfaz', 'stationCode', 'traffic', 'language', 'showHeader', 'showAccess', 
-      'showPlatform', 'showProduct', 'showNumber', 'countdown', 'platformFilter', 
-      'productFilter', 'companyFilter', 'subtitle'
+    departures: [
+      ...allAllowedProps,
+      'showHeader',
+      'showAccess',
+      'showPlatform',
+      'showProduct',
+      'showNumber',
+      'countdown',
+      'platformFilter',
+      'productFilter',
+      'companyFilter',
+      'subtitle',
     ],
-    'arrivals': [
-      'interfaz', 'stationCode', 'traffic', 'language', 'showHeader', 'showAccess', 
-      'showPlatform', 'showProduct', 'showNumber', 'countdown', 'platformFilter', 
-      'productFilter', 'companyFilter', 'subtitle'
+    arrivals: [
+      ...allAllowedProps,
+      'showHeader',
+      'showAccess',
+      'showPlatform',
+      'showProduct',
+      'showNumber',
+      'countdown',
+      'platformFilter',
+      'productFilter',
+      'companyFilter',
+      'subtitle',
     ],
-    'platform': [
-      'interfaz', 'stationCode', 'traffic', 'language', 'platformLocation', 
-      'platformMode', 'platformTrigger', 'showComposition', 'showObservation', 
-      'platformArrangement'
+    platform: [
+      ...allAllowedProps,
+      'platformLocation',
+      'platformMode',
+      'platformTrigger',
+      'showComposition',
+      'showObservation',
+      'platformArrangement',
     ],
-    'number': [
-      'interfaz', 'stationCode', 'platformLocation'
-    ],
-    'clock': [
-      'interfaz', 'stationCode'
-    ]
+    number: [...allAllowedProps, 'platformLocation'],
+    clock: [...allAllowedProps],
   }
-  
+
   const allowed = allowedProps[interfaceKey] || []
   const filtered: any = {}
-  
-  allowed.forEach(prop => {
+
+  allowed.forEach((prop) => {
     if (props[prop] !== undefined) {
       filtered[prop] = props[prop]
     }
   })
-  
+
   return filtered
 }
 
@@ -251,38 +277,62 @@ export function filterPropsByInterface(props: any, interfaceKey: string) {
 export function filterFormDataByInterface(data: any) {
   const interfaceKey = data.interfaz
   const allowedProps = {
-    'departures': [
-      'interfaz', 'traffic', 'language', 'showHeader', 'showAccess', 
-      'showPlatform', 'showProduct', 'showNumber', 'countdown', 'platformFilter', 
-      'productFilter', 'companyFilter', 'subtitle', 'subtitleParam'
+    departures: [
+      'interfaz',
+      'traffic',
+      'language',
+      'showHeader',
+      'showAccess',
+      'showPlatform',
+      'showProduct',
+      'showNumber',
+      'countdown',
+      'platformFilter',
+      'productFilter',
+      'companyFilter',
+      'subtitle',
+      'subtitleParam',
     ],
-    'arrivals': [
-      'interfaz', 'traffic', 'language', 'showHeader', 'showAccess', 
-      'showPlatform', 'showProduct', 'showNumber', 'countdown', 'platformFilter', 
-      'productFilter', 'companyFilter', 'subtitle', 'subtitleParam'
+    arrivals: [
+      'interfaz',
+      'traffic',
+      'language',
+      'showHeader',
+      'showAccess',
+      'showPlatform',
+      'showProduct',
+      'showNumber',
+      'countdown',
+      'platformFilter',
+      'productFilter',
+      'companyFilter',
+      'subtitle',
+      'subtitleParam',
     ],
-    'platform': [
-      'interfaz', 'traffic', 'language', 'platformLocations', 
-      'platformMode', 'platformTrigger', 'showComposition', 'showObservation', 
-      'platformArrangement'
+    platform: [
+      'interfaz',
+      'traffic',
+      'language',
+      'platformLocations',
+      'platformMode',
+      'platformTrigger',
+      'showComposition',
+      'showObservation',
+      'platformArrangement',
     ],
-    'number': [
-      'interfaz', 'displayNumber'
-    ],
-    'clock': [
-      'interfaz'
-    ]
+    number: ['interfaz', 'displayNumber'],
+    clock: ['interfaz'],
   }
-  
+
   const allowed = allowedProps[interfaceKey] || []
   const filtered: any = {}
-  
-  allowed.forEach(prop => {
+
+  allowed.forEach((prop) => {
     if (data[prop] !== undefined) {
       filtered[prop] = data[prop]
     }
   })
-  
+
   return filtered
 }
 
@@ -300,7 +350,7 @@ export function parseUrlParamsToFormData(params: URLSearchParams): FormData {
 
   // Map interface value back to key
   const interfaceValue = params.get('interfaz') || 'departures'
-  const interfaceObj = Interfaces.find(i => i.value === interfaceValue)
+  const interfaceObj = Interfaces.find((i) => i.value === interfaceValue)
   const interfaceKey = interfaceObj?.key || interfaceValue
 
   // Map traffic values back to keys
@@ -308,8 +358,8 @@ export function parseUrlParamsToFormData(params: URLSearchParams): FormData {
   let trafficKeys: string[] = []
   if (trafficParam) {
     const trafficValues = trafficParam.split(',')
-    trafficKeys = trafficValues.map(value => {
-      const traffic = Traffics.find(t => t.value === value)
+    trafficKeys = trafficValues.map((value) => {
+      const traffic = Traffics.find((t) => t.value === value)
       return traffic?.key || value
     })
   }
@@ -317,8 +367,8 @@ export function parseUrlParamsToFormData(params: URLSearchParams): FormData {
   // Map language values back to keys
   const languageParam = params.get('language') || 'ESP'
   const languageValues = languageParam.split(',')
-  const languageKeys = languageValues.map(value => {
-    const lang = Languages.find(l => l.value === value)
+  const languageKeys = languageValues.map((value) => {
+    const lang = Languages.find((l) => l.value === value)
     return lang?.key || value
   })
 
@@ -326,10 +376,10 @@ export function parseUrlParamsToFormData(params: URLSearchParams): FormData {
   const subtitleParam = params.get('subtitle') || ''
   let subtitleKey = ''
   let subtitleParamValue = ''
-  
+
   if (subtitleParam) {
     // Find matching subtitle by value
-    const subtitle = SubtitlesList.find(s => {
+    const subtitle = SubtitlesList.find((s) => {
       if (s.takesParam) {
         // For parameterized subtitles, check if the param starts with the base value
         const baseValue = s.value.replace('$', '')
@@ -337,7 +387,7 @@ export function parseUrlParamsToFormData(params: URLSearchParams): FormData {
       }
       return s.value === subtitleParam
     })
-    
+
     if (subtitle) {
       subtitleKey = subtitle.key
       if (subtitle.takesParam) {
@@ -352,8 +402,8 @@ export function parseUrlParamsToFormData(params: URLSearchParams): FormData {
   let productFilterKeys: string[] = []
   if (productFilterParam) {
     const productValues = productFilterParam.split(',')
-    productFilterKeys = productValues.map(value => {
-      const product = Products.find(p => p.value === value)
+    productFilterKeys = productValues.map((value) => {
+      const product = Products.find((p) => p.value === value)
       return product?.key || value
     })
   }
@@ -363,8 +413,8 @@ export function parseUrlParamsToFormData(params: URLSearchParams): FormData {
   let companyFilterKeys: string[] = []
   if (companyFilterParam) {
     const companyValues = companyFilterParam.split(',')
-    companyFilterKeys = companyValues.map(value => {
-      const company = Companies.find(c => c.value === value)
+    companyFilterKeys = companyValues.map((value) => {
+      const company = Companies.find((c) => c.value === value)
       return company?.key || value
     })
   }
@@ -391,6 +441,7 @@ export function parseUrlParamsToFormData(params: URLSearchParams): FormData {
     platformTrigger: params.get('platformTrigger') || 'announced',
     showComposition: parseBoolean(params.get('showComposition'), false),
     showObservation: parseBoolean(params.get('showObservation'), false),
-    platformArrangement: params.get('platformArrangement') || 'ascending'
+    platformArrangement: params.get('platformArrangement') || 'ascending',
+    fontSize: params.get('fontSize') || 1,
   }
 }

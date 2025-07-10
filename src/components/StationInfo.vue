@@ -1,5 +1,5 @@
 <template>
-  <div v-if="selectedStation" class="bg-slate-700 rounded-lg p-4 border border-slate-600">
+  <div v-if="selectedStation" class="bg-slate-700 rounded-lg p-4 pb-3 border border-slate-600">
     <div class="space-y-3 text-sm">
       <div class="flex items-center space-x-2">
         <span class="text-slate-400">Código:</span>
@@ -19,26 +19,48 @@
       </div>
 
       <div
-        class="flex items-center justify-between pt-1 border-t border-slate-600"
+        class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0 pt-2 border-t border-slate-600"
         v-if="trainsLoaded"
       >
-        <div class="flex items-center space-x-1.5 flex-shrink-0">
-          <div class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div>
-          <span class="text-green-400 text-xs">Conectado</span>
+        <div class="flex items-center justify-between sm:justify-start">
+          <div class="flex items-center space-x-1.5 flex-shrink-0">
+            <div
+              class="w-1.5 h-1.5 rounded-full animate-pulse"
+              :class="isDelayed ? 'bg-orange-400' : 'bg-green-400'"
+            ></div>
+            <span class="text-xs" :class="isDelayed ? 'text-orange-400' : 'text-green-400'">
+              Conectado
+            </span>
+          </div>
+          <div class="text-xs text-slate-400 sm:hidden">{{ trainsLoaded }} trenes cargados</div>
         </div>
-        <div class="text-xs text-slate-400 flex-shrink-0 hidden sm:block">
-          Trenes cargados: {{ trainsLoaded }}
+
+        <div class="hidden sm:flex sm:items-center sm:space-x-4">
+          <div class="text-xs text-slate-400">{{ trainsLoaded }} trenes cargados</div>
+          <div class="text-xs text-slate-400" v-if="currentTime">
+            Actualizado: {{ currentTime }}
+          </div>
         </div>
-        <div class="text-xs text-slate-400 flex-shrink-0" v-if="currentTime">
+
+        <div class="text-xs text-slate-400 sm:hidden" v-if="currentTime">
           Actualizado: {{ currentTime }}
         </div>
       </div>
-      <!-- Mobile-only row for train count -->
-      <div class="sm:hidden text-xs text-slate-400 pt-0.5" v-if="trainsLoaded">
-        Trenes cargados: {{ trainsLoaded }}
+
+      <!-- Warning message for delays -->
+      <div v-if="isDelayed && trainsLoaded" class="flex items-center space-x-1.5">
+        <svg class="w-3 h-3 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+          />
+        </svg>
+        <span class="text-xs text-orange-400">Adif está enviando la información con retraso</span>
       </div>
 
-      <div class="flex items-center space-x-2 pt-1 border-t border-slate-600" v-else>
+      <div class="flex items-center space-x-2 pt-2 border-t border-slate-600" v-if="!trainsLoaded">
         <div class="w-1.5 h-1.5 bg-red-300 rounded-full animate-pulse"></div>
         <span class="text-red-300 text-md">Adif no proporciona datos para esta estación</span>
       </div>
@@ -67,10 +89,33 @@ const currentTime = computed(() => {
 })
 
 const platforms = computed(() => {
-  return Object.keys(props.adifData?.station_settings?.platforms || {})
+  const platformKeys = Object.keys(props.adifData?.station_settings?.platforms || {})
+  return platformKeys.sort((a, b) => {
+    // Try to sort numerically first
+    const numA = parseInt(a, 10)
+    const numB = parseInt(b, 10)
+
+    if (!isNaN(numA) && !isNaN(numB)) {
+      return numA - numB
+    }
+
+    // Fall back to string comparison
+    return a.localeCompare(b)
+  })
 })
 
 const trainsLoaded = computed(() => {
   return props.adifData?.trains?.length || 0
+})
+
+const isDelayed = computed(() => {
+  const date = props.adifData?.station_settings?.data_time
+  if (!date) return false
+
+  const dataTime = new Date(date)
+  const now = new Date()
+  const diffInMinutes = (now - dataTime) / (1000 * 60)
+
+  return diffInMinutes > 30
 })
 </script>

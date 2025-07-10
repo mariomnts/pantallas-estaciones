@@ -1,6 +1,6 @@
 <template>
   <div class="bg-slate-800 rounded-xl shadow-2xl p-6 border border-slate-700">
-    <h3 class="text-lg font-medium text-white mb-4">Compartir pantalla</h3>
+    <h3 class="text-base font-medium text-white mb-3">Compartir pantalla</h3>
     <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
       <input
         :value="url"
@@ -15,8 +15,10 @@
           :disabled="props.disabled"
           :class="[
             'px-4 py-3 rounded-lg transition-colors flex items-center justify-center flex-1 sm:flex-initial',
-            copied ? 'bg-green-600 hover:bg-green-700 text-white' : 'bg-[#ACDAC6] hover:bg-[#9BC7B3] text-[#102341]',
-            props.disabled ? 'opacity-50 cursor-not-allowed' : ''
+            copied
+              ? 'bg-green-600 hover:bg-green-700 text-white'
+              : 'bg-dark-green hover:bg-light-green text-dark-blue',
+            props.disabled ? 'opacity-50 cursor-not-allowed' : '',
           ]"
         >
           <svg v-if="!copied" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -38,7 +40,7 @@
         <button
           @click="openUrl"
           :disabled="props.disabled"
-          class="px-4 py-3 bg-[#ACDAC6] text-[#102341] rounded-lg hover:bg-[#9BC7B3] transition-colors flex items-center justify-center flex-1 sm:flex-initial"
+          class="px-4 py-3 bg-dark-green text-dark-blue rounded-lg hover:bg-light-green transition-colors flex items-center justify-center flex-1 sm:flex-initial"
           :class="{ 'opacity-50 cursor-not-allowed': props.disabled }"
         >
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -55,22 +57,22 @@
   </div>
 </template>
 
-<script setup >
+<script setup>
 import { ref } from 'vue'
 
 const props = defineProps({
   url: String,
   disabled: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 })
 
 const copied = ref(false)
 
 const copyUrl = async () => {
   if (props.disabled) return
-  
+
   try {
     await navigator.clipboard.writeText(props.url)
     window?.gtag?.('event', 'url_copy_click')
