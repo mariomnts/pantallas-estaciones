@@ -31,7 +31,7 @@ const props = defineProps([
   'fontSize',
 ])
 
-const emit = defineEmits(['data'])
+const emit = defineEmits(['data', 'status'])
 
 const status = ref('connecting')
 const lastMessageRaw = ref(null)
@@ -116,6 +116,13 @@ watch(
     await connection.start()
     await connection.invoke('JoinInfo', `ECM-${props.stationCode}`)
     await connection.invoke('GetLastMessage', `ECM-${props.stationCode}`)
+  },
+)
+
+watch(
+  () => status.value,
+  (newStatus) => {
+    emit('status', newStatus)
   },
 )
 

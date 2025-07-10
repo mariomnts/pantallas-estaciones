@@ -18,48 +18,69 @@
         </div>
       </div>
 
-      <div class="pt-2 border-t border-slate-600" v-if="trainsLoaded">
-        <!-- Desktop: single row with three sections, Mobile: two rows -->
-        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
-          <!-- Conectado (always left) -->
-          <div class="flex items-center space-x-1.5">
-            <div
-              class="w-1.5 h-1.5 rounded-full animate-pulse"
-              :class="isDelayed ? 'bg-orange-400' : 'bg-green-400'"
-            ></div>
-            <span class="text-xs" :class="isDelayed ? 'text-orange-400' : 'text-green-400'">
-              Conectado
-            </span>
-          </div>
-
-          <!-- Trenes cargados (center on desktop, new line left on mobile) -->
-          <div class="text-xs text-slate-400 sm:flex-1 sm:text-center">
-            {{ trainsLoaded }} trenes cargados
-          </div>
-
-          <!-- Actualizado (always right) -->
-          <div class="text-xs text-slate-400" v-if="currentTime">
-            Actualizado: {{ currentTime }}
+      <div v-if="!adifStatus || adifStatus === 'connecting'">
+        <div class="pt-2 border-t border-slate-600">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
+            <div class="flex items-center space-x-1.5">
+              <div class="w-1.5 h-1.5 rounded-full animate-pulse bg-orange-400"></div>
+              <span class="text-xs text-orange-400">Conectando</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Warning message for delays -->
-      <div v-if="isDelayed && trainsLoaded" class="flex items-center space-x-1.5">
-        <svg class="w-3 h-3 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
-          />
-        </svg>
-        <span class="text-xs text-orange-400">Adif está enviando la información con retraso</span>
-      </div>
+      <div v-else>
+        <div class="pt-2 border-t border-slate-600" v-if="trainsLoaded">
+          <!-- Desktop: single row with three sections, Mobile: two rows -->
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
+            <!-- Conectado (always left) -->
+            <div class="flex items-center space-x-1.5">
+              <div
+                class="w-1.5 h-1.5 rounded-full animate-pulse"
+                :class="isDelayed ? 'bg-orange-400' : 'bg-green-400'"
+              ></div>
+              <span class="text-xs" :class="isDelayed ? 'text-orange-400' : 'text-green-400'">
+                Conectado
+              </span>
+            </div>
 
-      <div class="flex items-center space-x-2 pt-2 border-t border-slate-600" v-if="!trainsLoaded">
-        <div class="w-1.5 h-1.5 bg-red-300 rounded-full animate-pulse"></div>
-        <span class="text-red-300 text-md">Adif no proporciona datos para esta estación</span>
+            <!-- Trenes cargados (center on desktop, new line left on mobile) -->
+            <div class="text-xs text-slate-400 sm:flex-1 sm:text-center">
+              {{ trainsLoaded }} trenes cargados
+            </div>
+
+            <!-- Actualizado (always right) -->
+            <div class="text-xs text-slate-400" v-if="currentTime">
+              Actualizado: {{ currentTime }}
+            </div>
+          </div>
+        </div>
+
+        <!-- Warning message for delays -->
+        <div v-if="isDelayed && trainsLoaded" class="flex items-center space-x-1.5">
+          <svg
+            class="w-3 h-3 text-orange-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+            />
+          </svg>
+          <span class="text-xs text-orange-400">Adif está enviando la información con retraso</span>
+        </div>
+
+        <div
+          class="flex items-center space-x-2 pt-2 border-t border-slate-600"
+          v-if="!trainsLoaded"
+        >
+          <div class="w-1.5 h-1.5 bg-red-300 rounded-full animate-pulse"></div>
+          <span class="text-red-300 text-md">Adif no proporciona datos para esta estación</span>
+        </div>
       </div>
     </div>
   </div>
@@ -71,6 +92,7 @@ import { computed } from 'vue'
 const props = defineProps({
   selectedStation: Object,
   adifData: Object,
+  adifStatus: Object,
 })
 
 const currentTime = computed(() => {

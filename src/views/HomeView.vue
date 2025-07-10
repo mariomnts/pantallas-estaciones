@@ -25,7 +25,11 @@
             />
 
             <!-- Station Info Display -->
-            <StationInfo :selected-station="selectedStation" :adif-data="adifData" />
+            <StationInfo
+              :selected-station="selectedStation"
+              :adif-data="adifData"
+              :adif-status="adifStatus"
+            />
 
             <!-- Interface Selection -->
             <div :class="{ 'opacity-50 pointer-events-none': !selectedStation }">
@@ -731,7 +735,12 @@
               class="transition-all duration-700 ease-in-out overflow-hidden rounded-lg border border-slate-600"
               :class="isPortrait ? 'aspect-[9/16]' : 'aspect-[16/9]'"
             >
-              <Gravita class="gravita w-full h-full" v-bind="gravitaProps" @data="handledata" />
+              <Gravita
+                class="gravita w-full h-full"
+                v-bind="gravitaProps"
+                @data="handledata"
+                @status="handlestatus"
+              />
             </div>
 
             <!-- Aspect Ratio Toggle Button - Left Aligned -->
@@ -858,6 +867,7 @@ const formData = ref({
 // Component state
 const selectedStation = ref(Stations.find((s) => s.code === '17000') || null)
 const adifData = ref(null)
+const adifStatus = ref(null)
 const isPortrait = ref(false)
 const manualPlatform = ref('')
 
@@ -948,6 +958,10 @@ const handleStationCleared = () => {
 
 const handledata = (data) => {
   adifData.value = data
+}
+
+const handlestatus = (status) => {
+  adifStatus.value = status
 }
 
 // Platform management methods
