@@ -15,10 +15,9 @@
           :disabled="props.disabled"
           :class="[
             'px-4 py-3 rounded-lg transition-colors flex items-center justify-center flex-1 sm:flex-initial',
-            copied ? 'bg-green-600 hover:bg-green-700' : 'bg-[#ACDAC6] hover:bg-[#9BC7B3]',
+            copied ? 'bg-green-600 hover:bg-green-700 text-white' : 'bg-[#ACDAC6] hover:bg-[#9BC7B3] text-[#102341]',
             props.disabled ? 'opacity-50 cursor-not-allowed' : ''
           ]"
-          :class="copied ? 'text-white' : 'text-[#102341]'"
         >
           <svg v-if="!copied" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
