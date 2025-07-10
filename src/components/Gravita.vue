@@ -54,8 +54,6 @@ const iframeSrc = computed(() => {
     }
   })
 
-  console.log('paramsObj:', paramsObj)
-
   const params = new URLSearchParams(paramsObj)
 
   return props.stationCode

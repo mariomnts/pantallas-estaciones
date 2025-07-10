@@ -89,11 +89,11 @@
 <script setup>
 import { computed } from 'vue'
 
-const props = defineProps({
-  selectedStation: Object,
-  adifData: Object,
-  adifStatus: Object,
-})
+const props = defineProps([
+  'adifData',
+  'adifStatus',
+  'selectedStation',
+])
 
 const currentTime = computed(() => {
   const date = props.adifData?.station_settings?.data_time
