@@ -40,11 +40,13 @@ onMounted(() => {
   const urlParams = new URLSearchParams(window.location.search)
   if (urlParams.toString()) {
     formData.value = parseUrlParamsToFormData(urlParams)
-  }
 
-  window?.gtag?.('event', 'full_screen_view', {
+    window?.gtag?.('event', 'full_screen_view', {
     ...formData.value,
   })
+  }
+
+  
 })
 
 // Convert form data to Gravita props
