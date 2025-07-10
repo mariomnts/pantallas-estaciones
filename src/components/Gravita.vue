@@ -8,7 +8,7 @@ const props = defineProps([
   'interfaz',
   'countdown',
   'traffic',
-  'language',
+  'languages',
   'showHeader',
   'showAccess',
   'showPlatform',

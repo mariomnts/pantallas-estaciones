@@ -224,7 +224,7 @@
                   <div v-for="option in Languages" :key="option.key">
                     <input
                       :id="`lang-${option.key}`"
-                      v-model="formData.language"
+                      v-model="formData.languages"
                       :value="option.key"
                       type="checkbox"
                       class="sr-only"
@@ -233,7 +233,7 @@
                       :for="`lang-${option.key}`"
                       class="inline-flex items-center px-2 py-1.5 rounded-lg text-xs cursor-pointer transition-all"
                       :class="
-                        formData.language.includes(option.key)
+                        formData.languages.includes(option.key)
                           ? 'bg-dark-green text-dark-blue'
                           : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
                       "
@@ -842,7 +842,7 @@ const formData = ref({
   interfaz: 'departures',
   stationCode: '17000',
   traffic: [], // Default none selected in UI
-  language: ['es'], // Default Spanish
+  languages: ['es'], // Default Spanish
   showHeader: true,
   showAccess: false,
   showPlatform: true,

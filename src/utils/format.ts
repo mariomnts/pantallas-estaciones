@@ -4,7 +4,7 @@ export interface FormData {
   interfaz: string
   stationCode: string
   traffic: string[]
-  language: string[]
+  languages: string[]
   showHeader: boolean
   showAccess: boolean
   showPlatform: boolean
@@ -41,8 +41,8 @@ export function convertFormDataToGravitaProps(formData: FormData) {
           })
           .join(',')
 
-  // Handle language - send selected ones
-  const languageValues = formData.language
+  // Handle languages - send selected ones
+  const languagesValues = formData.languages
     .map((key) => {
       const lang = Languages.find((l) => l.key === key)
       return lang?.value
@@ -67,7 +67,7 @@ export function convertFormDataToGravitaProps(formData: FormData) {
     interfaz: interfaceObj?.value || formData.interfaz,
     stationCode: formData.stationCode,
     traffic: trafficValues,
-    language: languageValues,
+    languages: languagesValues,
     fontSize: formData.fontSize || 1,
   }
 
@@ -149,8 +149,8 @@ export function generateUrl(formData: FormData, selectedStation: any): string {
       return
     }
 
-    // Handle language - only add if not default Spanish
-    if (key === 'language') {
+    // Handle languages - only add if not default Spanish
+    if (key === 'languages') {
       if (value.length === 1 && value[0] === 'es') {
         return // Don't add default Spanish to URL
       }
@@ -220,7 +220,7 @@ export function generateUrl(formData: FormData, selectedStation: any): string {
 
 // Helper function to filter form data by interface
 export function filterPropsByInterface(props: any, interfaceKey: string) {
-  const allAllowedProps = ['interfaz', 'stationCode', 'traffic', 'language', 'fontSize']
+  const allAllowedProps = ['interfaz', 'stationCode', 'traffic', 'languages', 'fontSize']
   const allowedProps = {
     departures: [
       ...allAllowedProps,
@@ -280,7 +280,7 @@ export function filterFormDataByInterface(data: any) {
     departures: [
       'interfaz',
       'traffic',
-      'language',
+      'languages',
       'showHeader',
       'showAccess',
       'showPlatform',
@@ -296,7 +296,7 @@ export function filterFormDataByInterface(data: any) {
     arrivals: [
       'interfaz',
       'traffic',
-      'language',
+      'languages',
       'showHeader',
       'showAccess',
       'showPlatform',
@@ -312,7 +312,7 @@ export function filterFormDataByInterface(data: any) {
     platform: [
       'interfaz',
       'traffic',
-      'language',
+      'languages',
       'platformLocations',
       'platformMode',
       'platformTrigger',
@@ -364,10 +364,10 @@ export function parseUrlParamsToFormData(params: URLSearchParams): FormData {
     })
   }
 
-  // Map language values back to keys
-  const languageParam = params.get('language') || 'ESP'
-  const languageValues = languageParam.split(',')
-  const languageKeys = languageValues.map((value) => {
+  // Map languages values back to keys
+  const languagesParam = params.get('languages') || 'ESP'
+  const languagesValues = languagesParam.split(',')
+  const languagesKeys = languagesValues.map((value) => {
     const lang = Languages.find((l) => l.value === value)
     return lang?.key || value
   })
@@ -423,7 +423,7 @@ export function parseUrlParamsToFormData(params: URLSearchParams): FormData {
     interfaz: interfaceKey,
     stationCode: params.get('station') || '',
     traffic: trafficKeys,
-    language: languageKeys,
+    languages: languagesKeys,
     showHeader: parseBoolean(params.get('showHeader'), true),
     showAccess: parseBoolean(params.get('showAccess'), true),
     showPlatform: parseBoolean(params.get('showPlatform'), true),

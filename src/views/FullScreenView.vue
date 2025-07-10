@@ -13,7 +13,7 @@ const formData = ref({
   interfaz: 'departures',
   stationCode: '',
   traffic: [],
-  language: ['es'],
+  languages: ['es'],
   showHeader: true,
   showAccess: true,
   showPlatform: true,
