@@ -43,7 +43,7 @@
                     />
                     <label
                       :for="option.key"
-                      class="flex flex-col items-center justify-center p-4 rounded-lg border cursor-pointer transition-all text-center h-20"
+                      class="flex items-center justify-center p-3 rounded-lg border cursor-pointer transition-all text-center h-12"
                       :class="
                         formData.interfaz === option.key
                           ? 'bg-[#ACDAC6] border-[#ACDAC6] text-[#102341]'
@@ -51,21 +51,21 @@
                       "
                     >
                       <!-- Icon for each interface type -->
-                      <div class="mb-1">
+                      <div class="mr-2">
                         <!-- Departures icon -->
-                        <svg v-if="option.key === 'departures'" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg v-if="option.key === 'departures'" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                         </svg>
                         <!-- Arrivals icon -->
-                        <svg v-else-if="option.key === 'arrivals'" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg v-else-if="option.key === 'arrivals'" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"/>
                         </svg>
                         <!-- Platform icon -->
-                        <svg v-else-if="option.key === 'platform'" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg v-else-if="option.key === 'platform'" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1"/>
                         </svg>
                       </div>
-                      <span class="text-xs font-medium uppercase">{{ option.label }}</span>
+                      <span class="text-sm font-medium uppercase">{{ option.label }}</span>
                     </label>
                   </div>
                 </div>
@@ -82,7 +82,7 @@
                     />
                     <label
                       :for="option.key"
-                      class="flex flex-col items-center justify-center p-4 rounded-lg border cursor-pointer transition-all text-center h-20"
+                      class="flex items-center justify-center p-3 rounded-lg border cursor-pointer transition-all text-center h-12"
                       :class="
                         formData.interfaz === option.key
                           ? 'bg-[#ACDAC6] border-[#ACDAC6] text-[#102341]'
@@ -90,17 +90,17 @@
                       "
                     >
                       <!-- Icon for each interface type -->
-                      <div class="mb-1">
+                      <div class="mr-2">
                         <!-- Number icon -->
-                        <svg v-if="option.key === 'number'" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg v-if="option.key === 'number'" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"/>
                         </svg>
                         <!-- Clock icon -->
-                        <svg v-else-if="option.key === 'clock'" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg v-else-if="option.key === 'clock'" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                       </div>
-                      <span class="text-xs font-medium uppercase">{{ option.label }}</span>
+                      <span class="text-sm font-medium uppercase">{{ option.label }}</span>
                     </label>
                   </div>
                 </div>
