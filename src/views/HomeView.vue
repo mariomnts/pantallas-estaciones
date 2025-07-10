@@ -60,12 +60,17 @@
                           stroke="currentColor"
                           viewBox="0 0 24 24"
                         >
+                          <!-- Clear departure arrow -->
                           <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                            d="M5 12h14m-4-4l4 4-4 4"
                           />
+                          <!-- Simple train shape -->
+                          <rect x="2" y="9" width="8" height="6" rx="1" stroke-width="2" />
+                          <circle cx="4" cy="16" r="1" fill="currentColor" />
+                          <circle cx="8" cy="16" r="1" fill="currentColor" />
                         </svg>
                         <!-- Arrivals icon -->
                         <svg
@@ -75,12 +80,17 @@
                           stroke="currentColor"
                           viewBox="0 0 24 24"
                         >
+                          <!-- Clear arrival arrow -->
                           <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                            d="M7 16l-4-4m0 0l4-4m-4 4h18"
+                            d="M19 12H5m4-4l-4 4 4 4"
                           />
+                          <!-- Simple train shape -->
+                          <rect x="14" y="9" width="8" height="6" rx="1" stroke-width="2" />
+                          <circle cx="16" cy="16" r="1" fill="currentColor" />
+                          <circle cx="20" cy="16" r="1" fill="currentColor" />
                         </svg>
                         <!-- Platform icon -->
                         <svg
@@ -90,11 +100,19 @@
                           stroke="currentColor"
                           viewBox="0 0 24 24"
                         >
+                          <!-- Railway tracks -->
                           <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1"
+                            d="M3 10h18M3 14h18"
+                          />
+                          <!-- Railway ties/sleepers -->
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.5"
+                            d="M6 8v8M9 8v8M12 8v8M15 8v8M18 8v8"
                           />
                         </svg>
                       </div>
@@ -182,7 +200,7 @@
                     />
                     <label
                       :for="`traffic-${option.key}`"
-                      class="inline-flex items-center px-3 py-2 rounded-lg text-sm cursor-pointer transition-all"
+                      class="inline-flex items-center px-2 py-1.5 rounded-lg text-xs cursor-pointer transition-all"
                       :class="
                         formData.traffic.includes(option.key)
                           ? 'bg-dark-green text-dark-blue'
@@ -209,7 +227,7 @@
                     />
                     <label
                       :for="`lang-${option.key}`"
-                      class="inline-flex items-center px-3 py-2 rounded-lg text-sm cursor-pointer transition-all"
+                      class="inline-flex items-center px-2 py-1.5 rounded-lg text-xs cursor-pointer transition-all"
                       :class="
                         formData.language.includes(option.key)
                           ? 'bg-dark-green text-dark-blue'
@@ -229,9 +247,9 @@
               :class="{ 'opacity-50 pointer-events-none': !selectedStation }"
             >
               <label class="block text-sm font-medium text-slate-300 mb-3">Vías</label>
-              <!-- When platforms are available, show checkboxes -->
-              <div v-if="availablePlatforms.length > 0" class="flex flex-wrap gap-2">
-                <div v-for="platform in availablePlatforms" :key="platform">
+              <!-- Show all platforms (available + manually added) -->
+              <div v-if="allPlatforms.length > 0" class="flex flex-wrap gap-2">
+                <div v-for="platform in allPlatforms" :key="platform">
                   <input
                     :id="`platform-${platform}`"
                     v-model="formData.platformFilter"
@@ -241,7 +259,7 @@
                   />
                   <label
                     :for="`platform-${platform}`"
-                    class="inline-flex items-center px-2 py-1 rounded text-sm cursor-pointer transition-all"
+                    class="inline-flex items-center px-2 py-1 rounded text-sm cursor-pointer transition-all group"
                     :class="
                       formData.platformFilter.includes(platform)
                         ? 'bg-dark-green text-dark-blue'
@@ -249,10 +267,48 @@
                     "
                   >
                     {{ platform }}
+                    <!-- Show X button for manually added platforms -->
+                    <button
+                      v-if="!availablePlatforms.includes(platform)"
+                      @click.prevent="removePlatform(platform)"
+                      class="ml-1 opacity-50 hover:opacity-100 w-3 h-3 flex items-center justify-center"
+                      :class="
+                        formData.platformFilter.includes(platform)
+                          ? 'text-dark-blue'
+                          : 'text-slate-300'
+                      "
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-2 w-2"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"
+                        />
+                      </svg>
+                    </button>
                   </label>
                 </div>
+                <!-- Single custom platform input -->
+                <div class="flex items-center gap-1">
+                  <input
+                    v-model="manualPlatform"
+                    type="text"
+                    placeholder="Ej: 1A"
+                    class="w-16 px-2 py-1 bg-slate-700 border border-slate-600 rounded text-sm text-white placeholder-slate-400 focus:ring-1 focus:ring-dark-green focus:border-dark-green"
+                    @keyup.enter="addManualPlatform"
+                  />
+                  <button
+                    @click.prevent="addManualPlatform"
+                    class="px-2 py-1 bg-slate-700 text-slate-300 text-sm rounded border border-slate-600 hover:bg-slate-600 transition-colors flex-shrink-0"
+                  >
+                    <span class="text-xs">+</span>
+                  </button>
+                </div>
               </div>
-              <!-- When no platforms are available, show manual input -->
+              <!-- When no platforms are available at all, show manual input with instructions -->
               <div v-else class="space-y-3">
                 <p class="text-sm text-slate-400">
                   No hay información de vías. Introduce manualmente:
@@ -319,7 +375,7 @@
                     />
                     <label
                       :for="`product-${product.key}`"
-                      class="inline-flex items-center px-3 py-2 rounded-lg text-sm cursor-pointer transition-all"
+                      class="inline-flex items-center px-2 py-1.5 rounded-lg text-xs cursor-pointer transition-all"
                       :class="
                         formData.productFilter.includes(product.key)
                           ? 'bg-dark-green text-dark-blue'
@@ -346,7 +402,7 @@
                     />
                     <label
                       :for="`company-${company.key}`"
-                      class="inline-flex items-center px-3 py-2 rounded-lg text-sm cursor-pointer transition-all"
+                      class="inline-flex items-center px-2 py-1.5 rounded-lg text-xs cursor-pointer transition-all"
                       :class="
                         formData.companyFilter.includes(company.key)
                           ? 'bg-dark-green text-dark-blue'
@@ -439,9 +495,9 @@
             >
               <div>
                 <label class="block text-sm font-medium text-slate-300 mb-3">Vías</label>
-                <!-- When platforms are available, show checkboxes -->
-                <div v-if="availablePlatforms.length > 0" class="flex flex-wrap gap-2">
-                  <div v-for="platform in availablePlatforms" :key="platform">
+                <!-- Show all platforms (available + manually added) -->
+                <div v-if="allPlatformLocations.length > 0" class="flex flex-wrap gap-2">
+                  <div v-for="platform in allPlatformLocations" :key="platform">
                     <input
                       :id="`platform-loc-${platform}`"
                       v-model="formData.platformLocations"
@@ -451,7 +507,7 @@
                     />
                     <label
                       :for="`platform-loc-${platform}`"
-                      class="inline-flex items-center px-2 py-1 rounded text-sm cursor-pointer transition-all"
+                      class="inline-flex items-center px-2 py-1 rounded text-sm cursor-pointer transition-all group"
                       :class="
                         formData.platformLocations.includes(platform)
                           ? 'bg-dark-green text-dark-blue'
@@ -459,10 +515,48 @@
                       "
                     >
                       {{ platform }}
+                      <!-- Show X button for manually added platforms -->
+                      <button
+                        v-if="!availablePlatforms.includes(platform)"
+                        @click.prevent="removePlatformLocation(platform)"
+                        class="ml-1 opacity-50 hover:opacity-100 w-3 h-3 flex items-center justify-center"
+                        :class="
+                          formData.platformLocations.includes(platform)
+                            ? 'text-dark-blue'
+                            : 'text-slate-300'
+                        "
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-2 w-2"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"
+                          />
+                        </svg>
+                      </button>
                     </label>
                   </div>
+                  <!-- Single custom platform input -->
+                  <div class="flex items-center gap-1">
+                    <input
+                      v-model="manualPlatform"
+                      type="text"
+                      placeholder="Ej: 1A"
+                      class="w-16 px-2 py-1 bg-slate-700 border border-slate-600 rounded text-sm text-white placeholder-slate-400 focus:ring-1 focus:ring-dark-green focus:border-dark-green"
+                      @keyup.enter="addManualPlatformLocation"
+                    />
+                    <button
+                      @click.prevent="addManualPlatformLocation"
+                      class="px-2 py-1 bg-slate-700 text-slate-300 text-sm rounded border border-slate-600 hover:bg-slate-600 transition-colors flex-shrink-0"
+                    >
+                      <span class="text-xs">+</span>
+                    </button>
+                  </div>
                 </div>
-                <!-- When no platforms are available, show manual input -->
+                <!-- When no platforms are available at all, show manual input with instructions -->
                 <div v-else class="space-y-3">
                   <p class="text-sm text-slate-400">
                     No hay información de vías. Introduce manualmente:
@@ -793,6 +887,42 @@ const availablePlatforms = computed(() => {
   })
 })
 
+// Computed property for all platforms (available + manually added)
+const allPlatforms = computed(() => {
+  const available = availablePlatforms.value
+  const manual = formData.value.platformFilter.filter((p) => !available.includes(p))
+  return [...available, ...manual].sort((a, b) => {
+    // Try to sort numerically first
+    const numA = parseInt(a, 10)
+    const numB = parseInt(b, 10)
+
+    if (!isNaN(numA) && !isNaN(numB)) {
+      return numA - numB
+    }
+
+    // Fall back to string comparison
+    return a.localeCompare(b)
+  })
+})
+
+// Computed property for all platform locations (available + manually added)
+const allPlatformLocations = computed(() => {
+  const available = availablePlatforms.value
+  const manual = formData.value.platformLocations.filter((p) => !available.includes(p))
+  return [...available, ...manual].sort((a, b) => {
+    // Try to sort numerically first
+    const numA = parseInt(a, 10)
+    const numB = parseInt(b, 10)
+
+    if (!isNaN(numA) && !isNaN(numB)) {
+      return numA - numB
+    }
+
+    // Fall back to string comparison
+    return a.localeCompare(b)
+  })
+})
+
 // Check if subtitle takes parameter
 const subtitleTakesParam = computed(() => {
   const subtitle = SubtitlesList.find((s) => s.key === formData.value.subtitle)
@@ -824,36 +954,9 @@ const handledata = (data) => {
 const addManualPlatform = () => {
   if (!manualPlatform.value.trim()) return
 
-  // Handle comma-separated values
-  if (manualPlatform.value.includes(',')) {
-    const platforms = manualPlatform.value
-      .split(',')
-      .map((p) => p.trim())
-      .filter((p) => p)
-    platforms.forEach((platform) => {
-      if (!formData.value.platformFilter.includes(platform)) {
-        formData.value.platformFilter.push(platform)
-      }
-    })
-  }
-  // Handle range syntax (e.g., 1-5)
-  else if (manualPlatform.value.includes('-')) {
-    const [start, end] = manualPlatform.value.split('-').map((p) => parseInt(p.trim(), 10))
-    if (!isNaN(start) && !isNaN(end) && start <= end) {
-      for (let i = start; i <= end; i++) {
-        const platform = i.toString()
-        if (!formData.value.platformFilter.includes(platform)) {
-          formData.value.platformFilter.push(platform)
-        }
-      }
-    }
-  }
-  // Handle single value
-  else {
-    const platform = manualPlatform.value.trim()
-    if (!formData.value.platformFilter.includes(platform)) {
-      formData.value.platformFilter.push(platform)
-    }
+  const platform = manualPlatform.value.trim()
+  if (!formData.value.platformFilter.includes(platform)) {
+    formData.value.platformFilter.push(platform)
   }
 
   // Clear input after adding
@@ -870,36 +973,9 @@ const removePlatform = (platform) => {
 const addManualPlatformLocation = () => {
   if (!manualPlatform.value.trim()) return
 
-  // Handle comma-separated values
-  if (manualPlatform.value.includes(',')) {
-    const platforms = manualPlatform.value
-      .split(',')
-      .map((p) => p.trim())
-      .filter((p) => p)
-    platforms.forEach((platform) => {
-      if (!formData.value.platformLocations.includes(platform)) {
-        formData.value.platformLocations.push(platform)
-      }
-    })
-  }
-  // Handle range syntax (e.g., 1-5)
-  else if (manualPlatform.value.includes('-')) {
-    const [start, end] = manualPlatform.value.split('-').map((p) => parseInt(p.trim(), 10))
-    if (!isNaN(start) && !isNaN(end) && start <= end) {
-      for (let i = start; i <= end; i++) {
-        const platform = i.toString()
-        if (!formData.value.platformLocations.includes(platform)) {
-          formData.value.platformLocations.push(platform)
-        }
-      }
-    }
-  }
-  // Handle single value
-  else {
-    const platform = manualPlatform.value.trim()
-    if (!formData.value.platformLocations.includes(platform)) {
-      formData.value.platformLocations.push(platform)
-    }
+  const platform = manualPlatform.value.trim()
+  if (!formData.value.platformLocations.includes(platform)) {
+    formData.value.platformLocations.push(platform)
   }
 
   // Clear input after adding

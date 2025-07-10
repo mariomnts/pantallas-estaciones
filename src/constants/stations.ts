@@ -352,7 +352,7 @@ export const Stations = [
     },
   },
   {
-    name: 'Valencia Joaquín Sorolla',
+    name: 'València Joaquín Sorolla',
     code: '03216',
     location: {
       town: 'Valencia',
@@ -5976,7 +5976,7 @@ export const Stations = [
     name: 'Los Balbases (APD)',
     code: '11008',
     location: {
-      town: 'Balbases (LOS)',
+      town: 'Balbases ',
       province: 'Burgos',
       country: 'España',
       lat: 42.174118,
@@ -6746,7 +6746,7 @@ export const Stations = [
     name: 'Los Molinos-Guadarrama',
     code: '12005',
     location: {
-      town: 'Molinos (LOS)',
+      town: 'Molinos ',
       province: 'Madrid',
       country: 'España',
       lat: 40.7066368,
@@ -7989,7 +7989,7 @@ export const Stations = [
     name: 'Los Corrales De Buelna',
     code: '14210',
     location: {
-      town: 'Corrales De Buelna (LOS)',
+      town: 'Corrales De Buelna ',
       province: 'Cantabria',
       country: 'España',
       lat: 43.257961,
@@ -8000,7 +8000,7 @@ export const Stations = [
     name: 'Las Caldas De Besaya',
     code: '14211',
     location: {
-      town: 'Corrales De Buelna (LOS)',
+      town: 'Corrales De Buelna ',
       province: 'Cantabria',
       country: 'España',
       lat: 43.295518,
@@ -8165,7 +8165,7 @@ export const Stations = [
     name: 'Lombera',
     code: '14232',
     location: {
-      town: 'Corrales De Buelna (LOS)',
+      town: 'Corrales De Buelna ',
       province: 'Cantabria',
       country: 'España',
       lat: 43.276219,
@@ -13841,7 +13841,7 @@ export const Stations = [
     name: 'Yebenes (APT)',
     code: '37106',
     location: {
-      town: 'Yébenes (LOS)',
+      town: 'Yébenes ',
       province: 'Toledo',
       country: 'España',
       lat: 39.553763,
@@ -13852,7 +13852,7 @@ export const Stations = [
     name: 'Urda',
     code: '37107',
     location: {
-      town: 'Yébenes (LOS)',
+      town: 'Yébenes ',
       province: 'Toledo',
       country: 'España',
       lat: 39.4454489,
@@ -13863,7 +13863,7 @@ export const Stations = [
     name: 'El Emperador',
     code: '37108',
     location: {
-      town: 'Yébenes (LOS)',
+      town: 'Yébenes ',
       province: 'Toledo',
       country: 'España',
       lat: 39.322303,
@@ -14402,7 +14402,7 @@ export const Stations = [
     name: 'Los Santos De Maimona',
     code: '40006',
     location: {
-      town: 'Santos De Maimona (LOS)',
+      town: 'Santos De Maimona ',
       province: 'Badajoz',
       country: 'España',
       lat: 38.449724,
@@ -17834,7 +17834,7 @@ export const Stations = [
     name: 'Los Barrios',
     code: '55019',
     location: {
-      town: 'Barrios (LOS)',
+      town: 'Barrios ',
       province: 'Cádiz',
       country: 'España',
       lat: 36.173998,
@@ -19976,17 +19976,6 @@ export const Stations = [
     },
   },
   {
-    name: 'Desconocido',
-    code: '65222',
-    location: {
-      town: "Aldea (L')",
-      province: undefined,
-      country: 'España',
-      lat: 40.753648,
-      lon: 0.614438,
-    },
-  },
-  {
     name: 'Castelló',
     code: '65300',
     location: {
@@ -21762,7 +21751,7 @@ export const Stations = [
     code: '7007 ',
     location: {
       town: 'Águilas',
-      province: 'Desconocido',
+      province: null,
       country: 'España',
       lat: null,
       lon: null,
@@ -26711,7 +26700,7 @@ export const Stations = [
     name: 'Los Ausines (APD)',
     code: '82119',
     location: {
-      town: 'Ausines (LOS)',
+      town: 'Ausines ',
       province: 'Soria',
       country: 'España',
       lat: null,
@@ -27173,7 +27162,7 @@ export const Stations = [
     name: 'Navalcaballo (APD)',
     code: '84105',
     location: {
-      town: 'Rábanos (LOS)',
+      town: 'Rábanos ',
       province: 'Soria',
       country: 'España',
       lat: null,
@@ -27691,7 +27680,7 @@ export const Stations = [
     code: '87011',
     location: {
       town: 'Paris',
-      province: 'Desconocido',
+      province: null,
       country: 'España',
       lat: 48.8424,
       lon: 2.3664,
@@ -27712,7 +27701,7 @@ export const Stations = [
     name: undefined,
     code: '87018',
     location: {
-      town: 'Desconocido',
+      town: null,
       province: undefined,
       country: 'España',
       lat: null,
@@ -27900,7 +27889,7 @@ export const Stations = [
     code: '87088',
     location: {
       town: 'Narbona',
-      province: 'Desconocido',
+      province: null,
       country: 'España',
       lat: 43.190253,
       lon: 3.005716,
@@ -27922,7 +27911,7 @@ export const Stations = [
     code: '87100',
     location: {
       town: 'Montpellier',
-      province: 'Desconocido',
+      province: null,
       country: 'España',
       lat: 43.5951821,
       lon: 3.9216961,
@@ -27955,7 +27944,7 @@ export const Stations = [
     code: '87173',
     location: {
       town: 'Montpellier',
-      province: 'Desconocido',
+      province: null,
       country: 'España',
       lat: 43.604852,
       lon: 3.880491,
@@ -28131,7 +28120,7 @@ export const Stations = [
     code: '87635',
     location: {
       town: 'Chessy',
-      province: 'Desconocido',
+      province: null,
       country: 'España',
       lat: null,
       lon: null,
@@ -29087,7 +29076,7 @@ export const Stations = [
     name: 'Sara Baras',
     code: '97002',
     location: {
-      town: 'Desconocido',
+      town: null,
       province: 'Barcelona',
       country: 'España',
       lat: 41.38737,
@@ -29098,7 +29087,7 @@ export const Stations = [
     name: 'Terracota',
     code: '97003',
     location: {
-      town: 'Desconocido',
+      town: null,
       province: 'Barcelona',
       country: 'España',
       lat: 41.38737,
@@ -29109,7 +29098,7 @@ export const Stations = [
     name: 'Portave.Ferrari',
     code: '97004',
     location: {
-      town: 'Desconocido',
+      town: null,
       province: 'Barcelona',
       country: 'España',
       lat: 41.0847081,
@@ -29241,7 +29230,7 @@ export const Stations = [
     name: 'Ferraryland',
     code: '97016',
     location: {
-      town: 'Desconocido',
+      town: null,
       province: 'Barcelona',
       country: 'España',
       lat: 41.0847081,
@@ -30440,7 +30429,7 @@ export const Stations = [
     name: 'Sol-The Hole',
     code: '99212',
     location: {
-      town: 'Desconocido',
+      town: null,
       province: 'Madrid',
       country: 'España',
       lat: 0.0,
@@ -30451,7 +30440,7 @@ export const Stations = [
     name: 'Wildlife',
     code: '99213',
     location: {
-      town: 'Desconocido',
+      town: null,
       province: 'Madrid',
       country: 'España',
       lat: 40.423313,
@@ -30484,7 +30473,7 @@ export const Stations = [
     name: 'Sol - King Of Pop',
     code: '99216',
     location: {
-      town: 'Desconocido',
+      town: null,
       province: 'Madrid',
       country: 'España',
       lat: 40.416845,

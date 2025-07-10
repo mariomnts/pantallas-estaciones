@@ -1,6 +1,6 @@
 <template>
-  <div class="w-screen h-screen overflow-hidden">
-    <Gravita class="w-screen h-screen" v-bind="gravitaProps" />
+  <div class="fullscreen-container">
+    <Gravita class="w-full h-full" v-bind="gravitaProps" />
   </div>
 </template>
 
@@ -53,3 +53,23 @@ const gravitaProps = computed(() => {
   return convertFormDataToGravitaProps(formData.value)
 })
 </script>
+
+<style scoped>
+.fullscreen-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh; /* Dynamic viewport height for mobile browsers */
+  overflow: hidden;
+  background: var(--color-blue, #001b41);
+}
+
+/* Fallback for browsers that don't support dvh */
+@supports not (height: 100dvh) {
+  .fullscreen-container {
+    height: 100vh;
+  }
+}
+</style>

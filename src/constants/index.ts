@@ -35,6 +35,7 @@ export const Languages = [
   { key: 'eu', value: 'EUS', label: 'Euskera' },
   { key: 'gl', value: 'GAL', label: 'Galego' },
   { key: 'va', value: 'VAL', label: 'Valencià' },
+  { key: 'fr', value: 'FRA', label: 'Français' },
 ]
 
 export const Companies = [

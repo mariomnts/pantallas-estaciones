@@ -18,12 +18,11 @@
         </div>
       </div>
 
-      <div
-        class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0 pt-2 border-t border-slate-600"
-        v-if="trainsLoaded"
-      >
-        <div class="flex items-center justify-between sm:justify-start">
-          <div class="flex items-center space-x-1.5 flex-shrink-0">
+      <div class="pt-2 border-t border-slate-600" v-if="trainsLoaded">
+        <!-- Desktop: single row with three sections, Mobile: two rows -->
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
+          <!-- Conectado (always left) -->
+          <div class="flex items-center space-x-1.5">
             <div
               class="w-1.5 h-1.5 rounded-full animate-pulse"
               :class="isDelayed ? 'bg-orange-400' : 'bg-green-400'"
@@ -32,18 +31,16 @@
               Conectado
             </span>
           </div>
-          <div class="text-xs text-slate-400 sm:hidden">{{ trainsLoaded }} trenes cargados</div>
-        </div>
 
-        <div class="hidden sm:flex sm:items-center sm:space-x-4">
-          <div class="text-xs text-slate-400">{{ trainsLoaded }} trenes cargados</div>
+          <!-- Trenes cargados (center on desktop, new line left on mobile) -->
+          <div class="text-xs text-slate-400 sm:flex-1 sm:text-center">
+            {{ trainsLoaded }} trenes cargados
+          </div>
+
+          <!-- Actualizado (always right) -->
           <div class="text-xs text-slate-400" v-if="currentTime">
             Actualizado: {{ currentTime }}
           </div>
-        </div>
-
-        <div class="text-xs text-slate-400 sm:hidden" v-if="currentTime">
-          Actualizado: {{ currentTime }}
         </div>
       </div>
 
