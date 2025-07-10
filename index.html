@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pantallas estaciones ADIF</title>
+
+    <meta name="description" content="Generador de pantallas de estaciones" />
+
+    <meta property="og:title" content="Pantallas de estaciones ADIF" />
+    <meta property="og:description" content="Generador de pantallas de estaciones" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:image" content="https://pantallas-adif.vercel.app/card.png" />
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-602Y87XFGR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-602Y87XFGR')
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

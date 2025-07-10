@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'AdifHauss';
+  src:
+    url('/fonts/AdifHauss-Medium.woff2') format('woff2'),
+    url('/fonts/AdifHauss-Medium.woff') format('woff');
+}
+
+@import 'tailwindcss';
+
+:root {
+  font-family:
+    'AdifHauss',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --adif-blue: #001b41;
+  --adif-light-green: #bfefd5;
+}
+
+* {
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  ring: 2px;
+  ring-color: #3b82f6;
+  ring-offset: 2px;
+}
+
+input[type='checkbox']:checked {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+input[type='radio']:checked {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}

@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "strict": false,            // disables all *strict* checks
+    "noImplicitAny": false,     // allow implicit any
+    "noUncheckedIndexedAccess": false,
+    "skipLibCheck": true,       // stop checking .d.ts files
+    "noEmitOnError": false,     // continue emitting output even when there are type errors
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ]
+}
