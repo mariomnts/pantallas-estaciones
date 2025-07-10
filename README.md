@@ -2,4 +2,4 @@
 
 ![Website](/public/card.png)
 
-https://adif-pantallas.vercel.app/
+Link al proyecto: https://adif-pantallas.vercel.app/

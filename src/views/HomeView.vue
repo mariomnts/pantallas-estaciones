@@ -641,6 +641,15 @@
             >
           </div>
           <span class="hidden sm:inline">•</span>
+          <div>
+            <a
+              href="https://github.com/mariomnts/pantallas-adif"
+              target="_blank"
+              class="hover:text-slate-400 transition-colors"
+              >Código en GitHub</a
+            >
+          </div>
+          <span class="hidden sm:inline">•</span>
           <div>Propósito educacional. Sin afiliación con Adif</div>
         </div>
       </footer>
