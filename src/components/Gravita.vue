@@ -77,7 +77,7 @@ function handleIncoming(raw) {
   lastMessageRaw.value = raw
   sendBoardData(raw)
   emit('data', JSON.parse(raw))
-  // console.log('[SignalR] Received message:', JSON.parse(raw))
+  console.log('[SignalR] Received message:', JSON.parse(raw))
 }
 
 onMounted(async () => {

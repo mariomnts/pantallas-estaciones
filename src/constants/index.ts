@@ -13,6 +13,7 @@ export const Traffics = [
   { key: 'av', value: 'A', label: 'Alta Velocidad' },
   { key: 'largaDistancia', value: 'L', label: 'Larga Distancia' },
   { key: 'regional', value: 'R', label: 'Regional' },
+  { key: 'interno', value: '-', label: 'Servicio interno' },
 ]
 
 export const Products = [
