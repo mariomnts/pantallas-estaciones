@@ -10,6 +10,7 @@ export const Interfaces = [
 
 export const Traffics = [
   { key: 'cercanias', value: 'C', label: 'Cercanías' },
+  { key: 'av', value: 'A', label: 'Alta Velocidad' },
   { key: 'largaDistancia', value: 'L', label: 'Larga Distancia' },
   { key: 'regional', value: 'R', label: 'Regional' },
 ]
