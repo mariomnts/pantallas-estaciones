@@ -12,7 +12,7 @@
           <span
             v-for="platform in platforms"
             :key="platform"
-            class="px-2 py-1 bg-slate-600 rounded text-xs"
+            class="px-2 py-1 bg-slate-600 rounded text-xs text-slate-400 "
             >{{ platform }}</span
           >
         </div>

@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount, computed, defineProps, watch } from 'vue'
 import * as signalR from '@microsoft/signalr'
-import Adif from './Adif.vue'
+import Adif from './icons/AdifLogo.vue'
 
 const props = defineProps([
   'stationCode',

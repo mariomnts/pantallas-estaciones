@@ -2,13 +2,13 @@
   <div class="min-h-screen bg-slate-900 p-6">
     <div class="max-w-7xl mx-auto">
       <div
-        class="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-3 space-y-3 sm:space-y-0 mb-8"
+        class="flex flex-col md:flex-row items-center space-x-0 md:space-x-3 space-y-3 md:space-y-0 mb-7"
       >
-        <div class="w-24 sm:w-30 h-12 sm:h-16 flex items-center justify-center flex-shrink-0 mr-5">
-          <Adif class="adif-logo w-full h-full" />
+        <div class="h-23 md:h-18 flex items-center justify-center flex-shrink-0 mr-5">
+          <Logo class="logo w-full h-full" />
         </div>
-        <div class="text-center sm:text-left">
-          <h1 class="text-2xl font-bold text-white leading-tight">Pantallas estaciones Adif</h1>
+        <div class="text-center md:text-left">
+          <h1 class="text-2xl font-bold text-white leading-tight">Pantallas estaciones</h1>
           <p class="text-slate-400 text-md mt-1">Configurador pantallas información estaciones</p>
         </div>
       </div>
@@ -765,6 +765,13 @@
                 <span>{{ isPortrait ? '16:9' : '9:16' }}</span>
               </button>
             </div>
+
+            <div class="mt-6 bg-light-green p-3 rounded-md border border-dark-green">
+              <p class="text-xs text-dark-blue">
+                Proyecto no oficial ni afiliado con ADIF con proposito educativo que permite
+                configurar el sistema de información a viajeros de sus estaciones.
+              </p>
+            </div>
           </div>
 
           <!-- URL Sharing -->
@@ -796,14 +803,12 @@
           <span class="hidden sm:inline">•</span>
           <div>
             <a
-              href="https://github.com/mariomnts/pantallas-adif"
+              href="https://github.com/mariomnts/pantallas-estaciones"
               target="_blank"
               class="hover:text-slate-400 transition-colors"
               >Código en GitHub</a
             >
           </div>
-          <span class="hidden sm:inline">•</span>
-          <div>Propósito educacional. Sin afiliación con Adif</div>
         </div>
       </footer>
     </div>
@@ -812,7 +817,7 @@
 
 <script setup>
 import { ref, computed, watch } from 'vue'
-import Adif from '../components/Adif.vue'
+import Logo from '../components/icons/Logo.vue'
 import Gravita from '../components/Gravita.vue'
 import StationFinder from '../components/StationFinder.vue'
 import StationInfo from '../components/StationInfo.vue'
@@ -1028,7 +1033,9 @@ watch(
   background: var(--color-blue);
 }
 
-.adif-logo {
-  fill: var(--color-light-green);
+.logo {
+  stroke: var(--color-light-green);
+  color: var(--color-light-green);
+  fill: none;
 }
 </style>

@@ -36,7 +36,7 @@
         placeholder="Buscar estación..."
         :class="[
           'w-full pl-10 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-dark-green focus:border-dark-green text-white placeholder-slate-400',
-          selectedStation ? 'pr-12' : 'pr-4',
+          selectedStation ? 'pr-12 font-semibold' : 'pr-4',
         ]"
       />
       <div
