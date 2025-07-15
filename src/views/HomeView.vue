@@ -645,7 +645,7 @@
                 </div>
               </div>
 
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label class="block text-sm font-medium text-slate-300 mb-2"
                     >Disposición del andén</label
@@ -663,7 +663,7 @@
                     </option>
                   </select>
                 </div>
-              </div>
+              </div> -->
 
               <div class="flex flex-wrap gap-3">
                 <div v-for="option in PlatformBooleanOptions" :key="option.key" class="relative">
@@ -717,9 +717,6 @@
                 >
                 <input
                   v-model="formData.displayNumber"
-                  type="number"
-                  min="0"
-                  max="99"
                   class="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-dark-green focus:border-dark-green text-white"
                 />
               </div>

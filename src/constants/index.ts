@@ -17,17 +17,17 @@ export const Traffics = [
 ]
 
 export const Products = [
-  { key: 'iryo', value: 'IRYO', label: 'Iryo' },
+  { key: 'iryo', value: 'IRYO,IRY', label: 'Iryo' },
   { key: 'avlo', value: 'AVLO', label: 'Avlo' },
   { key: 'md', value: 'MD', label: 'Media Distancia' },
-  { key: 'avant', value: 'AVANT', label: 'Avant' },
-  { key: 'rex', value: 'REX', label: 'Reg. Express' },
-  { key: 'intercity', value: 'ICITY', label: 'Intercity' },
-  { key: 'ave', value: 'AVE', label: 'AVE' },
+  { key: 'avant', value: 'AVANT,AVA', label: 'Avant' },
+  { key: 'rex', value: 'REX', label: 'Reg. Exprés' },
+  { key: 'intercity', value: 'ICITY,INTC', label: 'Intercity' },
+  { key: 'ave', value: 'AVE,A,AVE624', label: 'AVE' },
   { key: 'sserv', value: 'SSERV,ESPECRF', label: 'Serv. Especiales' },
   { key: 'cercanias', value: 'CERCAN', label: 'Cercanías' },
-  { key: 'ouigo', value: 'OUIGO', label: 'Ouigo' },
-  { key: 'alvia', value: 'ALVIA', label: 'Alvia' },
+  { key: 'ouigo', value: 'OUIGO,OUI', label: 'Ouigo' },
+  { key: 'alvia', value: 'ALVIA,B', label: 'Alvia' },
 ]
 
 export const Languages = [
@@ -98,6 +98,6 @@ export const VisualizationOptions = [
 ]
 
 export const PlatformBooleanOptions = [
-  { key: 'showComposition', label: 'Mostrar composición' },
-  { key: 'showObservation', label: 'Mostrar observación' },
+  // { key: 'showComposition', label: 'Mostrar composición' },
+  // { key: 'showObservation', label: 'Mostrar observación' },
 ]

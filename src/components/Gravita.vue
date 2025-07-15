@@ -29,6 +29,7 @@ const props = defineProps([
   'showObservation',
   'subtitle',
   'fontSize',
+  'customFilter',
 ])
 
 const emit = defineEmits(['data', 'status'])
@@ -43,6 +44,10 @@ const iframeSrc = computed(() => {
   const paramsObj = {
     rutaRecursos: '../../../recursos',
     IdEstacion: props.stationCode,
+
+    // 'pin-position': '0,120,240',
+    // 'pin-style': 'stairs_up_left,pin,stairs_up_right',
+    // 'if-no-trains': 'number',
   }
 
   // Add all other props that are not undefined, converting camelCase to kebab-case
@@ -70,14 +75,43 @@ function handleBoardLoad() {
 }
 
 function sendBoardData(msg) {
-  board.value?.contentWindow?.postMessage({ target: 'grvta.setData', objData: msg }, '*')
+  const data = JSON.parse(msg)
+
+  data?.trains?.forEach((train) => {
+    const destinationCercanias = train?.destinations?.[0]?.line
+      ?.replace(/ROD(BCN|.*?)|CER(MAD|.*?)/, '')
+      .trim()
+
+    if (train?.traffic_type == 'C' && destinationCercanias) {
+      train.custom_categories = [
+        destinationCercanias,
+        destinationCercanias.replace(/([A-Z])0([1-9])/g, '$1$2'),
+        destinationCercanias.replace(/([A-Z])0([1-9])/g, '$1-$2'),
+      ]
+    }
+
+    if (['IRYO', 'IRY'].includes(train?.commercial_id?.[0]?.product)) {
+      train.company = 'IRYO'
+    }
+
+    if (['OUIGO', 'OUI'].includes(train?.commercial_id?.[0]?.product)) {
+      train.company = 'OUIGO'
+    }
+  })
+
+  board.value?.contentWindow?.postMessage(
+    { target: 'grvta.setData', objData: JSON.stringify(data) },
+    '*',
+  )
 }
 
 function handleIncoming(raw) {
   lastMessageRaw.value = raw
   sendBoardData(raw)
   emit('data', JSON.parse(raw))
-  console.log('[SignalR] Received message:', JSON.parse(raw))
+  if (!import.meta.env.PROD) {
+    console.log('>', JSON.parse(raw))
+  }
 }
 
 onMounted(async () => {
