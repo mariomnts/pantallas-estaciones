@@ -1,0 +1,17 @@
+/* TEAM */
+Developer: Mario Montes
+Contact: mmontesgonz [at] gmail.com
+Twitter: @mariomnts
+From: Spain
+
+/* PROJECT */
+Name: Pantallas Estaciones
+Description: Unofficial ADIF station display configurator
+License: Open Source
+Repository: https://github.com/mariomnts/pantallas-estaciones
+Live Site: https://pantallas-estaciones.vercel.app/
+
+/* LEGAL */
+This project is unofficial and not affiliated with ADIF.
+Created for educational purposes only.
+All train data belongs to ADIF.
