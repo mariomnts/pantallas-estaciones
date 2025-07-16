@@ -24,6 +24,8 @@ export interface FormData {
   showObservation: boolean
   platformArrangement: string
   fontSize: string | number
+  customFilter: string[]
+  stopFilter: string[]
 }
 
 export function convertFormDataToGravitaProps(formData: FormData) {
@@ -82,6 +84,16 @@ export function convertFormDataToGravitaProps(formData: FormData) {
     props.platformFilter = Array.isArray(formData.platformFilter)
       ? formData.platformFilter.join(',')
       : formData.platformFilter
+
+    // Only add customFilter if custom filters are selected
+    if (formData.customFilter.length > 0) {
+      props.customFilter = formData.customFilter.join(',')
+    }
+
+    // Only add stopFilter if stop filters are selected
+    if (formData.stopFilter.length > 0) {
+      props.stopFilter = formData.stopFilter.join(',')
+    }
 
     // Only add productFilter if products are selected
     if (formData.productFilter.length > 0) {
@@ -158,8 +170,13 @@ export function generateUrl(formData: FormData, selectedStation: any): string {
       return
     }
 
-    // Handle productFilter and companyFilter - only add if selected
-    if (key === 'productFilter' || key === 'companyFilter') {
+    // Handle productFilter, companyFilter, customFilter, and stopFilter - only add if selected
+    if (
+      key === 'productFilter' ||
+      key === 'companyFilter' ||
+      key === 'customFilter' ||
+      key === 'stopFilter'
+    ) {
       if (Array.isArray(value) && value.length > 0) {
         params.append(key, value.join(','))
       }
@@ -200,6 +217,12 @@ export function generateUrl(formData: FormData, selectedStation: any): string {
       return
     }
 
+    // Handle fontSize
+    if (key === 'fontSize' && value && value !== 1) {
+      params.append('fontSize', String(value))
+      return
+    }
+
     // Handle arrays
     if (Array.isArray(value)) {
       if (value.length > 0) {
@@ -207,11 +230,6 @@ export function generateUrl(formData: FormData, selectedStation: any): string {
       }
     } else if (value !== '' && value !== null && value !== undefined) {
       params.append(key, String(value))
-    }
-
-    // Handle fontSize
-    if (key === 'fontSize' && value && value !== 1) {
-      params.append('fontSize', String(value))
     }
   })
 
@@ -233,6 +251,8 @@ export function filterPropsByInterface(props: any, interfaceKey: string) {
       'platformFilter',
       'productFilter',
       'companyFilter',
+      'customFilter',
+      'stopFilter',
       'subtitle',
     ],
     arrivals: [
@@ -246,6 +266,8 @@ export function filterPropsByInterface(props: any, interfaceKey: string) {
       'platformFilter',
       'productFilter',
       'companyFilter',
+      'customFilter',
+      'stopFilter',
       'subtitle',
     ],
     platform: [
@@ -290,8 +312,11 @@ export function filterFormDataByInterface(data: any) {
       'platformFilter',
       'productFilter',
       'companyFilter',
+      'customFilter',
+      'stopFilter',
       'subtitle',
       'subtitleParam',
+      'fontSize',
     ],
     arrivals: [
       'interfaz',
@@ -306,8 +331,11 @@ export function filterFormDataByInterface(data: any) {
       'platformFilter',
       'productFilter',
       'companyFilter',
+      'customFilter',
+      'stopFilter',
       'subtitle',
       'subtitleParam',
+      'fontSize',
     ],
     platform: [
       'interfaz',
@@ -319,9 +347,10 @@ export function filterFormDataByInterface(data: any) {
       'showComposition',
       'showObservation',
       'platformArrangement',
+      'fontSize',
     ],
-    number: ['interfaz', 'displayNumber'],
-    clock: ['interfaz'],
+    number: ['interfaz', 'displayNumber', 'fontSize'],
+    clock: ['interfaz', 'fontSize'],
   }
 
   const allowed = allowedProps[interfaceKey] || []
@@ -443,5 +472,7 @@ export function parseUrlParamsToFormData(params: URLSearchParams): FormData {
     showObservation: parseBoolean(params.get('showObservation'), false),
     platformArrangement: params.get('platformArrangement') || 'ascending',
     fontSize: params.get('fontSize') || 1,
+    customFilter: parseArray(params.get('customFilter')),
+    stopFilter: parseArray(params.get('stopFilter')),
   }
 }

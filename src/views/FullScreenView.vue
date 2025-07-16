@@ -23,6 +23,8 @@ const formData = ref({
   platformFilter: [],
   productFilter: [],
   companyFilter: [],
+  customFilter: [],
+  stopFilter: [],
   subtitle: '',
   subtitleParam: '',
   platformLocations: [],

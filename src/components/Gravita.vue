@@ -30,6 +30,7 @@ const props = defineProps([
   'subtitle',
   'fontSize',
   'customFilter',
+  'stopFilter',
 ])
 
 const emit = defineEmits(['data', 'status'])
@@ -117,7 +118,7 @@ function handleIncoming(raw) {
 onMounted(async () => {
   connection = new signalR.HubConnectionBuilder()
     .withUrl('https://info.adif.es/InfoStation', {
-      skipNegotiation: true, // evita la petición /negotiate
+      skipNegotiation: true,
       transport: signalR.HttpTransportType.WebSockets,
     })
     .configureLogging(signalR.LogLevel.Error)

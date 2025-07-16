@@ -32,11 +32,11 @@ export const Products = [
 
 export const Languages = [
   { key: 'es', value: 'ESP', label: 'Español' },
-  { key: 'en', value: 'ENG', label: 'English' },
   { key: 'ca', value: 'CAT', label: 'Català' },
   { key: 'eu', value: 'EUS', label: 'Euskera' },
   { key: 'gl', value: 'GAL', label: 'Galego' },
   { key: 'va', value: 'VAL', label: 'Valencià' },
+  { key: 'en', value: 'ENG', label: 'English' },
   { key: 'fr', value: 'FRA', label: 'Français' },
 ]
 
@@ -55,7 +55,11 @@ export const SubtitlesList = [
   { key: 'ldav', value: 'LDAV', label: 'Larga Distancia · Alta Velocidad' },
   { key: 'mdld', value: 'MDLD', label: 'Regional · Larga Distancia' },
   { key: 'mdlconv', value: 'MDLDCONV', label: 'Regional · Larga Distancia Convencional' },
-  { key: 'cercmdldconv', value: 'CERCMDLDCONV', label: 'Cercanías · Regional · Larga Distancia Convencional' },
+  {
+    key: 'cercmdldconv',
+    value: 'CERCMDLDCONV',
+    label: 'Cercanías · Regional · Larga Distancia Convencional',
+  },
   { key: 'aeropuerto', value: 'AEROPUERTO', label: 'Conexiones al aeropuerto' },
   {
     key: 'operador:$',
@@ -98,6 +102,6 @@ export const VisualizationOptions = [
 ]
 
 export const PlatformBooleanOptions = [
-  // { key: 'showComposition', label: 'Mostrar composición' },
-  // { key: 'showObservation', label: 'Mostrar observación' },
+  { key: 'showComposition', label: 'Mostrar composición' },
+  { key: 'showObservation', label: 'Mostrar observación' },
 ]

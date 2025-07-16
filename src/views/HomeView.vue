@@ -14,720 +14,31 @@
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <!-- Left Panel - Form -->
-        <div class="bg-slate-800 rounded-xl shadow-2xl p-6 border border-slate-700">
-          <form @submit.prevent class="space-y-6">
-            <!-- Station Selection -->
-            <StationFinder
-              v-model="formData.estacion"
-              @station-selected="handleStationSelected"
-              @station-cleared="handleStationCleared"
-            />
+        <div class="bg-slate-800 rounded-xl shadow-2xl p-4 lg:p-5 border border-slate-700">
+          <StationFinder
+            class="mb-4"
+            v-model="formData.estacion"
+            @station-selected="handleStationSelected"
+            @station-cleared="handleStationCleared"
+          />
 
-            <!-- Station Info Display -->
-            <StationInfo
-              :selected-station="selectedStation"
-              :adif-data="adifData"
-              :adif-status="adifStatus"
-            />
+          <StationInfo
+            class="mb-4"
+            :selected-station="selectedStation"
+            :adif-data="adifData"
+            :adif-status="adifStatus"
+          />
 
-            <!-- Interface Selection -->
-            <div :class="{ 'opacity-50 pointer-events-none': !selectedStation }">
-              <label class="block text-sm font-medium text-slate-300 mb-3">Pantalla</label>
-              <div class="space-y-3">
-                <!-- First row: Salidas, Llegadas, Vía -->
-                <div class="grid grid-cols-3 gap-3">
-                  <div v-for="option in Interfaces.slice(0, 3)" :key="option.key" class="relative">
-                    <input
-                      :id="option.key"
-                      v-model="formData.interfaz"
-                      :value="option.key"
-                      type="radio"
-                      class="sr-only"
-                    />
-                    <label
-                      :for="option.key"
-                      class="flex items-center justify-center p-3 rounded-lg border cursor-pointer transition-all text-center h-12"
-                      :class="
-                        formData.interfaz === option.key
-                          ? 'bg-dark-green border-dark-green text-dark-blue'
-                          : 'bg-slate-700 border-slate-600 text-slate-300 hover:bg-slate-600'
-                      "
-                    >
-                      <!-- Icon for each interface type -->
-                      <div class="mr-2">
-                        <!-- Departures icon -->
-                        <svg
-                          v-if="option.key === 'departures'"
-                          class="w-4 h-4"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <!-- Clear departure arrow -->
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M5 12h14m-4-4l4 4-4 4"
-                          />
-                          <!-- Simple train shape -->
-                          <rect x="2" y="9" width="8" height="6" rx="1" stroke-width="2" />
-                          <circle cx="4" cy="16" r="1" fill="currentColor" />
-                          <circle cx="8" cy="16" r="1" fill="currentColor" />
-                        </svg>
-                        <!-- Arrivals icon -->
-                        <svg
-                          v-else-if="option.key === 'arrivals'"
-                          class="w-4 h-4"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <!-- Clear arrival arrow -->
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M19 12H5m4-4l-4 4 4 4"
-                          />
-                          <!-- Simple train shape -->
-                          <rect x="14" y="9" width="8" height="6" rx="1" stroke-width="2" />
-                          <circle cx="16" cy="16" r="1" fill="currentColor" />
-                          <circle cx="20" cy="16" r="1" fill="currentColor" />
-                        </svg>
-                        <!-- Platform icon -->
-                        <svg
-                          v-else-if="option.key === 'platform'"
-                          class="w-4 h-4"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <!-- Railway tracks -->
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M3 10h18M3 14h18"
-                          />
-                          <!-- Railway ties/sleepers -->
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.5"
-                            d="M6 8v8M9 8v8M12 8v8M15 8v8M18 8v8"
-                          />
-                        </svg>
-                      </div>
-                      <span class="text-sm font-medium uppercase">{{ option.label }}</span>
-                    </label>
-                  </div>
-                </div>
-
-                <!-- Second row: Número, Reloj -->
-                <div class="grid grid-cols-2 gap-3">
-                  <div v-for="option in Interfaces.slice(3, 5)" :key="option.key" class="relative">
-                    <input
-                      :id="option.key"
-                      v-model="formData.interfaz"
-                      :value="option.key"
-                      type="radio"
-                      class="sr-only"
-                    />
-                    <label
-                      :for="option.key"
-                      class="flex items-center justify-center p-3 rounded-lg border cursor-pointer transition-all text-center h-12"
-                      :class="
-                        formData.interfaz === option.key
-                          ? 'bg-dark-green border-dark-green text-dark-blue'
-                          : 'bg-slate-700 border-slate-600 text-slate-300 hover:bg-slate-600'
-                      "
-                    >
-                      <!-- Icon for each interface type -->
-                      <div class="mr-2">
-                        <!-- Number icon -->
-                        <svg
-                          v-if="option.key === 'number'"
-                          class="w-4 h-4"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"
-                          />
-                        </svg>
-                        <!-- Clock icon -->
-                        <svg
-                          v-else-if="option.key === 'clock'"
-                          class="w-4 h-4"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                          />
-                        </svg>
-                      </div>
-                      <span class="text-sm font-medium uppercase">{{ option.label }}</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Traffic, Language in one line -->
-            <div
-              v-if="formData.interfaz !== 'clock' && formData.interfaz !== 'number'"
-              class="grid grid-cols-1 md:grid-cols-2 gap-6"
-              :class="{ 'opacity-50 pointer-events-none': !selectedStation }"
-            >
-              <!-- Traffic Selection -->
-              <div>
-                <label class="block text-sm font-medium text-slate-300 mb-3">Tráfico</label>
-                <div class="flex flex-wrap gap-2">
-                  <div v-for="option in Traffics" :key="option.key">
-                    <input
-                      :id="`traffic-${option.key}`"
-                      v-model="formData.traffic"
-                      :value="option.key"
-                      type="checkbox"
-                      class="sr-only"
-                    />
-                    <label
-                      :for="`traffic-${option.key}`"
-                      class="inline-flex items-center px-2 py-1.5 rounded-lg text-xs cursor-pointer transition-all"
-                      :class="
-                        formData.traffic.includes(option.key)
-                          ? 'bg-dark-green text-dark-blue'
-                          : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
-                      "
-                    >
-                      {{ option.label }}
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Language Selection -->
-              <div>
-                <label class="block text-sm font-medium text-slate-300 mb-3">Idiomas</label>
-                <div class="flex flex-wrap gap-2">
-                  <div v-for="option in Languages" :key="option.key">
-                    <input
-                      :id="`lang-${option.key}`"
-                      v-model="formData.languages"
-                      :value="option.key"
-                      type="checkbox"
-                      class="sr-only"
-                    />
-                    <label
-                      :for="`lang-${option.key}`"
-                      class="inline-flex items-center px-2 py-1.5 rounded-lg text-xs cursor-pointer transition-all"
-                      :class="
-                        formData.languages.includes(option.key)
-                          ? 'bg-dark-green text-dark-blue'
-                          : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
-                      "
-                    >
-                      {{ option.label }}
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Platform Filter in its own line -->
-            <div
-              v-if="formData.interfaz === 'arrivals' || formData.interfaz === 'departures'"
-              :class="{ 'opacity-50 pointer-events-none': !selectedStation }"
-            >
-              <label class="block text-sm font-medium text-slate-300 mb-3">Vías</label>
-              <!-- Show all platforms (available + manually added) -->
-              <div v-if="allPlatforms.length > 0" class="flex flex-wrap gap-2">
-                <div v-for="platform in allPlatforms" :key="platform">
-                  <input
-                    :id="`platform-${platform}`"
-                    v-model="formData.platformFilter"
-                    :value="platform"
-                    type="checkbox"
-                    class="sr-only"
-                  />
-                  <label
-                    :for="`platform-${platform}`"
-                    class="inline-flex items-center px-2 py-1 rounded text-sm cursor-pointer transition-all group"
-                    :class="
-                      formData.platformFilter.includes(platform)
-                        ? 'bg-dark-green text-dark-blue'
-                        : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
-                    "
-                  >
-                    {{ platform }}
-                    <!-- Show X button for manually added platforms -->
-                    <button
-                      v-if="!availablePlatforms.includes(platform)"
-                      @click.prevent="removePlatform(platform)"
-                      class="ml-1 opacity-50 hover:opacity-100 w-3 h-3 flex items-center justify-center"
-                      :class="
-                        formData.platformFilter.includes(platform)
-                          ? 'text-dark-blue'
-                          : 'text-slate-300'
-                      "
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-2 w-2"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"
-                        />
-                      </svg>
-                    </button>
-                  </label>
-                </div>
-                <!-- Single custom platform input -->
-                <div class="flex items-center gap-1">
-                  <input
-                    v-model="manualPlatform"
-                    type="text"
-                    placeholder="Ej: 1A"
-                    class="w-16 px-2 py-1 bg-slate-700 border border-slate-600 rounded text-sm text-white placeholder-slate-400 focus:ring-1 focus:ring-dark-green focus:border-dark-green"
-                    @keyup.enter="addManualPlatform"
-                  />
-                  <button
-                    @click.prevent="addManualPlatform"
-                    class="px-2 py-1 bg-slate-700 text-slate-300 text-sm rounded border border-slate-600 hover:bg-slate-600 transition-colors flex-shrink-0"
-                  >
-                    <span class="text-xs">+</span>
-                  </button>
-                </div>
-              </div>
-              <!-- When no platforms are available at all, show manual input with instructions -->
-              <div v-else class="space-y-3">
-                <p class="text-sm text-slate-400">
-                  No hay información de vías. Introduce manualmente:
-                </p>
-                <div class="flex items-center gap-2">
-                  <input
-                    v-model="manualPlatform"
-                    type="text"
-                    placeholder="Ej: 1,2,3 o 1-5"
-                    class="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-dark-green focus:border-dark-green text-white placeholder-slate-400"
-                  />
-                  <button
-                    @click.prevent="addManualPlatform"
-                    class="px-3 py-2 bg-slate-700 text-slate-300 text-sm rounded-md border border-slate-600 hover:bg-slate-600 transition-colors flex-shrink-0"
-                  >
-                    <span>+</span>
-                  </button>
-                </div>
-                <!-- Display manually added platforms -->
-                <div v-if="formData.platformFilter.length > 0" class="flex flex-wrap gap-2 mt-3">
-                  <div v-for="platform in formData.platformFilter" :key="platform" class="group">
-                    <div
-                      class="inline-flex items-center px-2 py-1 rounded text-sm bg-dark-green text-dark-blue"
-                    >
-                      {{ platform }}
-                      <button
-                        @click.prevent="removePlatform(platform)"
-                        class="ml-1 text-dark-blue opacity-50 hover:opacity-100 w-4 h-4 flex items-center justify-center"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="h-3 w-3"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Conditional Fields for Arrivals/Departures -->
-            <div
-              v-if="formData.interfaz === 'arrivals' || formData.interfaz === 'departures'"
-              class="space-y-6"
-              :class="{ 'opacity-50 pointer-events-none': !selectedStation }"
-            >
-              <!-- Product Filter -->
-              <div>
-                <label class="block text-sm font-medium text-slate-300 mb-3">Productos</label>
-                <div class="flex flex-wrap gap-2">
-                  <div v-for="product in Products" :key="product.key">
-                    <input
-                      :id="`product-${product.key}`"
-                      v-model="formData.productFilter"
-                      :value="product.key"
-                      type="checkbox"
-                      class="sr-only"
-                    />
-                    <label
-                      :for="`product-${product.key}`"
-                      class="inline-flex items-center px-2 py-1.5 rounded-lg text-xs cursor-pointer transition-all"
-                      :class="
-                        formData.productFilter.includes(product.key)
-                          ? 'bg-dark-green text-dark-blue'
-                          : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
-                      "
-                    >
-                      {{ product.label }}
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Company Filter -->
-              <div>
-                <label class="block text-sm font-medium text-slate-300 mb-3">Compañías</label>
-                <div class="flex flex-wrap gap-2">
-                  <div v-for="company in Companies" :key="company.key">
-                    <input
-                      :id="`company-${company.key}`"
-                      v-model="formData.companyFilter"
-                      :value="company.key"
-                      type="checkbox"
-                      class="sr-only"
-                    />
-                    <label
-                      :for="`company-${company.key}`"
-                      class="inline-flex items-center px-2 py-1.5 rounded-lg text-xs cursor-pointer transition-all"
-                      :class="
-                        formData.companyFilter.includes(company.key)
-                          ? 'bg-dark-green text-dark-blue'
-                          : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
-                      "
-                    >
-                      {{ company.label }}
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="flex flex-wrap gap-3"
-                :class="{ 'opacity-50 pointer-events-none': !selectedStation }"
-              >
-                <div v-for="option in VisualizationOptions" :key="option.key" class="relative">
-                  <input
-                    :id="option.key"
-                    v-model="formData[option.key]"
-                    type="checkbox"
-                    class="sr-only"
-                  />
-                  <label
-                    :for="option.key"
-                    class="flex items-center px-3 py-2 rounded-lg text-sm cursor-pointer transition-all"
-                    :class="
-                      formData[option.key]
-                        ? 'bg-slate-600 text-white'
-                        : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
-                    "
-                  >
-                    <div
-                      class="w-3 h-3 rounded border mr-2 flex items-center justify-center"
-                      :class="formData[option.key] ? 'border-white bg-white' : 'border-slate-400'"
-                    >
-                      <svg
-                        v-if="formData[option.key]"
-                        class="w-2 h-2 text-slate-600"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    {{ option.label }}
-                  </label>
-                </div>
-              </div>
-
-              <!-- Subtitle -->
-              <div :class="{ 'opacity-50 pointer-events-none': !selectedStation }">
-                <label class="block text-sm font-medium text-slate-300 mb-2">Subtítulo</label>
-                <div class="grid gap-2 grid-cols-1 md:grid-cols-2">
-                  <select
-                    v-model="formData.subtitle"
-                    class="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-dark-green focus:border-dark-green text-white"
-                  >
-                    <option value="">Seleccionar subtítulo</option>
-                    <option
-                      v-for="subtitle in SubtitlesList"
-                      :key="subtitle.key"
-                      :value="subtitle.key"
-                    >
-                      {{ subtitle.label }}
-                    </option>
-                  </select>
-                  <input
-                    v-show="subtitleTakesParam"
-                    v-model="formData.subtitleParam"
-                    type="text"
-                    :placeholder="
-                      formData.subtitle === 'operador:$' ? 'Nombre del operador' : 'Número de vía'
-                    "
-                    class="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-dark-green focus:border-dark-green text-white placeholder-slate-400"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <!-- Conditional Fields for Platform -->
-            <div
-              v-if="formData.interfaz === 'platform'"
-              class="space-y-6"
-              :class="{ 'opacity-50 pointer-events-none': !selectedStation }"
-            >
-              <div>
-                <label class="block text-sm font-medium text-slate-300 mb-3">Vías</label>
-                <!-- Show all platforms (available + manually added) -->
-                <div v-if="allPlatformLocations.length > 0" class="flex flex-wrap gap-2">
-                  <div v-for="platform in allPlatformLocations" :key="platform">
-                    <input
-                      :id="`platform-loc-${platform}`"
-                      v-model="formData.platformLocations"
-                      :value="platform"
-                      type="checkbox"
-                      class="sr-only"
-                    />
-                    <label
-                      :for="`platform-loc-${platform}`"
-                      class="inline-flex items-center px-2 py-1 rounded text-sm cursor-pointer transition-all group"
-                      :class="
-                        formData.platformLocations.includes(platform)
-                          ? 'bg-dark-green text-dark-blue'
-                          : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
-                      "
-                    >
-                      {{ platform }}
-                      <!-- Show X button for manually added platforms -->
-                      <button
-                        v-if="!availablePlatforms.includes(platform)"
-                        @click.prevent="removePlatformLocation(platform)"
-                        class="ml-1 opacity-50 hover:opacity-100 w-3 h-3 flex items-center justify-center"
-                        :class="
-                          formData.platformLocations.includes(platform)
-                            ? 'text-dark-blue'
-                            : 'text-slate-300'
-                        "
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="h-2 w-2"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"
-                          />
-                        </svg>
-                      </button>
-                    </label>
-                  </div>
-                  <!-- Single custom platform input -->
-                  <div class="flex items-center gap-1">
-                    <input
-                      v-model="manualPlatform"
-                      type="text"
-                      placeholder="Ej: 1A"
-                      class="w-16 px-2 py-1 bg-slate-700 border border-slate-600 rounded text-sm text-white placeholder-slate-400 focus:ring-1 focus:ring-dark-green focus:border-dark-green"
-                      @keyup.enter="addManualPlatformLocation"
-                    />
-                    <button
-                      @click.prevent="addManualPlatformLocation"
-                      class="px-2 py-1 bg-slate-700 text-slate-300 text-sm rounded border border-slate-600 hover:bg-slate-600 transition-colors flex-shrink-0"
-                    >
-                      <span class="text-xs">+</span>
-                    </button>
-                  </div>
-                </div>
-                <!-- When no platforms are available at all, show manual input with instructions -->
-                <div v-else class="space-y-3">
-                  <p class="text-sm text-slate-400">
-                    No hay información de vías. Introduce manualmente:
-                  </p>
-                  <div class="flex items-center gap-2">
-                    <input
-                      v-model="manualPlatform"
-                      type="text"
-                      placeholder="Ej: 1,2,3 o 1-5"
-                      class="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-dark-green focus:border-dark-green text-white placeholder-slate-400"
-                    />
-                    <button
-                      @click.prevent="addManualPlatformLocation"
-                      class="px-3 py-2 bg-slate-700 text-slate-300 text-sm rounded-md border border-slate-600 hover:bg-slate-600 transition-colors flex-shrink-0"
-                    >
-                      <span>+</span>
-                    </button>
-                  </div>
-                  <!-- Display manually added platforms -->
-                  <div
-                    v-if="formData.platformLocations.length > 0"
-                    class="flex flex-wrap gap-2 mt-3"
-                  >
-                    <div
-                      v-for="platform in formData.platformLocations"
-                      :key="platform"
-                      class="group"
-                    >
-                      <div
-                        class="inline-flex items-center px-2 py-1 rounded text-sm bg-dark-green text-dark-blue"
-                      >
-                        {{ platform }}
-                        <button
-                          @click.prevent="removePlatformLocation(platform)"
-                          class="ml-1 text-dark-blue opacity-50 hover:opacity-100 w-4 h-4 flex items-center justify-center"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-3 w-3"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-sm font-medium text-slate-300 mb-2">Modo de andén</label>
-                  <select
-                    v-model="formData.platformMode"
-                    class="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-dark-green focus:border-dark-green text-white"
-                  >
-                    <option v-for="mode in PlatformModes" :key="mode.key" :value="mode.value">
-                      {{ mode.label }}
-                    </option>
-                  </select>
-                </div>
-                <div>
-                  <label class="block text-sm font-medium text-slate-300 mb-2"
-                    >Trigger de andén</label
-                  >
-                  <select
-                    v-model="formData.platformTrigger"
-                    class="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-dark-green focus:border-dark-green text-white"
-                  >
-                    <option
-                      v-for="trigger in PlatformTriggerList"
-                      :key="trigger.key"
-                      :value="trigger.value"
-                    >
-                      {{ trigger.label }}
-                    </option>
-                  </select>
-                </div>
-              </div>
-
-              <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-sm font-medium text-slate-300 mb-2"
-                    >Disposición del andén</label
-                  >
-                  <select
-                    v-model="formData.platformArrangement"
-                    class="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-dark-green focus:border-dark-green text-white"
-                  >
-                    <option
-                      v-for="arrangement in PlatformArrangements"
-                      :key="arrangement.key"
-                      :value="arrangement.value"
-                    >
-                      {{ arrangement.label }}
-                    </option>
-                  </select>
-                </div>
-              </div> -->
-
-              <div class="flex flex-wrap gap-3">
-                <div v-for="option in PlatformBooleanOptions" :key="option.key" class="relative">
-                  <input
-                    :id="option.key"
-                    v-model="formData[option.key]"
-                    type="checkbox"
-                    class="sr-only"
-                  />
-                  <label
-                    :for="option.key"
-                    class="flex items-center px-3 py-2 rounded-lg text-sm cursor-pointer transition-all"
-                    :class="
-                      formData[option.key]
-                        ? 'bg-slate-600 text-white'
-                        : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
-                    "
-                  >
-                    <div
-                      class="w-3 h-3 rounded border mr-2 flex items-center justify-center"
-                      :class="formData[option.key] ? 'border-white bg-white' : 'border-slate-400'"
-                    >
-                      <svg
-                        v-if="formData[option.key]"
-                        class="w-2 h-2 text-slate-600"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    {{ option.label }}
-                  </label>
-                </div>
-              </div>
-            </div>
-
-            <!-- Conditional Fields for Number -->
-            <div
-              v-if="formData.interfaz === 'number'"
-              class="space-y-4"
-              :class="{ 'opacity-50 pointer-events-none': !selectedStation }"
-            >
-              <div>
-                <label class="block text-sm font-medium text-slate-300 mb-2"
-                  >Número a mostrar</label
-                >
-                <input
-                  v-model="formData.displayNumber"
-                  class="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-dark-green focus:border-dark-green text-white"
-                />
-              </div>
-            </div>
-          </form>
+          <StationForm
+            :form-data="formData"
+            :selected-station="selectedStation"
+            :adif-data="adifData"
+            @form-change="handleFormChange"
+          />
         </div>
 
-        <!-- Right Panel - Preview -->
         <div class="space-y-6">
           <div class="bg-slate-800 rounded-xl shadow-2xl p-4 border border-slate-700">
-            <!-- Gravita Component Container -->
             <div
               class="transition-all duration-700 ease-in-out overflow-hidden rounded-lg border border-slate-600"
               :class="isPortrait ? 'aspect-[9/16]' : 'aspect-[16/9]'"
@@ -740,28 +51,13 @@
               />
             </div>
 
-            <!-- Aspect Ratio Toggle Button - Left Aligned -->
             <div class="flex justify-start mt-4">
               <button
                 @click="toggleAspectRatio"
-                class="px-2 py-1 bg-slate-700 text-slate-300 rounded-md hover:bg-slate-600 transition-colors flex items-center space-x-1.5 border border-slate-600 text-xs"
+                class="px-2 py-1 bg-slate-700 text-slate-300 rounded-md hover:bg-slate-600 transition-colors flex items-center space-x-1.5 border border-slate-600 text-xs cursor-pointer"
               >
-                <!-- Desktop/Landscape Icon -->
-                <svg
-                  v-if="isPortrait"
-                  class="w-3 h-3"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <rect x="2" y="6" width="20" height="12" rx="2" ry="2" stroke-width="2" />
-                  <circle cx="7" cy="12" r="1" fill="currentColor" />
-                </svg>
-                <!-- Mobile/Portrait Icon -->
-                <svg v-else class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <rect x="7" y="2" width="10" height="20" rx="2" ry="2" stroke-width="2" />
-                  <circle cx="12" cy="18" r="1" fill="currentColor" />
-                </svg>
+                <DesktopIcon v-if="isPortrait" />
+                <MobileIcon v-else />
                 <span>{{ isPortrait ? '16:9' : '9:16' }}</span>
               </button>
             </div>
@@ -774,23 +70,15 @@
             </div>
           </div>
 
-          <!-- URL Sharing -->
           <div :class="{ 'opacity-50 pointer-events-none': !selectedStation }">
             <UrlSharing :url="generatedUrl" :disabled="!selectedStation" />
           </div>
         </div>
       </div>
 
-      <!-- Footer -->
-      <footer class="mt-12 pb-8 text-center text-slate-500 text-xs">
+      <footer class="mt-12 pb-8 text-center text-slate-500 text-sm">
         <div class="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
-          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-            <path
-              fill-rule="evenodd"
-              d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z"
-              clip-rule="evenodd"
-            />
-          </svg>
+          <MonitorIcon />
           <div class="flex items-center gap-2">
             <span>por</span>
             <a
@@ -818,24 +106,15 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
 import Logo from '../components/icons/Logo.vue'
+import DesktopIcon from '../components/icons/DesktopIcon.vue'
+import MobileIcon from '../components/icons/MobileIcon.vue'
+import MonitorIcon from '../components/icons/MonitorIcon.vue'
 import Gravita from '../components/Gravita.vue'
 import StationFinder from '../components/StationFinder.vue'
 import StationInfo from '../components/StationInfo.vue'
+import StationForm from '../components/StationForm.vue'
 import UrlSharing from '../components/UrlSharing.vue'
 import { convertFormDataToGravitaProps, generateUrl } from '../utils/format'
-import {
-  Interfaces,
-  Traffics,
-  Languages,
-  Companies,
-  SubtitlesList,
-  PlatformModes,
-  PlatformTriggerList,
-  PlatformArrangements,
-  Products,
-  VisualizationOptions,
-  PlatformBooleanOptions,
-} from '../constants'
 import { Stations } from '../constants'
 import { onMounted } from 'vue'
 
@@ -864,6 +143,8 @@ const formData = ref({
   showObservation: true,
   platformArrangement: 'ascending',
   fontSize: 1,
+  customFilter: [], // Línea de cercanías filter
+  stopFilter: [], // Estaciones con parada filter
 })
 
 // Component state
@@ -871,7 +152,6 @@ const selectedStation = ref(Stations.find((s) => s.code === '17000') || null)
 const adifData = ref(null)
 const adifStatus = ref(null)
 const isPortrait = ref(false)
-const manualPlatform = ref('')
 
 // Set default station on mount
 onMounted(() => {
@@ -881,64 +161,6 @@ onMounted(() => {
     formData.value.stationCode = defaultStation.code
     formData.value.estacion = defaultStation.name
   }
-})
-
-const availablePlatforms = computed(() => {
-  const platforms = Object.keys(adifData.value?.station_settings?.platforms || {})
-  return platforms.sort((a, b) => {
-    // Try to sort numerically first
-    const numA = parseInt(a, 10)
-    const numB = parseInt(b, 10)
-
-    if (!isNaN(numA) && !isNaN(numB)) {
-      return numA - numB
-    }
-
-    // Fall back to string comparison
-    return a.localeCompare(b)
-  })
-})
-
-// Computed property for all platforms (available + manually added)
-const allPlatforms = computed(() => {
-  const available = availablePlatforms.value
-  const manual = formData.value.platformFilter.filter((p) => !available.includes(p))
-  return [...available, ...manual].sort((a, b) => {
-    // Try to sort numerically first
-    const numA = parseInt(a, 10)
-    const numB = parseInt(b, 10)
-
-    if (!isNaN(numA) && !isNaN(numB)) {
-      return numA - numB
-    }
-
-    // Fall back to string comparison
-    return a.localeCompare(b)
-  })
-})
-
-// Computed property for all platform locations (available + manually added)
-const allPlatformLocations = computed(() => {
-  const available = availablePlatforms.value
-  const manual = formData.value.platformLocations.filter((p) => !available.includes(p))
-  return [...available, ...manual].sort((a, b) => {
-    // Try to sort numerically first
-    const numA = parseInt(a, 10)
-    const numB = parseInt(b, 10)
-
-    if (!isNaN(numA) && !isNaN(numB)) {
-      return numA - numB
-    }
-
-    // Fall back to string comparison
-    return a.localeCompare(b)
-  })
-})
-
-// Check if subtitle takes parameter
-const subtitleTakesParam = computed(() => {
-  const subtitle = SubtitlesList.find((s) => s.key === formData.value.subtitle)
-  return subtitle?.takesParam || false
 })
 
 // Toggle aspect ratio
@@ -958,51 +180,16 @@ const handleStationCleared = () => {
   formData.value.stationCode = ''
 }
 
+const handleFormChange = (newFormData) => {
+  formData.value = newFormData
+}
+
 const handledata = (data) => {
   adifData.value = data
 }
 
 const handlestatus = (status) => {
   adifStatus.value = status
-}
-
-// Platform management methods
-const addManualPlatform = () => {
-  if (!manualPlatform.value.trim()) return
-
-  const platform = manualPlatform.value.trim()
-  if (!formData.value.platformFilter.includes(platform)) {
-    formData.value.platformFilter.push(platform)
-  }
-
-  // Clear input after adding
-  manualPlatform.value = ''
-}
-
-const removePlatform = (platform) => {
-  const index = formData.value.platformFilter.indexOf(platform)
-  if (index !== -1) {
-    formData.value.platformFilter.splice(index, 1)
-  }
-}
-
-const addManualPlatformLocation = () => {
-  if (!manualPlatform.value.trim()) return
-
-  const platform = manualPlatform.value.trim()
-  if (!formData.value.platformLocations.includes(platform)) {
-    formData.value.platformLocations.push(platform)
-  }
-
-  // Clear input after adding
-  manualPlatform.value = ''
-}
-
-const removePlatformLocation = (platform) => {
-  const index = formData.value.platformLocations.indexOf(platform)
-  if (index !== -1) {
-    formData.value.platformLocations.splice(index, 1)
-  }
 }
 
 // Computed props for Gravita component
