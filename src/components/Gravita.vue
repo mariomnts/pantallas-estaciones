@@ -81,6 +81,7 @@ function sendBoardData(msg) {
   data?.trains?.forEach((train) => {
     const destinationCercanias = train?.destinations?.[0]?.line
       ?.replace(/ROD[A-Z0-9]*|CER[A-Z0-9]*/g, '')
+      .replace(/CIVGUACHA/g, 'CIVIS')
       .trim()
 
     if (train?.traffic_type == 'C' && destinationCercanias) {

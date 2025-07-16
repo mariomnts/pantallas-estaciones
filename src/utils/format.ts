@@ -92,7 +92,11 @@ export function convertFormDataToGravitaProps(formData: FormData) {
 
     // Only add stopFilter if stop filters are selected
     if (formData.stopFilter.length > 0) {
-      props.stopFilter = formData.stopFilter.join(',')
+      // Remove leading zeros from station codes
+      const processedStopFilter = formData.stopFilter.map((code) => {
+        return code.replace(/^0+/, '')
+      })
+      props.stopFilter = processedStopFilter.join(',')
     }
 
     // Only add productFilter if products are selected
