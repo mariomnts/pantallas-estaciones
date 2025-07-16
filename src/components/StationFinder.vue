@@ -1,20 +1,24 @@
 <template>
-  <div>
-    <label class="block text-sm font-medium text-slate-300 mb-2">Estación</label>
+  <div role="search">
+    <label for="station-search" class="block text-sm font-medium text-slate-300 mb-2"
+      >Estación</label
+    >
     <div class="relative">
       <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-        <SearchIcon />
+        <SearchIcon aria-hidden="true" />
       </div>
       <div v-if="selectedStation" class="absolute inset-y-0 right-0 pr-3 flex items-center">
         <button
           @click="clearStation"
           type="button"
+          aria-label="Clear selected station"
           class="text-slate-400 hover:text-slate-300 transition-colors cursor-pointer"
         >
-          <ClearIcon />
+          <ClearIcon aria-hidden="true" />
         </button>
       </div>
       <input
+        id="station-search"
         v-model="searchQuery"
         @focus="showDropdown = true"
         @blur="hideDropdown"
@@ -28,11 +32,13 @@
       <div
         v-if="showDropdown && filteredStations.length > 0"
         class="absolute z-10 w-full bg-slate-700 border border-slate-600 rounded-lg mt-1 max-h-48 overflow-y-auto shadow-xl"
+        role="listbox"
       >
         <div
           v-for="station in filteredStations"
           :key="station.code"
           @mousedown="selectStation(station)"
+          role="option"
           class="px-4 py-3 hover:bg-slate-600 cursor-pointer text-white flex items-center justify-between"
         >
           <div>

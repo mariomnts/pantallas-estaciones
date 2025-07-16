@@ -129,7 +129,7 @@ const startResize = (direction, event) => {
     startWidth: rect.width,
     startHeight: rect.height,
     direction,
-    maxWidth: parentRect.width - 40, // Account for padding and margins
+    maxWidth: parentRect.width, // Remove the -40 padding to allow full width
   }
 
   // Set initial size immediately with centering
@@ -154,22 +154,19 @@ const handleResize = (event) => {
   let newWidth = resizeData.value.startWidth
   let newHeight = resizeData.value.startHeight
 
-  // Calculate new dimensions with parent width constraint
+  // Calculate new dimensions - only modify the dimension that should change
   if (direction.includes('e')) {
-    newWidth = Math.min(
-      resizeData.value.maxWidth,
-      Math.max(200, resizeData.value.startWidth + deltaX),
-    )
+    newWidth = Math.max(200, resizeData.value.startWidth + deltaX)
   }
   if (direction.includes('w')) {
-    newWidth = Math.min(
-      resizeData.value.maxWidth,
-      Math.max(200, resizeData.value.startWidth - deltaX),
-    )
+    newWidth = Math.max(200, resizeData.value.startWidth - deltaX)
   }
   if (direction.includes('s')) {
     newHeight = Math.max(150, resizeData.value.startHeight + deltaY)
   }
+
+  // Apply maxWidth constraint after calculation to allow growing back
+  newWidth = Math.min(resizeData.value.maxWidth, newWidth)
 
   // Style object with consistent centering
   const styleObj = {

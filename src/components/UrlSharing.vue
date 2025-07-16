@@ -1,11 +1,17 @@
 <template>
-  <div class="bg-slate-800 rounded-xl shadow-2xl p-4 border border-slate-700">
-    <h3 class="text-base font-medium text-white mb-3">Compartir pantalla</h3>
+  <section
+    aria-labelledby="share-screen-title"
+    class="bg-slate-800 rounded-xl shadow-2xl p-4 border border-slate-700"
+  >
+    <h3 id="share-screen-title" class="text-base font-medium text-white mb-3">
+      Compartir pantalla
+    </h3>
     <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
       <input
         :value="url"
         readonly
         :disabled="props.disabled"
+        aria-label="Screen sharing URL"
         class="flex-1 px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-slate-300 text-sm min-w-0"
         :class="{ 'opacity-50': props.disabled }"
       />
@@ -13,6 +19,7 @@
         <button
           @click="copyUrl"
           :disabled="props.disabled"
+          aria-label="Copy screen sharing URL"
           :class="[
             'px-4 py-3 rounded-lg transition-colors flex items-center justify-center flex-1 sm:flex-initial cursor-pointer',
             copied
@@ -21,22 +28,23 @@
             props.disabled ? 'opacity-50 cursor-not-allowed' : '',
           ]"
         >
-          <CopyIcon v-if="!copied" />
+          <CopyIcon v-if="!copied" aria-hidden="true" />
           <div v-else class="w-4 h-4">
-            <CheckmarkIcon />
+            <CheckmarkIcon aria-hidden="true" />
           </div>
         </button>
         <button
           @click="openUrl"
           :disabled="props.disabled"
+          aria-label="Open screen sharing URL"
           class="px-4 py-3 bg-dark-green text-dark-blue rounded-lg hover:bg-light-green transition-colors flex items-center justify-center flex-1 sm:flex-initial cursor-pointer"
           :class="{ 'opacity-50 cursor-not-allowed': props.disabled }"
         >
-          <ExternalLinkIcon />
+          <ExternalLinkIcon aria-hidden="true" />
         </button>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>

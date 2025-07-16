@@ -77,7 +77,10 @@ import { watch } from 'vue'
 watch(
   () => props.modelValue,
   (newValue) => {
-    selectedStations.value = [...newValue]
+    // Only update if the values are actually different to prevent circular updates
+    if (JSON.stringify(selectedStations.value) !== JSON.stringify(newValue)) {
+      selectedStations.value = [...newValue]
+    }
   },
 )
 
@@ -85,7 +88,10 @@ watch(
 watch(
   selectedStations,
   (newValue) => {
-    emit('update:modelValue', newValue)
+    // Only emit if the values are actually different to prevent circular updates
+    if (JSON.stringify(props.modelValue) !== JSON.stringify(newValue)) {
+      emit('update:modelValue', newValue)
+    }
   },
   { deep: true },
 )

@@ -80,7 +80,7 @@ function sendBoardData(msg) {
 
   data?.trains?.forEach((train) => {
     const destinationCercanias = train?.destinations?.[0]?.line
-      ?.replace(/ROD(BCN|.*?)|CER(MAD|.*?)/, '')
+      ?.replace(/ROD[A-Z0-9]*|CER[A-Z0-9]*/g, '')
       .trim()
 
     if (train?.traffic_type == 'C' && destinationCercanias) {
@@ -107,11 +107,22 @@ function sendBoardData(msg) {
 }
 
 function handleIncoming(raw) {
+  // Prevent recursive calls by checking if we're already processing the same data
+  if (lastMessageRaw.value === raw) {
+    return
+  }
+
   lastMessageRaw.value = raw
-  sendBoardData(raw)
-  emit('data', JSON.parse(raw))
-  if (!import.meta.env.PROD) {
-    console.log('>', JSON.parse(raw))
+
+  try {
+    const parsedData = JSON.parse(raw)
+    sendBoardData(raw)
+    emit('data', parsedData)
+    if (!import.meta.env.PROD) {
+      console.log('>', parsedData)
+    }
+  } catch (error) {
+    console.error('[Gravita] Error parsing incoming data:', error)
   }
 }
 

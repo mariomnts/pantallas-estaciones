@@ -1,68 +1,72 @@
 <template>
   <div class="min-h-screen bg-slate-900 p-6">
     <div class="max-w-7xl mx-auto">
-      <div
-        class="flex flex-col md:flex-row items-center space-x-0 md:space-x-3 space-y-3 md:space-y-0 mb-7"
-      >
-        <div class="h-23 md:h-18 flex items-center justify-center flex-shrink-0 mr-5">
-          <Logo class="logo w-full h-full" />
-        </div>
-        <div class="text-center md:text-left">
-          <h1 class="text-2xl font-bold text-white leading-tight">Pantallas estaciones</h1>
-          <p class="text-slate-400 text-md mt-1">Configurador pantallas información estaciones</p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div class="bg-slate-800 rounded-xl shadow-2xl p-4 lg:p-5 border border-slate-700">
-          <StationFinder
-            class="mb-4"
-            v-model="formData.estacion"
-            @station-selected="handleStationSelected"
-            @station-cleared="handleStationCleared"
-          />
-
-          <StationInfo
-            class="mb-4"
-            :selected-station="selectedStation"
-            :adif-data="adifData"
-            :adif-status="adifStatus"
-          />
-
-          <StationForm
-            :form-data="formData"
-            :selected-station="selectedStation"
-            :adif-data="adifData"
-            @form-change="handleFormChange"
-          />
-        </div>
-
-        <div class="space-y-6">
-          <div class="bg-slate-800 rounded-xl shadow-2xl p-4 border border-slate-700">
-            <div class="flex justify-center">
-              <ResizableContainer>
-                <Gravita
-                  class="gravita w-full h-full"
-                  v-bind="gravitaProps"
-                  @data="handledata"
-                  @status="handlestatus"
-                />
-              </ResizableContainer>
-            </div>
-
-            <div class="mt-6 bg-light-green p-3 rounded-md border border-dark-green">
-              <p class="text-xs text-dark-blue">
-                Proyecto no oficial ni afiliado con ADIF con proposito educativo que permite
-                configurar el sistema de información a viajeros de sus estaciones.
-              </p>
-            </div>
+      <header>
+        <div
+          class="flex flex-col md:flex-row items-center space-x-0 md:space-x-3 space-y-3 md:space-y-0 mb-7"
+        >
+          <div class="h-22 md:h-17 flex items-center justify-center flex-shrink-0 mr-5">
+            <Logo class="logo w-full h-full" alt="Logo de Pantallas Estaciones" />
           </div>
-
-          <div :class="{ 'opacity-50 pointer-events-none': !selectedStation }">
-            <UrlSharing :url="generatedUrl" :disabled="!selectedStation" />
+          <div class="text-center md:text-left">
+            <h1 class="text-2xl font-bold text-white leading-tight">Pantallas estaciones</h1>
+            <p class="text-slate-400 text-md mt-1">Configurador pantallas información estaciones</p>
           </div>
         </div>
-      </div>
+      </header>
+
+      <main>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <section class="bg-slate-800 rounded-xl shadow-2xl p-4 lg:p-5 border border-slate-700">
+            <StationFinder
+              class="mb-4"
+              v-model="formData.estacion"
+              @station-selected="handleStationSelected"
+              @station-cleared="handleStationCleared"
+            />
+
+            <StationInfo
+              class="mb-4"
+              :selected-station="selectedStation"
+              :adif-data="adifData"
+              :adif-status="adifStatus"
+            />
+
+            <StationForm
+              :form-data="formData"
+              :selected-station="selectedStation"
+              :adif-data="adifData"
+              @form-change="handleFormChange"
+            />
+          </section>
+
+          <aside class="space-y-6">
+            <div class="bg-slate-800 rounded-xl shadow-2xl p-4 border border-slate-700">
+              <div class="flex justify-center">
+                <ResizableContainer>
+                  <Gravita
+                    class="gravita w-full h-full"
+                    v-bind="gravitaProps"
+                    @data="handledata"
+                    @status="handlestatus"
+                  />
+                </ResizableContainer>
+              </div>
+
+              <div class="mt-6 bg-light-green p-3 rounded-md border border-dark-green">
+                <p class="text-xs text-dark-blue">
+                  Proyecto no oficial ni afiliado con ADIF con propósito educativo que permite
+                  configurar el sistema de información a viajeros de sus estaciones.
+                </p>
+              </div>
+            </div>
+
+            <div :class="{ 'opacity-50 pointer-events-none': !selectedStation }">
+              <UrlSharing :url="generatedUrl" :disabled="!selectedStation" />
+            </div>
+          </aside>
+        </div>
+      </main>
 
       <footer class="mt-12 pb-8 text-center text-slate-500 text-sm">
         <div class="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
@@ -73,6 +77,7 @@
               href="https://x.com/mariomnts"
               target="_blank"
               class="hover:text-slate-400 transition-colors"
+              rel="noopener noreferrer"
               >Mario Montes</a
             >
           </div>
