@@ -39,27 +39,15 @@
 
         <div class="space-y-6">
           <div class="bg-slate-800 rounded-xl shadow-2xl p-4 border border-slate-700">
-            <div
-              class="transition-all duration-700 ease-in-out overflow-hidden rounded-lg border border-slate-600"
-              :class="isPortrait ? 'aspect-[9/16]' : 'aspect-[16/9]'"
-            >
-              <Gravita
-                class="gravita w-full h-full"
-                v-bind="gravitaProps"
-                @data="handledata"
-                @status="handlestatus"
-              />
-            </div>
-
-            <div class="flex justify-start mt-4">
-              <button
-                @click="toggleAspectRatio"
-                class="px-2 py-1 bg-slate-700 text-slate-300 rounded-md hover:bg-slate-600 transition-colors flex items-center space-x-1.5 border border-slate-600 text-xs cursor-pointer"
-              >
-                <DesktopIcon v-if="isPortrait" />
-                <MobileIcon v-else />
-                <span>{{ isPortrait ? '16:9' : '9:16' }}</span>
-              </button>
+            <div class="flex justify-center">
+              <ResizableContainer>
+                <Gravita
+                  class="gravita w-full h-full"
+                  v-bind="gravitaProps"
+                  @data="handledata"
+                  @status="handlestatus"
+                />
+              </ResizableContainer>
             </div>
 
             <div class="mt-6 bg-light-green p-3 rounded-md border border-dark-green">
@@ -106,9 +94,8 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
 import Logo from '../components/icons/Logo.vue'
-import DesktopIcon from '../components/icons/DesktopIcon.vue'
-import MobileIcon from '../components/icons/MobileIcon.vue'
 import MonitorIcon from '../components/icons/MonitorIcon.vue'
+import ResizableContainer from '../components/ResizableContainer.vue'
 import Gravita from '../components/Gravita.vue'
 import StationFinder from '../components/StationFinder.vue'
 import StationInfo from '../components/StationInfo.vue'
@@ -151,7 +138,6 @@ const formData = ref({
 const selectedStation = ref(Stations.find((s) => s.code === '17000') || null)
 const adifData = ref(null)
 const adifStatus = ref(null)
-const isPortrait = ref(false)
 
 // Set default station on mount
 onMounted(() => {
@@ -162,11 +148,6 @@ onMounted(() => {
     formData.value.estacion = defaultStation.name
   }
 })
-
-// Toggle aspect ratio
-const toggleAspectRatio = () => {
-  isPortrait.value = !isPortrait.value
-}
 
 // Station handlers
 const handleStationSelected = (station) => {

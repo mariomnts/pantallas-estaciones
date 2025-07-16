@@ -828,8 +828,8 @@ const removeCustomFilter = (filter) => {
 /* Custom range slider styles */
 .slider::-webkit-slider-thumb {
   appearance: none;
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
   background: var(--color-dark-green);
   cursor: pointer;
@@ -837,8 +837,8 @@ const removeCustomFilter = (filter) => {
 }
 
 .slider::-moz-range-thumb {
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
   background: var(--color-dark-green);
   cursor: pointer;
