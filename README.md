@@ -34,6 +34,8 @@ npm run dev
 
 Este proyecto es **no oficial** y **no está afiliado con ADIF**. Se ha creado con propósito educativo para demostrar las capacidades del sistema de información a viajeros.
 
+Para distribución o uso comercial, se debe obtener permiso por parte del autor.
+
 ## 👨‍💻 Autor
 
 **Mario Montes** - [@mariomnts](https://x.com/mariomnts)
