@@ -807,7 +807,7 @@ const removePlatformLocation = (platform) => {
 const addManualCustomFilter = () => {
   if (!manualCustomFilter.value.trim()) return
 
-  const filter = manualCustomFilter.value.trim()
+  const filter = manualCustomFilter.value.toUpperCase().trim()
   if (!props.formData.customFilter.includes(filter)) {
     emitFormChange({
       customFilter: [...props.formData.customFilter, filter],

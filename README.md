@@ -32,7 +32,7 @@ npm run dev
 
 ## 📝 Nota Legal
 
-Este proyecto es **no oficial** y **no está afiliado con ADIF**. Se ha creado con propósito educativo para demostrar las capacidades del sistema de información a viajeros.
+Este proyecto es **no oficial** y **no está afiliado con ADIF**. Se ha creado con propósito educacional para demostrar las capacidades del sistema de información a viajeros. La previsualización incluida muestra contenido servido directamente por ADIF, esta web solo permite configurar los parámetros de visualización. Marca, logotipos y datos mostrados en el panel son propiedad de ADIF.
 
 Para distribución o uso comercial, se debe obtener permiso por parte del autor.
 

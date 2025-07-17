@@ -55,8 +55,10 @@
 
               <div class="mt-6 bg-light-green p-3 rounded-md border border-dark-green">
                 <p class="text-xs text-dark-blue">
-                  Proyecto no oficial ni afiliado con ADIF con propósito educativo que permite
-                  configurar el sistema de información a viajeros de sus estaciones.
+                  Proyecto no oficial ni afiliado con ADIF con propósito educacional. El panel
+                  superior muestra contenido servido directamente por ADIF, esta web solo permite
+                  configurar los parámetros de visualización. Marca, logotipos y datos mostrados en
+                  el panel son propiedad de ADIF.
                 </p>
               </div>
             </div>
@@ -68,7 +70,7 @@
         </div>
       </main>
 
-      <footer class="mt-12 pb-8 text-center text-slate-500 text-sm">
+      <footer class="mt-12 pb-7 text-center text-slate-500 text-sm">
         <div class="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
           <MonitorIcon />
           <div class="flex items-center gap-2">

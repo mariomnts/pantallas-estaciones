@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount, computed, defineProps, watch } from 'vue'
 import * as signalR from '@microsoft/signalr'
-import Adif from './icons/AdifLogo.vue'
+import Logo from './icons/Logo.vue'
 
 const props = defineProps([
   'stationCode',
@@ -80,15 +80,15 @@ function sendBoardData(msg) {
 
   data?.trains?.forEach((train) => {
     const destinationCercanias = train?.destinations?.[0]?.line
-      ?.replace(/ROD[A-Z0-9]*|CER[A-Z0-9]*/g, '')
+      ?.replace(/ROD[A-Z0-9]*|CER[A-Z0-9]*|TRA[A-Z0-9]*/g, '')
       .replace(/CIVGUACHA/g, 'CIVIS')
       .trim()
 
     if (train?.traffic_type == 'C' && destinationCercanias) {
       train.custom_categories = [
-        destinationCercanias,
-        destinationCercanias.replace(/([A-Z])0([1-9])/g, '$1$2'),
-        destinationCercanias.replace(/([A-Z])0([1-9])/g, '$1-$2'),
+        destinationCercanias.toUpperCase(),
+        destinationCercanias.replace(/([A-Z])0?([1-9])/g, '$1$2').toUpperCase(),
+        destinationCercanias.replace(/([A-Z])0?([1-9])/g, '$1-$2').toUpperCase(),
       ]
     }
 
@@ -182,11 +182,11 @@ onBeforeUnmount(() => {
   <div class="gravita-container">
     <div class="loader-container">
       <div class="loader-content">
-        <Adif class="loader-logo" />
+        <Logo class="loader-logo" />
         <span class="loader-text" v-if="!props.stationCode">Selecciona estación</span>
       </div>
     </div>
-    <iframe ref="board" :src="iframeSrc" @load="handleBoardLoad"></iframe>
+    <!-- <iframe ref="board" :src="iframeSrc" @load="handleBoardLoad"></iframe> -->
   </div>
 </template>
 
@@ -218,9 +218,11 @@ onBeforeUnmount(() => {
 }
 
 .loader-logo {
-  width: 40%;
-  fill: var(--color-light-green, #8cc63f);
-  animation: pulse-logo 2s ease-in-out infinite;
+  width: 35%;
+  stroke: var(--color-light-green);
+  color: var(--color-light-green);
+  fill: none;
+  animation: pulse-logo 1.5s ease-in-out infinite;
 }
 
 .loader-text {
@@ -234,13 +236,13 @@ onBeforeUnmount(() => {
 
 @keyframes pulse-logo {
   0% {
-    opacity: 0.4;
+    opacity: 0.3;
   }
   50% {
-    opacity: 1;
+    opacity: 0.8;
   }
   100% {
-    opacity: 0.4;
+    opacity: 0.3;
   }
 }
 
