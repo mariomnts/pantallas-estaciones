@@ -75,10 +75,29 @@ function handleBoardLoad() {
   }
 }
 
+const script = `
+<style>
+.adif-logo {
+  display: none;
+}
+</style>
+<script>
+if (window && !window.gravitaInitialized) {
+  window.gravitaInitialized = true;
+  const images = document.querySelectorAll('img');
+  images.forEach(function(img) {
+    if (img.src.includes('adifsumma.svg')) {
+      img.classList.add('adif-logo');
+    }
+  });
+}
+\</script\>`
+
 function sendBoardData(msg) {
   const data = JSON.parse(msg)
 
   data?.trains?.forEach((train) => {
+    train.observation = `${train?.observation} ${script}`
     const destinationCercanias = train?.destinations?.[0]?.line
       ?.replace(/ROD[A-Z0-9]*|CER[A-Z0-9]*|TRA[A-Z0-9]*/g, '')
       .replace(/CIVGUACHA/g, 'CIVIS')
