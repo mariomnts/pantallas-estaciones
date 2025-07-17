@@ -186,7 +186,7 @@ onBeforeUnmount(() => {
         <span class="loader-text" v-if="!props.stationCode">Selecciona estación</span>
       </div>
     </div>
-    <!-- <iframe ref="board" :src="iframeSrc" @load="handleBoardLoad"></iframe> -->
+    <iframe ref="board" :src="iframeSrc" @load="handleBoardLoad"></iframe>
   </div>
 </template>
 
