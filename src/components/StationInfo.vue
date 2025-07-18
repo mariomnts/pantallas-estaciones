@@ -29,6 +29,15 @@
         </div>
       </div>
 
+      <div v-else-if="adifStatus === 'error'">
+        <div class="pt-2 flex items-center space-x-2 border-t border-slate-600">
+          <div class="w-1.5 h-1.5 bg-red-400 rounded-full"></div>
+          <span class="text-red-400 text-md"
+            >ADIF está bloqueando esta conexión a sus servidores</span
+          >
+        </div>
+      </div>
+
       <div v-else>
         <div class="pt-3 border-t border-slate-600" v-if="trainsLoaded">
           <!-- Desktop: single row with three sections, Mobile: two rows -->
