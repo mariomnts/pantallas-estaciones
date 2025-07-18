@@ -13,7 +13,7 @@ const router = createRouter({
     {
       path: '/~/:param?',
       name: 'full-screen',
-      component: FullScreenView,
+      component: HomeView,
     },
   ],
 })

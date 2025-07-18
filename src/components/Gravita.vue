@@ -128,30 +128,27 @@ function handleIncoming(raw) {
 }
 
 onMounted(async () => {
-  connection = new signalR.HubConnectionBuilder()
-    .withUrl('https://info.adif.es/InfoStation', {
-      skipNegotiation: true,
-      transport: signalR.HttpTransportType.WebSockets,
-    })
-    .configureLogging(signalR.LogLevel.Error)
-    .withAutomaticReconnect()
-    .build()
-
-  connection.on('ReceiveMessage', handleIncoming)
-  connection.on('ReceiveError', (error) => {
-    console.error('[SignalR] ReceiveError:', error)
-  })
-
-  try {
-    await connection.start()
-    await connection.invoke('JoinInfo', `ECM-${props.stationCode}`)
-    await connection.invoke('GetLastMessage', `ECM-${props.stationCode}`)
-
-    status.value = 'online'
-  } catch (err) {
-    console.error('[SignalR] error:', err)
-    status.value = 'error'
-  }
+  // connection = new signalR.HubConnectionBuilder()
+  //   .withUrl('https://info.adif.es/InfoStation', {
+  //     skipNegotiation: true,
+  //     transport: signalR.HttpTransportType.WebSockets,
+  //   })
+  //   .configureLogging(signalR.LogLevel.Error)
+  //   .withAutomaticReconnect()
+  //   .build()
+  // connection.on('ReceiveMessage', handleIncoming)
+  // connection.on('ReceiveError', (error) => {
+  //   console.error('[SignalR] ReceiveError:', error)
+  // })
+  // try {
+  //   await connection.start()
+  //   await connection.invoke('JoinInfo', `ECM-${props.stationCode}`)
+  //   await connection.invoke('GetLastMessage', `ECM-${props.stationCode}`)
+  //   status.value = 'online'
+  // } catch (err) {
+  //   console.error('[SignalR] error:', err)
+  //   status.value = 'error'
+  // }
 })
 
 watch(
@@ -186,7 +183,7 @@ onBeforeUnmount(() => {
         <span class="loader-text" v-if="!props.stationCode">Selecciona estación</span>
       </div>
     </div>
-    <iframe ref="board" v-if="status !== 'error'" :src="iframeSrc" @load="handleBoardLoad"></iframe>
+    <!-- <iframe ref="board" v-if="status !== 'error'" :src="iframeSrc" @load="handleBoardLoad"></iframe> -->
   </div>
 </template>
 

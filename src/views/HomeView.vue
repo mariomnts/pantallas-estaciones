@@ -1,6 +1,19 @@
 <template>
   <div class="min-h-screen bg-slate-900 p-6">
     <div class="max-w-7xl mx-auto">
+      <div class="mt-4 mb-10 bg-red-100 p-4 rounded-md border border-red-300 w-2/3 mx-auto">
+        <p class="text-md text-red-800 mb-5">
+          Proyecto cerrado a petición de ADIF a pesar de haber cumplido con eliminar su marca,
+          mostrar datos públicos y tener un propósito educacional.
+        </p>
+
+        <p class="text-md text-red-800">
+          Ojalá algún día las empresas públicas entiendan que la transparencia y el acceso a la
+          información son buenos para la sociedad y que proyectos como este ayudan a mejorar la
+          experiencia de los usuarios.
+        </p>
+      </div>
+
       <header>
         <div
           class="flex flex-col md:flex-row items-center space-x-0 md:space-x-3 space-y-3 md:space-y-0 mb-7"
@@ -25,12 +38,12 @@
               @station-cleared="handleStationCleared"
             />
 
-            <StationInfo
+            <!-- <StationInfo
               class="mb-4"
               :selected-station="selectedStation"
               :adif-data="adifData"
               :adif-status="adifStatus"
-            />
+            /> -->
 
             <StationForm
               :form-data="formData"
