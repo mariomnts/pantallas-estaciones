@@ -108,17 +108,19 @@ function sendBoardData(msg) {
 }
 
 function handleIncoming(raw) {
+  status.value = 'connected'
+
   // Prevent recursive calls by checking if we're already processing the same data
   if (lastMessageRaw.value === raw) {
     return
   }
 
-  lastMessageRaw.value = raw
-
   try {
     const parsedData = JSON.parse(raw)
     sendBoardData(raw)
     emit('data', parsedData)
+    lastMessageRaw.value = raw
+
     if (!import.meta.env.PROD) {
       console.log('>', parsedData)
     }
