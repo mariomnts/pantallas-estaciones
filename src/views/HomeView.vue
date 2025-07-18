@@ -1,7 +1,9 @@
 <template>
   <div class="min-h-screen bg-slate-900 p-6">
     <div class="max-w-7xl mx-auto">
-      <div class="mt-4 mb-10 bg-red-100 p-4 rounded-md border border-red-300 w-2/3 mx-auto">
+      <div
+        class="mt-4 mb-10 bg-red-100 p-3 lg:p-4 rounded-md border border-red-300 w-full lg:w-2/3 mx-auto"
+      >
         <p class="text-md text-red-800 mb-5">
           Proyecto cerrado a petición de ADIF a pesar de haber cumplido con eliminar su marca,
           mostrar datos públicos y tener un propósito educacional.
