@@ -15,19 +15,19 @@
             />
             <label
               :for="option.key"
-              class="flex items-center justify-center p-3 rounded-lg border cursor-pointer transition-all text-center h-12"
+              class="flex items-center justify-center p-2 sm:p-3 rounded-lg border cursor-pointer transition-all text-center h-10 sm:h-12"
               :class="
                 formData.interfaz === option.key
                   ? 'bg-dark-green border-dark-green text-dark-blue'
                   : 'bg-slate-700 border-slate-600 text-slate-300 hover:bg-slate-600'
               "
             >
-              <div class="mr-2">
+              <div class="mr-1 sm:mr-2">
                 <DeparturesIcon v-if="option.key === 'departures'" />
                 <ArrivalsIcon v-else-if="option.key === 'arrivals'" />
                 <PlatformIcon v-else-if="option.key === 'platform'" />
               </div>
-              <span class="text-sm font-bold uppercase">{{ option.label }}</span>
+              <span class="text-xs sm:text-sm font-bold uppercase">{{ option.label }}</span>
             </label>
           </div>
         </div>
@@ -44,18 +44,18 @@
             />
             <label
               :for="option.key"
-              class="flex items-center justify-center p-3 rounded-lg border cursor-pointer transition-all text-center h-12"
+              class="flex items-center justify-center p-2 sm:p-3 rounded-lg border cursor-pointer transition-all text-center h-10 sm:h-12"
               :class="
                 formData.interfaz === option.key
                   ? 'bg-dark-green border-dark-green text-dark-blue'
                   : 'bg-slate-700 border-slate-600 text-slate-300 hover:bg-slate-600'
               "
             >
-              <div class="mr-2">
+              <div class="mr-1 sm:mr-2">
                 <NumberIcon v-if="option.key === 'number'" />
                 <ClockIcon v-else-if="option.key === 'clock'" />
               </div>
-              <span class="text-sm font-bold uppercase">{{ option.label }}</span>
+              <span class="text-xs sm:text-sm font-bold uppercase">{{ option.label }}</span>
             </label>
           </div>
         </div>
@@ -734,24 +734,28 @@
       :class="{ 'opacity-50 pointer-events-none': !selectedStation }"
     >
       <label class="block text-sm font-medium text-slate-300 mb-3">Tamaño de fuente</label>
-      <div class="flex items-center gap-4 mb-3">
-        <div class="w-1/2">
-          <input
-            :value="formData.fontSize"
-            @input="(e) => emitFormChange({ fontSize: parseInt(e.target.value) })"
-            type="range"
-            min="0"
-            max="3"
-            step="1"
-            class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer slider"
-          />
+      <div class="grid gap-2 grid-cols-1 md:grid-cols-2">
+        <div>
+          <div class="flex items-center gap-4 mb-3">
+            <div class="w-full">
+              <input
+                :value="formData.fontSize"
+                @input="(e) => emitFormChange({ fontSize: parseInt(e.target.value) })"
+                type="range"
+                min="0"
+                max="3"
+                step="1"
+                class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer slider"
+              />
+            </div>
+          </div>
+          <div class="flex justify-between text-xs text-slate-400 mt-1">
+            <span>Auto</span>
+            <span>Pequeño</span>
+            <span>Mediano</span>
+            <span>Grande</span>
+          </div>
         </div>
-      </div>
-      <div class="flex justify-between text-xs text-slate-400 mt-1 w-1/2">
-        <span>Auto</span>
-        <span>Pequeño</span>
-        <span>Mediano</span>
-        <span>Grande</span>
       </div>
     </div>
   </form>

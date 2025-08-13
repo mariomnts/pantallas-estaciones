@@ -3,7 +3,7 @@
     <div class="flex justify-center w-full">
       <div
         ref="resizableContainer"
-        class="relative overflow-hidden rounded-lg border border-slate-600 w-full"
+        class="relative overflow-hidden rounded-sm border border-slate-700 w-full"
         :class="
           resizableStyle.width || resizableStyle.height
             ? ''

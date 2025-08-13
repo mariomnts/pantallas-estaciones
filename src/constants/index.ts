@@ -115,5 +115,5 @@ export const VisualizationOptions = [
 
 export const PlatformBooleanOptions = [
   { key: 'showObservation', label: 'Mostrar observación' },
-  { key: 'showComposition', label: 'Mostrar composición' },
+  { key: 'showComposition', label: 'Mostrar composición (no real)' },
 ]
