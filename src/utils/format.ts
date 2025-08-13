@@ -11,6 +11,8 @@ export interface FormData {
   showProduct: boolean
   showNumber: boolean
   countdown: boolean
+  showStops: boolean
+  showAllTrains: boolean
   platformFilter: string[]
   productFilter: string[]
   companyFilter: string[]
@@ -26,6 +28,8 @@ export interface FormData {
   fontSize: string | number
   customFilter: string[]
   stopFilter: string[]
+  platformLocationRight: string[]
+  platformLocationLeft: string[]
 }
 
 export function convertFormDataToGravitaProps(formData: FormData) {
@@ -70,7 +74,12 @@ export function convertFormDataToGravitaProps(formData: FormData) {
     stationCode: formData.stationCode,
     traffic: trafficValues,
     languages: languagesValues,
-    fontSize: formData.fontSize || 1,
+    fontSize:
+      formData.fontSize === 0
+        ? 'auto'
+        : formData.fontSize !== undefined
+          ? formData.fontSize
+          : 'auto',
   }
 
   // Add conditional props based on interface
@@ -81,6 +90,8 @@ export function convertFormDataToGravitaProps(formData: FormData) {
     props.showProduct = formData.showProduct
     props.showNumber = formData.showNumber
     props.countdown = formData.countdown
+    props.maxShowStops = formData.showStops ? -1 : 0
+    props.showAllTrains = formData.showAllTrains
     props.platformFilter = Array.isArray(formData.platformFilter)
       ? formData.platformFilter.join(',')
       : formData.platformFilter
@@ -126,6 +137,8 @@ export function convertFormDataToGravitaProps(formData: FormData) {
 
   if (formData.interfaz === 'platform') {
     props.platformLocation = formData.platformLocations.join(',')
+    props.platformLocationRight = formData.platformLocationRight.join(',')
+    props.platformLocationLeft = formData.platformLocationLeft.join(',')
     props.platformMode = formData.platformMode
     props.platformTrigger = formData.platformTrigger
     props.showComposition = formData.showComposition
@@ -156,10 +169,14 @@ export function generateUrl(formData: FormData, selectedStation: any): string {
 
   // Add form data as URL params with special handling
   Object.entries(filteredFormData).forEach(([key, value]: [string, any]) => {
-    // Handle traffic - if empty (nothing selected in UI), don't add to URL (means all)
+    // Handle traffic - if default selection (all except servicio interno), don't add to URL
     if (key === 'traffic') {
-      if (value.length === 0) {
-        return // Don't add to URL
+      const defaultTraffic = ['cercanias', 'av', 'largaDistancia', 'regional']
+      const isDefault =
+        value.length === defaultTraffic.length && defaultTraffic.every((t) => value.includes(t))
+
+      if (value.length === 0 || isDefault) {
+        return // Don't add to URL for empty or default selection
       }
       params.append(key, value.join(','))
       return
@@ -213,6 +230,22 @@ export function generateUrl(formData: FormData, selectedStation: any): string {
       return
     }
 
+    // Handle platformSelectionRight for platform interface
+    if (key === 'platformLocationRight') {
+      if (Array.isArray(value) && value.length > 0) {
+        params.append('platformLocationRight', value.join(','))
+      }
+      return
+    }
+
+    // Handle platformSelectionLeft for platform interface
+    if (key === 'platformLocationLeft') {
+      if (Array.isArray(value) && value.length > 0) {
+        params.append('platformLocationLeft', value.join(','))
+      }
+      return
+    }
+
     // Handle displayNumber for number interface
     if (key === 'displayNumber') {
       if (value) {
@@ -222,8 +255,21 @@ export function generateUrl(formData: FormData, selectedStation: any): string {
     }
 
     // Handle fontSize
-    if (key === 'fontSize' && value && value !== 1) {
+    if (key === 'fontSize' && value !== undefined && value !== 0) {
       params.append('fontSize', String(value))
+      return
+    }
+
+    // Handle showStops - convert to maxShowStops parameter
+    if (key === 'showStops') {
+      const maxShowStops = value ? -1 : 0
+      params.append('maxShowStops', String(maxShowStops))
+      return
+    }
+
+    // Handle showAllTrains - only add if true (since default is false)
+    if (key === 'showAllTrains' && value === true) {
+      params.append('showAllTrains', 'true')
       return
     }
 
@@ -252,6 +298,8 @@ export function filterPropsByInterface(props: any, interfaceKey: string) {
       'showProduct',
       'showNumber',
       'countdown',
+      'maxShowStops',
+      'showAllTrains',
       'platformFilter',
       'productFilter',
       'companyFilter',
@@ -267,6 +315,8 @@ export function filterPropsByInterface(props: any, interfaceKey: string) {
       'showProduct',
       'showNumber',
       'countdown',
+      'maxShowStops',
+      'showAllTrains',
       'platformFilter',
       'productFilter',
       'companyFilter',
@@ -277,6 +327,8 @@ export function filterPropsByInterface(props: any, interfaceKey: string) {
     platform: [
       ...allAllowedProps,
       'platformLocation',
+      'platformLocationRight',
+      'platformLocationLeft',
       'platformMode',
       'platformTrigger',
       'showComposition',
@@ -313,6 +365,8 @@ export function filterFormDataByInterface(data: any) {
       'showProduct',
       'showNumber',
       'countdown',
+      'showStops',
+      'showAllTrains',
       'platformFilter',
       'productFilter',
       'companyFilter',
@@ -332,6 +386,8 @@ export function filterFormDataByInterface(data: any) {
       'showProduct',
       'showNumber',
       'countdown',
+      'showStops',
+      'showAllTrains',
       'platformFilter',
       'productFilter',
       'companyFilter',
@@ -346,6 +402,8 @@ export function filterFormDataByInterface(data: any) {
       'traffic',
       'languages',
       'platformLocations',
+      'platformLocationRight',
+      'platformLocationLeft',
       'platformMode',
       'platformTrigger',
       'showComposition',
@@ -395,6 +453,9 @@ export function parseUrlParamsToFormData(params: URLSearchParams): FormData {
       const traffic = Traffics.find((t) => t.value === value)
       return traffic?.key || value
     })
+  } else {
+    // Default to all traffic except servicio interno
+    trafficKeys = ['cercanias', 'av', 'largaDistancia', 'regional']
   }
 
   // Map languages values back to keys
@@ -463,6 +524,15 @@ export function parseUrlParamsToFormData(params: URLSearchParams): FormData {
     showProduct: parseBoolean(params.get('showProduct'), true),
     showNumber: parseBoolean(params.get('showNumber'), true),
     countdown: parseBoolean(params.get('countdown'), false),
+    showStops: (() => {
+      const maxShowStops = params.get('maxShowStops')
+      if (maxShowStops !== null) {
+        // -1 means show all stops (true), 0 means show no stops (false)
+        return maxShowStops === '-1'
+      }
+      return true
+    })(),
+    showAllTrains: parseBoolean(params.get('showAllTrains'), false),
     platformFilter: parseArray(params.get('platformFilter')),
     productFilter: productFilterKeys,
     companyFilter: companyFilterKeys,
@@ -475,8 +545,10 @@ export function parseUrlParamsToFormData(params: URLSearchParams): FormData {
     showComposition: parseBoolean(params.get('showComposition'), false),
     showObservation: parseBoolean(params.get('showObservation'), false),
     platformArrangement: params.get('platformArrangement') || 'ascending',
-    fontSize: params.get('fontSize') || 1,
+    fontSize: params.get('fontSize') || 0,
     customFilter: parseArray(params.get('customFilter')),
     stopFilter: parseArray(params.get('stopFilter')),
+    platformLocationRight: parseArray(params.get('platformLocationRight')),
+    platformLocationLeft: parseArray(params.get('platformLocationLeft')),
   }
 }

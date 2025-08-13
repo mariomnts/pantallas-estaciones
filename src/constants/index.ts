@@ -17,17 +17,17 @@ export const Traffics = [
 ]
 
 export const Products = [
-  { key: 'iryo', value: 'IRYO,IRY', label: 'Iryo' },
+  { key: 'ave', value: 'AVE,A,AVE624', label: 'AVE' },
+  { key: 'alvia', value: 'ALVIA,B', label: 'Alvia' },
   { key: 'avlo', value: 'AVLO', label: 'Avlo' },
-  { key: 'md', value: 'MD', label: 'Media Distancia' },
   { key: 'avant', value: 'AVANT,AVA', label: 'Avant' },
   { key: 'rex', value: 'REX', label: 'Reg. Exprés' },
   { key: 'intercity', value: 'ICITY,INTC', label: 'Intercity' },
-  { key: 'ave', value: 'AVE,A,AVE624', label: 'AVE' },
-  { key: 'sserv', value: 'SSERV,ESPECRF', label: 'Serv. Especiales' },
+  { key: 'md', value: 'MD', label: 'Media Distancia' },
   { key: 'cercanias', value: 'CERCAN', label: 'Cercanías' },
+  { key: 'iryo', value: 'IRYO,IRY', label: 'Iryo' },
   { key: 'ouigo', value: 'OUIGO,OUI', label: 'Ouigo' },
-  { key: 'alvia', value: 'ALVIA,B', label: 'Alvia' },
+  { key: 'sserv', value: 'SSERV,ESPECRF', label: 'Serv. Especiales' },
 ]
 
 export const Languages = [
@@ -36,17 +36,21 @@ export const Languages = [
   { key: 'eu', value: 'EUS', label: 'Euskera' },
   { key: 'gl', value: 'GAL', label: 'Galego' },
   { key: 'va', value: 'VAL', label: 'Valencià' },
+  { key: 'ast', value: 'AST', label: 'Asturianu' },
+  { key: 'ara', value: 'ARA', label: 'Aragonés' },
+  { key: 'por', value: 'POR', label: 'Português' },
   { key: 'en', value: 'ENG', label: 'English' },
   { key: 'fr', value: 'FRA', label: 'Français' },
 ]
 
 export const Companies = [
-  { key: 'renfe', value: 'RENFE', label: 'Renfe' },
+  { key: 'renfe', value: 'RENFE,RF,Renfe', label: 'Renfe' },
   { key: 'iryo', value: 'IRYO', label: 'Iryo' },
   { key: 'ouigo', value: 'OUIGO', label: 'Ouigo' },
 ]
 
 export const SubtitlesList = [
+  { key: 'station-name', value: 'station-name', label: 'Nombre estación' },
   { key: 'av', value: 'AV', label: 'Alta Velocidad' },
   { key: 'cerc', value: 'CERC', label: 'Cercanías' },
   { key: 'cercmd', value: 'CERCMD', label: 'Cercanías · Regional' },
@@ -71,6 +75,12 @@ export const SubtitlesList = [
     key: 'via:$',
     value: 'VIA:$',
     label: 'Vía ...',
+    takesParam: true,
+  },
+  {
+    key: 'vias:$',
+    value: 'VIAS:$',
+    label: 'Vías ...',
     takesParam: true,
   },
 ]
@@ -99,9 +109,11 @@ export const VisualizationOptions = [
   { key: 'showProduct', label: 'Mostrar producto' },
   { key: 'showNumber', label: 'Mostrar número' },
   { key: 'countdown', label: 'Cuenta atrás' },
+  { key: 'showStops', label: 'Mostrar paradas' },
+  { key: 'showAllTrains', label: 'Mostrar con scroll' },
 ]
 
 export const PlatformBooleanOptions = [
-  { key: 'showComposition', label: 'Mostrar composición' },
   { key: 'showObservation', label: 'Mostrar observación' },
+  { key: 'showComposition', label: 'Mostrar composición' },
 ]

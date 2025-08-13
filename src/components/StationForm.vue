@@ -310,7 +310,7 @@
       <div class="md:col-span-1">
         <label class="block text-sm font-medium text-slate-300 mb-3">Compañías</label>
         <div class="flex flex-wrap gap-2">
-          <div v-for="company in Companies" :key="company.key">
+          <div v-for="company in availableCompanies" :key="company.key">
             <input
               :id="`company-${company.key}`"
               :value="company.key"
@@ -345,7 +345,7 @@
       <div class="md:col-span-2">
         <label class="block text-sm font-medium text-slate-300 mb-3">Productos</label>
         <div class="flex flex-wrap gap-2">
-          <div v-for="product in Products" :key="product.key">
+          <div v-for="product in availableProducts" :key="product.key">
             <input
               :id="`product-${product.key}`"
               :value="product.key"
@@ -460,10 +460,28 @@
               :checked="formData.platformLocations.includes(platform)"
               @change="
                 (e) => {
-                  const newPlatformLocations = e.target.checked
-                    ? [...formData.platformLocations, platform]
-                    : formData.platformLocations.filter((p) => p !== platform)
-                  emitFormChange({ platformLocations: newPlatformLocations })
+                  if (e.target.checked) {
+                    // Adding platform
+                    const newPlatformLocations = [...formData.platformLocations, platform]
+                    emitFormChange({ platformLocations: newPlatformLocations })
+                  } else {
+                    // Removing platform - also clean up from left/right arrays
+                    const newPlatformLocations = formData.platformLocations.filter(
+                      (p) => p !== platform,
+                    )
+                    const newPlatformLocationLeft = formData.platformLocationLeft.filter(
+                      (p) => p !== platform,
+                    )
+                    const newPlatformLocationRight = formData.platformLocationRight.filter(
+                      (p) => p !== platform,
+                    )
+
+                    emitFormChange({
+                      platformLocations: newPlatformLocations,
+                      platformLocationLeft: newPlatformLocationLeft,
+                      platformLocationRight: newPlatformLocationRight,
+                    })
+                  }
                 }
               "
               type="checkbox"
@@ -552,6 +570,88 @@
         </div>
       </div>
 
+      <!-- Platform Selection Right/Left -->
+      <div
+        v-if="availablePlatformsForSelection.length > 0"
+        class="grid grid-cols-1 md:grid-cols-2 gap-6"
+      >
+        <!-- Left Platforms -->
+        <div>
+          <label class="block text-sm font-medium text-slate-300 mb-3">Vías a la izquierda</label>
+          <div class="flex flex-wrap gap-2">
+            <div v-for="platform in availableLeftPlatforms" :key="`left-${platform}`">
+              <input
+                :id="`platform-left-${platform}`"
+                :value="platform"
+                :checked="formData.platformLocationLeft.includes(platform)"
+                @change="
+                  (e) => {
+                    const newPlatformLocationLeft = e.target.checked
+                      ? [...formData.platformLocationLeft, platform]
+                      : formData.platformLocationLeft.filter((p) => p !== platform)
+                    emitFormChange({ platformLocationLeft: newPlatformLocationLeft })
+                  }
+                "
+                type="checkbox"
+                class="sr-only"
+              />
+              <label
+                :for="`platform-left-${platform}`"
+                class="inline-flex items-center px-2 py-1 rounded text-sm cursor-pointer transition-all"
+                :class="
+                  formData.platformLocationLeft.includes(platform)
+                    ? 'bg-dark-green text-dark-blue'
+                    : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+                "
+              >
+                {{ platform }}
+              </label>
+            </div>
+            <div v-if="availableLeftPlatforms.length === 0" class="text-sm text-slate-400">
+              Todas las vías están asignadas
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Platforms -->
+        <div>
+          <label class="block text-sm font-medium text-slate-300 mb-3">Vías a la derecha</label>
+          <div class="flex flex-wrap gap-2">
+            <div v-for="platform in availableRightPlatforms" :key="`right-${platform}`">
+              <input
+                :id="`platform-right-${platform}`"
+                :value="platform"
+                :checked="formData.platformLocationRight.includes(platform)"
+                @change="
+                  (e) => {
+                    const newPlatformLocationRight = e.target.checked
+                      ? [...formData.platformLocationRight, platform]
+                      : formData.platformLocationRight.filter((p) => p !== platform)
+                    emitFormChange({ platformLocationRight: newPlatformLocationRight })
+                  }
+                "
+                type="checkbox"
+                class="sr-only"
+              />
+              <label
+                :for="`platform-right-${platform}`"
+                class="inline-flex items-center px-2 py-1 rounded text-sm cursor-pointer transition-all"
+                :class="
+                  formData.platformLocationRight.includes(platform)
+                    ? 'bg-dark-green text-dark-blue'
+                    : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+                "
+              >
+                {{ platform }}
+              </label>
+            </div>
+            <div v-if="availableRightPlatforms.length === 0" class="text-sm text-slate-400">
+              Todas las vías están asignadas
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <label class="block text-sm font-medium text-slate-300 mb-2">Modo de andén</label>
@@ -583,7 +683,7 @@
         </div>
       </div>
 
-      <!-- <div class="flex flex-wrap gap-3">
+      <div class="flex flex-wrap gap-3">
         <div v-for="option in PlatformBooleanOptions" :key="option.key" class="relative">
           <input
             :id="option.key"
@@ -610,7 +710,7 @@
             {{ option.label }}
           </label>
         </div>
-      </div> -->
+      </div>
     </div>
 
     <!-- Conditional Fields for Number -->
@@ -640,7 +740,7 @@
             :value="formData.fontSize"
             @input="(e) => emitFormChange({ fontSize: parseInt(e.target.value) })"
             type="range"
-            min="1"
+            min="0"
             max="3"
             step="1"
             class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer slider"
@@ -648,6 +748,7 @@
         </div>
       </div>
       <div class="flex justify-between text-xs text-slate-400 mt-1 w-1/2">
+        <span>Auto</span>
         <span>Pequeño</span>
         <span>Mediano</span>
         <span>Grande</span>
@@ -753,6 +854,110 @@ const allPlatformLocations = computed(() => {
   })
 })
 
+// Computed properties for platform selection (only selected platforms can be chosen for left/right)
+const availablePlatformsForSelection = computed(() => {
+  return props.formData.platformLocations
+})
+
+const availableRightPlatforms = computed(() => {
+  return availablePlatformsForSelection.value.filter(
+    (platform) => !props.formData.platformLocationLeft.includes(platform),
+  )
+})
+
+const availableLeftPlatforms = computed(() => {
+  return availablePlatformsForSelection.value.filter(
+    (platform) => !props.formData.platformLocationRight.includes(platform),
+  )
+})
+
+// Computed properties for companies
+const availableCompanies = computed(() => {
+  const staticCompanies = [...Companies]
+  return staticCompanies
+
+  // Extract companies from train data
+  const trains = props.adifData?.trains || []
+  const trainCompanies = new Set()
+
+  trains.forEach((train) => {
+    if (train.company && train.company.trim()) {
+      trainCompanies.add(train.company.trim().toUpperCase())
+    }
+  })
+
+  // Convert train companies to the same format as static companies
+  const dynamicCompanies = Array.from(trainCompanies).map((company) => ({
+    key: company,
+    value: company,
+    label: company,
+    fromTrains: true,
+  }))
+
+  // Filter out duplicates and merge
+  const allCompanies = [...staticCompanies]
+  dynamicCompanies.forEach((dynamic) => {
+    // Check if this company value already exists in any static company's value field
+    const existsInStatic = staticCompanies.some((staticCompany) =>
+      staticCompany.value.split(',').some((val) => val.trim() === dynamic.value),
+    )
+
+    if (!existsInStatic && !allCompanies.find((c) => c.key === dynamic.key)) {
+      allCompanies.push(dynamic)
+    }
+  })
+
+  return allCompanies
+})
+
+// Computed properties for products
+const availableProducts = computed(() => {
+  const staticProducts = [...Products]
+  return staticProducts
+
+  // Extract products from train data
+  const trains = props.adifData?.trains || []
+  const trainProducts = new Set()
+
+  trains.forEach((train) => {
+    // Skip products from Cercanías trains (traffic type 'C')
+    if (train.traffic_type === 'C') {
+      return
+    }
+
+    if (train.commercial_id && Array.isArray(train.commercial_id)) {
+      train.commercial_id.forEach((commercial) => {
+        if (commercial.product && commercial.product.trim()) {
+          trainProducts.add(commercial.product.trim().toUpperCase())
+        }
+      })
+    }
+  })
+
+  // Convert train products to the same format as static products
+  const dynamicProducts = Array.from(trainProducts).map((product) => ({
+    key: product,
+    value: product,
+    label: product,
+    fromTrains: true,
+  }))
+
+  // Filter out duplicates and merge
+  const allProducts = [...staticProducts]
+  dynamicProducts.forEach((dynamic) => {
+    // Check if this product value already exists in any static product's value field
+    const existsInStatic = staticProducts.some((staticProduct) =>
+      staticProduct.value.split(',').some((val) => val.trim() === dynamic.value),
+    )
+
+    if (!existsInStatic && !allProducts.find((p) => p.key === dynamic.key)) {
+      allProducts.push(dynamic)
+    }
+  })
+
+  return allProducts
+})
+
 // Check if subtitle takes parameter
 const subtitleTakesParam = computed(() => {
   const subtitle = SubtitlesList.find((s) => s.key === props.formData.subtitle)
@@ -800,7 +1005,18 @@ const addManualPlatformLocation = () => {
 
 const removePlatformLocation = (platform) => {
   const newPlatformLocations = props.formData.platformLocations.filter((p) => p !== platform)
-  emitFormChange({ platformLocations: newPlatformLocations })
+
+  // Also remove from left and right location arrays if present
+  const newPlatformLocationLeft = props.formData.platformLocationLeft.filter((p) => p !== platform)
+  const newPlatformLocationRight = props.formData.platformLocationRight.filter(
+    (p) => p !== platform,
+  )
+
+  emitFormChange({
+    platformLocations: newPlatformLocations,
+    platformLocationLeft: newPlatformLocationLeft,
+    platformLocationRight: newPlatformLocationRight,
+  })
 }
 
 // Custom filter management methods

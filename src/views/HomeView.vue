@@ -10,7 +10,7 @@
           </div>
           <div class="text-center md:text-left">
             <h1 class="text-2xl font-bold text-white leading-tight">Pantallas estaciones</h1>
-            <p class="text-slate-400 text-md mt-1">Configurador pantallas información estaciones</p>
+            <p class="text-slate-400 text-md mt-1">Configurador pantallas estaciones ADIF</p>
           </div>
         </div>
       </header>
@@ -116,7 +116,7 @@ import { onMounted } from 'vue'
 const formData = ref({
   interfaz: 'departures',
   stationCode: '17000',
-  traffic: [], // Default none selected in UI
+  traffic: ['cercanias', 'av', 'largaDistancia', 'regional'], // Default all except servicio interno
   languages: ['es'], // Default Spanish
   showHeader: true,
   showAccess: false,
@@ -124,19 +124,23 @@ const formData = ref({
   showProduct: true,
   showNumber: true,
   countdown: true,
+  showStops: true,
+  showAllTrains: false,
   platformFilter: [], // Default none
   productFilter: [], // Changed from productFilter
   companyFilter: [], // Changed from companyFilter
   subtitle: '',
   subtitleParam: '',
   platformLocations: [],
+  platformLocationRight: [],
+  platformLocationLeft: [],
   displayNumber: '',
   platformMode: 'platform',
   platformTrigger: 'next',
-  showComposition: true,
+  showComposition: false,
   showObservation: true,
   platformArrangement: 'ascending',
-  fontSize: 1,
+  fontSize: 0,
   customFilter: [], // Línea de cercanías filter
   stopFilter: [], // Estaciones con parada filter
 })

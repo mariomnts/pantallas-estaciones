@@ -12,7 +12,7 @@ import { parseUrlParamsToFormData, convertFormDataToGravitaProps } from '../util
 const formData = ref({
   interfaz: 'departures',
   stationCode: '',
-  traffic: [],
+  traffic: ['cercanias', 'av', 'largaDistancia', 'regional'],
   languages: ['es'],
   showHeader: true,
   showAccess: true,
@@ -20,6 +20,8 @@ const formData = ref({
   showProduct: true,
   showNumber: true,
   countdown: false,
+  showStops: true,
+  showAllTrains: false,
   platformFilter: [],
   productFilter: [],
   companyFilter: [],
@@ -28,13 +30,15 @@ const formData = ref({
   subtitle: '',
   subtitleParam: '',
   platformLocations: [],
+  platformLocationRight: [],
+  platformLocationLeft: [],
   displayNumber: '',
   platformMode: 'platform',
   platformTrigger: 'announced',
   showComposition: false,
   showObservation: false,
   platformArrangement: 'ascending',
-  fontSize: 1,
+  fontSize: 0,
 })
 
 // Parse URL parameters on mount

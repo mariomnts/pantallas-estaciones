@@ -15,8 +15,12 @@ const props = defineProps([
   'showPlatformSign',
   'showProduct',
   'showNumber',
+  'maxShowStops',
+  'showAllTrains',
   'platformFilter',
   'platformLocation',
+  'platformLocationRight',
+  'platformLocationLeft',
   'platformTrigger',
   'trafficFilter',
   'companyFilter',
@@ -45,10 +49,11 @@ const iframeSrc = computed(() => {
   const paramsObj = {
     rutaRecursos: '../../../recursos',
     IdEstacion: props.stationCode,
+    'estimated-time-traffics': 'C',
+    'countdown-traffics': 'C',
 
-    // 'pin-position': '0,120,240',
-    // 'pin-style': 'stairs_up_left,pin,stairs_up_right',
-    // 'if-no-trains': 'number',
+    'pin-position': '10,130',
+    'pin-style': 'stairs_down_right,lift_down',
   }
 
   // Add all other props that are not undefined, converting camelCase to kebab-case
@@ -78,6 +83,41 @@ function handleBoardLoad() {
 function sendBoardData(msg) {
   const data = JSON.parse(msg)
 
+  // Extract platforms from trains and add to station settings if not already present
+  if (data?.trains && data?.station_settings) {
+    const existingPlatforms = data.station_settings?.platforms || {}
+
+    const trainPlatforms = new Set()
+    data.trains.forEach((train) => {
+      if (train.platform && train.platform.trim()) {
+        trainPlatforms.add(train.platform.trim())
+      }
+    })
+
+    // Add new platforms that don't exist in station settings
+    trainPlatforms.forEach((platform) => {
+      if (!existingPlatforms.hasOwnProperty(platform)) {
+        existingPlatforms[platform] = {
+          fakeFromTrains: true,
+        }
+      }
+    })
+
+    // Add platform dimensions to each platform
+    Object.keys(existingPlatforms).forEach((platformKey) => {
+      existingPlatforms[platformKey] = {
+        ...existingPlatforms[platformKey],
+        platform_start: 0,
+        platform_end: 150,
+        track_start: 0,
+        track_end: 150,
+        sectors: existingPlatforms[platformKey]?.sectors || [],
+      }
+    })
+
+    data.station_settings.platforms = existingPlatforms
+  }
+
   data?.trains?.forEach((train) => {
     const destinationCercanias = train?.destinations?.[0]?.line
       ?.replace(/ROD[A-Z0-9]*|CER[A-Z0-9]*|TRA[A-Z0-9]*/g, '')
@@ -99,7 +139,49 @@ function sendBoardData(msg) {
     if (['OUIGO', 'OUI'].includes(train?.commercial_id?.[0]?.product)) {
       train.company = 'OUIGO'
     }
+
+    // Ensure train has a sectors property
+    train.sectors = train.sectors || []
+
+    // fake composition
+    train.orientation_out = 'left'
+    train.stopping_point = 30
+    train.stopping_point_reference = 'left'
+
+    if (train?.commercial_id?.[0]?.product != 'CERCAN') {
+      train.composition = [
+        [
+          { type: 'A', length: 100, number: '01' },
+          { type: 'C', length: 100, number: '02' },
+          { type: 'C', length: 100, info: ['bar'] },
+          { type: 'A', length: 100, number: '06' },
+        ],
+        [
+          { type: 'A', length: 100, number: '07' },
+          { type: 'C', length: 100, number: '08' },
+          { type: 'C', length: 100, info: ['accessible'] },
+          { type: 'A', length: 100, number: '10' },
+        ],
+      ]
+    } else {
+      train.composition = [
+        [
+          { type: 'A', length: 100, info: ['medium_occupancy'] },
+          { type: 'C', length: 100, info: ['low_occupancy'] },
+          { type: 'C', length: 100, info: ['low_occupancy'] },
+          { type: 'A', length: 100, info: ['low_occupancy'] },
+        ],
+        [
+          { type: 'A', length: 100, info: ['high_occupancy'] },
+          { type: 'C', length: 100, info: ['high_occupancy'] },
+          { type: 'C', length: 100, info: ['medium_occupancy'] },
+          { type: 'A', length: 100, info: ['high_occupancy'] },
+        ],
+      ]
+    }
   })
+
+  emit('data', data)
 
   board.value?.contentWindow?.postMessage(
     { target: 'grvta.setData', objData: JSON.stringify(data) },
@@ -116,13 +198,11 @@ function handleIncoming(raw) {
   }
 
   try {
-    const parsedData = JSON.parse(raw)
     sendBoardData(raw)
-    emit('data', parsedData)
     lastMessageRaw.value = raw
 
     if (!import.meta.env.PROD) {
-      console.log('>', parsedData)
+      console.log('>', JSON.parse(raw))
     }
   } catch (error) {
     console.error('[Gravita] Error parsing incoming data:', error)
