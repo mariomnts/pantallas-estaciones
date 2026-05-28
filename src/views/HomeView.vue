@@ -47,6 +47,11 @@
                   <Gravita
                     class="gravita w-full h-full"
                     v-bind="gravitaProps"
+                    :simulateClosedCheckIn="formData.simulateClosedCheckIn"
+                    :simulateAlightingOnly="formData.simulateAlightingOnly"
+                    :simulateAlertType="formData.simulateAlertType"
+                    :simulatePlatformRouting="formData.simulatePlatformRouting"
+                    :simulateAccessOpeningMargin="formData.simulateAccessOpeningMargin"
                     @data="handledata"
                     @status="handlestatus"
                   />
@@ -55,10 +60,9 @@
 
               <div class="mt-6 bg-light-green p-3 rounded-md border border-dark-green">
                 <p class="text-xs text-dark-blue">
-                  Proyecto no oficial ni afiliado con ADIF con propósito educacional. El panel
-                  superior muestra contenido servido directamente por ADIF, esta web solo permite
-                  configurar los parámetros de visualización. Marca, logotipos y datos mostrados en
-                  el panel son propiedad de ADIF.
+                  Proyecto no oficial ni afiliado con ADIF con propósito educacional. Esta web solo
+                  permite configurar los parámetros de su sistema de información al viajero. La
+                  marca y datos mostrados son propiedad de ADIF.
                 </p>
               </div>
             </div>
@@ -117,9 +121,9 @@ const formData = ref({
   interfaz: 'departures',
   stationCode: '17000',
   traffic: ['cercanias', 'av', 'largaDistancia', 'regional'], // Default all except servicio interno
-  languages: ['es'], // Default Spanish
+  languages: ['es', 'en'],
   showHeader: true,
-  showAccess: false,
+  showAccess: true,
   showPlatform: true,
   showProduct: true,
   showNumber: true,
@@ -129,20 +133,34 @@ const formData = ref({
   platformFilter: [], // Default none
   productFilter: [], // Changed from productFilter
   companyFilter: [], // Changed from companyFilter
-  subtitle: '',
+  subtitle: 'station-name',
   subtitleParam: '',
   platformLocations: [],
   platformLocationRight: [],
   platformLocationLeft: [],
+  platformLocationForwardLeft: [],
+  platformLocationForwardRight: [],
   displayNumber: '',
   platformMode: 'platform',
   platformTrigger: 'next',
-  showComposition: false,
+  showComposition: true,
   showObservation: true,
   platformArrangement: 'ascending',
+  showPlatformSign: true,
+  showPlatformPreview: true,
+  showAlerts: true,
+  showClosedCheckIn: true,
+  showAlightingOnly: true,
+  sectorizationMode: 'first_and_last',
   fontSize: 0,
   customFilter: [], // Línea de cercanías filter
   stopFilter: [], // Estaciones con parada filter
+  // Simulation controls — not included in shareable URL, only used for preview
+  simulateClosedCheckIn: false,
+  simulateAlightingOnly: false,
+  simulateAlertType: '',
+  simulatePlatformRouting: false,
+  simulateAccessOpeningMargin: false,
 })
 
 // Component state

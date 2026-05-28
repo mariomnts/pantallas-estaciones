@@ -33,7 +33,7 @@
         <div class="pt-2 flex items-center space-x-2 border-t border-slate-600">
           <div class="w-1.5 h-1.5 bg-red-400 rounded-full"></div>
           <span class="text-red-400 text-md"
-            >ADIF está bloqueando esta conexión a sus servidores</span
+            >ADIF está bloqueando tu conexión a sus servidores</span
           >
         </div>
       </div>
@@ -76,7 +76,9 @@
           v-if="!trainsLoaded"
         >
           <div class="w-1.5 h-1.5 bg-red-300 rounded-full animate-pulse"></div>
-          <span class="text-red-300 text-md">ADIF no proporciona datos para esta estación</span>
+          <span class="text-red-300 text-md"
+            >ADIF todavía no proporciona datos para esta estación</span
+          >
         </div>
       </div>
     </div>

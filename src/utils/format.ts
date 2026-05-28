@@ -30,6 +30,14 @@ export interface FormData {
   stopFilter: string[]
   platformLocationRight: string[]
   platformLocationLeft: string[]
+  platformLocationForwardLeft: string[]
+  platformLocationForwardRight: string[]
+  showPlatformSign: boolean
+  showPlatformPreview: boolean
+  showAlerts: boolean
+  showClosedCheckIn: boolean
+  showAlightingOnly: boolean
+  sectorizationMode: string
 }
 
 export function convertFormDataToGravitaProps(formData: FormData) {
@@ -56,7 +64,7 @@ export function convertFormDataToGravitaProps(formData: FormData) {
     .join(',')
 
   // Handle subtitle with parameter replacement
-  let subtitleValue = ''
+  let subtitleValue = 'station-name'
   if (formData.subtitle) {
     const subtitle = SubtitlesList.find((s) => s.key === formData.subtitle)
 
@@ -133,17 +141,26 @@ export function convertFormDataToGravitaProps(formData: FormData) {
     if (subtitleValue) {
       props.subtitle = subtitleValue
     }
+
+    props.showPlatformPreview = formData.showPlatformPreview
+    props.showAlerts = formData.showAlerts
   }
 
   if (formData.interfaz === 'platform') {
     props.platformLocation = formData.platformLocations.join(',')
     props.platformLocationRight = formData.platformLocationRight.join(',')
     props.platformLocationLeft = formData.platformLocationLeft.join(',')
+    props.platformLocationForwardLeft = formData.platformLocationForwardLeft.join(',')
+    props.platformLocationForwardRight = formData.platformLocationForwardRight.join(',')
     props.platformMode = formData.platformMode
     props.platformTrigger = formData.platformTrigger
+    props.showPlatformSign = formData.showPlatformSign
     props.showComposition = formData.showComposition
     props.showObservation = formData.showObservation
     props.platformArrangement = formData.platformArrangement
+    props.showClosedCheckIn = formData.showClosedCheckIn
+    props.showAlightingOnly = formData.showAlightingOnly
+    props.sectorizationMode = formData.sectorizationMode
   }
 
   if (formData.interfaz === 'number') {
@@ -246,6 +263,30 @@ export function generateUrl(formData: FormData, selectedStation: any): string {
       return
     }
 
+    // Handle platformLocationForwardLeft for platform interface
+    if (key === 'platformLocationForwardLeft') {
+      if (Array.isArray(value) && value.length > 0) {
+        params.append('platformLocationForwardLeft', value.join(','))
+      }
+      return
+    }
+
+    // Handle platformLocationForwardRight for platform interface
+    if (key === 'platformLocationForwardRight') {
+      if (Array.isArray(value) && value.length > 0) {
+        params.append('platformLocationForwardRight', value.join(','))
+      }
+      return
+    }
+
+    // Handle sectorizationMode - skip if default 'none'
+    if (key === 'sectorizationMode') {
+      if (value && value !== 'none') {
+        params.append(key, String(value))
+      }
+      return
+    }
+
     // Handle displayNumber for number interface
     if (key === 'displayNumber') {
       if (value) {
@@ -295,11 +336,13 @@ export function filterPropsByInterface(props: any, interfaceKey: string) {
       'showHeader',
       'showAccess',
       'showPlatform',
+      'showPlatformPreview',
       'showProduct',
       'showNumber',
       'countdown',
       'maxShowStops',
       'showAllTrains',
+      'showAlerts',
       'platformFilter',
       'productFilter',
       'companyFilter',
@@ -312,11 +355,13 @@ export function filterPropsByInterface(props: any, interfaceKey: string) {
       'showHeader',
       'showAccess',
       'showPlatform',
+      'showPlatformPreview',
       'showProduct',
       'showNumber',
       'countdown',
       'maxShowStops',
       'showAllTrains',
+      'showAlerts',
       'platformFilter',
       'productFilter',
       'companyFilter',
@@ -329,11 +374,17 @@ export function filterPropsByInterface(props: any, interfaceKey: string) {
       'platformLocation',
       'platformLocationRight',
       'platformLocationLeft',
+      'platformLocationForwardLeft',
+      'platformLocationForwardRight',
       'platformMode',
       'platformTrigger',
       'showComposition',
       'showObservation',
       'platformArrangement',
+      'showPlatformSign',
+      'showClosedCheckIn',
+      'showAlightingOnly',
+      'sectorizationMode',
     ],
     number: [...allAllowedProps, 'platformLocation'],
     clock: [...allAllowedProps],
@@ -362,11 +413,14 @@ export function filterFormDataByInterface(data: any) {
       'showHeader',
       'showAccess',
       'showPlatform',
+      'showPlatformSign',
+      'showPlatformPreview',
       'showProduct',
       'showNumber',
       'countdown',
       'showStops',
       'showAllTrains',
+      'showAlerts',
       'platformFilter',
       'productFilter',
       'companyFilter',
@@ -383,11 +437,14 @@ export function filterFormDataByInterface(data: any) {
       'showHeader',
       'showAccess',
       'showPlatform',
+      'showPlatformSign',
+      'showPlatformPreview',
       'showProduct',
       'showNumber',
       'countdown',
       'showStops',
       'showAllTrains',
+      'showAlerts',
       'platformFilter',
       'productFilter',
       'companyFilter',
@@ -404,11 +461,16 @@ export function filterFormDataByInterface(data: any) {
       'platformLocations',
       'platformLocationRight',
       'platformLocationLeft',
+      'platformLocationForwardLeft',
+      'platformLocationForwardRight',
       'platformMode',
       'platformTrigger',
       'showComposition',
       'showObservation',
       'platformArrangement',
+      'showClosedCheckIn',
+      'showAlightingOnly',
+      'sectorizationMode',
       'fontSize',
     ],
     number: ['interfaz', 'displayNumber', 'fontSize'],
@@ -468,7 +530,7 @@ export function parseUrlParamsToFormData(params: URLSearchParams): FormData {
 
   // Handle subtitle - check if it contains parameter and extract
   const subtitleParam = params.get('subtitle') || ''
-  let subtitleKey = ''
+  let subtitleKey = 'station-name'
   let subtitleParamValue = ''
 
   if (subtitleParam) {
@@ -550,5 +612,13 @@ export function parseUrlParamsToFormData(params: URLSearchParams): FormData {
     stopFilter: parseArray(params.get('stopFilter')),
     platformLocationRight: parseArray(params.get('platformLocationRight')),
     platformLocationLeft: parseArray(params.get('platformLocationLeft')),
+    platformLocationForwardLeft: parseArray(params.get('platformLocationForwardLeft')),
+    platformLocationForwardRight: parseArray(params.get('platformLocationForwardRight')),
+    showPlatformSign: parseBoolean(params.get('showPlatformSign'), true),
+    showPlatformPreview: parseBoolean(params.get('showPlatformPreview'), true),
+    showAlerts: parseBoolean(params.get('showAlerts'), true),
+    showClosedCheckIn: parseBoolean(params.get('showClosedCheckIn'), true),
+    showAlightingOnly: parseBoolean(params.get('showAlightingOnly'), true),
+    sectorizationMode: params.get('sectorizationMode') || 'none',
   }
 }

@@ -1,10 +1,9 @@
-export { Stations } from './stations'
+export { Stations, PopularStations } from './stations'
 
 export const Interfaces = [
   { key: 'departures', value: 'adif-gravita-departures', label: 'Salidas' },
   { key: 'arrivals', value: 'adif-gravita-arrivals', label: 'Llegadas' },
   { key: 'platform', value: 'adif-gravita-platform', label: 'Vía' },
-  { key: 'number', value: 'adif-gravita-number', label: 'Número' },
   { key: 'clock', value: 'adif-gravita-clock', label: 'Reloj' },
 ]
 
@@ -32,6 +31,7 @@ export const Products = [
 
 export const Languages = [
   { key: 'es', value: 'ESP', label: 'Español' },
+  { key: 'en', value: 'ENG', label: 'English' },
   { key: 'ca', value: 'CAT', label: 'Català' },
   { key: 'eu', value: 'EUS', label: 'Euskera' },
   { key: 'gl', value: 'GAL', label: 'Galego' },
@@ -39,7 +39,6 @@ export const Languages = [
   { key: 'ast', value: 'AST', label: 'Asturianu' },
   { key: 'ara', value: 'ARA', label: 'Aragonés' },
   { key: 'por', value: 'POR', label: 'Português' },
-  { key: 'en', value: 'ENG', label: 'English' },
   { key: 'fr', value: 'FRA', label: 'Français' },
 ]
 
@@ -83,6 +82,18 @@ export const SubtitlesList = [
     label: 'Vías ...',
     takesParam: true,
   },
+  {
+    key: 'acceso:$',
+    value: 'ACCESO:$',
+    label: 'Acceso ...',
+    takesParam: true,
+  },
+  {
+    key: 'accesos:$',
+    value: 'ACCESOS:$',
+    label: 'Accesos ...',
+    takesParam: true,
+  },
 ]
 
 export const PlatformArrangements = [
@@ -105,15 +116,36 @@ export const PlatformModes = [
 export const VisualizationOptions = [
   { key: 'showHeader', label: 'Mostrar cabecera' },
   { key: 'showAccess', label: 'Mostrar acceso' },
-  { key: 'showPlatform', label: 'Mostrar andén' },
+  { key: 'showPlatform', label: 'Mostrar vía' },
+  { key: 'showPlatformPreview', label: 'Previsión de vía' },
   { key: 'showProduct', label: 'Mostrar producto' },
   { key: 'showNumber', label: 'Mostrar número' },
   { key: 'countdown', label: 'Cuenta atrás' },
   { key: 'showStops', label: 'Mostrar paradas' },
+  { key: 'showAlerts', label: 'Mostrar alertas' },
   { key: 'showAllTrains', label: 'Mostrar con scroll' },
 ]
 
 export const PlatformBooleanOptions = [
   { key: 'showObservation', label: 'Mostrar observación' },
-  { key: 'showComposition', label: 'Mostrar composición (no real)' },
+  { key: 'showComposition', label: 'Mostrar composición' },
+  { key: 'showPlatformSign', label: 'Mostrar nº vía' },
+  { key: 'showClosedCheckIn', label: 'Mostrar acceso cerrado' },
+  { key: 'showAlightingOnly', label: 'Mostrar trenes sin parada' },
+]
+
+export const SectorizationModes = [
+  { key: 'none', value: 'none', label: 'Sin sectorización' },
+  { key: 'all', value: 'all', label: 'Todas las letras' },
+  { key: 'first_and_last', value: 'first_and_last', label: 'Primera y última' },
+  { key: 'middle', value: 'middle', label: 'Central' },
+  { key: 'middle_up', value: 'middle_up', label: 'Central arriba' },
+]
+
+// Levels that Gravita actually renders (warning/severe = disruption icon; info/works = info icon)
+export const AlertTypes = [
+  { key: 'warning', value: 'warning', label: 'Aviso — warning' },
+  { key: 'info', value: 'info', label: 'Información — info' },
+  { key: 'works', value: 'works', label: 'Obras — works' },
+  { key: 'severe', value: 'severe', label: 'Grave — severe' },
 ]

@@ -435,7 +435,7 @@
             @input="(e) => emitFormChange({ subtitleParam: e.target.value })"
             type="text"
             :placeholder="
-              formData.subtitle === 'operador:$' ? 'Nombre del operador' : 'Número de vía'
+              formData.subtitle === 'operador:$' ? 'Nombre del operador' : 'Número de vía/acceso'
             "
             class="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-dark-green focus:border-dark-green text-white placeholder-slate-400"
           />
@@ -465,7 +465,7 @@
                     const newPlatformLocations = [...formData.platformLocations, platform]
                     emitFormChange({ platformLocations: newPlatformLocations })
                   } else {
-                    // Removing platform - also clean up from left/right arrays
+                    // Removing platform - also clean up from left/right/forward arrays
                     const newPlatformLocations = formData.platformLocations.filter(
                       (p) => p !== platform,
                     )
@@ -475,11 +475,19 @@
                     const newPlatformLocationRight = formData.platformLocationRight.filter(
                       (p) => p !== platform,
                     )
+                    const newPlatformLocationForwardLeft = (
+                      formData.platformLocationForwardLeft || []
+                    ).filter((p) => p !== platform)
+                    const newPlatformLocationForwardRight = (
+                      formData.platformLocationForwardRight || []
+                    ).filter((p) => p !== platform)
 
                     emitFormChange({
                       platformLocations: newPlatformLocations,
                       platformLocationLeft: newPlatformLocationLeft,
                       platformLocationRight: newPlatformLocationRight,
+                      platformLocationForwardLeft: newPlatformLocationForwardLeft,
+                      platformLocationForwardRight: newPlatformLocationForwardRight,
                     })
                   }
                 }
@@ -570,83 +578,173 @@
         </div>
       </div>
 
-      <!-- Platform Selection Right/Left -->
-      <div
-        v-if="availablePlatformsForSelection.length > 0"
-        class="grid grid-cols-1 md:grid-cols-2 gap-6"
-      >
-        <!-- Left Platforms -->
-        <div>
-          <label class="block text-sm font-medium text-slate-300 mb-3">Vías a la izquierda</label>
-          <div class="flex flex-wrap gap-2">
-            <div v-for="platform in availableLeftPlatforms" :key="`left-${platform}`">
-              <input
-                :id="`platform-left-${platform}`"
-                :value="platform"
-                :checked="formData.platformLocationLeft.includes(platform)"
-                @change="
-                  (e) => {
-                    const newPlatformLocationLeft = e.target.checked
-                      ? [...formData.platformLocationLeft, platform]
-                      : formData.platformLocationLeft.filter((p) => p !== platform)
-                    emitFormChange({ platformLocationLeft: newPlatformLocationLeft })
-                  }
-                "
-                type="checkbox"
-                class="sr-only"
-              />
-              <label
-                :for="`platform-left-${platform}`"
-                class="inline-flex items-center px-2 py-1 rounded text-sm cursor-pointer transition-all"
-                :class="
-                  formData.platformLocationLeft.includes(platform)
-                    ? 'bg-dark-green text-dark-blue'
-                    : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
-                "
-              >
-                {{ platform }}
-              </label>
+      <!-- Platform Selection Left / Right / Forward -->
+      <div v-if="availablePlatformsForSelection.length > 0" class="space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Left Platforms -->
+          <div>
+            <label class="block text-sm font-medium text-slate-300 mb-3">Vías a la izquierda</label>
+            <div class="flex flex-wrap gap-2">
+              <div v-for="platform in availableLeftPlatforms" :key="`left-${platform}`">
+                <input
+                  :id="`platform-left-${platform}`"
+                  :value="platform"
+                  :checked="formData.platformLocationLeft.includes(platform)"
+                  @change="
+                    (e) => {
+                      const newPlatformLocationLeft = e.target.checked
+                        ? [...formData.platformLocationLeft, platform]
+                        : formData.platformLocationLeft.filter((p) => p !== platform)
+                      emitFormChange({ platformLocationLeft: newPlatformLocationLeft })
+                    }
+                  "
+                  type="checkbox"
+                  class="sr-only"
+                />
+                <label
+                  :for="`platform-left-${platform}`"
+                  class="inline-flex items-center px-2 py-1 rounded text-sm cursor-pointer transition-all"
+                  :class="
+                    formData.platformLocationLeft.includes(platform)
+                      ? 'bg-dark-green text-dark-blue'
+                      : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+                  "
+                >
+                  {{ platform }}
+                </label>
+              </div>
+              <div v-if="availableLeftPlatforms.length === 0" class="text-sm text-slate-400">
+                Todas las vías están asignadas
+              </div>
             </div>
-            <div v-if="availableLeftPlatforms.length === 0" class="text-sm text-slate-400">
-              Todas las vías están asignadas
+          </div>
+
+          <!-- Right Platforms -->
+          <div>
+            <label class="block text-sm font-medium text-slate-300 mb-3">Vías a la derecha</label>
+            <div class="flex flex-wrap gap-2">
+              <div v-for="platform in availableRightPlatforms" :key="`right-${platform}`">
+                <input
+                  :id="`platform-right-${platform}`"
+                  :value="platform"
+                  :checked="formData.platformLocationRight.includes(platform)"
+                  @change="
+                    (e) => {
+                      const newPlatformLocationRight = e.target.checked
+                        ? [...formData.platformLocationRight, platform]
+                        : formData.platformLocationRight.filter((p) => p !== platform)
+                      emitFormChange({ platformLocationRight: newPlatformLocationRight })
+                    }
+                  "
+                  type="checkbox"
+                  class="sr-only"
+                />
+                <label
+                  :for="`platform-right-${platform}`"
+                  class="inline-flex items-center px-2 py-1 rounded text-sm cursor-pointer transition-all"
+                  :class="
+                    formData.platformLocationRight.includes(platform)
+                      ? 'bg-dark-green text-dark-blue'
+                      : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+                  "
+                >
+                  {{ platform }}
+                </label>
+              </div>
+              <div v-if="availableRightPlatforms.length === 0" class="text-sm text-slate-400">
+                Todas las vías están asignadas
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Right Platforms -->
-        <div>
-          <label class="block text-sm font-medium text-slate-300 mb-3">Vías a la derecha</label>
-          <div class="flex flex-wrap gap-2">
-            <div v-for="platform in availableRightPlatforms" :key="`right-${platform}`">
-              <input
-                :id="`platform-right-${platform}`"
-                :value="platform"
-                :checked="formData.platformLocationRight.includes(platform)"
-                @change="
-                  (e) => {
-                    const newPlatformLocationRight = e.target.checked
-                      ? [...formData.platformLocationRight, platform]
-                      : formData.platformLocationRight.filter((p) => p !== platform)
-                    emitFormChange({ platformLocationRight: newPlatformLocationRight })
-                  }
-                "
-                type="checkbox"
-                class="sr-only"
-              />
-              <label
-                :for="`platform-right-${platform}`"
-                class="inline-flex items-center px-2 py-1 rounded text-sm cursor-pointer transition-all"
-                :class="
-                  formData.platformLocationRight.includes(platform)
-                    ? 'bg-dark-green text-dark-blue'
-                    : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
-                "
-              >
-                {{ platform }}
-              </label>
+        <!-- Forward-Left / Forward-Right -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Forward-Left Platforms -->
+          <div>
+            <label class="block text-sm font-medium text-slate-300 mb-3"
+              >Vías adelante-izquierda</label
+            >
+            <div class="flex flex-wrap gap-2">
+              <div v-for="platform in availableForwardLeftPlatforms" :key="`fwd-left-${platform}`">
+                <input
+                  :id="`platform-fwd-left-${platform}`"
+                  :value="platform"
+                  :checked="(formData.platformLocationForwardLeft || []).includes(platform)"
+                  @change="
+                    (e) => {
+                      const current = formData.platformLocationForwardLeft || []
+                      const updated = e.target.checked
+                        ? [...current, platform]
+                        : current.filter((p) => p !== platform)
+                      emitFormChange({ platformLocationForwardLeft: updated })
+                    }
+                  "
+                  type="checkbox"
+                  class="sr-only"
+                />
+                <label
+                  :for="`platform-fwd-left-${platform}`"
+                  class="inline-flex items-center px-2 py-1 rounded text-sm cursor-pointer transition-all"
+                  :class="
+                    (formData.platformLocationForwardLeft || []).includes(platform)
+                      ? 'bg-dark-green text-dark-blue'
+                      : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+                  "
+                >
+                  {{ platform }}
+                </label>
+              </div>
+              <div v-if="availableForwardLeftPlatforms.length === 0" class="text-sm text-slate-400">
+                Todas las vías están asignadas
+              </div>
             </div>
-            <div v-if="availableRightPlatforms.length === 0" class="text-sm text-slate-400">
-              Todas las vías están asignadas
+          </div>
+
+          <!-- Forward-Right Platforms -->
+          <div>
+            <label class="block text-sm font-medium text-slate-300 mb-3"
+              >Vías adelante-derecha</label
+            >
+            <div class="flex flex-wrap gap-2">
+              <div
+                v-for="platform in availableForwardRightPlatforms"
+                :key="`fwd-right-${platform}`"
+              >
+                <input
+                  :id="`platform-fwd-right-${platform}`"
+                  :value="platform"
+                  :checked="(formData.platformLocationForwardRight || []).includes(platform)"
+                  @change="
+                    (e) => {
+                      const current = formData.platformLocationForwardRight || []
+                      const updated = e.target.checked
+                        ? [...current, platform]
+                        : current.filter((p) => p !== platform)
+                      emitFormChange({ platformLocationForwardRight: updated })
+                    }
+                  "
+                  type="checkbox"
+                  class="sr-only"
+                />
+                <label
+                  :for="`platform-fwd-right-${platform}`"
+                  class="inline-flex items-center px-2 py-1 rounded text-sm cursor-pointer transition-all"
+                  :class="
+                    (formData.platformLocationForwardRight || []).includes(platform)
+                      ? 'bg-dark-green text-dark-blue'
+                      : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+                  "
+                >
+                  {{ platform }}
+                </label>
+              </div>
+              <div
+                v-if="availableForwardRightPlatforms.length === 0"
+                class="text-sm text-slate-400"
+              >
+                Todas las vías están asignadas
+              </div>
             </div>
           </div>
         </div>
@@ -758,6 +856,133 @@
         </div>
       </div>
     </div>
+
+    <!-- Simular parámetros -->
+    <div
+      v-if="formData.interfaz !== 'clock'"
+      class="border border-slate-600 rounded-lg overflow-hidden"
+    >
+      <button
+        type="button"
+        @click="showSimulationSection = !showSimulationSection"
+        class="w-full flex items-center justify-between px-4 py-3 bg-slate-800 text-slate-300 text-sm font-medium hover:bg-slate-750 transition-colors"
+      >
+        <span>Simular parámetros</span>
+        <span>{{ showSimulationSection ? '▲' : '▼' }}</span>
+      </button>
+      <div v-show="showSimulationSection" class="p-4 space-y-4 bg-slate-800">
+        <p class="text-xs text-slate-400">
+          Estos controles inyectan datos falsos para poder previsualizar funcionalidades. No afectan
+          a la URL compartible ni a la pantalla en modo completo.
+        </p>
+
+        <div class="flex flex-wrap gap-2">
+          <!-- Simular enrutamiento de andén -->
+          <div>
+            <input
+              id="simulatePlatformRouting"
+              type="checkbox"
+              :checked="formData.simulatePlatformRouting"
+              @change="(e) => emitFormChange({ simulatePlatformRouting: e.target.checked })"
+              class="sr-only"
+            />
+            <label
+              for="simulatePlatformRouting"
+              class="inline-flex items-center px-2 py-1.5 rounded-lg text-xs cursor-pointer transition-all"
+              :class="
+                formData.simulatePlatformRouting
+                  ? 'bg-dark-green text-dark-blue'
+                  : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+              "
+            >
+              Composición del tren en andenes
+            </label>
+          </div>
+
+          <!-- Simular acceso cerrado -->
+          <div>
+            <input
+              id="simulateClosedCheckIn"
+              type="checkbox"
+              :checked="formData.simulateClosedCheckIn"
+              @change="(e) => emitFormChange({ simulateClosedCheckIn: e.target.checked })"
+              class="sr-only"
+            />
+            <label
+              for="simulateClosedCheckIn"
+              class="inline-flex items-center px-2 py-1.5 rounded-lg text-xs cursor-pointer transition-all"
+              :class="
+                formData.simulateClosedCheckIn
+                  ? 'bg-dark-green text-dark-blue'
+                  : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+              "
+            >
+              Acceso cerrado en trenes impares
+            </label>
+          </div>
+
+          <!-- Simular tren de solo bajada -->
+          <div>
+            <input
+              id="simulateAlightingOnly"
+              type="checkbox"
+              :checked="formData.simulateAlightingOnly"
+              @change="(e) => emitFormChange({ simulateAlightingOnly: e.target.checked })"
+              class="sr-only"
+            />
+            <label
+              for="simulateAlightingOnly"
+              class="inline-flex items-center px-2 py-1.5 rounded-lg text-xs cursor-pointer transition-all"
+              :class="
+                formData.simulateAlightingOnly
+                  ? 'bg-dark-green text-dark-blue'
+                  : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+              "
+            >
+              Trenes sin parada en trenes pares
+            </label>
+          </div>
+
+          <!-- Simular hora de apertura de acceso -->
+          <div>
+            <input
+              id="simulateAccessOpeningMargin"
+              type="checkbox"
+              :checked="formData.simulateAccessOpeningMargin"
+              @change="(e) => emitFormChange({ simulateAccessOpeningMargin: e.target.checked })"
+              class="sr-only"
+            />
+            <label
+              for="simulateAccessOpeningMargin"
+              class="inline-flex items-center px-2 py-1.5 rounded-lg text-xs cursor-pointer transition-all"
+              :class="
+                formData.simulateAccessOpeningMargin
+                  ? 'bg-dark-green text-dark-blue'
+                  : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+              "
+            >
+              Hora prevista de apertura de acceso
+            </label>
+          </div>
+        </div>
+
+        <!-- Simular alerta -->
+        <div>
+          <label class="block text-sm font-medium text-slate-300 mb-2">Simular alerta</label>
+          <select
+            :value="formData.simulateAlertType"
+            @change="(e) => emitFormChange({ simulateAlertType: e.target.value })"
+            class="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-dark-green focus:border-dark-green text-white text-sm"
+          >
+            <option value="">Sin alerta simulada</option>
+            <option value="warning">Aviso — Líneas C-2 y C-5 cortadas</option>
+            <option value="info">Información — Retrasos generalizados en todas las líneas</option>
+            <option value="works">Obras — Obras de mejora en la estación</option>
+            <option value="severe">Grave — Cierre total de la red ferroviaria</option>
+          </select>
+        </div>
+      </div>
+    </div>
   </form>
 </template>
 
@@ -766,7 +991,6 @@ import { computed, ref } from 'vue'
 import DeparturesIcon from './icons/DeparturesIcon.vue'
 import ArrivalsIcon from './icons/ArrivalsIcon.vue'
 import PlatformIcon from './icons/PlatformIcon.vue'
-import NumberIcon from './icons/NumberIcon.vue'
 import ClockIcon from './icons/ClockIcon.vue'
 import CloseIcon from './icons/CloseIcon.vue'
 import CheckmarkIcon from './icons/CheckmarkIcon.vue'
@@ -800,6 +1024,9 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['form-change'])
+
+// Local state for simulation section visibility
+const showSimulationSection = ref(false)
 
 // Local state for manual platform input
 const manualPlatform = ref('')
@@ -865,13 +1092,37 @@ const availablePlatformsForSelection = computed(() => {
 
 const availableRightPlatforms = computed(() => {
   return availablePlatformsForSelection.value.filter(
-    (platform) => !props.formData.platformLocationLeft.includes(platform),
+    (platform) =>
+      !props.formData.platformLocationLeft.includes(platform) &&
+      !props.formData.platformLocationForwardLeft?.includes(platform) &&
+      !props.formData.platformLocationForwardRight?.includes(platform),
   )
 })
 
 const availableLeftPlatforms = computed(() => {
   return availablePlatformsForSelection.value.filter(
-    (platform) => !props.formData.platformLocationRight.includes(platform),
+    (platform) =>
+      !props.formData.platformLocationRight.includes(platform) &&
+      !props.formData.platformLocationForwardLeft?.includes(platform) &&
+      !props.formData.platformLocationForwardRight?.includes(platform),
+  )
+})
+
+const availableForwardLeftPlatforms = computed(() => {
+  return availablePlatformsForSelection.value.filter(
+    (platform) =>
+      !props.formData.platformLocationLeft.includes(platform) &&
+      !props.formData.platformLocationRight.includes(platform) &&
+      !props.formData.platformLocationForwardRight?.includes(platform),
+  )
+})
+
+const availableForwardRightPlatforms = computed(() => {
+  return availablePlatformsForSelection.value.filter(
+    (platform) =>
+      !props.formData.platformLocationLeft.includes(platform) &&
+      !props.formData.platformLocationRight.includes(platform) &&
+      !props.formData.platformLocationForwardLeft?.includes(platform),
   )
 })
 
@@ -1010,16 +1261,24 @@ const addManualPlatformLocation = () => {
 const removePlatformLocation = (platform) => {
   const newPlatformLocations = props.formData.platformLocations.filter((p) => p !== platform)
 
-  // Also remove from left and right location arrays if present
+  // Also remove from left, right, and forward location arrays if present
   const newPlatformLocationLeft = props.formData.platformLocationLeft.filter((p) => p !== platform)
   const newPlatformLocationRight = props.formData.platformLocationRight.filter(
     (p) => p !== platform,
   )
+  const newPlatformLocationForwardLeft = (props.formData.platformLocationForwardLeft || []).filter(
+    (p) => p !== platform,
+  )
+  const newPlatformLocationForwardRight = (
+    props.formData.platformLocationForwardRight || []
+  ).filter((p) => p !== platform)
 
   emitFormChange({
     platformLocations: newPlatformLocations,
     platformLocationLeft: newPlatformLocationLeft,
     platformLocationRight: newPlatformLocationRight,
+    platformLocationForwardLeft: newPlatformLocationForwardLeft,
+    platformLocationForwardRight: newPlatformLocationForwardRight,
   })
 }
 

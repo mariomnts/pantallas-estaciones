@@ -1,24 +1,34 @@
+export const PopularStations = [
+  { title: 'Chamartín', code: '17000' },
+  { title: 'Atocha Cercanías', code: '18000' },
+  { title: 'Puerta de Atocha', code: '60000' },
+  { title: 'Barcelona Sants', code: '71801' },
+  { title: 'Valencia Nord', code: '65000' },
+  { title: 'Valencia Joaquín Sorolla', code: '03216' },
+  // { title: 'Zaragoza Delicias', code: '71000' },
+  // { title: 'Bilbao Abando', code: '13200' },
+  { title: 'Sevilla Santa Justa', code: '51003' },
+  // { title: 'Málaga María Zambrano', code: '54413' },
+  // { title: 'Santiago de Compostela', code: '31400' },
+]
+
 export const Stations = [
   {
-    name: 'El Sorbito (APD-CGD)',
+    name: 'El Sorbito (APD - CGD)',
     code: '01001',
     location: {
       town: 'Alcalá De Guadaíra',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.208475,
-      lon: -5.706642,
     },
   },
   {
-    name: 'La Trinidad (APT-CGD)',
+    name: 'La Trinidad (APT - CGD)',
     code: '01002',
     location: {
       town: 'Alcalá De Guadaíra',
       province: 'Sevilla',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -28,19 +38,15 @@ export const Stations = [
       town: 'Arahal',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.268081,
-      lon: -5.548514,
     },
   },
   {
-    name: 'Paradas (APD-CGD)',
+    name: 'Paradas (APD - CGD)',
     code: '01004',
     location: {
       town: 'Paradas',
       province: 'Sevilla',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -50,19 +56,15 @@ export const Stations = [
       town: 'Marchena',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.334282,
-      lon: -5.425519,
     },
   },
   {
-    name: 'Ojuelos-Lantejuela (APD)',
+    name: 'Ojuelos - Lantejuela (APD)',
     code: '01006',
     location: {
       town: 'Marchena',
       province: 'Sevilla',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -72,8 +74,6 @@ export const Stations = [
       town: 'Osuna',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.233899,
-      lon: -5.115026,
     },
   },
   {
@@ -83,8 +83,6 @@ export const Stations = [
       town: 'Aguadulce',
       province: 'Sevilla',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -94,30 +92,25 @@ export const Stations = [
       town: 'Pedrera',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.222396,
-      lon: -4.893519,
     },
   },
   {
-    name: 'Puente Genil-Herrera',
+    name: 'Puente Genil - Herrera',
     code: '02002',
     location: {
       town: 'Puente Genil',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.3579,
-      lon: -4.821638,
     },
   },
   {
     name: 'Antequera - Santa Ana',
     code: '02003',
+    otherCodes: ['99130'],
     location: {
       town: 'Antequera',
       province: 'Málaga',
       country: 'España',
-      lat: 37.069881,
-      lon: -4.719014,
     },
   },
   {
@@ -127,8 +120,6 @@ export const Stations = [
       town: 'Antequera',
       province: 'Málaga',
       country: 'España',
-      lat: 37.0334437,
-      lon: -4.5612901,
     },
   },
   {
@@ -138,8 +129,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -149,19 +138,15 @@ export const Stations = [
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Mengíbar-Artichuela (APD-CGD)',
+    name: 'Mengíbar - Artichuela (APD - CGD)',
     code: '03001',
     location: {
       town: 'Mengíbar',
       province: 'Jaén',
       country: 'España',
-      lat: 37.978219,
-      lon: -3.803308,
     },
   },
   {
@@ -171,19 +156,15 @@ export const Stations = [
       town: 'Jaén',
       province: 'Jaén',
       country: 'España',
-      lat: 37.913359,
-      lon: -3.784829,
     },
   },
   {
-    name: 'Granena (APD-CGD)',
+    name: 'Granena (APD - CGD)',
     code: '03003',
     location: {
       town: 'Jaén',
       province: 'Jaén',
       country: 'España',
-      lat: 37.847712,
-      lon: -3.765399,
     },
   },
   {
@@ -193,63 +174,51 @@ export const Stations = [
       town: 'Jaén',
       province: 'Jaén',
       country: 'España',
-      lat: 37.779827,
-      lon: -3.790798,
     },
   },
   {
-    name: 'Torredelcamp(APD-CGD)',
+    name: 'Torredelcamp(APD - CGD)',
     code: '03102',
     location: {
       town: 'Torre Del Campo',
       province: 'Jaén',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Torredonjimeno (APD-CGD)',
+    name: 'Torredonjimeno (APD - CGD)',
     code: '03103',
     location: {
       town: 'Torredonjimeno',
       province: 'Jaén',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Martos (APD-CGD)',
+    name: 'Martos (APD - CGD)',
     code: '03104',
     location: {
       town: 'Martos',
       province: 'Jaén',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Vado-Jaen (APD)',
+    name: 'Vado - Jaen (APD)',
     code: '03105',
     location: {
       town: 'Martos',
       province: 'Jaén',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Alcaudete-Fte. De Orbe',
+    name: 'Alcaudete - Fte. De Orbe',
     code: '03106',
     location: {
       town: 'Alcaudete',
       province: 'Jaén',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -259,8 +228,6 @@ export const Stations = [
       town: 'Luque',
       province: 'Jaén',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -270,8 +237,6 @@ export const Stations = [
       town: 'Luque',
       province: 'Jaén',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -281,8 +246,6 @@ export const Stations = [
       town: 'Zuheros',
       province: 'Jaén',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -292,8 +255,6 @@ export const Stations = [
       town: 'Doña Mencía',
       province: 'Jaén',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -303,8 +264,6 @@ export const Stations = [
       town: 'Cabra',
       province: 'Jaén',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -314,8 +273,6 @@ export const Stations = [
       town: 'Lucena',
       province: 'Jaén',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -325,8 +282,6 @@ export const Stations = [
       town: 'Moriles',
       province: 'Jaén',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -336,8 +291,6 @@ export const Stations = [
       town: 'Cuenca',
       province: 'Cuenca',
       country: 'España',
-      lat: 40.035192,
-      lon: -2.14441,
     },
   },
   {
@@ -347,8 +300,6 @@ export const Stations = [
       town: 'Requena',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.519834,
-      lon: -1.127601,
     },
   },
   {
@@ -358,8 +309,6 @@ export const Stations = [
       town: 'Valencia',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.459051,
-      lon: -0.382923,
     },
   },
   {
@@ -369,8 +318,6 @@ export const Stations = [
       town: 'Villena',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.585302,
-      lon: -0.873295,
     },
   },
   {
@@ -380,8 +327,6 @@ export const Stations = [
       town: 'Elche/Elx',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.24551,
-      lon: -0.76675,
     },
   },
   {
@@ -391,19 +336,15 @@ export const Stations = [
       town: 'Callosa De Segura',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.1227708,
-      lon: -0.8745727,
     },
   },
   {
-    name: 'Linares-Paseo Linarejos',
+    name: 'Linares - Paseo Linarejos',
     code: '04001',
     location: {
       town: 'Linares',
       province: 'Jaén',
       country: 'España',
-      lat: 40.347189,
-      lon: -3.664578,
     },
   },
   {
@@ -413,19 +354,6 @@ export const Stations = [
       town: 'Yebes',
       province: 'Guadalajara',
       country: 'España',
-      lat: 40.587315,
-      lon: -3.124301,
-    },
-  },
-  {
-    name: 'Zaragoza - Delicias',
-    code: '04040',
-    location: {
-      town: 'Zaragoza',
-      province: 'Zaragoza',
-      country: 'España',
-      lat: 41.658649,
-      lon: -0.911615,
     },
   },
   {
@@ -435,8 +363,6 @@ export const Stations = [
       town: 'Tarragona',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.192066,
-      lon: 1.272666,
     },
   },
   {
@@ -446,8 +372,6 @@ export const Stations = [
       town: 'Vilafant',
       province: 'Girona',
       country: 'España',
-      lat: 42.264771,
-      lon: 2.943547,
     },
   },
   {
@@ -457,41 +381,33 @@ export const Stations = [
       town: 'Granada',
       province: 'Granada',
       country: 'España',
-      lat: 37.184038,
-      lon: -3.609154,
     },
   },
   {
-    name: 'Atarfe-Santafe',
+    name: 'Atarfe - Santafe',
     code: '05002',
     location: {
       town: 'Atarfe',
       province: 'Granada',
       country: 'España',
-      lat: 37.216314,
-      lon: -3.694583,
     },
   },
   {
-    name: 'Sierra Elvira (APD-CGD)',
+    name: 'Sierra Elvira (APD - CGD)',
     code: '05003',
     location: {
       town: 'Atarfe',
       province: 'Granada',
       country: 'España',
-      lat: 37.233188,
-      lon: -3.731477,
     },
   },
   {
-    name: 'Pinos Ponte (APT-CGD)',
+    name: 'Pinos Ponte (APT - CGD)',
     code: '05004',
     location: {
       town: 'Pinos Puente',
       province: 'Granada',
       country: 'España',
-      lat: 37.247231,
-      lon: -3.756148,
     },
   },
   {
@@ -501,19 +417,15 @@ export const Stations = [
       town: 'Pinos Puente',
       province: 'Granada',
       country: 'España',
-      lat: 37.251818,
-      lon: -3.79332,
     },
   },
   {
-    name: 'San Pascual (APD-CGD)',
+    name: 'San Pascual (APD - CGD)',
     code: '05006',
     location: {
       town: 'Pinos Puente',
       province: 'Granada',
       country: 'España',
-      lat: 37.24511,
-      lon: -3.828697,
     },
   },
   {
@@ -523,8 +435,6 @@ export const Stations = [
       town: 'Illora',
       province: 'Granada',
       country: 'España',
-      lat: 37.2500689,
-      lon: -3.859018,
     },
   },
   {
@@ -534,19 +444,15 @@ export const Stations = [
       town: 'Illora',
       province: 'Granada',
       country: 'España',
-      lat: 37.242201,
-      lon: -3.911302,
     },
   },
   {
-    name: 'Tocon-Montefrio (APT)',
+    name: 'Tocon - Montefrio (APT)',
     code: '05009',
     location: {
       town: 'Illora',
       province: 'Granada',
       country: 'España',
-      lat: 37.232841,
-      lon: -3.962381,
     },
   },
   {
@@ -556,19 +462,15 @@ export const Stations = [
       town: 'Villanueva Mesía',
       province: 'Granada',
       country: 'España',
-      lat: 37.2205019,
-      lon: -4.011728,
     },
   },
   {
-    name: 'Huetor-Tajar (APD)',
+    name: 'Huetor - Tajar (APD)',
     code: '05011',
     location: {
       town: 'Huétor Tájar',
       province: 'Granada',
       country: 'España',
-      lat: 37.203461,
-      lon: -4.059959,
     },
   },
   {
@@ -578,8 +480,6 @@ export const Stations = [
       town: 'Loja',
       province: 'Granada',
       country: 'España',
-      lat: 37.175372,
-      lon: -4.134841,
     },
   },
   {
@@ -589,8 +489,6 @@ export const Stations = [
       town: 'Loja',
       province: 'Granada',
       country: 'España',
-      lat: 37.174868,
-      lon: -4.149479,
     },
   },
   {
@@ -600,19 +498,15 @@ export const Stations = [
       town: 'Loja',
       province: 'Granada',
       country: 'España',
-      lat: 37.1480899,
-      lon: -4.203528,
     },
   },
   {
-    name: 'Salinas-Villanueva Tapia (APT)',
+    name: 'Salinas - Villanueva Tapia (APT)',
     code: '05015',
     location: {
       town: 'Archidona',
       province: 'Málaga',
       country: 'España',
-      lat: 37.122472,
-      lon: -4.298442,
     },
   },
   {
@@ -622,8 +516,6 @@ export const Stations = [
       town: 'Archidona',
       province: 'Málaga',
       country: 'España',
-      lat: 37.134572,
-      lon: -4.425941,
     },
   },
   {
@@ -633,8 +525,6 @@ export const Stations = [
       town: 'Antequera',
       province: 'Málaga',
       country: 'España',
-      lat: 37.028171,
-      lon: -4.560911,
     },
   },
   {
@@ -644,19 +534,15 @@ export const Stations = [
       town: 'Antequera',
       province: 'Málaga',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'La Pena (APT-CGD)',
+    name: 'La Pena (APT - CGD)',
     code: '05023',
     location: {
       town: 'Antequera',
       province: 'Málaga',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -664,10 +550,8 @@ export const Stations = [
     code: '05102',
     location: {
       town: 'Ferrol',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.494664,
-      lon: -8.213713,
     },
   },
   {
@@ -675,10 +559,8 @@ export const Stations = [
     code: '05103',
     location: {
       town: 'Narón',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.500113,
-      lon: -8.199581,
     },
   },
   {
@@ -686,10 +568,8 @@ export const Stations = [
     code: '05104',
     location: {
       town: 'Narón',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.496509,
-      lon: -8.204876,
     },
   },
   {
@@ -697,10 +577,8 @@ export const Stations = [
     code: '05105',
     location: {
       town: 'Narón',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.509526,
-      lon: -8.183968,
     },
   },
   {
@@ -708,10 +586,8 @@ export const Stations = [
     code: '05106',
     location: {
       town: 'Narón',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.514774,
-      lon: -8.177783,
     },
   },
   {
@@ -719,10 +595,8 @@ export const Stations = [
     code: '05107',
     location: {
       town: 'Narón',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.517113,
-      lon: -8.161322,
     },
   },
   {
@@ -730,10 +604,8 @@ export const Stations = [
     code: '05108',
     location: {
       town: 'Narón',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.503179,
-      lon: -8.195559,
     },
   },
   {
@@ -741,21 +613,17 @@ export const Stations = [
     code: '05109',
     location: {
       town: 'Narón',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.527976,
-      lon: -8.150454,
     },
   },
   {
-    name: 'Santander-Feve',
+    name: 'Santander - Feve',
     code: '05110',
     location: {
       town: 'Santander',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.458869,
-      lon: -3.811065,
     },
   },
   {
@@ -763,10 +631,8 @@ export const Stations = [
     code: '05111',
     location: {
       town: 'Narón',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.542607,
-      lon: -8.140199,
     },
   },
   {
@@ -774,10 +640,8 @@ export const Stations = [
     code: '05113',
     location: {
       town: 'Narón',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.536748,
-      lon: -8.109213,
     },
   },
   {
@@ -785,10 +649,8 @@ export const Stations = [
     code: '05115',
     location: {
       town: 'San Sadurniño',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.546021,
-      lon: -8.077931,
     },
   },
   {
@@ -796,10 +658,8 @@ export const Stations = [
     code: '05117',
     location: {
       town: 'San Sadurniño',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.54729,
-      lon: -8.049245,
     },
   },
   {
@@ -807,10 +667,8 @@ export const Stations = [
     code: '05119',
     location: {
       town: 'San Sadurniño',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.550463,
-      lon: -8.018649,
     },
   },
   {
@@ -818,10 +676,8 @@ export const Stations = [
     code: '05121',
     location: {
       town: 'Moeche',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.562171,
-      lon: -8.002732,
     },
   },
   {
@@ -829,10 +685,8 @@ export const Stations = [
     code: '05123',
     location: {
       town: 'Moeche',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.56528,
-      lon: -7.980225,
     },
   },
   {
@@ -840,10 +694,8 @@ export const Stations = [
     code: '05125',
     location: {
       town: 'Moeche',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.57706,
-      lon: -7.954257,
     },
   },
   {
@@ -851,10 +703,8 @@ export const Stations = [
     code: '05127',
     location: {
       town: 'Cerdido',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.587205,
-      lon: -7.934626,
     },
   },
   {
@@ -862,10 +712,8 @@ export const Stations = [
     code: '05129',
     location: {
       town: 'Cerdido',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.607876,
-      lon: -7.921832,
     },
   },
   {
@@ -873,10 +721,8 @@ export const Stations = [
     code: '05131',
     location: {
       town: 'Ortigueira',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.64098,
-      lon: -7.916192,
     },
   },
   {
@@ -884,10 +730,8 @@ export const Stations = [
     code: '05133',
     location: {
       town: 'Ortigueira',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.666073,
-      lon: -7.902641,
     },
   },
   {
@@ -895,10 +739,8 @@ export const Stations = [
     code: '05135',
     location: {
       town: 'Ribas De Sil',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.660887,
-      lon: -7.873495,
     },
   },
   {
@@ -906,10 +748,8 @@ export const Stations = [
     code: '05137',
     location: {
       town: 'Ortigueira',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.668783,
-      lon: -7.8545455,
     },
   },
   {
@@ -917,10 +757,8 @@ export const Stations = [
     code: '05139',
     location: {
       town: 'Ortigueira',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.686268,
-      lon: -7.849488,
     },
   },
   {
@@ -928,10 +766,8 @@ export const Stations = [
     code: '05141',
     location: {
       town: 'Ortigueira',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.70888,
-      lon: -7.804897,
     },
   },
   {
@@ -939,10 +775,8 @@ export const Stations = [
     code: '05143',
     location: {
       town: 'Ortigueira',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.730393,
-      lon: -7.750044,
     },
   },
   {
@@ -950,10 +784,8 @@ export const Stations = [
     code: '05145',
     location: {
       town: 'Mañón',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.735649,
-      lon: -7.70288,
     },
   },
   {
@@ -963,8 +795,6 @@ export const Stations = [
       town: 'Vicedo (O)',
       province: 'Lugo',
       country: 'España',
-      lat: 43.731026,
-      lon: -7.673215,
     },
   },
   {
@@ -974,8 +804,6 @@ export const Stations = [
       town: 'Vicedo (O)',
       province: 'Lugo',
       country: 'España',
-      lat: 43.706194,
-      lon: -7.635477,
     },
   },
   {
@@ -985,19 +813,15 @@ export const Stations = [
       town: 'Vicedo (O)',
       province: 'Lugo',
       country: 'España',
-      lat: 43.692766,
-      lon: -7.635048,
     },
   },
   {
-    name: 'Feve-Covas De Viveiro',
+    name: 'Feve - Covas De Viveiro',
     code: '05153',
     location: {
       town: 'Viveiro',
       province: 'Lugo',
       country: 'España',
-      lat: 43.670275,
-      lon: -7.614613,
     },
   },
   {
@@ -1007,8 +831,6 @@ export const Stations = [
       town: 'Viveiro',
       province: 'Lugo',
       country: 'España',
-      lat: 43.6569,
-      lon: -7.60033,
     },
   },
   {
@@ -1018,8 +840,6 @@ export const Stations = [
       town: 'Viveiro',
       province: 'Lugo',
       country: 'España',
-      lat: 43.661435,
-      lon: -7.594532,
     },
   },
   {
@@ -1029,8 +849,6 @@ export const Stations = [
       town: 'Xove',
       province: 'Lugo',
       country: 'España',
-      lat: 43.687991,
-      lon: -7.553904,
     },
   },
   {
@@ -1040,8 +858,6 @@ export const Stations = [
       town: 'Xove',
       province: 'Lugo',
       country: 'España',
-      lat: 43.683567,
-      lon: -7.510921,
     },
   },
   {
@@ -1051,8 +867,6 @@ export const Stations = [
       town: 'Xove',
       province: 'Lugo',
       country: 'España',
-      lat: 43.681138,
-      lon: -7.495251,
     },
   },
   {
@@ -1062,8 +876,6 @@ export const Stations = [
       town: 'Xove',
       province: 'Lugo',
       country: 'España',
-      lat: 43.687108,
-      lon: -7.481942,
     },
   },
   {
@@ -1073,8 +885,6 @@ export const Stations = [
       town: 'Cervo',
       province: 'Lugo',
       country: 'España',
-      lat: 43.696712,
-      lon: -7.468843,
     },
   },
   {
@@ -1084,8 +894,6 @@ export const Stations = [
       town: 'Cervo',
       province: 'Lugo',
       country: 'España',
-      lat: 43.692319,
-      lon: -7.44177,
     },
   },
   {
@@ -1095,8 +903,6 @@ export const Stations = [
       town: 'Cervo',
       province: 'Lugo',
       country: 'España',
-      lat: 43.686219,
-      lon: -7.412863,
     },
   },
   {
@@ -1106,8 +912,6 @@ export const Stations = [
       town: 'Burela',
       province: 'Lugo',
       country: 'España',
-      lat: 43.660607,
-      lon: -7.361183,
     },
   },
   {
@@ -1117,8 +921,6 @@ export const Stations = [
       town: 'Foz',
       province: 'Lugo',
       country: 'España',
-      lat: 43.626106,
-      lon: -7.333309,
     },
   },
   {
@@ -1128,8 +930,6 @@ export const Stations = [
       town: 'Foz',
       province: 'Lugo',
       country: 'España',
-      lat: 43.610309,
-      lon: -7.312222,
     },
   },
   {
@@ -1139,8 +939,6 @@ export const Stations = [
       town: 'Foz',
       province: 'Lugo',
       country: 'España',
-      lat: 43.600457,
-      lon: -7.299843,
     },
   },
   {
@@ -1150,8 +948,6 @@ export const Stations = [
       town: 'Foz',
       province: 'Lugo',
       country: 'España',
-      lat: 43.57475,
-      lon: -7.26936,
     },
   },
   {
@@ -1161,8 +957,6 @@ export const Stations = [
       town: 'Foz',
       province: 'Lugo',
       country: 'España',
-      lat: 43.560886,
-      lon: -7.272235,
     },
   },
   {
@@ -1172,8 +966,6 @@ export const Stations = [
       town: 'Barreiros',
       province: 'Lugo',
       country: 'España',
-      lat: 43.547366,
-      lon: -7.225287,
     },
   },
   {
@@ -1183,8 +975,6 @@ export const Stations = [
       town: 'Barreiros',
       province: 'Lugo',
       country: 'España',
-      lat: 43.54987,
-      lon: -7.174315,
     },
   },
   {
@@ -1194,8 +984,6 @@ export const Stations = [
       town: 'Ribadeo',
       province: 'Lugo',
       country: 'España',
-      lat: 43.551697,
-      lon: -7.146099,
     },
   },
   {
@@ -1205,8 +993,6 @@ export const Stations = [
       town: 'Ribadeo',
       province: 'Lugo',
       country: 'España',
-      lat: 43.55157,
-      lon: -7.130895,
     },
   },
   {
@@ -1216,8 +1002,6 @@ export const Stations = [
       town: 'Ribadeo',
       province: 'Lugo',
       country: 'España',
-      lat: 43.549761,
-      lon: -7.108645,
     },
   },
   {
@@ -1227,8 +1011,6 @@ export const Stations = [
       town: 'Ribadeo',
       province: 'Lugo',
       country: 'España',
-      lat: 43.53607,
-      lon: -7.055572,
     },
   },
   {
@@ -1238,8 +1020,6 @@ export const Stations = [
       town: 'Vegadeo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.4731616,
-      lon: -7.050645,
     },
   },
   {
@@ -1249,8 +1029,6 @@ export const Stations = [
       town: 'Vegadeo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.479667,
-      lon: -7.057327,
     },
   },
   {
@@ -1260,8 +1038,6 @@ export const Stations = [
       town: 'Castropol',
       province: 'Asturias',
       country: 'España',
-      lat: 43.490502,
-      lon: -7.038353,
     },
   },
   {
@@ -1271,19 +1047,15 @@ export const Stations = [
       town: 'Gijón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.535175,
-      lon: -5.698318,
     },
   },
   {
-    name: 'Tremañes-Carreño',
+    name: 'Tremañes - Carreño',
     code: '05203',
     location: {
       town: 'Gijón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.528549,
-      lon: -5.694869,
     },
   },
   {
@@ -1293,8 +1065,6 @@ export const Stations = [
       town: 'Gijón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.531135,
-      lon: -5.706739,
     },
   },
   {
@@ -1304,8 +1074,6 @@ export const Stations = [
       town: 'Carreño',
       province: 'Asturias',
       country: 'España',
-      lat: 43.55505,
-      lon: -5.72359,
     },
   },
   {
@@ -1315,8 +1083,6 @@ export const Stations = [
       town: 'Carreño',
       province: 'Asturias',
       country: 'España',
-      lat: 43.565927,
-      lon: -5.728723,
     },
   },
   {
@@ -1326,8 +1092,6 @@ export const Stations = [
       town: 'Carreño',
       province: 'Asturias',
       country: 'España',
-      lat: 43.58078,
-      lon: -5.75368,
     },
   },
   {
@@ -1337,8 +1101,6 @@ export const Stations = [
       town: 'Carreño',
       province: 'Asturias',
       country: 'España',
-      lat: 43.58654,
-      lon: -5.76801,
     },
   },
   {
@@ -1348,8 +1110,6 @@ export const Stations = [
       town: 'Carreño',
       province: 'Asturias',
       country: 'España',
-      lat: 43.584718,
-      lon: -5.772722,
     },
   },
   {
@@ -1359,8 +1119,6 @@ export const Stations = [
       town: 'Carreño',
       province: 'Asturias',
       country: 'España',
-      lat: 43.58048,
-      lon: -5.79763,
     },
   },
   {
@@ -1370,19 +1128,15 @@ export const Stations = [
       town: 'Carreño',
       province: 'Asturias',
       country: 'España',
-      lat: 43.56908,
-      lon: -5.82533,
     },
   },
   {
-    name: 'Gudín-Llaminación',
+    name: 'Gudín - Llaminación',
     code: '05216',
     location: {
       town: 'Corvera De Asturias',
       province: 'Asturias',
       country: 'España',
-      lat: 43.552295,
-      lon: -5.865382,
     },
   },
   {
@@ -1392,8 +1146,6 @@ export const Stations = [
       town: 'Corvera De Asturias',
       province: 'Asturias',
       country: 'España',
-      lat: 43.5518,
-      lon: -5.87438,
     },
   },
   {
@@ -1403,8 +1155,6 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.551308,
-      lon: -5.877217,
     },
   },
   {
@@ -1414,8 +1164,6 @@ export const Stations = [
       town: 'Avilés',
       province: 'Asturias',
       country: 'España',
-      lat: 43.55415,
-      lon: -5.89703,
     },
   },
   {
@@ -1425,8 +1173,6 @@ export const Stations = [
       town: 'Avilés',
       province: 'Asturias',
       country: 'España',
-      lat: 43.575543,
-      lon: -5.929345,
     },
   },
   {
@@ -1436,19 +1182,15 @@ export const Stations = [
       town: 'Avilés',
       province: 'Asturias',
       country: 'España',
-      lat: 43.554627,
-      lon: -5.917472,
     },
   },
   {
-    name: 'Avilés-Cim',
+    name: 'Avilés - Cim',
     code: '05222',
     location: {
       town: 'Avilés',
       province: 'Asturias',
       country: 'España',
-      lat: 43.561274,
-      lon: -5.922924,
     },
   },
   {
@@ -1458,8 +1200,6 @@ export const Stations = [
       town: 'Castrillón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.576334,
-      lon: -5.939915,
     },
   },
   {
@@ -1469,8 +1209,6 @@ export const Stations = [
       town: 'Castrillón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.57039,
-      lon: -5.95663,
     },
   },
   {
@@ -1480,8 +1218,6 @@ export const Stations = [
       town: 'Castrillón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.556554,
-      lon: -5.975562,
     },
   },
   {
@@ -1491,8 +1227,6 @@ export const Stations = [
       town: 'Castrillón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.551162,
-      lon: -5.99556,
     },
   },
   {
@@ -1502,8 +1236,6 @@ export const Stations = [
       town: 'Castrillón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.540979,
-      lon: -6.028002,
     },
   },
   {
@@ -1513,8 +1245,6 @@ export const Stations = [
       town: 'Soto Del Barco',
       province: 'Asturias',
       country: 'España',
-      lat: 43.53524,
-      lon: -6.07053,
     },
   },
   {
@@ -1524,8 +1254,6 @@ export const Stations = [
       town: 'Soto Del Barco',
       province: 'Asturias',
       country: 'España',
-      lat: 43.52929,
-      lon: -6.07124,
     },
   },
   {
@@ -1535,8 +1263,6 @@ export const Stations = [
       town: 'Soto Del Barco',
       province: 'Asturias',
       country: 'España',
-      lat: 43.502742,
-      lon: -6.074331,
     },
   },
   {
@@ -1546,8 +1272,6 @@ export const Stations = [
       town: 'Pravia',
       province: 'Asturias',
       country: 'España',
-      lat: 43.491163,
-      lon: -6.093979,
     },
   },
   {
@@ -1557,8 +1281,6 @@ export const Stations = [
       town: 'Pravia',
       province: 'Asturias',
       country: 'España',
-      lat: 43.503755,
-      lon: -6.091829,
     },
   },
   {
@@ -1568,8 +1290,6 @@ export const Stations = [
       town: 'Pravia',
       province: 'Asturias',
       country: 'España',
-      lat: 43.512444,
-      lon: -6.097514,
     },
   },
   {
@@ -1579,19 +1299,15 @@ export const Stations = [
       town: 'Muros De Nalón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.542957,
-      lon: -6.111114,
     },
   },
   {
-    name: 'El Pito-Piñera',
+    name: 'El Pito - Piñera',
     code: '05244',
     location: {
       town: 'Cudillero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.546893,
-      lon: -6.143335,
     },
   },
   {
@@ -1601,8 +1317,6 @@ export const Stations = [
       town: 'Cudillero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.550925,
-      lon: -6.151968,
     },
   },
   {
@@ -1612,8 +1326,6 @@ export const Stations = [
       town: 'Cudillero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.557065,
-      lon: -6.155477,
     },
   },
   {
@@ -1623,8 +1335,6 @@ export const Stations = [
       town: 'Cudillero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.559309,
-      lon: -6.184922,
     },
   },
   {
@@ -1634,8 +1344,6 @@ export const Stations = [
       town: 'Cudillero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.544753,
-      lon: -6.228702,
     },
   },
   {
@@ -1645,8 +1353,6 @@ export const Stations = [
       town: 'Cudillero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.544069,
-      lon: -6.248091,
     },
   },
   {
@@ -1656,8 +1362,6 @@ export const Stations = [
       town: 'Cudillero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.559635,
-      lon: -6.234369,
     },
   },
   {
@@ -1667,8 +1371,6 @@ export const Stations = [
       town: 'Cudillero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.56638,
-      lon: -6.263234,
     },
   },
   {
@@ -1678,8 +1380,6 @@ export const Stations = [
       town: 'Cudillero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.557795,
-      lon: -6.289593,
     },
   },
   {
@@ -1689,8 +1389,6 @@ export const Stations = [
       town: 'Cudillero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.552674,
-      lon: -6.305181,
     },
   },
   {
@@ -1700,8 +1398,6 @@ export const Stations = [
       town: 'Cudillero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.550716,
-      lon: -6.322812,
     },
   },
   {
@@ -1711,8 +1407,6 @@ export const Stations = [
       town: 'Valdés',
       province: 'Asturias',
       country: 'España',
-      lat: 43.547253,
-      lon: -6.351225,
     },
   },
   {
@@ -1722,8 +1416,6 @@ export const Stations = [
       town: 'Valdés',
       province: 'Asturias',
       country: 'España',
-      lat: 43.542952,
-      lon: -6.391612,
     },
   },
   {
@@ -1733,8 +1425,6 @@ export const Stations = [
       town: 'Valdés',
       province: 'Asturias',
       country: 'España',
-      lat: 43.547225,
-      lon: -6.415264,
     },
   },
   {
@@ -1744,8 +1434,6 @@ export const Stations = [
       town: 'Valdés',
       province: 'Asturias',
       country: 'España',
-      lat: 43.541913,
-      lon: -6.445878,
     },
   },
   {
@@ -1755,8 +1443,6 @@ export const Stations = [
       town: 'Valdés',
       province: 'Asturias',
       country: 'España',
-      lat: 43.546813,
-      lon: -6.50828,
     },
   },
   {
@@ -1766,8 +1452,6 @@ export const Stations = [
       town: 'Valdés',
       province: 'Asturias',
       country: 'España',
-      lat: 43.537949,
-      lon: -6.536617,
     },
   },
   {
@@ -1777,8 +1461,6 @@ export const Stations = [
       town: 'Valdés',
       province: 'Asturias',
       country: 'España',
-      lat: 43.540541,
-      lon: -6.593562,
     },
   },
   {
@@ -1788,8 +1470,6 @@ export const Stations = [
       town: 'Navia',
       province: 'Asturias',
       country: 'España',
-      lat: 43.546723,
-      lon: -6.64587,
     },
   },
   {
@@ -1799,8 +1479,6 @@ export const Stations = [
       town: 'Navia',
       province: 'Asturias',
       country: 'España',
-      lat: 43.535685,
-      lon: -6.685414,
     },
   },
   {
@@ -1810,8 +1488,6 @@ export const Stations = [
       town: 'Navia',
       province: 'Asturias',
       country: 'España',
-      lat: 43.536802,
-      lon: -6.719425,
     },
   },
   {
@@ -1821,8 +1497,6 @@ export const Stations = [
       town: 'Coaña',
       province: 'Asturias',
       country: 'España',
-      lat: 43.545692,
-      lon: -6.752994,
     },
   },
   {
@@ -1832,8 +1506,6 @@ export const Stations = [
       town: 'Coaña',
       province: 'Asturias',
       country: 'España',
-      lat: 43.551254,
-      lon: -6.771675,
     },
   },
   {
@@ -1843,8 +1515,6 @@ export const Stations = [
       town: 'Coaña',
       province: 'Asturias',
       country: 'España',
-      lat: 43.550714,
-      lon: -6.789622,
     },
   },
   {
@@ -1854,8 +1524,6 @@ export const Stations = [
       town: 'Franco (EL)',
       province: 'Asturias',
       country: 'España',
-      lat: 43.547074,
-      lon: -6.827541,
     },
   },
   {
@@ -1865,8 +1533,6 @@ export const Stations = [
       town: 'Tapia De Casariego',
       province: 'Asturias',
       country: 'España',
-      lat: 43.535026,
-      lon: -6.909329,
     },
   },
   {
@@ -1876,8 +1542,6 @@ export const Stations = [
       town: 'Castropol',
       province: 'Asturias',
       country: 'España',
-      lat: 43.527204,
-      lon: -6.952128,
     },
   },
   {
@@ -1887,8 +1551,6 @@ export const Stations = [
       town: 'Castropol',
       province: 'Asturias',
       country: 'España',
-      lat: 43.36383,
-      lon: -5.88346,
     },
   },
   {
@@ -1898,8 +1560,6 @@ export const Stations = [
       town: 'Castropol',
       province: 'Asturias',
       country: 'España',
-      lat: 43.5095861,
-      lon: -7.0147697,
     },
   },
   {
@@ -1909,8 +1569,6 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.3653,
-      lon: -5.8649,
     },
   },
   {
@@ -1920,8 +1578,6 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.365832,
-      lon: -5.870018,
     },
   },
   {
@@ -1931,8 +1587,6 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.36383,
-      lon: -5.88346,
     },
   },
   {
@@ -1942,8 +1596,6 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.35867,
-      lon: -5.89756,
     },
   },
   {
@@ -1953,8 +1605,6 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.355333,
-      lon: -5.917811,
     },
   },
   {
@@ -1964,8 +1614,6 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -1975,19 +1623,15 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.36874,
-      lon: -5.9588,
     },
   },
   {
-    name: 'Sotu-Udrión',
+    name: 'Sotu - Udrión',
     code: '05308',
     location: {
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.355707,
-      lon: -5.965352,
     },
   },
   {
@@ -1997,19 +1641,16 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Trubia',
-    code: '05311',
+    code: '16204',
+    otherCodes: ['05311'],
     location: {
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.34853,
-      lon: -5.96765,
     },
   },
   {
@@ -2019,8 +1660,6 @@ export const Stations = [
       town: 'Grado',
       province: 'Asturias',
       country: 'España',
-      lat: 43.38379,
-      lon: -5.98263,
     },
   },
   {
@@ -2030,8 +1669,6 @@ export const Stations = [
       town: 'Grado',
       province: 'Asturias',
       country: 'España',
-      lat: 43.38935,
-      lon: -6.00586,
     },
   },
   {
@@ -2041,8 +1678,6 @@ export const Stations = [
       town: 'Grado',
       province: 'Asturias',
       country: 'España',
-      lat: 43.402931,
-      lon: -6.045405,
     },
   },
   {
@@ -2052,8 +1687,6 @@ export const Stations = [
       town: 'Grado',
       province: 'Asturias',
       country: 'España',
-      lat: 43.39453,
-      lon: -6.06372,
     },
   },
   {
@@ -2063,8 +1696,6 @@ export const Stations = [
       town: 'Candamo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.425605,
-      lon: -6.05996,
     },
   },
   {
@@ -2074,8 +1705,6 @@ export const Stations = [
       town: 'Candamo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.439928,
-      lon: -6.065789,
     },
   },
   {
@@ -2085,8 +1714,6 @@ export const Stations = [
       town: 'Candamo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.448956,
-      lon: -6.077283,
     },
   },
   {
@@ -2096,8 +1723,6 @@ export const Stations = [
       town: 'Pravia',
       province: 'Asturias',
       country: 'España',
-      lat: 43.470084,
-      lon: -6.098877,
     },
   },
   {
@@ -2107,8 +1732,6 @@ export const Stations = [
       town: 'Pravia',
       province: 'Asturias',
       country: 'España',
-      lat: 43.49097,
-      lon: -6.11062,
     },
   },
   {
@@ -2118,8 +1741,6 @@ export const Stations = [
       town: 'Pravia',
       province: 'Asturias',
       country: 'España',
-      lat: 43.516494,
-      lon: -6.082065,
     },
   },
   {
@@ -2129,8 +1750,6 @@ export const Stations = [
       town: 'Muros De Nalón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.552084,
-      lon: -6.087238,
     },
   },
   {
@@ -2140,8 +1759,6 @@ export const Stations = [
       town: 'Ribera De Arriba',
       province: 'Asturias',
       country: 'España',
-      lat: 43.309911,
-      lon: -5.912549,
     },
   },
   {
@@ -2151,8 +1768,6 @@ export const Stations = [
       town: 'Ribera De Arriba',
       province: 'Asturias',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -2162,8 +1777,6 @@ export const Stations = [
       town: 'Morcín',
       province: 'Asturias',
       country: 'España',
-      lat: 43.28332,
-      lon: -5.87513,
     },
   },
   {
@@ -2173,30 +1786,24 @@ export const Stations = [
       town: 'Mieres',
       province: 'Asturias',
       country: 'España',
-      lat: 43.274515,
-      lon: -5.828206,
     },
   },
   {
-    name: 'Mieres Del Camín-El Vasco',
+    name: 'Mieres Del Camín - El Vasco',
     code: '05369',
     location: {
       town: 'Mieres',
       province: 'Asturias',
       country: 'España',
-      lat: 43.25028,
-      lon: -5.77999,
     },
   },
   {
-    name: 'Santuyano-Caudalia',
+    name: 'Santuyano - Caudalia',
     code: '05371',
     location: {
       town: 'Mieres',
       province: 'Asturias',
       country: 'España',
-      lat: 43.22628,
-      lon: -5.78332,
     },
   },
   {
@@ -2206,19 +1813,15 @@ export const Stations = [
       town: 'Aller',
       province: 'Asturias',
       country: 'España',
-      lat: 43.213957,
-      lon: -5.783983,
     },
   },
   {
-    name: 'Uxo-Taruelo',
+    name: 'Uxo - Taruelo',
     code: '05375',
     location: {
       town: 'Mieres',
       province: 'Asturias',
       country: 'España',
-      lat: 43.2006,
-      lon: -5.78765,
     },
   },
   {
@@ -2228,8 +1831,6 @@ export const Stations = [
       town: 'Mieres',
       province: 'Asturias',
       country: 'España',
-      lat: 43.195945,
-      lon: -5.777546,
     },
   },
   {
@@ -2239,8 +1840,6 @@ export const Stations = [
       town: 'Aller',
       province: 'Asturias',
       country: 'España',
-      lat: 43.176021,
-      lon: -5.754709,
     },
   },
   {
@@ -2250,8 +1849,6 @@ export const Stations = [
       town: 'Aller',
       province: 'Asturias',
       country: 'España',
-      lat: 43.17078,
-      lon: -5.741892,
     },
   },
   {
@@ -2261,8 +1858,6 @@ export const Stations = [
       town: 'Aller',
       province: 'Asturias',
       country: 'España',
-      lat: 43.16889,
-      lon: -5.696771,
     },
   },
   {
@@ -2272,8 +1867,6 @@ export const Stations = [
       town: 'Aller',
       province: 'Asturias',
       country: 'España',
-      lat: 43.16654,
-      lon: -5.72178,
     },
   },
   {
@@ -2283,8 +1876,6 @@ export const Stations = [
       town: 'Aller',
       province: 'Asturias',
       country: 'España',
-      lat: 43.16428,
-      lon: -5.67666,
     },
   },
   {
@@ -2294,8 +1885,6 @@ export const Stations = [
       town: 'Aller',
       province: 'Asturias',
       country: 'España',
-      lat: 43.16597,
-      lon: -5.68425,
     },
   },
   {
@@ -2305,8 +1894,6 @@ export const Stations = [
       town: 'Ribera De Arriba',
       province: 'Asturias',
       country: 'España',
-      lat: 43.16478,
-      lon: -5.646112,
     },
   },
   {
@@ -2316,8 +1903,6 @@ export const Stations = [
       town: 'Aller',
       province: 'Asturias',
       country: 'España',
-      lat: 43.16083,
-      lon: -5.62491,
     },
   },
   {
@@ -2327,8 +1912,6 @@ export const Stations = [
       town: 'Aller',
       province: 'Asturias',
       country: 'España',
-      lat: 43.151098,
-      lon: -5.600266,
     },
   },
   {
@@ -2338,8 +1921,6 @@ export const Stations = [
       town: 'Aller',
       province: 'Asturias',
       country: 'España',
-      lat: 43.124043,
-      lon: -5.566384,
     },
   },
   {
@@ -2349,19 +1930,15 @@ export const Stations = [
       town: 'Gijón',
       province: 'Asturias',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Tremañes-Llangréu/Langreo',
+    name: 'Tremañes - Llangréu/Langreo',
     code: '05403',
     location: {
       town: 'Gijón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.528766,
-      lon: -5.694847,
     },
   },
   {
@@ -2371,8 +1948,6 @@ export const Stations = [
       town: 'Gijón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.507289,
-      lon: -5.726564,
     },
   },
   {
@@ -2382,8 +1957,6 @@ export const Stations = [
       town: 'Gijón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.486585,
-      lon: -5.719696,
     },
   },
   {
@@ -2393,8 +1966,6 @@ export const Stations = [
       town: 'Gijón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.46603,
-      lon: -5.72606,
     },
   },
   {
@@ -2404,8 +1975,6 @@ export const Stations = [
       town: 'Siero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.370778,
-      lon: -5.69338,
     },
   },
   {
@@ -2415,8 +1984,6 @@ export const Stations = [
       town: 'Siero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.43459,
-      lon: -5.71,
     },
   },
   {
@@ -2426,8 +1993,6 @@ export const Stations = [
       town: 'Siero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.44811,
-      lon: -5.71739,
     },
   },
   {
@@ -2437,8 +2002,6 @@ export const Stations = [
       town: 'Noreña',
       province: 'Asturias',
       country: 'España',
-      lat: 43.39398,
-      lon: -5.70371,
     },
   },
   {
@@ -2448,8 +2011,6 @@ export const Stations = [
       town: 'Siero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.363371,
-      lon: -5.68034,
     },
   },
   {
@@ -2459,8 +2020,6 @@ export const Stations = [
       town: 'Siero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.358416,
-      lon: -5.65859,
     },
   },
   {
@@ -2470,8 +2029,6 @@ export const Stations = [
       town: 'Siero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.351168,
-      lon: -5.634756,
     },
   },
   {
@@ -2481,8 +2038,6 @@ export const Stations = [
       town: 'Siero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.339403,
-      lon: -5.63081,
     },
   },
   {
@@ -2492,8 +2047,6 @@ export const Stations = [
       town: 'Langreo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.328069,
-      lon: -5.643052,
     },
   },
   {
@@ -2503,30 +2056,26 @@ export const Stations = [
       town: 'Langreo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.31052,
-      lon: -5.6859,
     },
   },
   {
     name: 'Sama - Los Llerones',
     code: '05429',
+    otherCodes: ['05427'],
     location: {
       town: 'Langreo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.298761,
-      lon: -5.683358,
     },
   },
   {
     name: 'Ciañu',
-    code: '05431',
+    code: '16010',
+    otherCodes: ['05431'],
     location: {
       town: 'Langreo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.290721,
-      lon: -5.667903,
     },
   },
   {
@@ -2536,19 +2085,15 @@ export const Stations = [
       town: 'San Martín Del Rey Aurelio',
       province: 'Asturias',
       country: 'España',
-      lat: 43.28911,
-      lon: -5.65285,
     },
   },
   {
-    name: "L'Entregu-La Escura",
+    name: "L'Entregu - La Escura",
     code: '05433',
     location: {
       town: 'San Martín Del Rey Aurelio',
       province: 'Asturias',
       country: 'España',
-      lat: 43.289509,
-      lon: -5.640809,
     },
   },
   {
@@ -2558,8 +2103,6 @@ export const Stations = [
       town: 'San Martín Del Rey Aurelio',
       province: 'Asturias',
       country: 'España',
-      lat: 43.28774,
-      lon: -5.62637,
     },
   },
   {
@@ -2569,8 +2112,6 @@ export const Stations = [
       town: 'San Martín Del Rey Aurelio',
       province: 'Asturias',
       country: 'España',
-      lat: 43.278378,
-      lon: -5.615305,
     },
   },
   {
@@ -2580,8 +2121,6 @@ export const Stations = [
       town: 'San Martín Del Rey Aurelio',
       province: 'Asturias',
       country: 'España',
-      lat: 43.27578,
-      lon: -5.60481,
     },
   },
   {
@@ -2591,8 +2130,6 @@ export const Stations = [
       town: 'San Martín Del Rey Aurelio',
       province: 'Asturias',
       country: 'España',
-      lat: 43.27082,
-      lon: -5.5903,
     },
   },
   {
@@ -2602,8 +2139,6 @@ export const Stations = [
       town: 'Laviana',
       province: 'Asturias',
       country: 'España',
-      lat: 43.25987,
-      lon: -5.57504,
     },
   },
   {
@@ -2613,8 +2148,6 @@ export const Stations = [
       town: 'Laviana',
       province: 'Asturias',
       country: 'España',
-      lat: 43.25068,
-      lon: -5.56449,
     },
   },
   {
@@ -2624,8 +2157,6 @@ export const Stations = [
       town: 'Bilbao',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.259998,
-      lon: -2.926286,
     },
   },
   {
@@ -2635,19 +2166,15 @@ export const Stations = [
       town: 'Bilbao',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.259754,
-      lon: -2.953828,
     },
   },
   {
-    name: 'Feve-Zorroza Zorrozgoiti',
+    name: 'Feve - Zorroza Zorrozgoiti',
     code: '05457',
     location: {
       town: 'Bilbao',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.273951,
-      lon: -2.974167,
     },
   },
   {
@@ -2657,8 +2184,6 @@ export const Stations = [
       town: 'Bilbao',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.261854,
-      lon: -2.973004,
     },
   },
   {
@@ -2668,8 +2193,6 @@ export const Stations = [
       town: 'Bilbao',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.255361,
-      lon: -2.972073,
     },
   },
   {
@@ -2679,8 +2202,6 @@ export const Stations = [
       town: 'Alonsotegi',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.248317,
-      lon: -2.990089,
     },
   },
   {
@@ -2690,8 +2211,6 @@ export const Stations = [
       town: 'Güeñes',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.233225,
-      lon: -3.016037,
     },
   },
   {
@@ -2701,8 +2220,6 @@ export const Stations = [
       town: 'Güeñes',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.222712,
-      lon: -3.024874,
     },
   },
   {
@@ -2712,8 +2229,6 @@ export const Stations = [
       town: 'Güeñes',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.202057,
-      lon: -3.050494,
     },
   },
   {
@@ -2723,8 +2238,6 @@ export const Stations = [
       town: 'Güeñes',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.201091,
-      lon: -3.071677,
     },
   },
   {
@@ -2734,8 +2247,6 @@ export const Stations = [
       town: 'Güeñes',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.205985,
-      lon: -3.08262,
     },
   },
   {
@@ -2745,8 +2256,6 @@ export const Stations = [
       town: 'Güeñes',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.20908,
-      lon: -3.095381,
     },
   },
   {
@@ -2756,8 +2265,6 @@ export const Stations = [
       town: 'Zalla',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.210494,
-      lon: -3.109354,
     },
   },
   {
@@ -2767,8 +2274,6 @@ export const Stations = [
       town: 'Zalla',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.210347,
-      lon: -3.114075,
     },
   },
   {
@@ -2778,8 +2283,6 @@ export const Stations = [
       town: 'Zalla',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.212797,
-      lon: -3.133284,
     },
   },
   {
@@ -2789,8 +2292,6 @@ export const Stations = [
       town: 'Zalla',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.210884,
-      lon: -3.138703,
     },
   },
   {
@@ -2800,8 +2301,6 @@ export const Stations = [
       town: 'Zalla',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.203957,
-      lon: -3.144831,
     },
   },
   {
@@ -2811,8 +2310,6 @@ export const Stations = [
       town: 'Zalla',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.199986,
-      lon: -3.150469,
     },
   },
   {
@@ -2822,8 +2319,6 @@ export const Stations = [
       town: 'Zalla',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.203182,
-      lon: -3.170446,
     },
   },
   {
@@ -2833,8 +2328,6 @@ export const Stations = [
       town: 'Balmaseda',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.196388,
-      lon: -3.189924,
     },
   },
   {
@@ -2844,8 +2337,6 @@ export const Stations = [
       town: 'Zalla',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.2132627,
-      lon: -3.1352774,
     },
   },
   {
@@ -2855,8 +2346,6 @@ export const Stations = [
       town: 'Balmaseda',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.190121,
-      lon: -3.19716,
     },
   },
   {
@@ -2866,8 +2355,6 @@ export const Stations = [
       town: 'Artzentales',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.23329,
-      lon: -3.198304,
     },
   },
   {
@@ -2877,8 +2364,6 @@ export const Stations = [
       town: 'Erriberagoitia/Ribera Alta',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.25,
-      lon: -3.22,
     },
   },
   {
@@ -2888,8 +2373,6 @@ export const Stations = [
       town: 'Trucios-Turtzioz',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.24128,
-      lon: -3.25054,
     },
   },
   {
@@ -2899,8 +2382,6 @@ export const Stations = [
       town: 'Karrantza Harana/Valle De Carranza',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.238854,
-      lon: -3.357827,
     },
   },
   {
@@ -2910,8 +2391,6 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.366841,
-      lon: -5.854263,
     },
   },
   {
@@ -2919,10 +2398,8 @@ export const Stations = [
     code: '05503',
     location: {
       town: 'Oviedo',
-      province: undefined,
+      province: 'Asturias',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -2932,8 +2409,6 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.38681,
-      lon: -5.80889,
     },
   },
   {
@@ -2943,8 +2418,6 @@ export const Stations = [
       town: 'Siero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.37944,
-      lon: -5.79225,
     },
   },
   {
@@ -2954,8 +2427,6 @@ export const Stations = [
       town: 'Siero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.3807153,
-      lon: -5.7488323,
     },
   },
   {
@@ -2965,8 +2436,6 @@ export const Stations = [
       town: 'Siero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.3817019,
-      lon: -5.7296665,
     },
   },
   {
@@ -2976,8 +2445,6 @@ export const Stations = [
       town: 'Siero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.382525,
-      lon: -5.702655,
     },
   },
   {
@@ -2987,8 +2454,6 @@ export const Stations = [
       town: 'Siero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.386909,
-      lon: -5.675275,
     },
   },
   {
@@ -2998,8 +2463,6 @@ export const Stations = [
       town: 'Siero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.388113,
-      lon: -5.664779,
     },
   },
   {
@@ -3009,8 +2472,6 @@ export const Stations = [
       town: 'Siero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.376828,
-      lon: -5.601385,
     },
   },
   {
@@ -3020,8 +2481,6 @@ export const Stations = [
       town: 'Siero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.38058,
-      lon: -5.582573,
     },
   },
   {
@@ -3031,8 +2490,6 @@ export const Stations = [
       town: 'Riaño',
       province: 'Asturias',
       country: 'España',
-      lat: 43.3789387,
-      lon: -5.5628276,
     },
   },
   {
@@ -3042,8 +2499,6 @@ export const Stations = [
       town: 'Nava',
       province: 'Asturias',
       country: 'España',
-      lat: 43.375076,
-      lon: -5.546238,
     },
   },
   {
@@ -3053,8 +2508,6 @@ export const Stations = [
       town: 'Nava',
       province: 'Asturias',
       country: 'España',
-      lat: 43.36878,
-      lon: -5.52566,
     },
   },
   {
@@ -3064,8 +2517,6 @@ export const Stations = [
       town: 'Nava',
       province: 'Asturias',
       country: 'España',
-      lat: 43.36117,
-      lon: -5.50929,
     },
   },
   {
@@ -3075,8 +2526,6 @@ export const Stations = [
       town: 'Nava',
       province: 'Asturias',
       country: 'España',
-      lat: 43.35547,
-      lon: -5.47824,
     },
   },
   {
@@ -3086,8 +2535,6 @@ export const Stations = [
       town: 'Nava',
       province: 'Asturias',
       country: 'España',
-      lat: 43.35618,
-      lon: -5.45117,
     },
   },
   {
@@ -3097,8 +2544,6 @@ export const Stations = [
       town: 'Nava',
       province: 'Asturias',
       country: 'España',
-      lat: 43.355586,
-      lon: -5.434425,
     },
   },
   {
@@ -3108,8 +2553,6 @@ export const Stations = [
       town: 'Piloña',
       province: 'Asturias',
       country: 'España',
-      lat: 43.361448,
-      lon: -5.387496,
     },
   },
   {
@@ -3119,8 +2562,6 @@ export const Stations = [
       town: 'Piloña',
       province: 'Asturias',
       country: 'España',
-      lat: 43.351777,
-      lon: -5.36921,
     },
   },
   {
@@ -3130,8 +2571,6 @@ export const Stations = [
       town: 'Piloña',
       province: 'Asturias',
       country: 'España',
-      lat: 43.343895,
-      lon: -5.357283,
     },
   },
   {
@@ -3141,8 +2580,6 @@ export const Stations = [
       town: 'Piloña',
       province: 'Asturias',
       country: 'España',
-      lat: 43.3631,
-      lon: -5.30285,
     },
   },
   {
@@ -3152,8 +2589,6 @@ export const Stations = [
       town: 'Piloña',
       province: 'Asturias',
       country: 'España',
-      lat: 43.36236,
-      lon: -5.2574,
     },
   },
   {
@@ -3163,8 +2598,6 @@ export const Stations = [
       town: 'Parres',
       province: 'Asturias',
       country: 'España',
-      lat: 43.3583,
-      lon: -5.22689,
     },
   },
   {
@@ -3174,8 +2607,6 @@ export const Stations = [
       town: 'Parres',
       province: 'Asturias',
       country: 'España',
-      lat: 43.368395,
-      lon: -5.185191,
     },
   },
   {
@@ -3185,8 +2616,6 @@ export const Stations = [
       town: 'Parres',
       province: 'Asturias',
       country: 'España',
-      lat: 43.378622,
-      lon: -5.18603,
     },
   },
   {
@@ -3196,8 +2625,6 @@ export const Stations = [
       town: 'Parres',
       province: 'Asturias',
       country: 'España',
-      lat: 43.387513,
-      lon: -5.188258,
     },
   },
   {
@@ -3207,8 +2634,6 @@ export const Stations = [
       town: 'Parres',
       province: 'Asturias',
       country: 'España',
-      lat: 43.401443,
-      lon: -5.143117,
     },
   },
   {
@@ -3218,8 +2643,6 @@ export const Stations = [
       town: 'Parres',
       province: 'Asturias',
       country: 'España',
-      lat: 43.412281,
-      lon: -5.118013,
     },
   },
   {
@@ -3229,8 +2652,6 @@ export const Stations = [
       town: 'Ribadesella',
       province: 'Asturias',
       country: 'España',
-      lat: 43.431144,
-      lon: -5.073302,
     },
   },
   {
@@ -3240,8 +2661,6 @@ export const Stations = [
       town: 'Ribadesella',
       province: 'Asturias',
       country: 'España',
-      lat: 43.440563,
-      lon: -5.055592,
     },
   },
   {
@@ -3251,8 +2670,6 @@ export const Stations = [
       town: 'Ribadesella',
       province: 'Asturias',
       country: 'España',
-      lat: 43.4586649,
-      lon: -5.0568797,
     },
   },
   {
@@ -3262,8 +2679,6 @@ export const Stations = [
       town: 'Ribadesella',
       province: 'Asturias',
       country: 'España',
-      lat: 43.45945,
-      lon: -5.0545,
     },
   },
   {
@@ -3273,8 +2688,6 @@ export const Stations = [
       town: 'Ribadesella',
       province: 'Asturias',
       country: 'España',
-      lat: 43.44821,
-      lon: -5.01882,
     },
   },
   {
@@ -3284,8 +2697,6 @@ export const Stations = [
       town: 'Llanes',
       province: 'Asturias',
       country: 'España',
-      lat: 43.4398,
-      lon: -4.98228,
     },
   },
   {
@@ -3295,8 +2706,6 @@ export const Stations = [
       town: 'Llanes',
       province: 'Asturias',
       country: 'España',
-      lat: 43.440585,
-      lon: -4.935531,
     },
   },
   {
@@ -3306,8 +2715,6 @@ export const Stations = [
       town: 'Llanes',
       province: 'Asturias',
       country: 'España',
-      lat: 43.4420099,
-      lon: -4.90383,
     },
   },
   {
@@ -3317,8 +2724,6 @@ export const Stations = [
       town: 'Llanes',
       province: 'Asturias',
       country: 'España',
-      lat: 43.42483,
-      lon: -4.865,
     },
   },
   {
@@ -3328,8 +2733,6 @@ export const Stations = [
       town: 'Llanes',
       province: 'Asturias',
       country: 'España',
-      lat: 43.42147,
-      lon: -4.83583,
     },
   },
   {
@@ -3339,8 +2742,6 @@ export const Stations = [
       town: 'Llanes',
       province: 'Asturias',
       country: 'España',
-      lat: 43.42501,
-      lon: -4.81133,
     },
   },
   {
@@ -3350,8 +2751,6 @@ export const Stations = [
       town: 'Llanes',
       province: 'Asturias',
       country: 'España',
-      lat: 43.42429,
-      lon: -4.78189,
     },
   },
   {
@@ -3361,8 +2760,6 @@ export const Stations = [
       town: 'Llanes',
       province: 'Asturias',
       country: 'España',
-      lat: 43.42094,
-      lon: -4.7587,
     },
   },
   {
@@ -3372,8 +2769,6 @@ export const Stations = [
       town: 'Llanes',
       province: 'Asturias',
       country: 'España',
-      lat: 43.39473,
-      lon: -4.73013,
     },
   },
   {
@@ -3383,8 +2778,6 @@ export const Stations = [
       town: 'Llanes',
       province: 'Asturias',
       country: 'España',
-      lat: 43.39647,
-      lon: -4.673,
     },
   },
   {
@@ -3394,8 +2787,6 @@ export const Stations = [
       town: 'Llanes',
       province: 'Asturias',
       country: 'España',
-      lat: 43.39283,
-      lon: -4.63039,
     },
   },
   {
@@ -3405,8 +2796,6 @@ export const Stations = [
       town: 'Ribadedeva',
       province: 'Asturias',
       country: 'España',
-      lat: 43.38272,
-      lon: -4.55709,
     },
   },
   {
@@ -3414,10 +2803,8 @@ export const Stations = [
     code: '05601',
     location: {
       town: 'Santander',
-      province: undefined,
+      province: 'Cantabria',
       country: 'España',
-      lat: 43.4583294,
-      lon: -3.8120706,
     },
   },
   {
@@ -3427,8 +2814,6 @@ export const Stations = [
       town: 'Santander',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.452804,
-      lon: -3.828602,
     },
   },
   {
@@ -3438,8 +2823,6 @@ export const Stations = [
       town: 'Santander',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.455249,
-      lon: -3.841491,
     },
   },
   {
@@ -3449,8 +2832,6 @@ export const Stations = [
       town: 'Santander',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.453465,
-      lon: -3.85579,
     },
   },
   {
@@ -3460,8 +2841,6 @@ export const Stations = [
       town: 'Santa Cruz De Bezana',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.44099,
-      lon: -3.89961,
     },
   },
   {
@@ -3471,8 +2850,6 @@ export const Stations = [
       town: 'Piélagos',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.435207,
-      lon: -3.918223,
     },
   },
   {
@@ -3482,8 +2859,6 @@ export const Stations = [
       town: 'Piélagos',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.431634,
-      lon: -3.946432,
     },
   },
   {
@@ -3493,8 +2868,6 @@ export const Stations = [
       town: 'Miengo',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.42504,
-      lon: -3.96076,
     },
   },
   {
@@ -3504,8 +2877,6 @@ export const Stations = [
       town: 'Miengo',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.409638,
-      lon: -3.988686,
     },
   },
   {
@@ -3515,8 +2886,6 @@ export const Stations = [
       town: 'Polanco',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.398343,
-      lon: -4.010047,
     },
   },
   {
@@ -3526,8 +2895,6 @@ export const Stations = [
       town: 'Polanco',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.39137,
-      lon: -4.02798,
     },
   },
   {
@@ -3537,8 +2904,6 @@ export const Stations = [
       town: 'Torrelavega',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.37424,
-      lon: -4.04187,
     },
   },
   {
@@ -3548,8 +2913,6 @@ export const Stations = [
       town: 'Torrelavega',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.353604,
-      lon: -4.060609,
     },
   },
   {
@@ -3559,8 +2922,6 @@ export const Stations = [
       town: 'Torrelavega',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.35093,
-      lon: -4.051009,
     },
   },
   {
@@ -3570,8 +2931,6 @@ export const Stations = [
       town: 'Torrelavega',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.356546,
-      lon: -4.070291,
     },
   },
   {
@@ -3581,8 +2940,6 @@ export const Stations = [
       town: 'Reocín',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.358638,
-      lon: -4.087757,
     },
   },
   {
@@ -3592,8 +2949,6 @@ export const Stations = [
       town: 'Reocín',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.358977,
-      lon: -4.111865,
     },
   },
   {
@@ -3603,8 +2958,6 @@ export const Stations = [
       town: 'Alfoz De Lloredo',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.361127,
-      lon: -4.149519,
     },
   },
   {
@@ -3614,8 +2967,6 @@ export const Stations = [
       town: 'Reocín',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.340871,
-      lon: -4.155596,
     },
   },
   {
@@ -3625,8 +2976,6 @@ export const Stations = [
       town: 'Cabezón De La Sal',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.33877,
-      lon: -4.17473,
     },
   },
   {
@@ -3636,8 +2985,6 @@ export const Stations = [
       town: 'Cabezón De La Sal',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.323142,
-      lon: -4.193685,
     },
   },
   {
@@ -3647,8 +2994,6 @@ export const Stations = [
       town: 'Cabezón De La Sal',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.31525,
-      lon: -4.21554,
     },
   },
   {
@@ -3658,8 +3003,6 @@ export const Stations = [
       town: 'Cabezón De La Sal',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.30777,
-      lon: -4.23196,
     },
   },
   {
@@ -3669,8 +3012,6 @@ export const Stations = [
       town: 'Valdáliga',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.31828,
-      lon: -4.30902,
     },
   },
   {
@@ -3680,8 +3021,6 @@ export const Stations = [
       town: 'Valdáliga',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.32821,
-      lon: -4.34927,
     },
   },
   {
@@ -3691,8 +3030,6 @@ export const Stations = [
       town: 'San Vicente De La Barquera',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.340347,
-      lon: -4.383335,
     },
   },
   {
@@ -3702,8 +3039,6 @@ export const Stations = [
       town: 'San Vicente De La Barquera',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.367837,
-      lon: -4.404504,
     },
   },
   {
@@ -3713,8 +3048,6 @@ export const Stations = [
       town: 'Val De San Vicente',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.370289,
-      lon: -4.480174,
     },
   },
   {
@@ -3724,19 +3057,16 @@ export const Stations = [
       town: 'Val De San Vicente',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.37478,
-      lon: -4.51434,
     },
   },
   {
     name: 'Nueva Montaña',
-    code: '05651',
+    code: '14231',
+    otherCodes: ['05651'],
     location: {
       town: 'Santander',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.440103,
-      lon: -3.849398,
     },
   },
   {
@@ -3746,8 +3076,6 @@ export const Stations = [
       town: 'Santander',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.427513,
-      lon: -3.840498,
     },
   },
   {
@@ -3757,8 +3085,6 @@ export const Stations = [
       town: 'Camargo',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.416083,
-      lon: -3.841081,
     },
   },
   {
@@ -3768,8 +3094,6 @@ export const Stations = [
       town: 'Astillero (EL)',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.40371,
-      lon: -3.82125,
     },
   },
   {
@@ -3779,8 +3103,6 @@ export const Stations = [
       town: 'Comillas',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.397296,
-      lon: -3.814914,
     },
   },
   {
@@ -3790,8 +3112,6 @@ export const Stations = [
       town: 'Medio Cudeyo',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.393758,
-      lon: -3.803777,
     },
   },
   {
@@ -3801,8 +3121,6 @@ export const Stations = [
       town: 'Medio Cudeyo',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.401139,
-      lon: -3.766305,
     },
   },
   {
@@ -3812,8 +3130,6 @@ export const Stations = [
       town: 'Marina De Cudeyo',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.399487,
-      lon: -3.737923,
     },
   },
   {
@@ -3823,8 +3139,6 @@ export const Stations = [
       town: 'Medio Cudeyo',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.38748,
-      lon: -3.73131,
     },
   },
   {
@@ -3834,8 +3148,6 @@ export const Stations = [
       town: 'Medio Cudeyo',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.376441,
-      lon: -3.717872,
     },
   },
   {
@@ -3845,8 +3157,6 @@ export const Stations = [
       town: 'Riotuerto',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.350589,
-      lon: -3.706766,
     },
   },
   {
@@ -3856,8 +3166,6 @@ export const Stations = [
       town: 'Liérganes',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.34482,
-      lon: -3.74212,
     },
   },
   {
@@ -3867,8 +3175,6 @@ export const Stations = [
       town: 'Entrambasaguas',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.406489,
-      lon: -3.719342,
     },
   },
   {
@@ -3878,8 +3184,6 @@ export const Stations = [
       town: 'Ribamontán Al Monte',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.411322,
-      lon: -3.703643,
     },
   },
   {
@@ -3889,8 +3193,6 @@ export const Stations = [
       town: 'Ribamontán Al Monte',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.404885,
-      lon: -3.666883,
     },
   },
   {
@@ -3900,8 +3202,6 @@ export const Stations = [
       town: 'Hazas De Cesto',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.41371,
-      lon: -3.57713,
     },
   },
   {
@@ -3911,8 +3211,6 @@ export const Stations = [
       town: 'Bárcena De Cicero',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.42315,
-      lon: -3.52472,
     },
   },
   {
@@ -3922,8 +3220,6 @@ export const Stations = [
       town: 'Bárcena De Cicero',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.417052,
-      lon: -3.49049,
     },
   },
   {
@@ -3933,8 +3229,6 @@ export const Stations = [
       town: 'Bárcena De Cicero',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.39409,
-      lon: -3.4692,
     },
   },
   {
@@ -3944,8 +3238,6 @@ export const Stations = [
       town: 'Limpias',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.35881,
-      lon: -3.43334,
     },
   },
   {
@@ -3955,8 +3247,6 @@ export const Stations = [
       town: 'Ampuero',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.34661,
-      lon: -3.420918,
     },
   },
   {
@@ -3966,8 +3256,6 @@ export const Stations = [
       town: 'Rasines',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.31368,
-      lon: -3.44549,
     },
   },
   {
@@ -3977,8 +3265,6 @@ export const Stations = [
       town: 'Ramales De La Victoria',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.28219,
-      lon: -3.43831,
     },
   },
   {
@@ -3988,8 +3274,6 @@ export const Stations = [
       town: 'Valle De Mena',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.166699,
-      lon: -3.227589,
     },
   },
   {
@@ -3999,19 +3283,15 @@ export const Stations = [
       town: 'Valle De Mena',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.142894,
-      lon: -3.264716,
     },
   },
   {
-    name: 'Mercadillo-Villasana',
+    name: 'Mercadillo - Villasana',
     code: '05724',
     location: {
       town: 'Cerezo De Río Tirón',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.105209,
-      lon: -3.264469,
     },
   },
   {
@@ -4021,8 +3301,6 @@ export const Stations = [
       town: 'Valle De Mena',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.068171,
-      lon: -3.347339,
     },
   },
   {
@@ -4032,8 +3310,6 @@ export const Stations = [
       town: 'Merindad De Sotoscueva',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.088479,
-      lon: -3.456,
     },
   },
   {
@@ -4043,8 +3319,6 @@ export const Stations = [
       town: 'Espinosa De Los Monteros',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.08,
-      lon: -3.51,
     },
   },
   {
@@ -4054,8 +3328,6 @@ export const Stations = [
       town: 'Espinosa De Los Monteros',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.074252,
-      lon: -3.537116,
     },
   },
   {
@@ -4065,8 +3337,6 @@ export const Stations = [
       town: 'Merindad De Sotoscueva',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.062993,
-      lon: -3.607895,
     },
   },
   {
@@ -4076,8 +3346,6 @@ export const Stations = [
       town: 'Merindad De Sotoscueva',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.045292,
-      lon: -3.688253,
     },
   },
   {
@@ -4087,8 +3355,6 @@ export const Stations = [
       town: 'Merindad De Valdeporres',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.012367,
-      lon: -3.737852,
     },
   },
   {
@@ -4098,8 +3364,6 @@ export const Stations = [
       town: 'Merindad De Valdeporres',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.00125,
-      lon: -3.74525,
     },
   },
   {
@@ -4109,8 +3373,6 @@ export const Stations = [
       town: 'Merindad De Valdeporres',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.019094,
-      lon: -3.809231,
     },
   },
   {
@@ -4120,8 +3382,6 @@ export const Stations = [
       town: 'Valle De Valdebezana',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.005809,
-      lon: -3.844888,
     },
   },
   {
@@ -4131,8 +3391,6 @@ export const Stations = [
       town: 'Valle De Valdebezana',
       province: 'Cantabria',
       country: 'España',
-      lat: 42.996397,
-      lon: -3.858466,
     },
   },
   {
@@ -4142,8 +3400,6 @@ export const Stations = [
       town: 'Arija',
       province: 'Cantabria',
       country: 'España',
-      lat: 42.991292,
-      lon: -3.945006,
     },
   },
   {
@@ -4153,19 +3409,15 @@ export const Stations = [
       town: 'Rozas De Valdearroyo (LAS)',
       province: 'Cantabria',
       country: 'España',
-      lat: 42.988062,
-      lon: -3.982357,
     },
   },
   {
-    name: 'Feve-Las Rozas De Valdearroyo',
+    name: 'Feve - Las Rozas De Valdearroyo',
     code: '05742',
     location: {
       town: 'Rozas De Valdearroyo (LAS)',
       province: 'Cantabria',
       country: 'España',
-      lat: 42.973605,
-      lon: -4.029864,
     },
   },
   {
@@ -4175,8 +3427,6 @@ export const Stations = [
       town: 'Valdeprado Del Río',
       province: 'Cantabria',
       country: 'España',
-      lat: 42.934323,
-      lon: -4.050073,
     },
   },
   {
@@ -4186,8 +3436,6 @@ export const Stations = [
       town: 'Valdeprado Del Río',
       province: 'Cantabria',
       country: 'España',
-      lat: 42.910329,
-      lon: -4.075211,
     },
   },
   {
@@ -4197,8 +3445,6 @@ export const Stations = [
       town: 'Barruelo De Santullán',
       province: 'Palencia',
       country: 'España',
-      lat: 42.857752,
-      lon: -4.279178,
     },
   },
   {
@@ -4208,8 +3454,6 @@ export const Stations = [
       town: 'Salinas De Pisuerga',
       province: 'Palencia',
       country: 'España',
-      lat: 42.851271,
-      lon: -4.386209,
     },
   },
   {
@@ -4219,8 +3463,6 @@ export const Stations = [
       town: 'Dehesa De Montejo',
       province: 'Palencia',
       country: 'España',
-      lat: 42.83936,
-      lon: -4.49477,
     },
   },
   {
@@ -4230,8 +3472,6 @@ export const Stations = [
       town: 'Castrejón De La Peña',
       province: 'Palencia',
       country: 'España',
-      lat: 42.81199,
-      lon: -4.60162,
     },
   },
   {
@@ -4241,8 +3481,6 @@ export const Stations = [
       town: 'Santibáñez De La Peña',
       province: 'Palencia',
       country: 'España',
-      lat: 42.818353,
-      lon: -4.685419,
     },
   },
   {
@@ -4252,8 +3490,6 @@ export const Stations = [
       town: 'Santibáñez De La Peña',
       province: 'Palencia',
       country: 'España',
-      lat: 42.80204,
-      lon: -4.74145,
     },
   },
   {
@@ -4263,8 +3499,6 @@ export const Stations = [
       town: 'Guardo',
       province: 'Palencia',
       country: 'España',
-      lat: 42.78776,
-      lon: -4.845192,
     },
   },
   {
@@ -4274,8 +3508,6 @@ export const Stations = [
       town: 'Guardo',
       province: 'Palencia',
       country: 'España',
-      lat: 42.79108,
-      lon: -4.85201,
     },
   },
   {
@@ -4285,8 +3517,6 @@ export const Stations = [
       town: 'Prado De La Guzpeña',
       province: 'León',
       country: 'España',
-      lat: 42.770274,
-      lon: -5.041299,
     },
   },
   {
@@ -4296,8 +3526,6 @@ export const Stations = [
       town: 'Valderrueda',
       province: 'León',
       country: 'España',
-      lat: 42.787317,
-      lon: -4.905185,
     },
   },
   {
@@ -4307,8 +3535,6 @@ export const Stations = [
       town: 'Valderrueda',
       province: 'León',
       country: 'España',
-      lat: 42.76562,
-      lon: -4.92921,
     },
   },
   {
@@ -4318,8 +3544,6 @@ export const Stations = [
       town: 'Valderrueda',
       province: 'León',
       country: 'España',
-      lat: 42.78764,
-      lon: -4.971911,
     },
   },
   {
@@ -4329,8 +3553,6 @@ export const Stations = [
       town: 'Prado De La Guzpeña',
       province: 'León',
       country: 'España',
-      lat: 42.7838799,
-      lon: -5.02648,
     },
   },
   {
@@ -4340,8 +3562,6 @@ export const Stations = [
       town: 'Cebanico',
       province: 'León',
       country: 'España',
-      lat: 42.76778,
-      lon: -5.07111,
     },
   },
   {
@@ -4351,8 +3571,6 @@ export const Stations = [
       town: 'Cistierna',
       province: 'León',
       country: 'España',
-      lat: 42.80314,
-      lon: -5.13076,
     },
   },
   {
@@ -4362,8 +3580,6 @@ export const Stations = [
       town: 'Ercina (LA)',
       province: 'León',
       country: 'España',
-      lat: 42.809817,
-      lon: -5.180063,
     },
   },
   {
@@ -4373,8 +3589,6 @@ export const Stations = [
       town: 'Ercina (LA)',
       province: 'León',
       country: 'España',
-      lat: 42.80868,
-      lon: -5.214087,
     },
   },
   {
@@ -4384,19 +3598,15 @@ export const Stations = [
       town: 'Ercina (LA)',
       province: 'León',
       country: 'España',
-      lat: 42.812364,
-      lon: -5.283128,
     },
   },
   {
-    name: 'Feve-La Losilla',
+    name: 'Feve - La Losilla',
     code: '05765',
     location: {
       town: 'Vegaquemada',
       province: 'León',
       country: 'España',
-      lat: 42.838561,
-      lon: -5.318151,
     },
   },
   {
@@ -4406,8 +3616,6 @@ export const Stations = [
       town: 'Boñar',
       province: 'León',
       country: 'España',
-      lat: 42.862759,
-      lon: -5.328534,
     },
   },
   {
@@ -4417,8 +3625,6 @@ export const Stations = [
       town: 'Vecilla (LA)',
       province: 'León',
       country: 'España',
-      lat: 42.855095,
-      lon: -5.412162,
     },
   },
   {
@@ -4428,8 +3634,6 @@ export const Stations = [
       town: 'Valdepiélago',
       province: 'León',
       country: 'España',
-      lat: 42.854774,
-      lon: -5.442816,
     },
   },
   {
@@ -4439,8 +3643,6 @@ export const Stations = [
       town: 'Matallana De Torío',
       province: 'León',
       country: 'España',
-      lat: 42.84966,
-      lon: -5.486957,
     },
   },
   {
@@ -4450,8 +3652,6 @@ export const Stations = [
       town: 'Matallana De Torío',
       province: 'León',
       country: 'España',
-      lat: 42.841068,
-      lon: -5.522135,
     },
   },
   {
@@ -4461,8 +3661,6 @@ export const Stations = [
       town: 'Matallana De Torío',
       province: 'León',
       country: 'España',
-      lat: 42.806349,
-      lon: -5.508186,
     },
   },
   {
@@ -4472,8 +3670,6 @@ export const Stations = [
       town: 'Garrafe De Torío',
       province: 'León',
       country: 'España',
-      lat: 42.791013,
-      lon: -5.506954,
     },
   },
   {
@@ -4483,8 +3679,6 @@ export const Stations = [
       town: 'Truchas',
       province: 'León',
       country: 'España',
-      lat: 42.754603,
-      lon: -5.51641,
     },
   },
   {
@@ -4494,8 +3688,6 @@ export const Stations = [
       town: 'Garrafe De Torío',
       province: 'León',
       country: 'España',
-      lat: 42.734502,
-      lon: -5.52421,
     },
   },
   {
@@ -4505,8 +3697,6 @@ export const Stations = [
       town: 'Garrafe De Torío',
       province: 'León',
       country: 'España',
-      lat: 42.707132,
-      lon: -5.533764,
     },
   },
   {
@@ -4516,8 +3706,6 @@ export const Stations = [
       town: 'Garrafe De Torío',
       province: 'León',
       country: 'España',
-      lat: 42.682301,
-      lon: -5.537782,
     },
   },
   {
@@ -4527,19 +3715,15 @@ export const Stations = [
       town: 'Villaquilambre',
       province: 'León',
       country: 'España',
-      lat: 42.646934,
-      lon: -5.554046,
     },
   },
   {
-    name: 'Feve-León',
+    name: 'Feve - León',
     code: '05778',
     location: {
       town: 'León',
       province: 'León',
       country: 'España',
-      lat: 42.60232,
-      lon: -5.57504,
     },
   },
   {
@@ -4549,8 +3733,6 @@ export const Stations = [
       town: 'León',
       province: 'León',
       country: 'España',
-      lat: 42.61262,
-      lon: -5.56985,
     },
   },
   {
@@ -4560,8 +3742,6 @@ export const Stations = [
       town: 'Villaquilambre',
       province: 'León',
       country: 'España',
-      lat: 42.657554,
-      lon: -5.549298,
     },
   },
   {
@@ -4571,8 +3751,6 @@ export const Stations = [
       town: 'Garrafe De Torío',
       province: 'León',
       country: 'España',
-      lat: 42.771532,
-      lon: -5.51194,
     },
   },
   {
@@ -4582,8 +3760,6 @@ export const Stations = [
       town: 'Matallana De Torío',
       province: 'León',
       country: 'España',
-      lat: 42.833441,
-      lon: -5.523002,
     },
   },
   {
@@ -4593,8 +3769,6 @@ export const Stations = [
       town: 'Matallana De Torío',
       province: 'León',
       country: 'España',
-      lat: 42.840743,
-      lon: -5.507292,
     },
   },
   {
@@ -4604,8 +3778,6 @@ export const Stations = [
       town: 'Vecilla (LA)',
       province: 'León',
       country: 'España',
-      lat: 42.855941,
-      lon: -5.42872,
     },
   },
   {
@@ -4615,8 +3787,6 @@ export const Stations = [
       town: 'Valverde De La Virgen',
       province: 'León',
       country: 'España',
-      lat: 42.786278,
-      lon: -5.127479,
     },
   },
   {
@@ -4626,8 +3796,6 @@ export const Stations = [
       town: 'Vegaquemada',
       province: 'León',
       country: 'España',
-      lat: 42.858578,
-      lon: -5.339645,
     },
   },
   {
@@ -4637,19 +3805,15 @@ export const Stations = [
       town: 'León',
       province: 'León',
       country: 'España',
-      lat: 42.629108,
-      lon: -5.561383,
     },
   },
   {
-    name: 'Feve-Otero',
+    name: 'Feve - Otero',
     code: '05795',
     location: {
       town: 'Villaobispo De Otero',
       province: 'León',
       country: 'España',
-      lat: 42.859568,
-      lon: -5.389983,
     },
   },
   {
@@ -4659,8 +3823,6 @@ export const Stations = [
       town: 'León',
       province: 'León',
       country: 'España',
-      lat: 42.629111,
-      lon: -5.561338,
     },
   },
   {
@@ -4670,8 +3832,6 @@ export const Stations = [
       town: 'Valdepiélago',
       province: 'León',
       country: 'España',
-      lat: 42.86505,
-      lon: -5.403217,
     },
   },
   {
@@ -4681,8 +3841,6 @@ export const Stations = [
       town: 'Truchas',
       province: 'León',
       country: 'España',
-      lat: 42.820148,
-      lon: -5.302187,
     },
   },
   {
@@ -4692,8 +3850,6 @@ export const Stations = [
       town: 'Prado De La Guzpeña',
       province: 'León',
       country: 'España',
-      lat: 42.779834,
-      lon: -5.005851,
     },
   },
   {
@@ -4703,8 +3859,6 @@ export const Stations = [
       town: 'León',
       province: 'León',
       country: 'España',
-      lat: 42.6096999,
-      lon: -5.5718483,
     },
   },
   {
@@ -4714,8 +3868,6 @@ export const Stations = [
       town: 'León',
       province: 'León',
       country: 'España',
-      lat: 42.615821,
-      lon: -5.566379,
     },
   },
   {
@@ -4725,8 +3877,6 @@ export const Stations = [
       town: 'Boñar',
       province: 'León',
       country: 'España',
-      lat: 42.858586,
-      lon: -5.339549,
     },
   },
   {
@@ -4736,19 +3886,15 @@ export const Stations = [
       town: 'Siero',
       province: 'León',
       country: 'España',
-      lat: 42.717641,
-      lon: -5.530277,
     },
   },
   {
-    name: 'Feve-Cartagena Plaza Bastarreche',
+    name: 'Feve - Cartagena Plaza Bastarreche',
     code: '05951',
     location: {
       town: 'Cartagena',
       province: 'Murcia',
       country: 'España',
-      lat: 37.603575,
-      lon: -0.977029,
     },
   },
   {
@@ -4758,8 +3904,6 @@ export const Stations = [
       town: 'Cartagena',
       province: 'Murcia',
       country: 'España',
-      lat: 37.60529,
-      lon: -0.960681,
     },
   },
   {
@@ -4769,8 +3913,6 @@ export const Stations = [
       town: 'Cartagena',
       province: 'Murcia',
       country: 'España',
-      lat: 37.607888,
-      lon: -0.953643,
     },
   },
   {
@@ -4780,8 +3922,6 @@ export const Stations = [
       town: 'Cartagena',
       province: 'Murcia',
       country: 'España',
-      lat: 37.609294,
-      lon: -0.944179,
     },
   },
   {
@@ -4791,8 +3931,6 @@ export const Stations = [
       town: 'Cartagena',
       province: 'Murcia',
       country: 'España',
-      lat: 37.609727,
-      lon: -0.931259,
     },
   },
   {
@@ -4802,8 +3940,6 @@ export const Stations = [
       town: 'Cartagena',
       province: 'Murcia',
       country: 'España',
-      lat: 37.609929,
-      lon: -0.914841,
     },
   },
   {
@@ -4813,8 +3949,6 @@ export const Stations = [
       town: 'Murcia',
       province: 'Murcia',
       country: 'España',
-      lat: 37.613793,
-      lon: -0.891342,
     },
   },
   {
@@ -4824,8 +3958,6 @@ export const Stations = [
       town: 'Unión (LA)',
       province: 'Murcia',
       country: 'España',
-      lat: 37.615466,
-      lon: -0.881629,
     },
   },
   {
@@ -4835,8 +3967,6 @@ export const Stations = [
       town: 'Unión (LA)',
       province: 'Murcia',
       country: 'España',
-      lat: 37.615673,
-      lon: -0.875217,
     },
   },
   {
@@ -4846,8 +3976,6 @@ export const Stations = [
       town: 'Unión (LA)',
       province: 'Murcia',
       country: 'España',
-      lat: 37.61985,
-      lon: -0.864864,
     },
   },
   {
@@ -4857,8 +3985,6 @@ export const Stations = [
       town: 'Cartagena',
       province: 'Murcia',
       country: 'España',
-      lat: 37.626055,
-      lon: -0.83621,
     },
   },
   {
@@ -4868,8 +3994,6 @@ export const Stations = [
       town: 'Fuente Álamo De Murcia',
       province: 'Murcia',
       country: 'España',
-      lat: 37.627603,
-      lon: -0.829591,
     },
   },
   {
@@ -4879,8 +4003,6 @@ export const Stations = [
       town: 'Cartagena',
       province: 'Murcia',
       country: 'España',
-      lat: 37.646924,
-      lon: -0.791485,
     },
   },
   {
@@ -4890,8 +4012,6 @@ export const Stations = [
       town: 'Cartagena',
       province: 'Murcia',
       country: 'España',
-      lat: 37.649354,
-      lon: -0.787864,
     },
   },
   {
@@ -4901,8 +4021,6 @@ export const Stations = [
       town: 'Cartagena',
       province: 'Murcia',
       country: 'España',
-      lat: 37.651839,
-      lon: -0.796983,
     },
   },
   {
@@ -4912,8 +4030,6 @@ export const Stations = [
       town: 'Librilla',
       province: 'Murcia',
       country: 'España',
-      lat: 37.8865569,
-      lon: -1.3471673,
     },
   },
   {
@@ -4923,8 +4039,6 @@ export const Stations = [
       town: 'Alhama De Murcia',
       province: 'Murcia',
       country: 'España',
-      lat: 37.8493837,
-      lon: -1.4145055,
     },
   },
   {
@@ -4934,8 +4048,6 @@ export const Stations = [
       town: 'Totana',
       province: 'Murcia',
       country: 'España',
-      lat: 37.7635101,
-      lon: -1.4956127,
     },
   },
   {
@@ -4945,8 +4057,6 @@ export const Stations = [
       town: 'Lorca',
       province: 'Murcia',
       country: 'España',
-      lat: 37.7037338,
-      lon: -1.5954024,
     },
   },
   {
@@ -4956,8 +4066,6 @@ export const Stations = [
       town: 'Lorca',
       province: 'Murcia',
       country: 'España',
-      lat: 37.6805717,
-      lon: -1.6858944,
     },
   },
   {
@@ -4967,8 +4075,6 @@ export const Stations = [
       town: 'Lorca',
       province: 'Murcia',
       country: 'España',
-      lat: 37.6725714,
-      lon: -1.6959002,
     },
   },
   {
@@ -4978,8 +4084,6 @@ export const Stations = [
       town: 'Puerto Lumbreras',
       province: 'Murcia',
       country: 'España',
-      lat: 37.5809194,
-      lon: -1.731775,
     },
   },
   {
@@ -4989,8 +4093,6 @@ export const Stations = [
       town: 'Alcantarilla',
       province: 'Murcia',
       country: 'España',
-      lat: 37.9642527,
-      lon: -1.2170108,
     },
   },
   {
@@ -5000,8 +4102,6 @@ export const Stations = [
       town: 'Lorca',
       province: 'Murcia',
       country: 'España',
-      lat: 37.4748912,
-      lon: -1.7796447,
     },
   },
   {
@@ -5011,19 +4111,15 @@ export const Stations = [
       town: 'Huércal-Overa',
       province: 'Almería',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Huercal-Overa',
+    name: 'Huercal - Overa',
     code: '06102',
     location: {
       town: 'Huércal-Overa',
       province: 'Almería',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -5033,8 +4129,6 @@ export const Stations = [
       town: 'Huércal-Overa',
       province: 'Almería',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -5044,8 +4138,6 @@ export const Stations = [
       town: 'Zurgena',
       province: 'Almería',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -5055,8 +4147,6 @@ export const Stations = [
       town: 'Arboleas',
       province: 'Almería',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -5066,8 +4156,6 @@ export const Stations = [
       town: 'Albox',
       province: 'Almería',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -5077,19 +4165,15 @@ export const Stations = [
       town: 'Cantoria',
       province: 'Almería',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Fines-Olula',
+    name: 'Fines - Olula',
     code: '06108',
     location: {
       town: 'Fines',
       province: 'Almería',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -5099,8 +4183,6 @@ export const Stations = [
       town: 'Purchena',
       province: 'Almería',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -5110,8 +4192,6 @@ export const Stations = [
       town: 'Tíjola',
       province: 'Almería',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -5121,8 +4201,6 @@ export const Stations = [
       town: 'Serón',
       province: 'Almería',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -5132,8 +4210,6 @@ export const Stations = [
       town: 'Alcóntar',
       province: 'Granada',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -5143,8 +4219,6 @@ export const Stations = [
       town: 'Caniles',
       province: 'Granada',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -5154,19 +4228,15 @@ export const Stations = [
       town: 'Baza',
       province: 'Granada',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Zujar-Freila (APD)',
+    name: 'Zujar - Freila (APD)',
     code: '06201',
     location: {
       town: 'Freila',
       province: 'Granada',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -5176,19 +4246,15 @@ export const Stations = [
       town: 'Baza',
       province: 'Granada',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Gorafe (APD-CGD)',
+    name: 'Gorafe (APD - CGD)',
     code: '06203',
     location: {
       town: 'Gorafe',
       province: 'Granada',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -5198,8 +4264,6 @@ export const Stations = [
       town: 'Gor',
       province: 'Granada',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -5209,19 +4273,15 @@ export const Stations = [
       town: 'Gor',
       province: 'Granada',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Hernan-Valle (APD)',
+    name: 'Hernan - Valle (APD)',
     code: '06206',
     location: {
       town: 'Guadix',
       province: 'Granada',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -5231,8 +4291,6 @@ export const Stations = [
       town: 'Pulpí',
       province: 'Almería',
       country: 'España',
-      lat: 37.3999194,
-      lon: -1.7501361,
     },
   },
   {
@@ -5242,8 +4300,6 @@ export const Stations = [
       town: 'Pulpí',
       province: 'Murcia',
       country: 'España',
-      lat: 37.3925027,
-      lon: -1.693175,
     },
   },
   {
@@ -5253,8 +4309,6 @@ export const Stations = [
       town: 'Águilas',
       province: 'Murcia',
       country: 'España',
-      lat: 37.4098333,
-      lon: -1.5725777,
     },
   },
   {
@@ -5264,8 +4318,6 @@ export const Stations = [
       town: 'Águilas',
       province: 'Murcia',
       country: 'España',
-      lat: 37.408671,
-      lon: -1.654558,
     },
   },
   {
@@ -5275,8 +4327,6 @@ export const Stations = [
       town: 'Águilas',
       province: 'Murcia',
       country: 'España',
-      lat: 37.4119055,
-      lon: -1.5859138,
     },
   },
   {
@@ -5286,8 +4336,6 @@ export const Stations = [
       town: 'Segovia',
       province: 'Segovia',
       country: 'España',
-      lat: 40.910577,
-      lon: -4.094564,
     },
   },
   {
@@ -5297,8 +4345,6 @@ export const Stations = [
       town: 'Vigo',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.234189,
-      lon: -8.713728,
     },
   },
   {
@@ -5308,8 +4354,6 @@ export const Stations = [
       town: 'Redondela',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.286005,
-      lon: -8.619402,
     },
   },
   {
@@ -5319,8 +4363,6 @@ export const Stations = [
       town: 'Medina Del Campo',
       province: 'Valladolid',
       country: 'España',
-      lat: 41.317459,
-      lon: -4.910071,
     },
   },
   {
@@ -5330,8 +4372,6 @@ export const Stations = [
       town: 'Puebla De Sanabria',
       province: 'Zamora',
       country: 'España',
-      lat: 42.045763,
-      lon: -6.626848,
     },
   },
   {
@@ -5341,8 +4381,6 @@ export const Stations = [
       town: 'Gudiña (A)',
       province: 'Ourense',
       country: 'España',
-      lat: 42.0606439,
-      lon: -7.132532,
     },
   },
   {
@@ -5352,8 +4390,6 @@ export const Stations = [
       town: 'Roquetas De Mar',
       province: 'Almería',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -5363,8 +4399,6 @@ export const Stations = [
       town: 'Roquetas De Mar',
       province: 'Almería',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -5374,19 +4408,15 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.4215361,
-      lon: -3.7190805,
     },
   },
   {
-    name: 'Aravaca (APD-CGD)',
+    name: 'Aravaca (APD - CGD)',
     code: '10001',
     location: {
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.4484027,
-      lon: -3.7855512,
     },
   },
   {
@@ -5396,8 +4426,6 @@ export const Stations = [
       town: 'Pozuelo De Alarcón',
       province: 'Madrid',
       country: 'España',
-      lat: 40.4473443,
-      lon: -3.8002865,
     },
   },
   {
@@ -5407,19 +4435,15 @@ export const Stations = [
       town: 'Majadahonda',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'El Plantio-Majadahonda (APT)',
+    name: 'El Plantio - Majadahonda (APT)',
     code: '10004',
     location: {
       town: 'Majadahonda',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -5429,8 +4453,6 @@ export const Stations = [
       town: 'Rozas De Madrid (LAS)',
       province: 'Madrid',
       country: 'España',
-      lat: 40.4942255,
-      lon: -3.8681086,
     },
   },
   {
@@ -5440,8 +4462,6 @@ export const Stations = [
       town: 'Majadahonda',
       province: 'Madrid',
       country: 'España',
-      lat: 40.4742448,
-      lon: -3.8452712,
     },
   },
   {
@@ -5451,8 +4471,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.4653336,
-      lon: -3.8078526,
     },
   },
   {
@@ -5462,8 +4480,6 @@ export const Stations = [
       town: 'Rozas De Madrid (LAS)',
       province: 'Madrid',
       country: 'España',
-      lat: 40.5222566,
-      lon: -3.8822585,
     },
   },
   {
@@ -5473,8 +4489,6 @@ export const Stations = [
       town: 'Rozas De Madrid (LAS)',
       province: 'Madrid',
       country: 'España',
-      lat: 40.5523275,
-      lon: -3.8967651,
     },
   },
   {
@@ -5484,8 +4498,6 @@ export const Stations = [
       town: 'Rozas De Madrid (LAS)',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -5495,19 +4507,15 @@ export const Stations = [
       town: 'Torrelodones',
       province: 'Madrid',
       country: 'España',
-      lat: 40.5745499,
-      lon: -3.9565955,
     },
   },
   {
-    name: 'Galapagar-La Navata',
+    name: 'Galapagar - La Navata',
     code: '10104',
     location: {
       town: 'Galapagar',
       province: 'Madrid',
       country: 'España',
-      lat: 40.6002664,
-      lon: -3.9822646,
     },
   },
   {
@@ -5517,8 +4525,6 @@ export const Stations = [
       town: 'Collado Villalba',
       province: 'Madrid',
       country: 'España',
-      lat: 40.6265067,
-      lon: -4.0081871,
     },
   },
   {
@@ -5528,30 +4534,25 @@ export const Stations = [
       town: 'Galapagar',
       province: 'Madrid',
       country: 'España',
-      lat: 40.6178786,
-      lon: -4.0312349,
     },
   },
   {
-    name: 'Las Zorreras-Navalquejigo',
+    name: 'Las Zorreras - Navalquejigo',
     code: '10202',
     location: {
       town: 'San Lorenzo De El Escorial',
       province: 'Madrid',
       country: 'España',
-      lat: 40.6092725,
-      lon: -4.0463634,
     },
   },
   {
     name: 'El Escorial',
-    code: '10203',
+    code: '99207',
+    otherCodes: ['10203'],
     location: {
       town: 'San Lorenzo De El Escorial',
       province: 'Madrid',
       country: 'España',
-      lat: 40.5852811,
-      lon: -4.1324479,
     },
   },
   {
@@ -5561,8 +4562,6 @@ export const Stations = [
       town: 'Zarzalejo',
       province: 'Madrid',
       country: 'España',
-      lat: 40.53871,
-      lon: -4.15818,
     },
   },
   {
@@ -5572,8 +4571,6 @@ export const Stations = [
       town: 'Robledo De Chavela',
       province: 'Madrid',
       country: 'España',
-      lat: 40.520802,
-      lon: -4.246774,
     },
   },
   {
@@ -5583,8 +4580,6 @@ export const Stations = [
       town: 'Santa María De La Alameda',
       province: 'Madrid',
       country: 'España',
-      lat: 40.568937,
-      lon: -4.269332,
     },
   },
   {
@@ -5594,8 +4589,6 @@ export const Stations = [
       town: 'Navas Del Marqués (LAS)',
       province: 'Ávila',
       country: 'España',
-      lat: 40.589205,
-      lon: -4.362259,
     },
   },
   {
@@ -5605,8 +4598,6 @@ export const Stations = [
       town: 'Navalperal De Pinares',
       province: 'Ávila',
       country: 'España',
-      lat: 40.591152,
-      lon: -4.408382,
     },
   },
   {
@@ -5616,19 +4607,15 @@ export const Stations = [
       town: 'Santa María De La Alameda',
       province: 'Madrid',
       country: 'España',
-      lat: 40.567587,
-      lon: -4.283541,
     },
   },
   {
-    name: 'Herradón-La Cañada',
+    name: 'Herradón - La Cañada',
     code: '10300',
     location: {
       town: 'Herradón De Pinares',
       province: 'Ávila',
       country: 'España',
-      lat: 40.599275,
-      lon: -4.495039,
     },
   },
   {
@@ -5638,8 +4625,6 @@ export const Stations = [
       town: 'Herradón De Pinares',
       province: 'Ávila',
       country: 'España',
-      lat: 40.606337,
-      lon: -4.533738,
     },
   },
   {
@@ -5649,8 +4634,6 @@ export const Stations = [
       town: 'Ávila',
       province: 'Ávila',
       country: 'España',
-      lat: 40.649062,
-      lon: -4.614987,
     },
   },
   {
@@ -5660,8 +4643,6 @@ export const Stations = [
       town: 'Ávila',
       province: 'Ávila',
       country: 'España',
-      lat: 40.657255,
-      lon: -4.683312,
     },
   },
   {
@@ -5671,19 +4652,15 @@ export const Stations = [
       town: 'Ávila',
       province: 'Ávila',
       country: 'España',
-      lat: 40.712708,
-      lon: -4.671617,
     },
   },
   {
-    name: 'Mingorria (APT-CGD)',
+    name: 'Mingorria (APT - CGD)',
     code: '10403',
     location: {
       town: 'Mingorría',
       province: 'Ávila',
       country: 'España',
-      lat: 40.744571,
-      lon: -4.652155,
     },
   },
   {
@@ -5693,19 +4670,15 @@ export const Stations = [
       town: 'Blascosancho',
       province: 'Ávila',
       country: 'España',
-      lat: 40.88401,
-      lon: -4.601206,
     },
   },
   {
-    name: 'Sanchidrian (APT-CGD)',
+    name: 'Sanchidrian (APT - CGD)',
     code: '10405',
     location: {
       town: 'Blascosancho',
       province: 'Ávila',
       country: 'España',
-      lat: 40.886995,
-      lon: -4.602027,
     },
   },
   {
@@ -5715,19 +4688,15 @@ export const Stations = [
       town: 'Adanero',
       province: 'Ávila',
       country: 'España',
-      lat: 40.944414,
-      lon: -4.620316,
     },
   },
   {
-    name: 'Adanero-Munoz (APT)',
+    name: 'Adanero - Munoz (APT)',
     code: '10407',
     location: {
       town: 'Adanero',
       province: 'Ávila',
       country: 'España',
-      lat: 40.96581,
-      lon: -4.635475,
     },
   },
   {
@@ -5737,8 +4706,6 @@ export const Stations = [
       town: 'Espinosa De Los Caballeros',
       province: 'Ávila',
       country: 'España',
-      lat: 41.008603,
-      lon: -4.667446,
     },
   },
   {
@@ -5748,8 +4715,6 @@ export const Stations = [
       town: 'Arévalo',
       province: 'Ávila',
       country: 'España',
-      lat: 41.047123,
-      lon: -4.701988,
     },
   },
   {
@@ -5759,8 +4724,6 @@ export const Stations = [
       town: 'Palacios De Goda',
       province: 'Ávila',
       country: 'España',
-      lat: 41.123471,
-      lon: -4.754297,
     },
   },
   {
@@ -5770,8 +4733,6 @@ export const Stations = [
       town: 'Ataquines',
       province: 'Valladolid',
       country: 'España',
-      lat: 41.185375,
-      lon: -4.794227,
     },
   },
   {
@@ -5781,8 +4742,6 @@ export const Stations = [
       town: 'Medina Del Campo',
       province: 'Valladolid',
       country: 'España',
-      lat: 41.244475,
-      lon: -4.850926,
     },
   },
   {
@@ -5792,8 +4751,6 @@ export const Stations = [
       town: 'Medina Del Campo',
       province: 'Valladolid',
       country: 'España',
-      lat: 41.317617,
-      lon: -4.909923,
     },
   },
   {
@@ -5803,8 +4760,6 @@ export const Stations = [
       town: 'Pozaldez',
       province: 'Valladolid',
       country: 'España',
-      lat: 41.36792,
-      lon: -4.836001,
     },
   },
   {
@@ -5814,8 +4769,6 @@ export const Stations = [
       town: 'Matapozuelos',
       province: 'Valladolid',
       country: 'España',
-      lat: 41.422794,
-      lon: -4.801025,
     },
   },
   {
@@ -5825,8 +4778,6 @@ export const Stations = [
       town: 'Valdestillas',
       province: 'Valladolid',
       country: 'España',
-      lat: 41.488729,
-      lon: -4.772937,
     },
   },
   {
@@ -5836,8 +4787,6 @@ export const Stations = [
       town: 'Viana De Cega',
       province: 'Valladolid',
       country: 'España',
-      lat: 41.52407,
-      lon: -4.754489,
     },
   },
   {
@@ -5847,8 +4796,6 @@ export const Stations = [
       town: 'Valladolid',
       province: 'Valladolid',
       country: 'España',
-      lat: 41.583518,
-      lon: -4.756797,
     },
   },
   {
@@ -5858,8 +4805,6 @@ export const Stations = [
       town: 'Valladolid',
       province: 'Valladolid',
       country: 'España',
-      lat: 41.642167,
-      lon: -4.726986,
     },
   },
   {
@@ -5869,19 +4814,15 @@ export const Stations = [
       town: 'Cabezón De Pisuerga',
       province: 'Valladolid',
       country: 'España',
-      lat: 41.737276,
-      lon: -4.651294,
     },
   },
   {
-    name: 'Corcos-Aguilarejo',
+    name: 'Corcos - Aguilarejo',
     code: '10603',
     location: {
       town: 'Corcos',
       province: 'Valladolid',
       country: 'España',
-      lat: 41.766446,
-      lon: -4.623485,
     },
   },
   {
@@ -5891,8 +4832,6 @@ export const Stations = [
       town: 'Cubillas De Santa Marta',
       province: 'Valladolid',
       country: 'España',
-      lat: 41.808861,
-      lon: -4.579754,
     },
   },
   {
@@ -5902,19 +4841,15 @@ export const Stations = [
       town: 'Dueñas',
       province: 'Palencia',
       country: 'España',
-      lat: 41.87048,
-      lon: -4.541216,
     },
   },
   {
-    name: 'Valladolid-Universidad',
+    name: 'Valladolid - Universidad',
     code: '10610',
     location: {
       town: 'Valladolid',
       province: 'Valladolid',
       country: 'España',
-      lat: 41.660257,
-      lon: -4.704037,
     },
   },
   {
@@ -5924,8 +4859,6 @@ export const Stations = [
       town: 'Venta De Baños',
       province: 'Palencia',
       country: 'España',
-      lat: 41.91736,
-      lon: -4.495844,
     },
   },
   {
@@ -5935,8 +4868,6 @@ export const Stations = [
       town: 'Magaz De Pisuerga',
       province: 'Palencia',
       country: 'España',
-      lat: 41.976561,
-      lon: -4.432114,
     },
   },
   {
@@ -5946,8 +4877,6 @@ export const Stations = [
       town: 'Torquemada',
       province: 'Palencia',
       country: 'España',
-      lat: 42.015807,
-      lon: -4.299431,
     },
   },
   {
@@ -5957,8 +4886,6 @@ export const Stations = [
       town: 'Quintana Del Puente',
       province: 'Palencia',
       country: 'España',
-      lat: 42.079974,
-      lon: -4.19858,
     },
   },
   {
@@ -5968,8 +4895,6 @@ export const Stations = [
       town: 'Villodrigo',
       province: 'Palencia',
       country: 'España',
-      lat: 42.146315,
-      lon: -4.106545,
     },
   },
   {
@@ -5979,8 +4904,6 @@ export const Stations = [
       town: 'Balbases ',
       province: 'Burgos',
       country: 'España',
-      lat: 42.174118,
-      lon: -4.058396,
     },
   },
   {
@@ -5990,8 +4913,6 @@ export const Stations = [
       town: 'Villaquirán De Los Infantes',
       province: 'Burgos',
       country: 'España',
-      lat: 42.215717,
-      lon: -3.999396,
     },
   },
   {
@@ -6001,8 +4922,6 @@ export const Stations = [
       town: 'San Mamés De Burgos',
       province: 'Burgos',
       country: 'España',
-      lat: 42.272817,
-      lon: -3.892896,
     },
   },
   {
@@ -6012,19 +4931,15 @@ export const Stations = [
       town: 'San Mamés De Burgos',
       province: 'Burgos',
       country: 'España',
-      lat: 42.326617,
-      lon: -3.811995,
     },
   },
   {
-    name: 'Alameda (APD-CGD)',
+    name: 'Alameda (APD - CGD)',
     code: '11012',
     location: {
       town: 'Villalbilla De Burgos',
       province: 'Burgos',
       country: 'España',
-      lat: 42.348229,
-      lon: -3.781323,
     },
   },
   {
@@ -6034,8 +4949,6 @@ export const Stations = [
       town: 'Burgos',
       province: 'Burgos',
       country: 'España',
-      lat: 42.371197,
-      lon: -3.666308,
     },
   },
   {
@@ -6045,8 +4958,6 @@ export const Stations = [
       town: 'Villalbilla De Burgos',
       province: 'Burgos',
       country: 'España',
-      lat: 42.334494,
-      lon: -3.70766,
     },
   },
   {
@@ -6056,8 +4967,6 @@ export const Stations = [
       town: 'Burgos',
       province: 'Burgos',
       country: 'España',
-      lat: 42.362458,
-      lon: -3.619196,
     },
   },
   {
@@ -6067,8 +4976,6 @@ export const Stations = [
       town: 'Quintanapalla',
       province: 'Burgos',
       country: 'España',
-      lat: 42.400091,
-      lon: -3.541018,
     },
   },
   {
@@ -6078,8 +4985,6 @@ export const Stations = [
       town: 'Barrios De Colina',
       province: 'Burgos',
       country: 'España',
-      lat: 42.397124,
-      lon: -3.486381,
     },
   },
   {
@@ -6089,8 +4994,6 @@ export const Stations = [
       town: 'Santa Olalla De Bureba',
       province: 'Burgos',
       country: 'España',
-      lat: 42.464917,
-      lon: -3.447095,
     },
   },
   {
@@ -6100,8 +5003,6 @@ export const Stations = [
       town: 'Castil De Peones',
       province: 'Burgos',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -6111,8 +5012,6 @@ export const Stations = [
       town: 'Briviesca',
       province: 'Burgos',
       country: 'España',
-      lat: 42.542765,
-      lon: -3.319287,
     },
   },
   {
@@ -6122,8 +5021,6 @@ export const Stations = [
       town: 'Fuentebureba',
       province: 'Burgos',
       country: 'España',
-      lat: 42.622994,
-      lon: -3.24609,
     },
   },
   {
@@ -6133,8 +5030,6 @@ export const Stations = [
       town: 'Pancorbo',
       province: 'Burgos',
       country: 'España',
-      lat: 42.630486,
-      lon: -3.112307,
     },
   },
   {
@@ -6144,8 +5039,6 @@ export const Stations = [
       town: 'Bugedo',
       province: 'Burgos',
       country: 'España',
-      lat: 42.647917,
-      lon: -3.016694,
     },
   },
   {
@@ -6155,8 +5048,6 @@ export const Stations = [
       town: 'Miranda De Ebro',
       province: 'Burgos',
       country: 'España',
-      lat: 42.691024,
-      lon: -2.940366,
     },
   },
   {
@@ -6166,8 +5057,6 @@ export const Stations = [
       town: 'Ribera Baja/Erribera Beitia',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 42.742899,
-      lon: -2.867501,
     },
   },
   {
@@ -6177,8 +5066,6 @@ export const Stations = [
       town: 'Puebla De Arganzón (LA)',
       province: 'Burgos',
       country: 'España',
-      lat: 42.765245,
-      lon: -2.830385,
     },
   },
   {
@@ -6188,8 +5075,6 @@ export const Stations = [
       town: 'Iruña Oka/Iruña De Oca',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 42.816216,
-      lon: -2.804942,
     },
   },
   {
@@ -6199,8 +5084,6 @@ export const Stations = [
       town: 'Iruña Oka/Iruña De Oca',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 42.843417,
-      lon: -2.765994,
     },
   },
   {
@@ -6210,19 +5093,15 @@ export const Stations = [
       town: 'Vitoria - Gasteiz',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 42.841517,
-      lon: -2.672601,
     },
   },
   {
-    name: 'Estíbaliz-Oreitia',
+    name: 'Estíbaliz - Oreitia',
     code: '11209',
     location: {
       town: 'Vitoria - Gasteiz',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 42.853965,
-      lon: -2.560163,
     },
   },
   {
@@ -6232,8 +5111,6 @@ export const Stations = [
       town: 'Alegría - Dulantzi',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 42.848723,
-      lon: -2.514668,
     },
   },
   {
@@ -6243,8 +5120,6 @@ export const Stations = [
       town: 'Alegría - Dulantzi',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 42.841288,
-      lon: -2.478512,
     },
   },
   {
@@ -6254,8 +5129,6 @@ export const Stations = [
       town: 'Salvatierra/Agurain',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 42.84643,
-      lon: -2.38921,
     },
   },
   {
@@ -6265,8 +5138,6 @@ export const Stations = [
       town: 'Zalduondo',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 42.869599,
-      lon: -2.306807,
     },
   },
   {
@@ -6276,8 +5147,6 @@ export const Stations = [
       town: 'Asparrena',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 42.866791,
-      lon: -2.252437,
     },
   },
   {
@@ -6287,8 +5156,6 @@ export const Stations = [
       town: 'Ziordia',
       province: 'Navarra',
       country: 'España',
-      lat: 42.869229,
-      lon: -2.225819,
     },
   },
   {
@@ -6298,8 +5165,6 @@ export const Stations = [
       town: 'Olazti/Olazagutía',
       province: 'Navarra',
       country: 'España',
-      lat: 42.878453,
-      lon: -2.199143,
     },
   },
   {
@@ -6309,8 +5174,6 @@ export const Stations = [
       town: 'Altsasu/Alsasua',
       province: 'Navarra',
       country: 'España',
-      lat: 42.894847,
-      lon: -2.181237,
     },
   },
   {
@@ -6320,8 +5183,6 @@ export const Stations = [
       town: 'Zegama',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 42.939412,
-      lon: -2.263581,
     },
   },
   {
@@ -6331,8 +5192,6 @@ export const Stations = [
       town: 'Zegama',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 42.995515,
-      lon: -2.322915,
     },
   },
   {
@@ -6342,8 +5201,6 @@ export const Stations = [
       town: 'Legazpi',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.019887,
-      lon: -2.334469,
     },
   },
   {
@@ -6353,8 +5210,6 @@ export const Stations = [
       town: 'Legazpi',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.052263,
-      lon: -2.329396,
     },
   },
   {
@@ -6364,8 +5219,6 @@ export const Stations = [
       town: 'Zumarraga',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.088273,
-      lon: -2.318462,
     },
   },
   {
@@ -6375,8 +5228,6 @@ export const Stations = [
       town: 'Gabiria',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -6386,8 +5237,6 @@ export const Stations = [
       town: 'Ormaiztegi',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.040151,
-      lon: -2.255831,
     },
   },
   {
@@ -6397,8 +5246,6 @@ export const Stations = [
       town: 'Beasain',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -6408,8 +5255,6 @@ export const Stations = [
       town: 'Beasain',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.046174,
-      lon: -2.203234,
     },
   },
   {
@@ -6419,8 +5264,6 @@ export const Stations = [
       town: 'Ordizia',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.052583,
-      lon: -2.181019,
     },
   },
   {
@@ -6430,8 +5273,6 @@ export const Stations = [
       town: 'Itsasondo',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.068955,
-      lon: -2.162736,
     },
   },
   {
@@ -6441,8 +5282,6 @@ export const Stations = [
       town: 'Legorreta',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.085187,
-      lon: -2.14555,
     },
   },
   {
@@ -6452,8 +5291,6 @@ export const Stations = [
       town: 'Ikaztegieta',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.094977,
-      lon: -2.126252,
     },
   },
   {
@@ -6463,8 +5300,6 @@ export const Stations = [
       town: 'Alegia',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.10214,
-      lon: -2.099346,
     },
   },
   {
@@ -6474,8 +5309,6 @@ export const Stations = [
       town: 'Tolosa',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.131936,
-      lon: -2.085247,
     },
   },
   {
@@ -6485,8 +5318,6 @@ export const Stations = [
       town: 'Tolosa',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.13597,
-      lon: -2.078512,
     },
   },
   {
@@ -6496,8 +5327,6 @@ export const Stations = [
       town: 'Anoeta',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.165233,
-      lon: -2.071624,
     },
   },
   {
@@ -6507,19 +5336,15 @@ export const Stations = [
       town: 'Villabona',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.189391,
-      lon: -2.055641,
     },
   },
   {
-    name: 'Andoain-Centro',
+    name: 'Andoain - Centro',
     code: '11504',
     location: {
       town: 'Andoain',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.214729,
-      lon: -2.020394,
     },
   },
   {
@@ -6529,8 +5354,6 @@ export const Stations = [
       town: 'Andoain',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.221715,
-      lon: -2.016357,
     },
   },
   {
@@ -6540,19 +5363,15 @@ export const Stations = [
       town: 'Urnieta',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.243416,
-      lon: -1.991492,
     },
   },
   {
-    name: 'Hernani-Centro',
+    name: 'Hernani - Centro',
     code: '11507',
     location: {
       town: 'Hernani',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.261977,
-      lon: -1.975726,
     },
   },
   {
@@ -6562,8 +5381,6 @@ export const Stations = [
       town: 'Hernani',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.272283,
-      lon: -1.964175,
     },
   },
   {
@@ -6573,8 +5390,6 @@ export const Stations = [
       town: 'Donostia/San Sebastián',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.29442,
-      lon: -1.956981,
     },
   },
   {
@@ -6584,8 +5399,6 @@ export const Stations = [
       town: 'Donostia/San Sebastián',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.304772,
-      lon: -1.964289,
     },
   },
   {
@@ -6595,8 +5408,6 @@ export const Stations = [
       town: 'Donostia/San Sebastián',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.317669,
-      lon: -1.976704,
     },
   },
   {
@@ -6606,8 +5417,6 @@ export const Stations = [
       town: 'Donostia/San Sebastián',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.322077,
-      lon: -1.972632,
     },
   },
   {
@@ -6617,8 +5426,6 @@ export const Stations = [
       town: 'Donostia/San Sebastián',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.321814,
-      lon: -1.967016,
     },
   },
   {
@@ -6628,8 +5435,6 @@ export const Stations = [
       town: 'Donostia/San Sebastián',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.320009,
-      lon: -1.917946,
     },
   },
   {
@@ -6639,19 +5444,15 @@ export const Stations = [
       town: 'Pasaia',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.318764,
-      lon: -1.904324,
     },
   },
   {
-    name: 'Lezo-Errenteria',
+    name: 'Lezo - Errenteria',
     code: '11516',
     location: {
       town: 'Lezo',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.313544,
-      lon: -1.895015,
     },
   },
   {
@@ -6661,8 +5462,6 @@ export const Stations = [
       town: 'Lezo',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -6672,8 +5471,6 @@ export const Stations = [
       town: 'Irun',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.331008,
-      lon: -1.816203,
     },
   },
   {
@@ -6683,8 +5480,6 @@ export const Stations = [
       town: 'Donostia/San Sebastián',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.32068,
-      lon: -1.952632,
     },
   },
   {
@@ -6694,8 +5489,6 @@ export const Stations = [
       town: 'Irun',
       province: 'Gipuzkoa',
       country: 'España',
-      lat: 43.339582,
-      lon: -1.800192,
     },
   },
   {
@@ -6705,8 +5498,6 @@ export const Stations = [
       town: 'Irun',
       province: 'Ceuta',
       country: 'España',
-      lat: 43.352298,
-      lon: -1.783081,
     },
   },
   {
@@ -6716,19 +5507,15 @@ export const Stations = [
       town: 'Alpedrete',
       province: 'Madrid',
       country: 'España',
-      lat: 40.6385681,
-      lon: -4.0220307,
     },
   },
   {
-    name: 'Alpedrete-Mataespesa',
+    name: 'Alpedrete - Mataespesa',
     code: '12002',
     location: {
       town: 'Alpedrete',
       province: 'Madrid',
       country: 'España',
-      lat: 40.6580931,
-      lon: -4.0350813,
     },
   },
   {
@@ -6738,19 +5525,15 @@ export const Stations = [
       town: 'Collado Mediano',
       province: 'Madrid',
       country: 'España',
-      lat: 40.69276,
-      lon: -4.0359164,
     },
   },
   {
-    name: 'Los Molinos-Guadarrama',
+    name: 'Los Molinos - Guadarrama',
     code: '12005',
     location: {
       town: 'Molinos ',
       province: 'Madrid',
       country: 'España',
-      lat: 40.7066368,
-      lon: -4.0673999,
     },
   },
   {
@@ -6760,8 +5543,6 @@ export const Stations = [
       town: 'Cercedilla',
       province: 'Madrid',
       country: 'España',
-      lat: 40.7375282,
-      lon: -4.0664502,
     },
   },
   {
@@ -6771,8 +5552,6 @@ export const Stations = [
       town: 'Guadarrama',
       province: 'Madrid',
       country: 'España',
-      lat: 40.705648,
-      lon: -4.12531,
     },
   },
   {
@@ -6782,8 +5561,6 @@ export const Stations = [
       town: 'Espinar (EL)',
       province: 'Segovia',
       country: 'España',
-      lat: 40.716914,
-      lon: -4.157681,
     },
   },
   {
@@ -6793,8 +5570,6 @@ export const Stations = [
       town: 'Castro Del Río',
       province: 'Segovia',
       country: 'España',
-      lat: 40.714944,
-      lon: -4.18143,
     },
   },
   {
@@ -6804,8 +5579,6 @@ export const Stations = [
       town: 'Castro Del Río',
       province: 'Segovia',
       country: 'España',
-      lat: 40.740852,
-      lon: -4.189482,
     },
   },
   {
@@ -6815,19 +5588,15 @@ export const Stations = [
       town: 'Castro Del Río',
       province: 'Segovia',
       country: 'España',
-      lat: 40.777909,
-      lon: -4.206933,
     },
   },
   {
-    name: 'Otero-Herreros',
+    name: 'Otero - Herreros',
     code: '12012',
     location: {
       town: 'Otero De Herreros',
       province: 'Segovia',
       country: 'España',
-      lat: 40.80097,
-      lon: -4.203504,
     },
   },
   {
@@ -6837,19 +5606,15 @@ export const Stations = [
       town: 'Ortigosa Del Monte',
       province: 'Segovia',
       country: 'España',
-      lat: 40.832771,
-      lon: -4.168094,
     },
   },
   {
-    name: 'Navas De Riofrío- La Losa',
+    name: 'Navas De Riofrío - La Losa',
     code: '12014',
     location: {
       town: 'Navas De Riofrío',
       province: 'Segovia',
       country: 'España',
-      lat: 40.856673,
-      lon: -4.141103,
     },
   },
   {
@@ -6859,8 +5624,6 @@ export const Stations = [
       town: 'Cercedilla',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -6870,8 +5633,6 @@ export const Stations = [
       town: 'Cercedilla',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -6881,8 +5642,6 @@ export const Stations = [
       town: 'Cercedilla',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -6892,8 +5651,6 @@ export const Stations = [
       town: 'Cercedilla',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -6903,8 +5660,6 @@ export const Stations = [
       town: 'Cercedilla',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -6914,8 +5669,6 @@ export const Stations = [
       town: 'Cercedilla',
       province: 'Madrid',
       country: 'España',
-      lat: 40.7842464,
-      lon: -4.0050168,
     },
   },
   {
@@ -6925,8 +5678,6 @@ export const Stations = [
       town: 'Real Sitio De San Ildefonso',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -6936,8 +5687,6 @@ export const Stations = [
       town: 'Real Sitio De San Ildefonso',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -6947,8 +5696,6 @@ export const Stations = [
       town: 'Real Sitio De San Ildefonso',
       province: 'Madrid',
       country: 'España',
-      lat: 40.8223493,
-      lon: -3.9644101,
     },
   },
   {
@@ -6958,8 +5705,6 @@ export const Stations = [
       town: 'Segovia',
       province: 'Segovia',
       country: 'España',
-      lat: 40.93403,
-      lon: -4.11365,
     },
   },
   {
@@ -6969,8 +5714,6 @@ export const Stations = [
       town: 'Hontanares De Eresma',
       province: 'Segovia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -6980,19 +5723,15 @@ export const Stations = [
       town: 'Yanguas De Eresma',
       province: 'Segovia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Yanguas De E.-Carbonero El Mayor',
+    name: 'Yanguas De E. - Carbonero El Mayor',
     code: '12103',
     location: {
       town: 'Carbonero El Mayor',
       province: 'Segovia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -7002,19 +5741,15 @@ export const Stations = [
       town: 'Bernardos',
       province: 'Segovia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Ortigosa Pestano (APT-CGD)',
+    name: 'Ortigosa Pestano (APT - CGD)',
     code: '12105',
     location: {
       town: 'Ortigosa De Pestaño',
       province: 'Segovia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -7024,19 +5759,15 @@ export const Stations = [
       town: 'Nava De La Asunción',
       province: 'Segovia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Coca (APT-CGD)',
+    name: 'Coca (APT - CGD)',
     code: '12107',
     location: {
       town: 'Coca',
       province: 'Segovia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -7046,8 +5777,6 @@ export const Stations = [
       town: 'Coca',
       province: 'Segovia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -7057,8 +5786,6 @@ export const Stations = [
       town: 'Fuente De Santa Cruz',
       province: 'Segovia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -7068,8 +5795,6 @@ export const Stations = [
       town: 'Fuente-Olmedo',
       province: 'Valladolid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -7079,8 +5804,6 @@ export const Stations = [
       town: 'Olmedo',
       province: 'Valladolid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -7090,8 +5813,6 @@ export const Stations = [
       town: 'Pozal De Gallinas',
       province: 'Valladolid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -7101,8 +5822,6 @@ export const Stations = [
       town: 'Erriberagoitia/Ribera Alta',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 42.803117,
-      lon: -2.907294,
     },
   },
   {
@@ -7112,8 +5831,6 @@ export const Stations = [
       town: 'Galdakao',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 42.868931,
-      lon: -2.89806,
     },
   },
   {
@@ -7123,19 +5840,15 @@ export const Stations = [
       town: 'Urkabustaiz',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 42.951409,
-      lon: -2.900755,
     },
   },
   {
-    name: 'Inoso-Oiardo )',
+    name: 'Inoso - Oiardo )',
     code: '13004',
     location: {
       town: 'Urkabustaiz',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 42.992136,
-      lon: -2.91571,
     },
   },
   {
@@ -7145,8 +5858,6 @@ export const Stations = [
       town: 'Lezama',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 43.027817,
-      lon: -2.990694,
     },
   },
   {
@@ -7156,8 +5867,6 @@ export const Stations = [
       town: 'Amurrio',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 42.983451,
-      lon: -2.977194,
     },
   },
   {
@@ -7167,8 +5876,6 @@ export const Stations = [
       town: 'Urduña/Orduña',
       province: 'Bizkaia',
       country: 'España',
-      lat: 42.994971,
-      lon: -3.014669,
     },
   },
   {
@@ -7178,8 +5885,6 @@ export const Stations = [
       town: 'Amurrio',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 43.042794,
-      lon: -3.004019,
     },
   },
   {
@@ -7189,8 +5894,6 @@ export const Stations = [
       town: 'Amurrio',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 43.064293,
-      lon: -2.995857,
     },
   },
   {
@@ -7200,8 +5903,6 @@ export const Stations = [
       town: 'Ayala/Aiara',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 43.093554,
-      lon: -2.999662,
     },
   },
   {
@@ -7211,8 +5912,6 @@ export const Stations = [
       town: 'Laudio/Llodio',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 43.132448,
-      lon: -2.970197,
     },
   },
   {
@@ -7222,8 +5921,6 @@ export const Stations = [
       town: 'Arrankudiaga',
       province: 'Bizkaia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -7233,8 +5930,6 @@ export const Stations = [
       town: 'Laudio/Llodio',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 43.142721,
-      lon: -2.959916,
     },
   },
   {
@@ -7244,8 +5939,6 @@ export const Stations = [
       town: 'Laudio/Llodio',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 43.146085,
-      lon: -2.945719,
     },
   },
   {
@@ -7255,8 +5948,6 @@ export const Stations = [
       town: 'Arrankudiaga',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.159117,
-      lon: -2.929893,
     },
   },
   {
@@ -7266,19 +5957,15 @@ export const Stations = [
       town: 'Arrankudiaga',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.1689773,
-      lon: -2.9190924,
     },
   },
   {
-    name: 'Ugao-Miraballes',
+    name: 'Ugao - Miraballes',
     code: '13110',
     location: {
       town: 'Ugao-Miraballes',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.180117,
-      lon: -2.903493,
     },
   },
   {
@@ -7288,8 +5975,6 @@ export const Stations = [
       town: 'Arrigorriaga',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.2123426,
-      lon: -2.8906975,
     },
   },
   {
@@ -7299,8 +5984,6 @@ export const Stations = [
       town: 'Basauri',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.226952,
-      lon: -2.888881,
     },
   },
   {
@@ -7310,8 +5993,6 @@ export const Stations = [
       town: 'Basauri',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.238817,
-      lon: -2.892993,
     },
   },
   {
@@ -7321,8 +6002,6 @@ export const Stations = [
       town: 'Arrigorriaga',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.244697,
-      lon: -2.912016,
     },
   },
   {
@@ -7332,8 +6011,6 @@ export const Stations = [
       town: 'Arrankudiaga',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.176332,
-      lon: -2.909743,
     },
   },
   {
@@ -7343,8 +6020,6 @@ export const Stations = [
       town: 'Amurrio',
       province: 'Araba/Álava',
       country: 'España',
-      lat: 43.017154,
-      lon: -3.011418,
     },
   },
   {
@@ -7354,8 +6029,6 @@ export const Stations = [
       town: 'Arakaldo',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.154817,
-      lon: -2.938893,
     },
   },
   {
@@ -7365,8 +6038,6 @@ export const Stations = [
       town: 'Basauri',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.236846,
-      lon: -2.889762,
     },
   },
   {
@@ -7374,10 +6045,8 @@ export const Stations = [
     code: '13119',
     location: {
       town: 'Bilbao',
-      province: undefined,
+      province: 'Bizkaia',
       country: 'España',
-      lat: 43.239764,
-      lon: -2.923413,
     },
   },
   {
@@ -7385,10 +6054,8 @@ export const Stations = [
     code: '13120',
     location: {
       town: 'Bilbao',
-      province: undefined,
+      province: 'Bizkaia',
       country: 'España',
-      lat: 43.25325,
-      lon: -2.9294,
     },
   },
   {
@@ -7398,19 +6065,15 @@ export const Stations = [
       town: 'Amurrio',
       province: 'Madrid',
       country: 'España',
-      lat: 43.0513,
-      lon: -2.99965,
     },
   },
   {
-    name: 'Bilbao-Abando Indalecio Prieto',
+    name: 'Bilbao - Abando Indalecio Prieto',
     code: '13200',
     location: {
       town: 'Bilbao',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.259609,
-      lon: -2.92915,
     },
   },
   {
@@ -7420,8 +6083,6 @@ export const Stations = [
       town: 'Bilbao',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.256752,
-      lon: -2.932127,
     },
   },
   {
@@ -7431,8 +6092,6 @@ export const Stations = [
       town: 'Bilbao',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.255428,
-      lon: -2.940762,
     },
   },
   {
@@ -7442,8 +6101,6 @@ export const Stations = [
       town: 'Bilbao',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.257784,
-      lon: -2.94615,
     },
   },
   {
@@ -7453,30 +6110,24 @@ export const Stations = [
       town: 'Bilbao',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.261825,
-      lon: -2.948816,
     },
   },
   {
-    name: 'Bilbao-La Naja',
+    name: 'Bilbao - La Naja',
     code: '13300',
     location: {
       town: 'Bilbao',
       province: 'Bizkaia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Bilbao-Parkea',
+    name: 'Bilbao - Parkea',
     code: '13302',
     location: {
       town: 'Bilbao',
       province: 'Bizkaia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -7486,8 +6137,6 @@ export const Stations = [
       town: 'Bilbao',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.264166,
-      lon: -2.957191,
     },
   },
   {
@@ -7497,8 +6146,6 @@ export const Stations = [
       town: 'Bilbao',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.27778,
-      lon: -2.972117,
     },
   },
   {
@@ -7508,8 +6155,6 @@ export const Stations = [
       town: 'Erandio',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.288106,
-      lon: -2.975335,
     },
   },
   {
@@ -7519,8 +6164,6 @@ export const Stations = [
       town: 'Barakaldo',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.300475,
-      lon: -2.984948,
     },
   },
   {
@@ -7530,8 +6173,6 @@ export const Stations = [
       town: 'Sestao',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.310243,
-      lon: -2.997303,
     },
   },
   {
@@ -7541,8 +6182,6 @@ export const Stations = [
       town: 'Sestao',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.311861,
-      lon: -3.00425,
     },
   },
   {
@@ -7552,8 +6191,6 @@ export const Stations = [
       town: 'Portugalete',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.318728,
-      lon: -3.015567,
     },
   },
   {
@@ -7563,8 +6200,6 @@ export const Stations = [
       town: 'Santurtzi',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.329766,
-      lon: -3.031149,
     },
   },
   {
@@ -7574,8 +6209,6 @@ export const Stations = [
       town: 'Santurtzi',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.335671,
-      lon: -3.041196,
     },
   },
   {
@@ -7585,8 +6218,6 @@ export const Stations = [
       town: 'Sestao',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.300847,
-      lon: -3.021017,
     },
   },
   {
@@ -7596,8 +6227,6 @@ export const Stations = [
       town: 'Valle De Trápaga - Trapagaran',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.30335,
-      lon: -3.0351,
     },
   },
   {
@@ -7607,8 +6236,6 @@ export const Stations = [
       town: 'Valle De Trápaga - Trapagaran',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.307763,
-      lon: -3.039786,
     },
   },
   {
@@ -7618,8 +6245,6 @@ export const Stations = [
       town: 'Ortuella',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.310251,
-      lon: -3.058531,
     },
   },
   {
@@ -7629,8 +6254,6 @@ export const Stations = [
       town: 'Abanto Y Ciérvana - Abanto Zierbena',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.31623,
-      lon: -3.089951,
     },
   },
   {
@@ -7640,8 +6263,6 @@ export const Stations = [
       town: 'Muskiz',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.321472,
-      lon: -3.112317,
     },
   },
   {
@@ -7651,8 +6272,6 @@ export const Stations = [
       town: 'Ortuella',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.306411,
-      lon: -3.046882,
     },
   },
   {
@@ -7662,8 +6281,6 @@ export const Stations = [
       town: 'Abanto Y Ciérvana - Abanto Zierbena',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.320472,
-      lon: -3.073542,
     },
   },
   {
@@ -7673,8 +6290,6 @@ export const Stations = [
       town: 'Ortuella',
       province: 'Bizkaia',
       country: 'España',
-      lat: 43.308212,
-      lon: -3.052896,
     },
   },
   {
@@ -7684,8 +6299,6 @@ export const Stations = [
       town: 'Palencia',
       province: 'Palencia',
       country: 'España',
-      lat: 42.015711,
-      lon: -4.534135,
     },
   },
   {
@@ -7695,8 +6308,6 @@ export const Stations = [
       town: 'Monzón De Campos',
       province: 'Palencia',
       country: 'España',
-      lat: 42.105538,
-      lon: -4.501677,
     },
   },
   {
@@ -7706,8 +6317,6 @@ export const Stations = [
       town: 'Amusco',
       province: 'Palencia',
       country: 'España',
-      lat: 42.178019,
-      lon: -4.480743,
     },
   },
   {
@@ -7717,8 +6326,6 @@ export const Stations = [
       town: 'Piña De Campos',
       province: 'Palencia',
       country: 'España',
-      lat: 42.211747,
-      lon: -4.434689,
     },
   },
   {
@@ -7728,8 +6335,6 @@ export const Stations = [
       town: 'Frómista',
       province: 'Palencia',
       country: 'España',
-      lat: 42.2649,
-      lon: -4.402433,
     },
   },
   {
@@ -7739,8 +6344,6 @@ export const Stations = [
       town: 'Marcilla De Campos',
       province: 'Palencia',
       country: 'España',
-      lat: 42.317393,
-      lon: -4.379713,
     },
   },
   {
@@ -7750,8 +6353,6 @@ export const Stations = [
       town: 'Osorno La Mayor',
       province: 'Palencia',
       country: 'España',
-      lat: 42.376947,
-      lon: -4.367366,
     },
   },
   {
@@ -7761,8 +6362,6 @@ export const Stations = [
       town: 'Osorno La Mayor',
       province: 'Palencia',
       country: 'España',
-      lat: 42.415077,
-      lon: -4.357367,
     },
   },
   {
@@ -7772,8 +6371,6 @@ export const Stations = [
       town: 'Espinosa De Villagonzalo',
       province: 'Palencia',
       country: 'España',
-      lat: 42.452373,
-      lon: -4.367811,
     },
   },
   {
@@ -7783,8 +6380,6 @@ export const Stations = [
       town: 'Espinosa De Villagonzalo',
       province: 'Palencia',
       country: 'España',
-      lat: 42.478958,
-      lon: -4.374501,
     },
   },
   {
@@ -7794,8 +6389,6 @@ export const Stations = [
       town: 'San Cristóbal De Boedo',
       province: 'Palencia',
       country: 'España',
-      lat: 42.54196,
-      lon: -4.356958,
     },
   },
   {
@@ -7805,19 +6398,15 @@ export const Stations = [
       town: 'Herrera De Pisuerga',
       province: 'Palencia',
       country: 'España',
-      lat: 42.598477,
-      lon: -4.316683,
     },
   },
   {
-    name: 'Alar Del Rey-San Quirce',
+    name: 'Alar Del Rey - San Quirce',
     code: '14112',
     location: {
       town: 'Alar Del Rey',
       province: 'Palencia',
       country: 'España',
-      lat: 42.656837,
-      lon: -4.311372,
     },
   },
   {
@@ -7827,8 +6416,6 @@ export const Stations = [
       town: 'Aguilar De Campoo',
       province: 'Palencia',
       country: 'España',
-      lat: 42.723726,
-      lon: -4.27616,
     },
   },
   {
@@ -7838,8 +6425,6 @@ export const Stations = [
       town: 'Aguilar De Campoo',
       province: 'Palencia',
       country: 'España',
-      lat: 42.785362,
-      lon: -4.233899,
     },
   },
   {
@@ -7849,8 +6434,6 @@ export const Stations = [
       town: 'Pomar De Valdivia',
       province: 'Palencia',
       country: 'España',
-      lat: 42.81903,
-      lon: -4.202753,
     },
   },
   {
@@ -7860,8 +6443,6 @@ export const Stations = [
       town: 'Monzón De Campos',
       province: 'Palencia',
       country: 'España',
-      lat: 42.1163504,
-      lon: -4.496321,
     },
   },
   {
@@ -7871,8 +6452,6 @@ export const Stations = [
       town: 'Monzón De Campos',
       province: 'Palencia',
       country: 'España',
-      lat: 42.1166417,
-      lon: -4.500692,
     },
   },
   {
@@ -7882,8 +6461,6 @@ export const Stations = [
       town: 'Valdeolea',
       province: 'Cantabria',
       country: 'España',
-      lat: 42.870901,
-      lon: -4.165406,
     },
   },
   {
@@ -7893,8 +6470,6 @@ export const Stations = [
       town: 'Campoo De Enmedio',
       province: 'Cantabria',
       country: 'España',
-      lat: 42.920918,
-      lon: -4.120195,
     },
   },
   {
@@ -7904,19 +6479,15 @@ export const Stations = [
       town: 'Reinosa',
       province: 'Cantabria',
       country: 'España',
-      lat: 42.995158,
-      lon: -4.139917,
     },
   },
   {
-    name: 'Lantueno-Santiurde',
+    name: 'Lantueno - Santiurde',
     code: '14203',
     location: {
       town: 'Santiurde De Reinosa',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.064618,
-      lon: -4.086294,
     },
   },
   {
@@ -7926,8 +6497,6 @@ export const Stations = [
       town: 'Pesquera',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.083718,
-      lon: -4.079594,
     },
   },
   {
@@ -7937,8 +6506,6 @@ export const Stations = [
       town: 'Bárcena De Pie De Concha',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.101678,
-      lon: -4.096828,
     },
   },
   {
@@ -7948,19 +6515,15 @@ export const Stations = [
       town: 'Bárcena De Pie De Concha',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.130561,
-      lon: -4.056662,
     },
   },
   {
-    name: 'Molledo-Portolín',
+    name: 'Molledo - Portolín',
     code: '14207',
     location: {
       town: 'Molledo',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.146897,
-      lon: -4.043563,
     },
   },
   {
@@ -7970,8 +6533,6 @@ export const Stations = [
       town: 'Molledo',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.167067,
-      lon: -4.048194,
     },
   },
   {
@@ -7981,8 +6542,6 @@ export const Stations = [
       town: 'Arroyo De Las Fraguas',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.194318,
-      lon: -4.057394,
     },
   },
   {
@@ -7992,8 +6551,6 @@ export const Stations = [
       town: 'Corrales De Buelna ',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.257961,
-      lon: -4.064679,
     },
   },
   {
@@ -8003,8 +6560,6 @@ export const Stations = [
       town: 'Corrales De Buelna ',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.295518,
-      lon: -4.075294,
     },
   },
   {
@@ -8014,8 +6569,6 @@ export const Stations = [
       town: 'Torrelavega',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.327437,
-      lon: -4.042475,
     },
   },
   {
@@ -8025,8 +6578,6 @@ export const Stations = [
       town: 'Torrelavega',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.33974,
-      lon: -4.02896,
     },
   },
   {
@@ -8036,19 +6587,16 @@ export const Stations = [
       town: 'Torrelavega',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.347118,
-      lon: -3.991694,
     },
   },
   {
     name: 'Zurita',
-    code: '14215',
+    code: '14229',
+    otherCodes: ['14215'],
     location: {
       town: 'Piélagos',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.357826,
-      lon: -3.979697,
     },
   },
   {
@@ -8058,8 +6606,6 @@ export const Stations = [
       town: 'Piélagos',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.355636,
-      lon: -3.953732,
     },
   },
   {
@@ -8069,8 +6615,6 @@ export const Stations = [
       town: 'Piélagos',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.375214,
-      lon: -3.90092,
     },
   },
   {
@@ -8080,8 +6624,6 @@ export const Stations = [
       town: 'Astillero (EL)',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.398271,
-      lon: -3.850226,
     },
   },
   {
@@ -8091,8 +6633,6 @@ export const Stations = [
       town: 'Astillero (EL)',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.404295,
-      lon: -3.8432,
     },
   },
   {
@@ -8102,8 +6642,6 @@ export const Stations = [
       town: 'Camargo',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.41664,
-      lon: -3.841901,
     },
   },
   {
@@ -8113,8 +6651,6 @@ export const Stations = [
       town: 'Camargo',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.426526,
-      lon: -3.84824,
     },
   },
   {
@@ -8124,19 +6660,6 @@ export const Stations = [
       town: 'Santander',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.458575,
-      lon: -3.811223,
-    },
-  },
-  {
-    name: 'Zurita',
-    code: '14229',
-    location: {
-      town: 'Piélagos',
-      province: 'Cantabria',
-      country: 'España',
-      lat: 43.3497231,
-      lon: -3.9335829,
     },
   },
   {
@@ -8146,19 +6669,6 @@ export const Stations = [
       town: 'Santander',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.450492,
-      lon: -3.838889,
-    },
-  },
-  {
-    name: 'Nueva Montaña',
-    code: '14231',
-    location: {
-      town: 'Santander',
-      province: 'Cantabria',
-      country: 'España',
-      lat: 43.445244,
-      lon: -3.846303,
     },
   },
   {
@@ -8168,8 +6678,6 @@ export const Stations = [
       town: 'Corrales De Buelna ',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.276219,
-      lon: -4.071153,
     },
   },
   {
@@ -8179,8 +6687,6 @@ export const Stations = [
       town: 'Campoo De Enmedio',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.025658,
-      lon: -4.097112,
     },
   },
   {
@@ -8190,8 +6696,6 @@ export const Stations = [
       town: 'Bárcena De Pie De Concha',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.123726,
-      lon: -4.08172,
     },
   },
   {
@@ -8201,8 +6705,6 @@ export const Stations = [
       town: 'Arenas De Iguña',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.186618,
-      lon: -4.054394,
     },
   },
   {
@@ -8212,19 +6714,15 @@ export const Stations = [
       town: 'Piélagos',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.360717,
-      lon: -3.964874,
     },
   },
   {
-    name: 'Muriedas-Bahía',
+    name: 'Muriedas - Bahía',
     code: '14237',
     location: {
       town: 'Camargo',
       province: 'Cantabria',
       country: 'España',
-      lat: 43.435311,
-      lon: -3.850821,
     },
   },
   {
@@ -8234,41 +6732,25 @@ export const Stations = [
       town: 'Barruelo De Santullán',
       province: 'Palencia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Barruelo De Santullan (APD-CGD)',
+    name: 'Barruelo De Santullan (APD - CGD)',
     code: '14302',
     location: {
       town: 'Barruelo De Santullán',
       province: 'Palencia',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Laredo',
-    code: '1462B',
-    location: {
-      town: 'Laredo',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Laredo',
     code: '14621',
+    otherCodes: ['1462B'],
     location: {
       town: 'Laredo',
       province: 'Cantabria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -8278,8 +6760,6 @@ export const Stations = [
       town: 'Grijota',
       province: 'Palencia',
       country: 'España',
-      lat: 42.049225,
-      lon: -4.583954,
     },
   },
   {
@@ -8289,8 +6769,6 @@ export const Stations = [
       town: 'Villaumbrales',
       province: 'Palencia',
       country: 'España',
-      lat: 42.086065,
-      lon: -4.6268,
     },
   },
   {
@@ -8300,8 +6778,6 @@ export const Stations = [
       town: 'Becerril De Campos',
       province: 'Palencia',
       country: 'España',
-      lat: 42.104706,
-      lon: -4.64712,
     },
   },
   {
@@ -8311,8 +6787,6 @@ export const Stations = [
       town: 'Paredes De Nava',
       province: 'Palencia',
       country: 'España',
-      lat: 42.150694,
-      lon: -4.697599,
     },
   },
   {
@@ -8322,8 +6796,6 @@ export const Stations = [
       town: 'Valle Del Retortillo',
       province: 'Palencia',
       country: 'España',
-      lat: 42.178247,
-      lon: -4.782097,
     },
   },
   {
@@ -8333,8 +6805,6 @@ export const Stations = [
       town: 'Cisneros',
       province: 'Palencia',
       country: 'España',
-      lat: 42.19112,
-      lon: -4.850249,
     },
   },
   {
@@ -8344,8 +6814,6 @@ export const Stations = [
       town: 'Villada',
       province: 'Palencia',
       country: 'España',
-      lat: 42.245238,
-      lon: -4.970589,
     },
   },
   {
@@ -8355,8 +6823,6 @@ export const Stations = [
       town: 'Grajal De Campos',
       province: 'León',
       country: 'España',
-      lat: 42.323246,
-      lon: -5.013381,
     },
   },
   {
@@ -8366,8 +6832,6 @@ export const Stations = [
       town: 'Sahagún',
       province: 'León',
       country: 'España',
-      lat: 42.369329,
-      lon: -5.022667,
     },
   },
   {
@@ -8377,8 +6841,6 @@ export const Stations = [
       town: 'Calzada Del Coto',
       province: 'León',
       country: 'España',
-      lat: 42.398253,
-      lon: -5.099871,
     },
   },
   {
@@ -8388,8 +6850,6 @@ export const Stations = [
       town: 'Bercianos Del Real Camino',
       province: 'León',
       country: 'España',
-      lat: 42.400119,
-      lon: -5.144589,
     },
   },
   {
@@ -8399,8 +6859,6 @@ export const Stations = [
       town: 'Burgo Ranero (EL)',
       province: 'León',
       country: 'España',
-      lat: 42.425753,
-      lon: -5.208592,
     },
   },
   {
@@ -8410,8 +6868,6 @@ export const Stations = [
       town: 'Santas Martas',
       province: 'León',
       country: 'España',
-      lat: 42.466304,
-      lon: -5.296677,
     },
   },
   {
@@ -8421,8 +6877,6 @@ export const Stations = [
       town: 'Santas Martas',
       province: 'León',
       country: 'España',
-      lat: 42.460004,
-      lon: -5.386777,
     },
   },
   {
@@ -8432,8 +6886,6 @@ export const Stations = [
       town: 'Villanueva De Las Manzanas',
       province: 'León',
       country: 'España',
-      lat: 42.460716,
-      lon: -5.497584,
     },
   },
   {
@@ -8443,8 +6895,6 @@ export const Stations = [
       town: 'Vega De Infanzones',
       province: 'León',
       country: 'España',
-      lat: 42.474815,
-      lon: -5.532254,
     },
   },
   {
@@ -8454,8 +6904,6 @@ export const Stations = [
       town: 'Onzonilla',
       province: 'León',
       country: 'España',
-      lat: 42.516756,
-      lon: -5.559988,
     },
   },
   {
@@ -8465,8 +6913,6 @@ export const Stations = [
       town: 'León',
       province: 'León',
       country: 'España',
-      lat: 42.596048,
-      lon: -5.582428,
     },
   },
   {
@@ -8476,8 +6922,6 @@ export const Stations = [
       town: 'Cuadros',
       province: 'León',
       country: 'España',
-      lat: 42.678719,
-      lon: -5.631596,
     },
   },
   {
@@ -8487,8 +6931,6 @@ export const Stations = [
       town: 'Cuadros',
       province: 'León',
       country: 'España',
-      lat: 42.712564,
-      lon: -5.635976,
     },
   },
   {
@@ -8498,8 +6940,6 @@ export const Stations = [
       town: 'Cuadros',
       province: 'León',
       country: 'España',
-      lat: 42.757919,
-      lon: -5.643396,
     },
   },
   {
@@ -8509,8 +6949,6 @@ export const Stations = [
       town: 'Robla (LA)',
       province: 'León',
       country: 'España',
-      lat: 42.804454,
-      lon: -5.626255,
     },
   },
   {
@@ -8520,8 +6958,6 @@ export const Stations = [
       town: 'Pola De Gordón (LA)',
       province: 'León',
       country: 'España',
-      lat: 42.830725,
-      lon: -5.65353,
     },
   },
   {
@@ -8531,8 +6967,6 @@ export const Stations = [
       town: 'Pola De Gordón (LA)',
       province: 'León',
       country: 'España',
-      lat: 42.854099,
-      lon: -5.674524,
     },
   },
   {
@@ -8542,8 +6976,6 @@ export const Stations = [
       town: 'Pola De Gordón (LA)',
       province: 'León',
       country: 'España',
-      lat: 42.87515,
-      lon: -5.639613,
     },
   },
   {
@@ -8553,8 +6985,6 @@ export const Stations = [
       town: 'Pola De Gordón (LA)',
       province: 'León',
       country: 'España',
-      lat: 42.889356,
-      lon: -5.64046,
     },
   },
   {
@@ -8564,8 +6994,6 @@ export const Stations = [
       town: 'Pola De Gordón (LA)',
       province: 'León',
       country: 'España',
-      lat: 42.911674,
-      lon: -5.654534,
     },
   },
   {
@@ -8575,8 +7003,6 @@ export const Stations = [
       town: 'Villamanín',
       province: 'León',
       country: 'España',
-      lat: 42.93671,
-      lon: -5.657637,
     },
   },
   {
@@ -8586,8 +7012,6 @@ export const Stations = [
       town: 'Villamanín',
       province: 'León',
       country: 'España',
-      lat: 42.984495,
-      lon: -5.705391,
     },
   },
   {
@@ -8597,30 +7021,24 @@ export const Stations = [
       town: 'Lena',
       province: 'Asturias',
       country: 'España',
-      lat: 43.019219,
-      lon: -5.762396,
     },
   },
   {
-    name: 'Navidiello-Parana (APT)',
+    name: 'Navidiello - Parana (APT)',
     code: '15115',
     location: {
       town: 'Lena',
       province: 'Asturias',
       country: 'España',
-      lat: 43.072219,
-      lon: -5.724096,
     },
   },
   {
-    name: 'Linares-Congostinas',
+    name: 'Linares - Congostinas',
     code: '15116',
     location: {
       town: 'Lena',
       province: 'Asturias',
       country: 'España',
-      lat: 43.101743,
-      lon: -5.772162,
     },
   },
   {
@@ -8630,8 +7048,6 @@ export const Stations = [
       town: 'Lena',
       province: 'Asturias',
       country: 'España',
-      lat: 43.10722,
-      lon: -5.793896,
     },
   },
   {
@@ -8641,8 +7057,6 @@ export const Stations = [
       town: 'Lena',
       province: 'Asturias',
       country: 'España',
-      lat: 43.07152,
-      lon: -5.769496,
     },
   },
   {
@@ -8652,8 +7066,6 @@ export const Stations = [
       town: 'Lena',
       province: 'Asturias',
       country: 'España',
-      lat: 43.09722,
-      lon: -5.797896,
     },
   },
   {
@@ -8663,8 +7075,6 @@ export const Stations = [
       town: 'Lena',
       province: 'Asturias',
       country: 'España',
-      lat: 43.11112,
-      lon: -5.814196,
     },
   },
   {
@@ -8674,8 +7084,6 @@ export const Stations = [
       town: 'Lena',
       province: 'Asturias',
       country: 'España',
-      lat: 43.130231,
-      lon: -5.812825,
     },
   },
   {
@@ -8685,8 +7093,6 @@ export const Stations = [
       town: 'Lena',
       province: 'Asturias',
       country: 'España',
-      lat: 43.158942,
-      lon: -5.831075,
     },
   },
   {
@@ -8696,8 +7102,6 @@ export const Stations = [
       town: 'Lena',
       province: 'Asturias',
       country: 'España',
-      lat: 43.186778,
-      lon: -5.803633,
     },
   },
   {
@@ -8707,8 +7111,6 @@ export const Stations = [
       town: 'Mieres',
       province: 'Asturias',
       country: 'España',
-      lat: 43.20702,
-      lon: -5.791496,
     },
   },
   {
@@ -8718,8 +7120,6 @@ export const Stations = [
       town: 'Mieres',
       province: 'Asturias',
       country: 'España',
-      lat: 43.214944,
-      lon: -5.785817,
     },
   },
   {
@@ -8729,8 +7129,6 @@ export const Stations = [
       town: 'Mieres',
       province: 'Asturias',
       country: 'España',
-      lat: 43.250027,
-      lon: -5.78028,
     },
   },
   {
@@ -8740,8 +7138,6 @@ export const Stations = [
       town: 'Mieres',
       province: 'Asturias',
       country: 'España',
-      lat: 43.25473,
-      lon: -5.782925,
     },
   },
   {
@@ -8751,8 +7147,6 @@ export const Stations = [
       town: 'Mieres',
       province: 'Asturias',
       country: 'España',
-      lat: 43.267493,
-      lon: -5.804693,
     },
   },
   {
@@ -8762,8 +7156,6 @@ export const Stations = [
       town: 'Mieres',
       province: 'Asturias',
       country: 'España',
-      lat: 43.277234,
-      lon: -5.812279,
     },
   },
   {
@@ -8773,8 +7165,6 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.29622,
-      lon: -5.819295,
     },
   },
   {
@@ -8784,8 +7174,6 @@ export const Stations = [
       town: 'Ribera De Arriba',
       province: 'Asturias',
       country: 'España',
-      lat: 43.30762,
-      lon: -5.856895,
     },
   },
   {
@@ -8795,8 +7183,6 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.312842,
-      lon: -5.86918,
     },
   },
   {
@@ -8806,8 +7192,6 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.33042,
-      lon: -5.868395,
     },
   },
   {
@@ -8817,8 +7201,6 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.366841,
-      lon: -5.854263,
     },
   },
   {
@@ -8828,8 +7210,6 @@ export const Stations = [
       town: 'Siero',
       province: 'Asturias',
       country: 'España',
-      lat: 43.40347,
-      lon: -5.812935,
     },
   },
   {
@@ -8837,10 +7217,8 @@ export const Stations = [
     code: '15217',
     location: {
       town: 'Oviedo',
-      province: undefined,
+      province: 'Asturias',
       country: 'España',
-      lat: 43.383422,
-      lon: -5.830233,
     },
   },
   {
@@ -8850,8 +7228,6 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.355864,
-      lon: -5.855475,
     },
   },
   {
@@ -8861,8 +7237,6 @@ export const Stations = [
       town: 'Llanera',
       province: 'Asturias',
       country: 'España',
-      lat: 43.445519,
-      lon: -5.817438,
     },
   },
   {
@@ -8872,8 +7246,6 @@ export const Stations = [
       town: 'Llanera',
       province: 'Asturias',
       country: 'España',
-      lat: 43.46082,
-      lon: -5.825595,
     },
   },
   {
@@ -8883,8 +7255,6 @@ export const Stations = [
       town: 'Gijón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.50482,
-      lon: -5.780395,
     },
   },
   {
@@ -8894,8 +7264,6 @@ export const Stations = [
       town: 'Gijón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.527578,
-      lon: -5.735516,
     },
   },
   {
@@ -8905,8 +7273,6 @@ export const Stations = [
       town: 'Llanera',
       province: 'Asturias',
       country: 'España',
-      lat: 43.474597,
-      lon: -5.802526,
     },
   },
   {
@@ -8916,8 +7282,6 @@ export const Stations = [
       town: 'Gijón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.54092,
-      lon: -5.725018,
     },
   },
   {
@@ -8927,41 +7291,16 @@ export const Stations = [
       town: 'Gijón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.534132,
-      lon: -5.70981,
     },
   },
   {
-    name: 'Gijón/Xixón',
-    code: '15402',
-    location: {
-      town: 'Gijón',
-      province: 'Asturias',
-      country: 'España',
-      lat: 43.539243,
-      lon: -5.675436,
-    },
-  },
-  {
-    name: 'Gijón/Xixón',
-    code: '15403',
-    location: {
-      town: 'Gijón',
-      province: 'Asturias',
-      country: 'España',
-      lat: 43.53889,
-      lon: -5.675266,
-    },
-  },
-  {
-    name: 'Gijón/Xixón',
+    name: 'Gijón - Sanz Crespo',
     code: '15410',
+    otherCodes: ['15403', '15402'],
     location: {
       town: 'Gijón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.535175,
-      lon: -5.698318,
     },
   },
   {
@@ -8971,8 +7310,6 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.31742,
-      lon: -5.812495,
     },
   },
   {
@@ -8982,8 +7319,6 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.33152,
-      lon: -5.772595,
     },
   },
   {
@@ -8993,8 +7328,6 @@ export const Stations = [
       town: 'Langreo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.32212,
-      lon: -5.722295,
     },
   },
   {
@@ -9004,8 +7337,6 @@ export const Stations = [
       town: 'Langreo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.3178079,
-      lon: -5.7109228,
     },
   },
   {
@@ -9015,8 +7346,6 @@ export const Stations = [
       town: 'Langreo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.304594,
-      lon: -5.692439,
     },
   },
   {
@@ -9026,19 +7355,6 @@ export const Stations = [
       town: 'Langreo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.291503,
-      lon: -5.679332,
-    },
-  },
-  {
-    name: 'Ciañu',
-    code: '16010',
-    location: {
-      town: 'Langreo',
-      province: 'Asturias',
-      country: 'España',
-      lat: 43.289192,
-      lon: -5.66793,
     },
   },
   {
@@ -9048,8 +7364,6 @@ export const Stations = [
       town: 'San Martín Del Rey Aurelio',
       province: 'Asturias',
       country: 'España',
-      lat: 43.2872372,
-      lon: -5.6479229,
     },
   },
   {
@@ -9059,8 +7373,6 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -9070,8 +7382,6 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -9081,19 +7391,6 @@ export const Stations = [
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Trubia',
-    code: '16204',
-    location: {
-      town: 'Oviedo',
-      province: 'Asturias',
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -9103,8 +7400,6 @@ export const Stations = [
       town: 'Llanera',
       province: 'Asturias',
       country: 'España',
-      lat: 43.475556,
-      lon: -5.861372,
     },
   },
   {
@@ -9114,8 +7409,6 @@ export const Stations = [
       town: 'Corvera De Asturias',
       province: 'Asturias',
       country: 'España',
-      lat: 43.51582,
-      lon: -5.869095,
     },
   },
   {
@@ -9125,8 +7418,6 @@ export const Stations = [
       town: 'Corvera De Asturias',
       province: 'Asturias',
       country: 'España',
-      lat: 43.52212,
-      lon: -5.869295,
     },
   },
   {
@@ -9136,8 +7427,6 @@ export const Stations = [
       town: 'Avilés',
       province: 'Asturias',
       country: 'España',
-      lat: 43.536871,
-      lon: -5.896108,
     },
   },
   {
@@ -9147,8 +7436,6 @@ export const Stations = [
       town: 'Avilés',
       province: 'Asturias',
       country: 'España',
-      lat: 43.5467,
-      lon: -5.9052,
     },
   },
   {
@@ -9158,8 +7445,6 @@ export const Stations = [
       town: 'Avilés',
       province: 'Asturias',
       country: 'España',
-      lat: 43.561191,
-      lon: -5.922576,
     },
   },
   {
@@ -9169,52 +7454,34 @@ export const Stations = [
       town: 'Castrillón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.58952,
-      lon: -5.932595,
-    },
-  },
-  {
-    name: 'Los Campos',
-    code: '16406',
-    location: {
-      town: 'Corvera De Asturias',
-      province: undefined,
-      country: 'España',
-      lat: 43.5357,
-      lon: -5.884,
     },
   },
   {
     name: 'Los Campos',
     code: '16408',
+    otherCodes: ['16406'],
     location: {
       town: 'Corvera De Asturias',
       province: 'Asturias',
       country: 'España',
-      lat: 43.536675,
-      lon: -5.885115,
     },
   },
   {
-    name: 'Gijon-Puerto',
+    name: 'Gijon - Puerto',
     code: '16604',
     location: {
       town: 'Gijón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.552658,
-      lon: -5.691081,
     },
   },
   {
-    name: 'Madrid - Chamartín-Clara Campoamor',
+    name: 'Madrid - Chamartín - Clara Campoamor',
     code: '17000',
     location: {
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.4720993,
-      lon: -3.6824687,
     },
   },
   {
@@ -9224,8 +7491,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.5015242,
-      lon: -3.6824808,
     },
   },
   {
@@ -9235,8 +7500,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.538415,
-      lon: -3.703716,
     },
   },
   {
@@ -9246,8 +7509,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.5587539,
-      lon: -3.7139504,
     },
   },
   {
@@ -9257,8 +7518,6 @@ export const Stations = [
       town: 'Tres Cantos',
       province: 'Madrid',
       country: 'España',
-      lat: 40.5985252,
-      lon: -3.7155822,
     },
   },
   {
@@ -9268,19 +7527,15 @@ export const Stations = [
       town: 'Colmenar Viejo',
       province: 'Madrid',
       country: 'España',
-      lat: 40.6451853,
-      lon: -3.7765198,
     },
   },
   {
-    name: 'Manzanares-Soto El Real',
+    name: 'Manzanares - Soto El Real',
     code: '17006',
     location: {
       town: 'Soto Del Real',
       province: 'Madrid',
       country: 'España',
-      lat: 40.721107,
-      lon: -3.792536,
     },
   },
   {
@@ -9290,8 +7545,6 @@ export const Stations = [
       town: 'Soto Del Real',
       province: 'Madrid',
       country: 'España',
-      lat: 40.75744,
-      lon: -3.766481,
     },
   },
   {
@@ -9301,8 +7554,6 @@ export const Stations = [
       town: 'Miraflores De La Sierra',
       province: 'Madrid',
       country: 'España',
-      lat: 40.807472,
-      lon: -3.751128,
     },
   },
   {
@@ -9312,8 +7563,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.5438226,
-      lon: -3.7001834,
     },
   },
   {
@@ -9323,19 +7572,15 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.528516,
-      lon: -3.688318,
     },
   },
   {
-    name: 'Bustarviejo-Valdemanco',
+    name: 'Bustarviejo - Valdemanco',
     code: '17100',
     location: {
       town: 'Bustarviejo',
       province: 'Madrid',
       country: 'España',
-      lat: 40.857591,
-      lon: -3.680431,
     },
   },
   {
@@ -9345,8 +7590,6 @@ export const Stations = [
       town: 'Valdemanco',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -9356,8 +7599,6 @@ export const Stations = [
       town: 'Garganta De Los Montes',
       province: 'Madrid',
       country: 'España',
-      lat: 40.914363,
-      lon: -3.674407,
     },
   },
   {
@@ -9367,8 +7608,6 @@ export const Stations = [
       town: 'Gargantilla Del Lozoya Y Pinilla De Buitrago',
       province: 'Madrid',
       country: 'España',
-      lat: 40.952134,
-      lon: -3.714022,
     },
   },
   {
@@ -9378,19 +7617,15 @@ export const Stations = [
       town: 'Navarredonda Y San Mamés',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Gascones-Buitrago',
+    name: 'Gascones - Buitrago',
     code: '17105',
     location: {
       town: 'Gascones',
       province: 'Madrid',
       country: 'España',
-      lat: 41.027372,
-      lon: -3.679927,
     },
   },
   {
@@ -9400,19 +7635,15 @@ export const Stations = [
       town: 'Braojos',
       province: 'Madrid',
       country: 'España',
-      lat: 41.042512,
-      lon: -3.641916,
     },
   },
   {
-    name: 'Robregordo-Somosierra',
+    name: 'Robregordo - Somosierra',
     code: '17107',
     location: {
       town: 'Robregordo',
       province: 'Madrid',
       country: 'España',
-      lat: 41.105999,
-      lon: -3.591719,
     },
   },
   {
@@ -9422,8 +7653,6 @@ export const Stations = [
       town: 'Santo Tomé Del Puerto',
       province: 'Segovia',
       country: 'España',
-      lat: 41.180592,
-      lon: -3.563776,
     },
   },
   {
@@ -9433,19 +7662,15 @@ export const Stations = [
       town: 'Riaza',
       province: 'Segovia',
       country: 'España',
-      lat: 41.255372,
-      lon: -3.510626,
     },
   },
   {
-    name: 'Turrubuelo-Sepulveda (APD)',
+    name: 'Turrubuelo - Sepulveda (APD)',
     code: '17110',
     location: {
       town: 'Boceguillas',
       province: 'Segovia',
       country: 'España',
-      lat: 41.333672,
-      lon: -3.597226,
     },
   },
   {
@@ -9455,30 +7680,24 @@ export const Stations = [
       town: 'Campo De San Pedro',
       province: 'Segovia',
       country: 'España',
-      lat: 41.429372,
-      lon: -3.541925,
     },
   },
   {
-    name: 'Maderuelo-Linares (APD)',
+    name: 'Maderuelo - Linares (APD)',
     code: '17112',
     location: {
       town: 'Maderuelo',
       province: 'Segovia',
       country: 'España',
-      lat: 41.503271,
-      lon: -3.542255,
     },
   },
   {
-    name: 'Fuentelcesped-Santa Cruz (APD)',
+    name: 'Fuentelcesped - Santa Cruz (APD)',
     code: '17113',
     location: {
       town: 'Fuentelcésped',
       province: 'Burgos',
       country: 'España',
-      lat: 41.604572,
-      lon: -3.644825,
     },
   },
   {
@@ -9488,8 +7707,6 @@ export const Stations = [
       town: 'Garganta De Los Montes',
       province: 'Madrid',
       country: 'España',
-      lat: 40.92214,
-      lon: -3.692065,
     },
   },
   {
@@ -9499,8 +7716,6 @@ export const Stations = [
       town: 'Santa Cruz De La Salceda',
       province: 'Madrid',
       country: 'España',
-      lat: 41.586024,
-      lon: -3.585652,
     },
   },
   {
@@ -9510,8 +7725,6 @@ export const Stations = [
       town: 'Santa Cruz De La Salceda',
       province: 'Segovia',
       country: 'España',
-      lat: 41.086563,
-      lon: -3.62525,
     },
   },
   {
@@ -9521,19 +7734,15 @@ export const Stations = [
       town: 'Serna Del Monte (LA)',
       province: 'Madrid',
       country: 'España',
-      lat: 41.060213,
-      lon: -3.623076,
     },
   },
   {
-    name: 'Aranda De Duero-Montecillo',
+    name: 'Aranda De Duero - Montecillo',
     code: '17200',
     location: {
       town: 'Aranda De Duero',
       province: 'Burgos',
       country: 'España',
-      lat: 41.668616,
-      lon: -3.696814,
     },
   },
   {
@@ -9543,8 +7752,6 @@ export const Stations = [
       town: 'Gumiel De Izán',
       province: 'Burgos',
       country: 'España',
-      lat: 41.774873,
-      lon: -3.671624,
     },
   },
   {
@@ -9554,8 +7761,6 @@ export const Stations = [
       town: 'Oquillas',
       province: 'Burgos',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -9565,8 +7770,6 @@ export const Stations = [
       town: 'Bahabón De Esgueva',
       province: 'Burgos',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -9576,8 +7779,6 @@ export const Stations = [
       town: 'Fontioso',
       province: 'Burgos',
       country: 'España',
-      lat: 41.934073,
-      lon: -3.769213,
     },
   },
   {
@@ -9587,8 +7788,6 @@ export const Stations = [
       town: 'Lerma',
       province: 'Burgos',
       country: 'España',
-      lat: 42.021272,
-      lon: -3.772821,
     },
   },
   {
@@ -9598,8 +7797,6 @@ export const Stations = [
       town: 'Madrigalejo Del Monte',
       province: 'Burgos',
       country: 'España',
-      lat: 42.119073,
-      lon: -3.735422,
     },
   },
   {
@@ -9609,8 +7806,6 @@ export const Stations = [
       town: 'Cogollos',
       province: 'Burgos',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -9620,19 +7815,15 @@ export const Stations = [
       town: 'Sarracín',
       province: 'Burgos',
       country: 'España',
-      lat: 42.259432,
-      lon: -3.700265,
     },
   },
   {
-    name: 'Villagonzalo-Pedernales (APD)',
+    name: 'Villagonzalo - Pedernales (APD)',
     code: '17209',
     location: {
       town: 'Villagonzalo Pedernales',
       province: 'Burgos',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -9642,8 +7833,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.4061556,
-      lon: -3.6889579,
     },
   },
   {
@@ -9653,8 +7842,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.4234123,
-      lon: -3.6908535,
     },
   },
   {
@@ -9664,19 +7851,15 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.4466171,
-      lon: -3.6923408,
     },
   },
   {
-    name: 'M.Alvaro-P',
+    name: 'M.Alvaro - P',
     code: '18003',
     location: {
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3956167,
-      lon: -3.6777094,
     },
   },
   {
@@ -9686,8 +7869,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.4003715,
-      lon: -3.692763,
     },
   },
   {
@@ -9697,8 +7878,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.4025917,
-      lon: -3.7113344,
     },
   },
   {
@@ -9708,8 +7887,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.4168778,
-      lon: -3.7032107,
     },
   },
   {
@@ -9719,8 +7896,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.554058,
-      lon: -3.683335,
     },
   },
   {
@@ -9730,8 +7905,6 @@ export const Stations = [
       town: 'Alcobendas',
       province: 'Madrid',
       country: 'España',
-      lat: 40.5474433,
-      lon: -3.6543338,
     },
   },
   {
@@ -9741,8 +7914,6 @@ export const Stations = [
       town: 'Alcobendas',
       province: 'Madrid',
       country: 'España',
-      lat: 40.546566,
-      lon: -3.6351819,
     },
   },
   {
@@ -9752,8 +7923,6 @@ export const Stations = [
       town: 'Santovenia De La Valdoncina',
       province: 'León',
       country: 'España',
-      lat: 42.550085,
-      lon: -5.637789,
     },
   },
   {
@@ -9763,8 +7932,6 @@ export const Stations = [
       town: 'Villadangos Del Páramo',
       province: 'León',
       country: 'España',
-      lat: 42.521743,
-      lon: -5.74542,
     },
   },
   {
@@ -9774,8 +7941,6 @@ export const Stations = [
       town: 'Santa Marina Del Rey',
       province: 'León',
       country: 'España',
-      lat: 42.476819,
-      lon: -5.819097,
     },
   },
   {
@@ -9785,8 +7950,6 @@ export const Stations = [
       town: 'Villarejo De Órbigo',
       province: 'León',
       country: 'España',
-      lat: 42.4335,
-      lon: -5.88756,
     },
   },
   {
@@ -9796,8 +7959,6 @@ export const Stations = [
       town: 'Valderrey',
       province: 'León',
       country: 'España',
-      lat: 42.414301,
-      lon: -5.963988,
     },
   },
   {
@@ -9807,8 +7968,6 @@ export const Stations = [
       town: 'San Justo De La Vega',
       province: 'León',
       country: 'España',
-      lat: 42.424462,
-      lon: -6.00803,
     },
   },
   {
@@ -9818,8 +7977,6 @@ export const Stations = [
       town: 'Santa Marina Del Rey',
       province: 'León',
       country: 'España',
-      lat: 42.46458,
-      lon: -5.838914,
     },
   },
   {
@@ -9827,10 +7984,8 @@ export const Stations = [
     code: '20046',
     location: {
       town: 'Coruña (A)',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -9840,8 +7995,6 @@ export const Stations = [
       town: 'Astorga',
       province: 'León',
       country: 'España',
-      lat: 42.459489,
-      lon: -6.047212,
     },
   },
   {
@@ -9851,8 +8004,6 @@ export const Stations = [
       town: 'Villaobispo De Otero',
       province: 'León',
       country: 'España',
-      lat: 42.513798,
-      lon: -6.055057,
     },
   },
   {
@@ -9862,8 +8013,6 @@ export const Stations = [
       town: 'Magaz De Cepeda',
       province: 'León',
       country: 'España',
-      lat: 42.55376,
-      lon: -6.068267,
     },
   },
   {
@@ -9873,8 +8022,6 @@ export const Stations = [
       town: 'Magaz De Cepeda',
       province: 'León',
       country: 'España',
-      lat: 42.598935,
-      lon: -6.108238,
     },
   },
   {
@@ -9884,8 +8031,6 @@ export const Stations = [
       town: 'Villagatón',
       province: 'León',
       country: 'España',
-      lat: 42.632631,
-      lon: -6.201002,
     },
   },
   {
@@ -9895,8 +8040,6 @@ export const Stations = [
       town: 'Torre Del Bierzo',
       province: 'León',
       country: 'España',
-      lat: 42.63252,
-      lon: -6.253297,
     },
   },
   {
@@ -9906,8 +8049,6 @@ export const Stations = [
       town: 'Torre Del Bierzo',
       province: 'León',
       country: 'España',
-      lat: 42.614874,
-      lon: -6.282495,
     },
   },
   {
@@ -9917,8 +8058,6 @@ export const Stations = [
       town: 'Torre Del Bierzo',
       province: 'León',
       country: 'España',
-      lat: 42.60642,
-      lon: -6.294397,
     },
   },
   {
@@ -9928,8 +8067,6 @@ export const Stations = [
       town: 'Torre Del Bierzo',
       province: 'León',
       country: 'España',
-      lat: 42.595578,
-      lon: -6.329083,
     },
   },
   {
@@ -9939,8 +8076,6 @@ export const Stations = [
       town: 'Bembibre',
       province: 'León',
       country: 'España',
-      lat: 42.609558,
-      lon: -6.422048,
     },
   },
   {
@@ -9950,8 +8085,6 @@ export const Stations = [
       town: 'Castropodame',
       province: 'León',
       country: 'España',
-      lat: 42.598129,
-      lon: -6.503112,
     },
   },
   {
@@ -9961,8 +8094,6 @@ export const Stations = [
       town: 'Congosto',
       province: 'León',
       country: 'España',
-      lat: 42.586392,
-      lon: -6.523776,
     },
   },
   {
@@ -9972,8 +8103,6 @@ export const Stations = [
       town: 'Ponferrada',
       province: 'León',
       country: 'España',
-      lat: 42.545429,
-      lon: -6.602376,
     },
   },
   {
@@ -9983,8 +8112,6 @@ export const Stations = [
       town: 'Ponferrada',
       province: 'León',
       country: 'España',
-      lat: 42.54232,
-      lon: -6.691397,
     },
   },
   {
@@ -9994,8 +8121,6 @@ export const Stations = [
       town: 'Carracedelo',
       province: 'León',
       country: 'España',
-      lat: 42.540153,
-      lon: -6.715125,
     },
   },
   {
@@ -10005,8 +8130,6 @@ export const Stations = [
       town: 'Carracedelo',
       province: 'León',
       country: 'España',
-      lat: 42.53686,
-      lon: -6.751109,
     },
   },
   {
@@ -10016,8 +8139,6 @@ export const Stations = [
       town: 'Toral De Los Vados',
       province: 'León',
       country: 'España',
-      lat: 42.541052,
-      lon: -6.776703,
     },
   },
   {
@@ -10027,8 +8148,6 @@ export const Stations = [
       town: 'Carucedo',
       province: 'León',
       country: 'España',
-      lat: 42.499448,
-      lon: -6.82561,
     },
   },
   {
@@ -10038,8 +8157,6 @@ export const Stations = [
       town: 'Rubiá',
       province: 'Ourense',
       country: 'España',
-      lat: 42.475326,
-      lon: -6.830878,
     },
   },
   {
@@ -10049,8 +8166,6 @@ export const Stations = [
       town: 'Rubiá',
       province: 'Ourense',
       country: 'España',
-      lat: 42.420704,
-      lon: -6.829486,
     },
   },
   {
@@ -10060,8 +8175,6 @@ export const Stations = [
       town: 'Carballeda De Valdeorras',
       province: 'Ourense',
       country: 'España',
-      lat: 42.404533,
-      lon: -6.859063,
     },
   },
   {
@@ -10071,8 +8184,6 @@ export const Stations = [
       town: 'Carballeda De Valdeorras',
       province: 'Ourense',
       country: 'España',
-      lat: 42.414859,
-      lon: -6.911951,
     },
   },
   {
@@ -10082,8 +8193,6 @@ export const Stations = [
       town: 'Barco De Valdeorras (O)',
       province: 'Ourense',
       country: 'España',
-      lat: 42.418301,
-      lon: -6.98503,
     },
   },
   {
@@ -10093,8 +8202,6 @@ export const Stations = [
       town: 'Vilamartín De Valdeorras',
       province: 'Ourense',
       country: 'España',
-      lat: 42.411829,
-      lon: -7.061185,
     },
   },
   {
@@ -10104,8 +8211,6 @@ export const Stations = [
       town: 'Rúa (A)',
       province: 'Ourense',
       country: 'España',
-      lat: 42.39276,
-      lon: -7.113284,
     },
   },
   {
@@ -10115,30 +8220,24 @@ export const Stations = [
       town: 'Quiroga',
       province: 'Lugo',
       country: 'España',
-      lat: 42.39402,
-      lon: -7.1984,
     },
   },
   {
-    name: 'Soldon-Sequeiros (APT)',
+    name: 'Soldon - Sequeiros (APT)',
     code: '20215',
     location: {
       town: 'Ribas De Sil',
       province: 'Lugo',
       country: 'España',
-      lat: 42.445721,
-      lon: -7.244298,
     },
   },
   {
-    name: 'San Clodio-Quiroga',
+    name: 'San Clodio - Quiroga',
     code: '20216',
     location: {
       town: 'Ribas De Sil',
       province: 'Lugo',
       country: 'España',
-      lat: 42.465271,
-      lon: -7.287198,
     },
   },
   {
@@ -10148,8 +8247,6 @@ export const Stations = [
       town: 'Quiroga',
       province: 'Lugo',
       country: 'España',
-      lat: 42.483621,
-      lon: -7.346898,
     },
   },
   {
@@ -10159,8 +8256,6 @@ export const Stations = [
       town: 'Pobra Do Brollón (A)',
       province: 'Lugo',
       country: 'España',
-      lat: 42.533682,
-      lon: -7.400088,
     },
   },
   {
@@ -10170,8 +8265,6 @@ export const Stations = [
       town: 'Monforte De Lemos',
       province: 'Lugo',
       country: 'España',
-      lat: 42.529682,
-      lon: -7.503589,
     },
   },
   {
@@ -10181,19 +8274,15 @@ export const Stations = [
       town: 'Bóveda',
       province: 'Lugo',
       country: 'España',
-      lat: 42.624981,
-      lon: -7.485495,
     },
   },
   {
-    name: 'Rubian (APT-CGD)',
+    name: 'Rubian (APT - CGD)',
     code: '20303',
     location: {
       town: 'Bóveda',
       province: 'Lugo',
       country: 'España',
-      lat: 42.649021,
-      lon: -7.485798,
     },
   },
   {
@@ -10203,8 +8292,6 @@ export const Stations = [
       town: 'Sarria',
       province: 'Lugo',
       country: 'España',
-      lat: 42.721167,
-      lon: -7.44642,
     },
   },
   {
@@ -10214,19 +8301,15 @@ export const Stations = [
       town: 'Sarria',
       province: 'Lugo',
       country: 'España',
-      lat: 42.784049,
-      lon: -7.418822,
     },
   },
   {
-    name: 'Pedrelo-Céltigos',
+    name: 'Pedrelo - Céltigos',
     code: '20306',
     location: {
       town: 'Sarria',
       province: 'Lugo',
       country: 'España',
-      lat: 42.832934,
-      lon: -7.393329,
     },
   },
   {
@@ -10236,19 +8319,15 @@ export const Stations = [
       town: 'Láncara',
       province: 'Lugo',
       country: 'España',
-      lat: 42.865521,
-      lon: -7.445898,
     },
   },
   {
-    name: 'Lajosa (APT-CGD)',
+    name: 'Lajosa (APT - CGD)',
     code: '20308',
     location: {
       town: 'Corgo (O)',
       province: 'Lugo',
       country: 'España',
-      lat: 42.958621,
-      lon: -7.480497,
     },
   },
   {
@@ -10258,8 +8337,6 @@ export const Stations = [
       town: 'Lugo',
       province: 'Lugo',
       country: 'España',
-      lat: 43.015222,
-      lon: -7.552176,
     },
   },
   {
@@ -10269,8 +8346,6 @@ export const Stations = [
       town: 'Rábade',
       province: 'Lugo',
       country: 'España',
-      lat: 43.121378,
-      lon: -7.624835,
     },
   },
   {
@@ -10280,8 +8355,6 @@ export const Stations = [
       town: 'Begonte',
       province: 'Lugo',
       country: 'España',
-      lat: 43.149172,
-      lon: -7.686417,
     },
   },
   {
@@ -10291,8 +8364,6 @@ export const Stations = [
       town: 'Begonte',
       province: 'Lugo',
       country: 'España',
-      lat: 43.173405,
-      lon: -7.756128,
     },
   },
   {
@@ -10302,8 +8373,6 @@ export const Stations = [
       town: 'Guitiriz',
       province: 'Lugo',
       country: 'España',
-      lat: 43.163644,
-      lon: -7.837383,
     },
   },
   {
@@ -10313,8 +8382,6 @@ export const Stations = [
       town: 'Guitiriz',
       province: 'Lugo',
       country: 'España',
-      lat: 43.179058,
-      lon: -7.895039,
     },
   },
   {
@@ -10322,10 +8389,8 @@ export const Stations = [
     code: '20315',
     location: {
       town: 'Curtis',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.178922,
-      lon: -7.990998,
     },
   },
   {
@@ -10333,10 +8398,8 @@ export const Stations = [
     code: '20316',
     location: {
       town: 'Curtis',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.141411,
-      lon: -8.03769,
     },
   },
   {
@@ -10344,10 +8407,8 @@ export const Stations = [
     code: '20317',
     location: {
       town: 'Curtis',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.127232,
-      lon: -8.143155,
     },
   },
   {
@@ -10355,10 +8416,8 @@ export const Stations = [
     code: '20318',
     location: {
       town: 'Cesuras',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.127922,
-      lon: -8.163498,
     },
   },
   {
@@ -10366,10 +8425,8 @@ export const Stations = [
     code: '20319',
     location: {
       town: 'Cesuras',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.173073,
-      lon: -8.2005,
     },
   },
   {
@@ -10377,21 +8434,17 @@ export const Stations = [
     code: '20320',
     location: {
       town: 'Oza Dos Ríos',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.21877,
-      lon: -8.187111,
     },
   },
   {
-    name: 'Betanzos-Infesta',
+    name: 'Betanzos - Infesta',
     code: '20400',
     location: {
       town: 'Betanzos',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.270698,
-      lon: -8.225847,
     },
   },
   {
@@ -10399,10 +8452,8 @@ export const Stations = [
     code: '20401',
     location: {
       town: 'Bergondo',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.288987,
-      lon: -8.264895,
     },
   },
   {
@@ -10410,10 +8461,8 @@ export const Stations = [
     code: '20402',
     location: {
       town: 'Cambre',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.287913,
-      lon: -8.307767,
     },
   },
   {
@@ -10421,10 +8470,8 @@ export const Stations = [
     code: '20403',
     location: {
       town: 'Cambre',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.290502,
-      lon: -8.352104,
     },
   },
   {
@@ -10432,10 +8479,8 @@ export const Stations = [
     code: '20404',
     location: {
       town: 'Culleredo',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.317841,
-      lon: -8.36875,
     },
   },
   {
@@ -10443,10 +8488,8 @@ export const Stations = [
     code: '20405',
     location: {
       town: 'Culleredo',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.328001,
-      lon: -8.38099,
     },
   },
   {
@@ -10454,21 +8497,17 @@ export const Stations = [
     code: '20410',
     location: {
       town: 'Coruña (A)',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.335222,
-      lon: -8.413061,
     },
   },
   {
-    name: 'Betanzos-Cidade',
+    name: 'Betanzos - Cidade',
     code: '21001',
     location: {
       town: 'Betanzos',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.284137,
-      lon: -8.215874,
     },
   },
   {
@@ -10476,10 +8515,8 @@ export const Stations = [
     code: '21002',
     location: {
       town: 'Miño',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.349431,
-      lon: -8.207313,
     },
   },
   {
@@ -10487,10 +8524,8 @@ export const Stations = [
     code: '21003',
     location: {
       town: 'Miño',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.378197,
-      lon: -8.201106,
     },
   },
   {
@@ -10498,21 +8533,17 @@ export const Stations = [
     code: '21004',
     location: {
       town: 'Pontedeume',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.411797,
-      lon: -8.180416,
     },
   },
   {
-    name: 'Cabanas-Areal',
+    name: 'Cabanas - Areal',
     code: '21005',
     location: {
       town: 'Cabanas',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.415585,
-      lon: -8.168828,
     },
   },
   {
@@ -10520,10 +8551,8 @@ export const Stations = [
     code: '21006',
     location: {
       town: 'Mugardos',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.438448,
-      lon: -8.197633,
     },
   },
   {
@@ -10531,10 +8560,8 @@ export const Stations = [
     code: '21007',
     location: {
       town: 'Fene',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.462899,
-      lon: -8.188586,
     },
   },
   {
@@ -10542,10 +8569,8 @@ export const Stations = [
     code: '21008',
     location: {
       town: 'Fene',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.472309,
-      lon: -8.174837,
     },
   },
   {
@@ -10553,10 +8578,8 @@ export const Stations = [
     code: '21009',
     location: {
       town: 'Neda',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.495351,
-      lon: -8.160967,
     },
   },
   {
@@ -10564,21 +8587,17 @@ export const Stations = [
     code: '21010',
     location: {
       town: 'Ferrol',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.4880349,
-      lon: -8.231143,
     },
   },
   {
     name: 'Poligon Industrial Del Segre',
     code: '21913',
     location: {
-      town: undefined,
+      town: 'Lleida',
       province: 'Lleida',
       country: 'España',
-      lat: 41.6157446,
-      lon: 0.6269556,
     },
   },
   {
@@ -10588,8 +8607,6 @@ export const Stations = [
       town: 'Sober',
       province: 'Lugo',
       country: 'España',
-      lat: 42.482882,
-      lon: -7.587733,
     },
   },
   {
@@ -10599,8 +8616,6 @@ export const Stations = [
       town: 'Sober',
       province: 'Lugo',
       country: 'España',
-      lat: 42.457799,
-      lon: -7.62879,
     },
   },
   {
@@ -10610,8 +8625,6 @@ export const Stations = [
       town: 'Pantón',
       province: 'Lugo',
       country: 'España',
-      lat: 42.426921,
-      lon: -7.661676,
     },
   },
   {
@@ -10621,8 +8634,6 @@ export const Stations = [
       town: 'Pantón',
       province: 'Lugo',
       country: 'España',
-      lat: 42.441353,
-      lon: -7.70412,
     },
   },
   {
@@ -10632,8 +8643,6 @@ export const Stations = [
       town: 'Peroxa (A)',
       province: 'Ourense',
       country: 'España',
-      lat: 42.451439,
-      lon: -7.735523,
     },
   },
   {
@@ -10643,8 +8652,6 @@ export const Stations = [
       town: 'Coles',
       province: 'Ourense',
       country: 'España',
-      lat: 42.401095,
-      lon: -7.802567,
     },
   },
   {
@@ -10654,8 +8661,6 @@ export const Stations = [
       town: 'Ourense',
       province: 'Ourense',
       country: 'España',
-      lat: 42.350389,
-      lon: -7.872777,
     },
   },
   {
@@ -10665,8 +8670,6 @@ export const Stations = [
       town: 'Cenlle',
       province: 'Ourense',
       country: 'España',
-      lat: 42.338376,
-      lon: -8.011721,
     },
   },
   {
@@ -10676,8 +8679,6 @@ export const Stations = [
       town: 'Ribadavia',
       province: 'Ourense',
       country: 'España',
-      lat: 42.2931,
-      lon: -8.139261,
     },
   },
   {
@@ -10687,8 +8688,6 @@ export const Stations = [
       town: 'Crecente',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.219917,
-      lon: -8.184788,
     },
   },
   {
@@ -10698,8 +8697,6 @@ export const Stations = [
       town: 'Crecente',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.154882,
-      lon: -8.201036,
     },
   },
   {
@@ -10709,8 +8706,6 @@ export const Stations = [
       town: 'Crecente',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.136705,
-      lon: -8.234889,
     },
   },
   {
@@ -10720,8 +8715,6 @@ export const Stations = [
       town: 'Arbo',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.107058,
-      lon: -8.300247,
     },
   },
   {
@@ -10731,8 +8724,6 @@ export const Stations = [
       town: 'Arbo',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.092092,
-      lon: -8.355998,
     },
   },
   {
@@ -10742,8 +8733,6 @@ export const Stations = [
       town: 'Neves (AS)',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.075462,
-      lon: -8.420074,
     },
   },
   {
@@ -10753,8 +8742,6 @@ export const Stations = [
       town: 'Salvaterra De Miño',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.08164,
-      lon: -8.495141,
     },
   },
   {
@@ -10764,8 +8751,6 @@ export const Stations = [
       town: 'Tui',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.055813,
-      lon: -8.566343,
     },
   },
   {
@@ -10775,8 +8760,6 @@ export const Stations = [
       town: 'Tui',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.065663,
-      lon: -8.62253,
     },
   },
   {
@@ -10786,19 +8769,15 @@ export const Stations = [
       town: 'Porriño (O)',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.16419,
-      lon: -8.62202,
     },
   },
   {
-    name: 'Louredo-Valos',
+    name: 'Louredo - Valos',
     code: '22202',
     location: {
       town: 'Mos',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.234388,
-      lon: -8.596834,
     },
   },
   {
@@ -10808,8 +8787,6 @@ export const Stations = [
       town: 'Redondela',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.286005,
-      lon: -8.619402,
     },
   },
   {
@@ -10819,8 +8796,6 @@ export const Stations = [
       town: 'Redondela',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.264064,
-      lon: -8.675258,
     },
   },
   {
@@ -10830,8 +8805,6 @@ export const Stations = [
       town: 'Vigo',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.234189,
-      lon: -8.713728,
     },
   },
   {
@@ -10841,8 +8814,6 @@ export const Stations = [
       town: 'Vigo',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.2392656,
-      lon: -8.7146089,
     },
   },
   {
@@ -10852,8 +8823,6 @@ export const Stations = [
       town: 'Tui',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.056534,
-      lon: -8.642884,
     },
   },
   {
@@ -10863,19 +8832,15 @@ export const Stations = [
       town: 'Tui',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.024734,
-      lon: -8.639745,
     },
   },
   {
-    name: 'Tui-Frontera (APD)',
+    name: 'Tui - Frontera (APD)',
     code: '22403',
     location: {
       town: 'Tui',
       province: 'Pontevedra',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -10885,8 +8850,6 @@ export const Stations = [
       town: 'Redondela',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.286866,
-      lon: -8.607118,
     },
   },
   {
@@ -10896,8 +8859,6 @@ export const Stations = [
       town: 'Redondela',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.310258,
-      lon: -8.616541,
     },
   },
   {
@@ -10907,8 +8868,6 @@ export const Stations = [
       town: 'Soutomaior',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.340549,
-      lon: -8.611178,
     },
   },
   {
@@ -10918,8 +8877,6 @@ export const Stations = [
       town: 'Vilaboa',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.379381,
-      lon: -8.632728,
     },
   },
   {
@@ -10929,8 +8886,6 @@ export const Stations = [
       town: 'Pontevedra',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.421969,
-      lon: -8.635546,
     },
   },
   {
@@ -10940,19 +8895,15 @@ export const Stations = [
       town: 'Barro',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.517801,
-      lon: -8.654609,
     },
   },
   {
-    name: 'Portas (APT-CGD)',
+    name: 'Portas (APT - CGD)',
     code: '23006',
     location: {
       town: 'Portas',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.587462,
-      lon: -8.657991,
     },
   },
   {
@@ -10962,8 +8913,6 @@ export const Stations = [
       town: 'Vilagarcía De Arousa',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.587767,
-      lon: -8.738231,
     },
   },
   {
@@ -10973,8 +8922,6 @@ export const Stations = [
       town: 'Vilagarcía De Arousa',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.602189,
-      lon: -8.762523,
     },
   },
   {
@@ -10984,8 +8931,6 @@ export const Stations = [
       town: 'Catoira',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.672166,
-      lon: -8.725291,
     },
   },
   {
@@ -10995,8 +8940,6 @@ export const Stations = [
       town: 'Pontecesures',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.722985,
-      lon: -8.65213,
     },
   },
   {
@@ -11004,10 +8947,8 @@ export const Stations = [
     code: '23011',
     location: {
       town: 'Padrón',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 42.738967,
-      lon: -8.652614,
     },
   },
   {
@@ -11015,10 +8956,8 @@ export const Stations = [
     code: '23012',
     location: {
       town: 'Padrón',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 42.784722,
-      lon: -8.647099,
     },
   },
   {
@@ -11026,10 +8965,8 @@ export const Stations = [
     code: '23013',
     location: {
       town: 'Teo',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 42.825298,
-      lon: -8.61584,
     },
   },
   {
@@ -11037,10 +8974,8 @@ export const Stations = [
     code: '23014',
     location: {
       town: 'Ames',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 42.859882,
-      lon: -8.587277,
     },
   },
   {
@@ -11050,8 +8985,6 @@ export const Stations = [
       town: 'Vilagarcía De Arousa',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.608279,
-      lon: -8.767392,
     },
   },
   {
@@ -11061,140 +8994,74 @@ export const Stations = [
       town: 'Pontevedra',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.4387499,
-      lon: -8.6304812,
     },
   },
   {
-    name: 'Padrón-Barbanza',
+    name: 'Padrón - Barbanza',
     code: '23021',
     location: {
       town: 'Padrón',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 42.738967,
-      lon: -8.652614,
-    },
-  },
-  {
-    name: 'Poyo',
-    code: '2400B',
-    location: {
-      town: 'Poio',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Poyo',
     code: '24001',
+    otherCodes: ['2400B'],
     location: {
       town: 'Poio',
       province: 'Pontevedra',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Sangenjo',
-    code: '2402B',
-    location: {
-      town: 'Sanxenxo',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Sangenjo',
     code: '24021',
+    otherCodes: ['2402B'],
     location: {
       town: 'Sanxenxo',
       province: 'Pontevedra',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Portonovo',
-    code: '2404B',
-    location: {
-      town: 'Sanxenxo',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Portonovo',
     code: '24041',
+    otherCodes: ['2404B'],
     location: {
       town: 'Sanxenxo',
       province: 'Pontevedra',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'El Grove',
-    code: '2406B',
-    location: {
-      town: 'Grove (O)',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'El Grove',
     code: '24061',
+    otherCodes: ['2406B'],
     location: {
       town: 'Grove (O)',
       province: 'Pontevedra',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'La Toja',
-    code: '2408B',
-    location: {
-      town: 'Grove (O)',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'La Toja',
     code: '24081',
+    otherCodes: ['2408B'],
     location: {
       town: 'Grove (O)',
       province: 'Pontevedra',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Monfragüe-Plasencia',
+    name: 'Monfragüe - Plasencia',
     code: '30000',
     location: {
       town: 'Malpartida De Plasencia',
       province: 'Cáceres',
       country: 'España',
-      lat: 39.937464,
-      lon: -6.10091,
     },
   },
   {
@@ -11204,8 +9071,6 @@ export const Stations = [
       town: 'Plasencia',
       province: 'Cáceres',
       country: 'España',
-      lat: 40.022282,
-      lon: -6.099397,
     },
   },
   {
@@ -11215,8 +9080,6 @@ export const Stations = [
       town: 'Oliva De Plasencia',
       province: 'Cáceres',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11226,19 +9089,15 @@ export const Stations = [
       town: 'Villar De Plasencia',
       province: 'Cáceres',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Casas Del Monte (APD-CGD)',
+    name: 'Casas Del Monte (APD - CGD)',
     code: '30005',
     location: {
       town: 'Casas Del Monte',
       province: 'Cáceres',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11248,8 +9107,6 @@ export const Stations = [
       town: 'Aldeanueva Del Camino',
       province: 'Cáceres',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11259,8 +9116,6 @@ export const Stations = [
       town: 'Hervás',
       province: 'Cáceres',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11270,8 +9125,6 @@ export const Stations = [
       town: 'Baños De Montemayor',
       province: 'Cáceres',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11281,8 +9134,6 @@ export const Stations = [
       town: 'Puerto De Béjar',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11292,8 +9143,6 @@ export const Stations = [
       town: 'Cantagallo',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11303,8 +9152,6 @@ export const Stations = [
       town: 'Béjar',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11314,8 +9161,6 @@ export const Stations = [
       town: 'Navalmoral De Béjar',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11325,8 +9170,6 @@ export const Stations = [
       town: 'Sanchotello',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11336,8 +9179,6 @@ export const Stations = [
       town: 'Ledrada',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11347,8 +9188,6 @@ export const Stations = [
       town: 'Fuentes De Béjar',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11358,8 +9197,6 @@ export const Stations = [
       town: 'Guijuelo',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11369,8 +9206,6 @@ export const Stations = [
       town: 'Pizarral',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11380,8 +9215,6 @@ export const Stations = [
       town: 'Maya (LA)',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11391,8 +9224,6 @@ export const Stations = [
       town: 'Sieteiglesias De Tormes',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11402,8 +9233,6 @@ export const Stations = [
       town: 'Alba De Tormes',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11413,8 +9242,6 @@ export const Stations = [
       town: 'Arapiles',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11424,52 +9251,42 @@ export const Stations = [
       town: 'Salamanca',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.972235,
-      lon: -5.64899,
     },
   },
   {
-    name: 'Valdunciel (APT-CGD)',
+    name: 'Valdunciel (APT - CGD)',
     code: '30101',
     location: {
       town: 'Valdunciel',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Huelmos-Cardenosa (APD)',
+    name: 'Huelmos - Cardenosa (APD)',
     code: '30102',
     location: {
       town: 'Valdunciel',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Cubo Del Vino (APT-CGD)',
+    name: 'Cubo Del Vino (APT - CGD)',
     code: '30104',
     location: {
       town: 'Cubo De Tierra Del Vino (EL)',
       province: 'Zamora',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Corrales Del Vino (APT-CGD)',
+    name: 'Corrales Del Vino (APT - CGD)',
     code: '30105',
     location: {
       town: 'Corrales Del Vino',
       province: 'Zamora',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11479,8 +9296,6 @@ export const Stations = [
       town: 'Casaseca De Campeán',
       province: 'Zamora',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11490,8 +9305,6 @@ export const Stations = [
       town: 'Morales Del Vino',
       province: 'Zamora',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11501,8 +9314,6 @@ export const Stations = [
       town: 'Salamanca',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.966763,
-      lon: -5.656366,
     },
   },
   {
@@ -11512,8 +9323,6 @@ export const Stations = [
       town: 'Zamora',
       province: 'Zamora',
       country: 'España',
-      lat: 41.515892,
-      lon: -5.739675,
     },
   },
   {
@@ -11523,8 +9332,6 @@ export const Stations = [
       town: 'Cubillos',
       province: 'Zamora',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11534,30 +9341,24 @@ export const Stations = [
       town: 'Moreruela De Los Infanzones',
       province: 'Zamora',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Piedrahita (APT-CGD)',
+    name: 'Piedrahita (APT - CGD)',
     code: '30203',
     location: {
       town: 'Piedrahita De Castro',
       province: 'Zamora',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Manganeses (APT-CGD)',
+    name: 'Manganeses (APT - CGD)',
     code: '30204',
     location: {
       town: 'Manganeses De La Lampreana',
       province: 'Zamora',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11567,8 +9368,6 @@ export const Stations = [
       town: 'Granja De Moreruela',
       province: 'Zamora',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11578,8 +9377,6 @@ export const Stations = [
       town: 'Santovenia',
       province: 'Zamora',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11589,8 +9386,6 @@ export const Stations = [
       town: 'Barcial Del Barco',
       province: 'Zamora',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11600,8 +9395,6 @@ export const Stations = [
       town: 'Benavente',
       province: 'Zamora',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11611,19 +9404,15 @@ export const Stations = [
       town: 'Villabrázaro',
       province: 'Zamora',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Pobladura (APD-CGD)',
+    name: 'Pobladura (APD - CGD)',
     code: '30212',
     location: {
       town: 'Pobladura Del Valle',
       province: 'Zamora',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11633,19 +9422,15 @@ export const Stations = [
       town: 'Pozuelo Del Páramo',
       province: 'León',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Valcabado (APT-CGD)',
+    name: 'Valcabado (APT - CGD)',
     code: '30214',
     location: {
       town: 'Valcabado',
       province: 'León',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11655,8 +9440,6 @@ export const Stations = [
       town: 'Cebrones Del Río',
       province: 'León',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11666,8 +9449,6 @@ export const Stations = [
       town: 'Bañeza (LA)',
       province: 'León',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11677,8 +9458,6 @@ export const Stations = [
       town: 'Santa María De La Isla',
       province: 'León',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11688,19 +9467,15 @@ export const Stations = [
       town: 'Riego De La Vega',
       province: 'León',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Valderrey (APT-CGD)',
+    name: 'Valderrey (APT - CGD)',
     code: '30219',
     location: {
       town: 'Valderrey',
       province: 'León',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11710,8 +9485,6 @@ export const Stations = [
       town: 'Villaverde De Medina',
       province: 'Valladolid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11721,8 +9494,6 @@ export const Stations = [
       town: 'Nava Del Rey',
       province: 'Valladolid',
       country: 'España',
-      lat: 41.334716,
-      lon: -5.076818,
     },
   },
   {
@@ -11732,8 +9503,6 @@ export const Stations = [
       town: 'Pollos',
       province: 'Valladolid',
       country: 'España',
-      lat: 41.421218,
-      lon: -5.123598,
     },
   },
   {
@@ -11743,8 +9512,6 @@ export const Stations = [
       town: 'Castronuño',
       province: 'Valladolid',
       country: 'España',
-      lat: 41.402518,
-      lon: -5.242598,
     },
   },
   {
@@ -11754,8 +9521,6 @@ export const Stations = [
       town: 'San Román De Hornija',
       province: 'Valladolid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11765,8 +9530,6 @@ export const Stations = [
       town: 'Toro',
       province: 'Zamora',
       country: 'España',
-      lat: 41.512201,
-      lon: -5.384953,
     },
   },
   {
@@ -11776,8 +9539,6 @@ export const Stations = [
       town: 'Toro',
       province: 'Zamora',
       country: 'España',
-      lat: 41.507819,
-      lon: -5.503598,
     },
   },
   {
@@ -11787,8 +9548,6 @@ export const Stations = [
       town: 'Fresno De La Ribera',
       province: 'Zamora',
       country: 'España',
-      lat: 41.533719,
-      lon: -5.575382,
     },
   },
   {
@@ -11798,8 +9557,6 @@ export const Stations = [
       town: 'Coreses',
       province: 'Zamora',
       country: 'España',
-      lat: 41.534619,
-      lon: -5.614998,
     },
   },
   {
@@ -11809,8 +9566,6 @@ export const Stations = [
       town: 'Hiniesta (LA)',
       province: 'Zamora',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11820,19 +9575,15 @@ export const Stations = [
       town: 'Andavías',
       province: 'Zamora',
       country: 'España',
-      lat: 41.607117,
-      lon: -5.823681,
     },
   },
   {
-    name: 'Manzanal Del Barco-Sta.Eufem(APD)',
+    name: 'Manzanal Del Barco - Sta.Eufem(APD)',
     code: '31103',
     location: {
       town: 'Manzanal Del Barco',
       province: 'Zamora',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -11842,19 +9593,15 @@ export const Stations = [
       town: 'Carbajales De Alba',
       province: 'Zamora',
       country: 'España',
-      lat: 41.681542,
-      lon: -5.971906,
     },
   },
   {
-    name: 'Losacio-San Martin (APD)',
+    name: 'Losacio - San Martin (APD)',
     code: '31105',
     location: {
       town: 'Losacio',
       province: 'Zamora',
       country: 'España',
-      lat: 41.713319,
-      lon: -6.018298,
     },
   },
   {
@@ -11864,8 +9611,6 @@ export const Stations = [
       town: 'Ferreruela De Huerva',
       province: 'Zamora',
       country: 'España',
-      lat: 41.764106,
-      lon: -6.0739,
     },
   },
   {
@@ -11875,8 +9620,6 @@ export const Stations = [
       town: 'Riofrío De Aliste',
       province: 'Zamora',
       country: 'España',
-      lat: 41.80942,
-      lon: -6.141851,
     },
   },
   {
@@ -11886,8 +9629,6 @@ export const Stations = [
       town: 'Riofrío De Aliste',
       province: 'Zamora',
       country: 'España',
-      lat: 41.848497,
-      lon: -6.20513,
     },
   },
   {
@@ -11897,19 +9638,15 @@ export const Stations = [
       town: 'San Vicente De La Cabeza',
       province: 'Zamora',
       country: 'España',
-      lat: 41.854595,
-      lon: -6.24635,
     },
   },
   {
-    name: 'La Torre De Aliste-Poblad. (APD)',
+    name: 'La Torre De Aliste - Poblad. (APD)',
     code: '31110',
     location: {
       town: 'Mahide',
       province: 'Zamora',
       country: 'España',
-      lat: 41.87642,
-      lon: -6.307898,
     },
   },
   {
@@ -11919,19 +9656,15 @@ export const Stations = [
       town: 'Mahide',
       province: 'Zamora',
       country: 'España',
-      lat: 41.90872,
-      lon: -6.379698,
     },
   },
   {
-    name: 'Linarejos-Pedroso',
+    name: 'Linarejos - Pedroso',
     code: '31112',
     location: {
       town: 'Manzanal De Arriba',
       province: 'Zamora',
       country: 'España',
-      lat: 41.946963,
-      lon: -6.484541,
     },
   },
   {
@@ -11941,8 +9674,6 @@ export const Stations = [
       town: 'Puebla De Sanabria',
       province: 'Zamora',
       country: 'España',
-      lat: 42.027808,
-      lon: -6.6144,
     },
   },
   {
@@ -11952,8 +9683,6 @@ export const Stations = [
       town: 'Puebla De Sanabria',
       province: 'Zamora',
       country: 'España',
-      lat: 42.045763,
-      lon: -6.626848,
     },
   },
   {
@@ -11963,8 +9692,6 @@ export const Stations = [
       town: 'Pedralba De La Pradería',
       province: 'Zamora',
       country: 'España',
-      lat: 42.027133,
-      lon: -6.696671,
     },
   },
   {
@@ -11974,8 +9701,6 @@ export const Stations = [
       town: 'Requejo',
       province: 'Zamora',
       country: 'España',
-      lat: 42.02142,
-      lon: -6.744898,
     },
   },
   {
@@ -11985,8 +9710,6 @@ export const Stations = [
       town: 'Lubián',
       province: 'Zamora',
       country: 'España',
-      lat: 42.038042,
-      lon: -6.894221,
     },
   },
   {
@@ -11996,8 +9719,6 @@ export const Stations = [
       town: 'Mezquita (A)',
       province: 'Ourense',
       country: 'España',
-      lat: 42.044181,
-      lon: -7.019624,
     },
   },
   {
@@ -12007,30 +9728,24 @@ export const Stations = [
       town: 'Gudiña (A)',
       province: 'Ourense',
       country: 'España',
-      lat: 42.0606439,
-      lon: -7.132532,
     },
   },
   {
-    name: 'Vilariño De Conso.-A Capela',
+    name: 'Vilariño De Conso. - A Capela',
     code: '31206',
     location: {
       town: 'Vilariño De Conso',
       province: 'Ourense',
       country: 'España',
-      lat: 42.070043,
-      lon: -7.234218,
     },
   },
   {
-    name: 'Castrelo Do Val-Verín-Campobecerros',
+    name: 'Castrelo Do Val - Verín - Campobecerros',
     code: '31207',
     location: {
       town: 'Castrelo Do Val',
       province: 'Ourense',
       country: 'España',
-      lat: 42.062588,
-      lon: -7.33332,
     },
   },
   {
@@ -12040,8 +9755,6 @@ export const Stations = [
       town: 'Laza',
       province: 'Ourense',
       country: 'España',
-      lat: 42.08798,
-      lon: -7.403862,
     },
   },
   {
@@ -12051,8 +9764,6 @@ export const Stations = [
       town: 'Vilar De Barrio',
       province: 'Ourense',
       country: 'España',
-      lat: 42.125586,
-      lon: -7.511292,
     },
   },
   {
@@ -12062,8 +9773,6 @@ export const Stations = [
       town: 'Vilar De Barrio',
       province: 'Ourense',
       country: 'España',
-      lat: 42.163348,
-      lon: -7.598626,
     },
   },
   {
@@ -12073,8 +9782,6 @@ export const Stations = [
       town: 'Baños De Molgas',
       province: 'Ourense',
       country: 'España',
-      lat: 42.237629,
-      lon: -7.68306,
     },
   },
   {
@@ -12084,19 +9791,15 @@ export const Stations = [
       town: 'Baños De Molgas',
       province: 'Ourense',
       country: 'España',
-      lat: 42.225896,
-      lon: -7.719185,
     },
   },
   {
-    name: 'Paderne-Cantoña',
+    name: 'Paderne - Cantoña',
     code: '31213',
     location: {
       town: 'Paderne De Allariz',
       province: 'Ourense',
       country: 'España',
-      lat: 42.255177,
-      lon: -7.753982,
     },
   },
   {
@@ -12106,19 +9809,15 @@ export const Stations = [
       town: 'Taboadela',
       province: 'Ourense',
       country: 'España',
-      lat: 42.265396,
-      lon: -7.831787,
     },
   },
   {
-    name: 'Ourense-San Francisco',
+    name: 'Ourense - San Francisco',
     code: '31215',
     location: {
       town: 'Ourense',
       province: 'Ourense',
       country: 'España',
-      lat: 42.33267,
-      lon: -7.860884,
     },
   },
   {
@@ -12128,8 +9827,6 @@ export const Stations = [
       town: 'Ourense',
       province: 'Ourense',
       country: 'España',
-      lat: 42.350076,
-      lon: -7.979031,
     },
   },
   {
@@ -12139,8 +9836,6 @@ export const Stations = [
       town: 'Maside',
       province: 'Ourense',
       country: 'España',
-      lat: 42.41452,
-      lon: -8.025022,
     },
   },
   {
@@ -12150,8 +9845,6 @@ export const Stations = [
       town: 'Maside',
       province: 'Ourense',
       country: 'España',
-      lat: 42.411401,
-      lon: -8.028967,
     },
   },
   {
@@ -12161,8 +9854,6 @@ export const Stations = [
       town: 'Carballiño (O)',
       province: 'Ourense',
       country: 'España',
-      lat: 42.43134,
-      lon: -8.068874,
     },
   },
   {
@@ -12172,8 +9863,6 @@ export const Stations = [
       town: 'Carballiño (O)',
       province: 'Ourense',
       country: 'España',
-      lat: 42.429353,
-      lon: -8.104712,
     },
   },
   {
@@ -12183,8 +9872,6 @@ export const Stations = [
       town: 'Irixo (O)',
       province: 'Ourense',
       country: 'España',
-      lat: 42.519719,
-      lon: -8.105174,
     },
   },
   {
@@ -12194,8 +9881,6 @@ export const Stations = [
       town: 'Lalín',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.579122,
-      lon: -8.115199,
     },
   },
   {
@@ -12205,8 +9890,6 @@ export const Stations = [
       town: 'Lalín',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.63253,
-      lon: -8.142715,
     },
   },
   {
@@ -12216,8 +9899,6 @@ export const Stations = [
       town: 'Silleda',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.684245,
-      lon: -8.206831,
     },
   },
   {
@@ -12227,8 +9908,6 @@ export const Stations = [
       town: 'Silleda',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.686965,
-      lon: -8.207662,
     },
   },
   {
@@ -12238,8 +9917,6 @@ export const Stations = [
       town: 'Silleda',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.746098,
-      lon: -8.304389,
     },
   },
   {
@@ -12247,21 +9924,17 @@ export const Stations = [
     code: '31312',
     location: {
       town: 'Vedra',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 42.776712,
-      lon: -8.428161,
     },
   },
   {
-    name: 'Susana (APD-CGD)',
+    name: 'Susana (APD - CGD)',
     code: '31313',
     location: {
       town: 'Santiago De Compostela',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 42.829622,
-      lon: -8.484799,
     },
   },
   {
@@ -12269,10 +9942,8 @@ export const Stations = [
     code: '31400',
     location: {
       town: 'Santiago De Compostela',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 42.870842,
-      lon: -8.544697,
     },
   },
   {
@@ -12280,21 +9951,17 @@ export const Stations = [
     code: '31401',
     location: {
       town: 'Santiago De Compostela',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 42.956122,
-      lon: -8.510898,
     },
   },
   {
-    name: 'Oroso-Villacid (APD)',
+    name: 'Oroso - Villacid (APD)',
     code: '31402',
     location: {
       town: 'Oroso',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 42.999633,
-      lon: -8.452942,
     },
   },
   {
@@ -12302,43 +9969,35 @@ export const Stations = [
     code: '31403',
     location: {
       town: 'Oroso',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Ordenes-Pontraga',
+    name: 'Ordenes - Pontraga',
     code: '31404',
     location: {
       town: 'Ordes',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.053322,
-      lon: -8.446999,
     },
   },
   {
-    name: 'Gorgullos-Tordoya (APD)',
+    name: 'Gorgullos - Tordoya (APD)',
     code: '31405',
     location: {
       town: 'Tordoia',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Queijas-Londono (APT)',
+    name: 'Queijas - Londono (APT)',
     code: '31406',
     location: {
       town: 'Ordes',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.102522,
-      lon: -8.474998,
     },
   },
   {
@@ -12346,10 +10005,8 @@ export const Stations = [
     code: '31407',
     location: {
       town: 'Cerceda',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.161222,
-      lon: -8.470995,
     },
   },
   {
@@ -12357,10 +10014,8 @@ export const Stations = [
     code: '31408',
     location: {
       town: 'Cerceda',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.186302,
-      lon: -8.46485,
     },
   },
   {
@@ -12368,10 +10023,8 @@ export const Stations = [
     code: '31409',
     location: {
       town: 'Cerceda',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.2151209,
-      lon: -8.449514,
     },
   },
   {
@@ -12379,10 +10032,8 @@ export const Stations = [
     code: '31410',
     location: {
       town: 'Culleredo',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.283561,
-      lon: -8.427707,
     },
   },
   {
@@ -12390,10 +10041,8 @@ export const Stations = [
     code: '31411',
     location: {
       town: 'Arteixo',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.297374,
-      lon: -8.444404,
     },
   },
   {
@@ -12401,10 +10050,8 @@ export const Stations = [
     code: '31412',
     location: {
       town: 'Coruña (A)',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.3496932,
-      lon: -8.4155629,
     },
   },
   {
@@ -12412,10 +10059,8 @@ export const Stations = [
     code: '31415',
     location: {
       town: 'Ordes',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.037544,
-      lon: -8.448447,
     },
   },
   {
@@ -12423,10 +10068,8 @@ export const Stations = [
     code: '31416',
     location: {
       town: 'Cerceda',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.2078791,
-      lon: -8.4467723,
     },
   },
   {
@@ -12436,8 +10079,6 @@ export const Stations = [
       town: 'Campillo (EL)',
       province: 'Valladolid',
       country: 'España',
-      lat: 41.259509,
-      lon: -5.017791,
     },
   },
   {
@@ -12447,8 +10088,6 @@ export const Stations = [
       town: 'Carpio',
       province: 'Valladolid',
       country: 'España',
-      lat: 41.215464,
-      lon: -5.114466,
     },
   },
   {
@@ -12458,8 +10097,6 @@ export const Stations = [
       town: 'Fresno El Viejo',
       province: 'Valladolid',
       country: 'España',
-      lat: 41.191351,
-      lon: -5.138061,
     },
   },
   {
@@ -12469,8 +10106,6 @@ export const Stations = [
       town: 'Cantalapiedra',
       province: 'Salamanca',
       country: 'España',
-      lat: 41.133585,
-      lon: -5.182961,
     },
   },
   {
@@ -12480,8 +10115,6 @@ export const Stations = [
       town: 'Cantalpino',
       province: 'Salamanca',
       country: 'España',
-      lat: 41.118114,
-      lon: -5.301328,
     },
   },
   {
@@ -12491,8 +10124,6 @@ export const Stations = [
       town: 'Pedroso De La Armuña (EL)',
       province: 'Salamanca',
       country: 'España',
-      lat: 41.079901,
-      lon: -5.406019,
     },
   },
   {
@@ -12502,8 +10133,6 @@ export const Stations = [
       town: 'Pitiegua',
       province: 'Salamanca',
       country: 'España',
-      lat: 41.063741,
-      lon: -5.474174,
     },
   },
   {
@@ -12513,8 +10142,6 @@ export const Stations = [
       town: 'Gomecello',
       province: 'Salamanca',
       country: 'España',
-      lat: 41.041859,
-      lon: -5.541551,
     },
   },
   {
@@ -12524,19 +10151,15 @@ export const Stations = [
       town: 'Moriscos',
       province: 'Salamanca',
       country: 'España',
-      lat: 41.011633,
-      lon: -5.584713,
     },
   },
   {
-    name: 'Tejares-Chamberi',
+    name: 'Tejares - Chamberi',
     code: '33001',
     location: {
       town: 'Salamanca',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.953868,
-      lon: -5.680066,
     },
   },
   {
@@ -12546,8 +10169,6 @@ export const Stations = [
       town: 'Calzada De Don Diego',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.910446,
-      lon: -5.878624,
     },
   },
   {
@@ -12557,8 +10178,6 @@ export const Stations = [
       town: 'Robliza De Cojos',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.881011,
-      lon: -5.981917,
     },
   },
   {
@@ -12568,8 +10187,6 @@ export const Stations = [
       town: 'Aldehuela De La Bóveda',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -12579,8 +10196,6 @@ export const Stations = [
       town: 'Aldehuela De La Bóveda',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.851464,
-      lon: -6.053002,
     },
   },
   {
@@ -12590,19 +10205,15 @@ export const Stations = [
       town: 'Garcirrey',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.834452,
-      lon: -6.146695,
     },
   },
   {
-    name: 'Fuente De San Esteban-Boadilla',
+    name: 'Fuente De San Esteban - Boadilla',
     code: '33008',
     location: {
       town: 'Fuente De San Esteban (LA)',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.79321,
-      lon: -6.248345,
     },
   },
   {
@@ -12612,8 +10223,6 @@ export const Stations = [
       town: 'Martín De Yeltes',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.778233,
-      lon: -6.292623,
     },
   },
   {
@@ -12623,19 +10232,15 @@ export const Stations = [
       town: 'Sancti-Spíritus',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.756327,
-      lon: -6.362589,
     },
   },
   {
-    name: 'Sancti-Spiritus',
+    name: 'Sancti - Spiritus',
     code: '33011',
     location: {
       town: 'Sancti-Spíritus',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.705071,
-      lon: -6.413354,
     },
   },
   {
@@ -12645,8 +10250,6 @@ export const Stations = [
       town: 'Herguijuela De Ciudad Rodrigo',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.648314,
-      lon: -6.450289,
     },
   },
   {
@@ -12656,8 +10259,6 @@ export const Stations = [
       town: 'Herguijuela De Ciudad Rodrigo',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.608732,
-      lon: -6.53031,
     },
   },
   {
@@ -12667,8 +10268,6 @@ export const Stations = [
       town: 'Carpio De Azaba',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.596088,
-      lon: -6.612047,
     },
   },
   {
@@ -12678,8 +10277,6 @@ export const Stations = [
       town: 'Espeja',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.560956,
-      lon: -6.716767,
     },
   },
   {
@@ -12689,8 +10286,6 @@ export const Stations = [
       town: 'Fuentes De Oñoro',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.598462,
-      lon: -6.824454,
     },
   },
   {
@@ -12700,8 +10295,6 @@ export const Stations = [
       town: 'Boada',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -12711,8 +10304,6 @@ export const Stations = [
       town: 'Villares De Yeltes',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -12722,8 +10313,6 @@ export const Stations = [
       town: 'Villavieja De Yeltes',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -12733,8 +10322,6 @@ export const Stations = [
       town: 'Bogajo',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -12744,19 +10331,15 @@ export const Stations = [
       town: 'Olmedo De Camaces',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Lumbrales (APT-CGD)',
+    name: 'Lumbrales (APT - CGD)',
     code: '33023',
     location: {
       town: 'Lumbrales',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -12766,8 +10349,6 @@ export const Stations = [
       town: 'Hinojosa De Duero',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -12777,8 +10358,6 @@ export const Stations = [
       town: 'Fregeneda (LA)',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -12788,8 +10367,6 @@ export const Stations = [
       town: 'Fregeneda (LA)',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -12799,8 +10376,6 @@ export const Stations = [
       town: 'Figueira De Castelo Rodrigo',
       province: 'Melilla',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -12810,8 +10385,6 @@ export const Stations = [
       town: 'Cardeñosa',
       province: 'Ávila',
       country: 'España',
-      lat: 40.73912,
-      lon: -4.75075,
     },
   },
   {
@@ -12821,8 +10394,6 @@ export const Stations = [
       town: 'Monsalupe',
       province: 'Ávila',
       country: 'España',
-      lat: 40.752821,
-      lon: -4.792818,
     },
   },
   {
@@ -12832,8 +10403,6 @@ export const Stations = [
       town: 'Aveinte',
       province: 'Ávila',
       country: 'España',
-      lat: 40.783096,
-      lon: -4.836413,
     },
   },
   {
@@ -12843,8 +10412,6 @@ export const Stations = [
       town: 'San Pedro Del Arroyo',
       province: 'Ávila',
       country: 'España',
-      lat: 40.803841,
-      lon: -4.871407,
     },
   },
   {
@@ -12854,8 +10421,6 @@ export const Stations = [
       town: 'Crespos',
       province: 'Ávila',
       country: 'España',
-      lat: 40.87011,
-      lon: -4.96803,
     },
   },
   {
@@ -12865,8 +10430,6 @@ export const Stations = [
       town: 'Narros Del Castillo',
       province: 'Ávila',
       country: 'España',
-      lat: 40.866641,
-      lon: -5.052869,
     },
   },
   {
@@ -12876,8 +10439,6 @@ export const Stations = [
       town: 'Peñaranda De Bracamonte',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.898138,
-      lon: -5.206361,
     },
   },
   {
@@ -12887,8 +10448,6 @@ export const Stations = [
       town: 'Villar De Gallimazo',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.951981,
-      lon: -5.296183,
     },
   },
   {
@@ -12898,8 +10457,6 @@ export const Stations = [
       town: 'Babilafuente',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.972426,
-      lon: -5.430593,
     },
   },
   {
@@ -12909,8 +10466,6 @@ export const Stations = [
       town: 'San Morales',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.984243,
-      lon: -5.492955,
     },
   },
   {
@@ -12920,8 +10475,6 @@ export const Stations = [
       town: 'Aldealengua',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.97989,
-      lon: -5.552951,
     },
   },
   {
@@ -12931,8 +10484,6 @@ export const Stations = [
       town: 'Leganés',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3286349,
-      lon: -3.7711552,
     },
   },
   {
@@ -12942,8 +10493,6 @@ export const Stations = [
       town: 'Fuenlabrada',
       province: 'Madrid',
       country: 'España',
-      lat: 40.2833747,
-      lon: -3.7994538,
     },
   },
   {
@@ -12953,8 +10502,6 @@ export const Stations = [
       town: 'Humanes De Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.2557023,
-      lon: -3.847063,
     },
   },
   {
@@ -12964,8 +10511,6 @@ export const Stations = [
       town: 'Griñón',
       province: 'Madrid',
       country: 'España',
-      lat: 40.214503,
-      lon: -3.85598,
     },
   },
   {
@@ -12975,8 +10520,6 @@ export const Stations = [
       town: 'Illescas',
       province: 'Toledo',
       country: 'España',
-      lat: 40.12088,
-      lon: -3.842262,
     },
   },
   {
@@ -12986,8 +10529,6 @@ export const Stations = [
       town: 'Yuncos',
       province: 'Toledo',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -12997,8 +10538,6 @@ export const Stations = [
       town: 'Fuenlabrada',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13008,8 +10547,6 @@ export const Stations = [
       town: 'Leganés',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3406009,
-      lon: -3.7482111,
     },
   },
   {
@@ -13019,8 +10556,6 @@ export const Stations = [
       town: 'Fuenlabrada',
       province: 'Madrid',
       country: 'España',
-      lat: 40.29675,
-      lon: -3.792645,
     },
   },
   {
@@ -13030,8 +10565,6 @@ export const Stations = [
       town: 'Leganés',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3125398,
-      lon: -3.7835135,
     },
   },
   {
@@ -13041,8 +10574,6 @@ export const Stations = [
       town: 'Humanes De Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.2556903,
-      lon: -3.8286016,
     },
   },
   {
@@ -13052,8 +10583,6 @@ export const Stations = [
       town: 'Villaluenga De La Sagra',
       province: 'Toledo',
       country: 'España',
-      lat: 40.03108,
-      lon: -3.902453,
     },
   },
   {
@@ -13063,8 +10592,6 @@ export const Stations = [
       town: 'Cabañas De La Sagra',
       province: 'Toledo',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13074,8 +10601,6 @@ export const Stations = [
       town: 'Bargas',
       province: 'Toledo',
       country: 'España',
-      lat: 39.971773,
-      lon: -4.021931,
     },
   },
   {
@@ -13085,8 +10610,6 @@ export const Stations = [
       town: 'Villamiel De Toledo',
       province: 'Toledo',
       country: 'España',
-      lat: 39.964173,
-      lon: -4.127931,
     },
   },
   {
@@ -13096,8 +10619,6 @@ export const Stations = [
       town: 'Rielves',
       province: 'Toledo',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13107,8 +10628,6 @@ export const Stations = [
       town: 'Torrijos',
       province: 'Toledo',
       country: 'España',
-      lat: 39.979003,
-      lon: -4.283037,
     },
   },
   {
@@ -13118,8 +10637,6 @@ export const Stations = [
       town: 'Santa Olalla',
       province: 'Toledo',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13129,19 +10646,15 @@ export const Stations = [
       town: 'Erustes',
       province: 'Toledo',
       country: 'España',
-      lat: 39.94954,
-      lon: -4.487507,
     },
   },
   {
-    name: 'Illan De Vacas-Cebolla (APD)',
+    name: 'Illan De Vacas - Cebolla (APD)',
     code: '35108',
     location: {
       town: 'Illán De Vacas',
       province: 'Toledo',
       country: 'España',
-      lat: 39.967599,
-      lon: -4.562847,
     },
   },
   {
@@ -13151,8 +10664,6 @@ export const Stations = [
       town: 'Montearagón',
       province: 'Toledo',
       country: 'España',
-      lat: 39.960996,
-      lon: -4.647093,
     },
   },
   {
@@ -13162,8 +10673,6 @@ export const Stations = [
       town: 'Talavera De La Reina',
       province: 'Toledo',
       country: 'España',
-      lat: 39.970674,
-      lon: -4.826512,
     },
   },
   {
@@ -13173,8 +10682,6 @@ export const Stations = [
       town: 'Calera Y Chozas',
       province: 'Toledo',
       country: 'España',
-      lat: 39.891999,
-      lon: -4.962527,
     },
   },
   {
@@ -13184,8 +10691,6 @@ export const Stations = [
       town: 'Alcañizo',
       province: 'Toledo',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13195,8 +10700,6 @@ export const Stations = [
       town: 'Oropesa',
       province: 'Toledo',
       country: 'España',
-      lat: 39.921746,
-      lon: -5.186137,
     },
   },
   {
@@ -13206,8 +10709,6 @@ export const Stations = [
       town: 'Calzada De Oropesa',
       province: 'Toledo',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13217,8 +10718,6 @@ export const Stations = [
       town: 'Navalmoral De La Mata',
       province: 'Cáceres',
       country: 'España',
-      lat: 39.894913,
-      lon: -5.545607,
     },
   },
   {
@@ -13228,8 +10727,6 @@ export const Stations = [
       town: 'Casatejada',
       province: 'Cáceres',
       country: 'España',
-      lat: 39.891909,
-      lon: -5.677732,
     },
   },
   {
@@ -13239,8 +10736,6 @@ export const Stations = [
       town: 'Toril',
       province: 'Cáceres',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13250,8 +10745,6 @@ export const Stations = [
       town: 'Malpartida De Plasencia',
       province: 'Cáceres',
       country: 'España',
-      lat: 39.912777,
-      lon: -5.897532,
     },
   },
   {
@@ -13261,8 +10754,6 @@ export const Stations = [
       town: 'Mirabel',
       province: 'Cáceres',
       country: 'España',
-      lat: 39.866229,
-      lon: -6.228969,
     },
   },
   {
@@ -13272,8 +10763,6 @@ export const Stations = [
       town: 'Casas De Millán',
       province: 'Cáceres',
       country: 'España',
-      lat: 39.811866,
-      lon: -6.326045,
     },
   },
   {
@@ -13283,8 +10772,6 @@ export const Stations = [
       town: 'Cañaveral',
       province: 'Cáceres',
       country: 'España',
-      lat: 39.789124,
-      lon: -6.375031,
     },
   },
   {
@@ -13294,8 +10781,6 @@ export const Stations = [
       town: 'Garrovillas De Alconétar',
       province: 'Cáceres',
       country: 'España',
-      lat: 39.723478,
-      lon: -6.447133,
     },
   },
   {
@@ -13305,8 +10790,6 @@ export const Stations = [
       town: 'Casar De Cáceres',
       province: 'Cáceres',
       country: 'España',
-      lat: 39.620678,
-      lon: -6.480333,
     },
   },
   {
@@ -13316,8 +10799,6 @@ export const Stations = [
       town: 'Casar De Cáceres',
       province: 'Cáceres',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13327,30 +10808,24 @@ export const Stations = [
       town: 'Cáceres',
       province: 'Cáceres',
       country: 'España',
-      lat: 39.461131,
-      lon: -6.385679,
     },
   },
   {
-    name: 'Aldea Moret (APD-CGD)',
+    name: 'Aldea Moret (APD - CGD)',
     code: '35401',
     location: {
       town: 'Cáceres',
       province: 'Cáceres',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Arroyo-Malpartida',
+    name: 'Arroyo - Malpartida',
     code: '35402',
     location: {
       town: 'Cáceres',
       province: 'Cáceres',
       country: 'España',
-      lat: 39.468078,
-      lon: -6.533634,
     },
   },
   {
@@ -13360,19 +10835,15 @@ export const Stations = [
       town: 'Aliseda',
       province: 'Cáceres',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Herreruela (APD-CGD)',
+    name: 'Herreruela (APD - CGD)',
     code: '35404',
     location: {
       town: 'Aliseda',
       province: 'Cáceres',
       country: 'España',
-      lat: 39.431917,
-      lon: -6.723945,
     },
   },
   {
@@ -13382,8 +10853,6 @@ export const Stations = [
       town: 'San Vicente De Alcántara',
       province: 'Badajoz',
       country: 'España',
-      lat: 39.381561,
-      lon: -7.117075,
     },
   },
   {
@@ -13393,8 +10862,6 @@ export const Stations = [
       town: 'Valencia De Alcántara',
       province: 'Cáceres',
       country: 'España',
-      lat: 39.426928,
-      lon: -7.230688,
     },
   },
   {
@@ -13404,8 +10871,6 @@ export const Stations = [
       town: 'Valencia De Alcántara',
       province: 'Cáceres',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13415,8 +10880,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3856315,
-      lon: -3.7607442,
     },
   },
   {
@@ -13426,8 +10889,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3836517,
-      lon: -3.7685682,
     },
   },
   {
@@ -13437,8 +10898,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3811836,
-      lon: -3.7802739,
     },
   },
   {
@@ -13448,8 +10907,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3777633,
-      lon: -3.7914876,
     },
   },
   {
@@ -13459,8 +10916,6 @@ export const Stations = [
       town: 'Alcorcón',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3565467,
-      lon: -3.8155715,
     },
   },
   {
@@ -13470,8 +10925,6 @@ export const Stations = [
       town: 'Alcorcón',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3502521,
-      lon: -3.832094,
     },
   },
   {
@@ -13481,8 +10934,6 @@ export const Stations = [
       town: 'Móstoles',
       province: 'Madrid',
       country: 'España',
-      lat: 40.328489,
-      lon: -3.8638111,
     },
   },
   {
@@ -13492,8 +10943,6 @@ export const Stations = [
       town: 'Villaviciosa De Odón',
       province: 'Madrid',
       country: 'España',
-      lat: 40.330971,
-      lon: -3.882441,
     },
   },
   {
@@ -13503,8 +10952,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3991775,
-      lon: -3.7442226,
     },
   },
   {
@@ -13514,8 +10961,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.4051246,
-      lon: -3.7026286,
     },
   },
   {
@@ -13525,8 +10970,6 @@ export const Stations = [
       town: 'Alcorcón',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3420458,
-      lon: -3.8424115,
     },
   },
   {
@@ -13534,21 +10977,18 @@ export const Stations = [
     code: '3567F',
     location: {
       town: 'Madrid',
-      province: undefined,
+      province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Mendez Alvaro',
     code: '35701',
+    otherCodes: ['3586F'],
     location: {
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.395727,
-      lon: -3.677807,
     },
   },
   {
@@ -13558,19 +10998,16 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3790374,
-      lon: -3.6988513,
     },
   },
   {
     name: 'Orcasitas',
     code: '35703',
+    otherCodes: ['3588F'],
     location: {
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3666963,
-      lon: -3.7046002,
     },
   },
   {
@@ -13580,19 +11017,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3504002,
-      lon: -3.7051062,
-    },
-  },
-  {
-    name: 'Mendez Alvaro',
-    code: '3586F',
-    location: {
-      town: 'Madrid',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13600,21 +11024,8 @@ export const Stations = [
     code: '3587F',
     location: {
       town: 'Madrid',
-      province: undefined,
+      province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Orcasitas',
-    code: '3588F',
-    location: {
-      town: 'Madrid',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13624,8 +11035,6 @@ export const Stations = [
       town: 'Aldea Del Cano',
       province: 'Cáceres',
       country: 'España',
-      lat: 39.292778,
-      lon: -6.379234,
     },
   },
   {
@@ -13635,8 +11044,6 @@ export const Stations = [
       town: 'Carmonita',
       province: 'Badajoz',
       country: 'España',
-      lat: 39.151481,
-      lon: -6.359079,
     },
   },
   {
@@ -13646,8 +11053,6 @@ export const Stations = [
       town: 'Mérida',
       province: 'Badajoz',
       country: 'España',
-      lat: 39.022674,
-      lon: -6.377877,
     },
   },
   {
@@ -13657,8 +11062,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3415512,
-      lon: -3.7115464,
     },
   },
   {
@@ -13668,8 +11071,6 @@ export const Stations = [
       town: 'Getafe',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3098934,
-      lon: -3.7340237,
     },
   },
   {
@@ -13679,8 +11080,6 @@ export const Stations = [
       town: 'Parla',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13690,8 +11089,6 @@ export const Stations = [
       town: 'Torrejón De Velasco',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13701,8 +11098,6 @@ export const Stations = [
       town: 'Yeles',
       province: 'Toledo',
       country: 'España',
-      lat: 40.117059,
-      lon: -3.78516,
     },
   },
   {
@@ -13712,8 +11107,6 @@ export const Stations = [
       town: 'Pantoja',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13723,8 +11116,6 @@ export const Stations = [
       town: 'Villaseca De La Sagra',
       province: 'Toledo',
       country: 'España',
-      lat: 39.951249,
-      lon: -3.845498,
     },
   },
   {
@@ -13734,8 +11125,6 @@ export const Stations = [
       town: 'Parla',
       province: 'Madrid',
       country: 'España',
-      lat: 40.240382,
-      lon: -3.743183,
     },
   },
   {
@@ -13745,19 +11134,15 @@ export const Stations = [
       town: 'Getafe',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3229367,
-      lon: -3.7272747,
     },
   },
   {
-    name: 'Getafe S-3',
+    name: 'Getafe S - 3',
     code: '37011',
     location: {
       town: 'Getafe',
       province: 'Madrid',
       country: 'España',
-      lat: 40.2882215,
-      lon: -3.7375106,
     },
   },
   {
@@ -13767,8 +11152,6 @@ export const Stations = [
       town: 'Parla',
       province: 'Madrid',
       country: 'España',
-      lat: 40.2411556,
-      lon: -3.7692726,
     },
   },
   {
@@ -13778,8 +11161,6 @@ export const Stations = [
       town: 'Aranjuez',
       province: 'Madrid',
       country: 'España',
-      lat: 39.916955,
-      lon: -3.85771,
     },
   },
   {
@@ -13789,8 +11170,6 @@ export const Stations = [
       town: 'Almonacid De Toledo',
       province: 'Toledo',
       country: 'España',
-      lat: 39.808786,
-      lon: -3.849151,
     },
   },
   {
@@ -13800,8 +11179,6 @@ export const Stations = [
       town: 'Almonacid De Toledo',
       province: 'Toledo',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13811,8 +11188,6 @@ export const Stations = [
       town: 'Mascaraque',
       province: 'Toledo',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13822,8 +11197,6 @@ export const Stations = [
       town: 'Mora',
       province: 'Toledo',
       country: 'España',
-      lat: 39.675596,
-      lon: -3.800177,
     },
   },
   {
@@ -13833,8 +11206,6 @@ export const Stations = [
       town: 'Manzaneque',
       province: 'Toledo',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13844,8 +11215,6 @@ export const Stations = [
       town: 'Yébenes ',
       province: 'Toledo',
       country: 'España',
-      lat: 39.553763,
-      lon: -3.820358,
     },
   },
   {
@@ -13855,8 +11224,6 @@ export const Stations = [
       town: 'Yébenes ',
       province: 'Toledo',
       country: 'España',
-      lat: 39.4454489,
-      lon: -3.811524,
     },
   },
   {
@@ -13866,8 +11233,6 @@ export const Stations = [
       town: 'Yébenes ',
       province: 'Toledo',
       country: 'España',
-      lat: 39.322303,
-      lon: -3.882673,
     },
   },
   {
@@ -13877,8 +11242,6 @@ export const Stations = [
       town: 'Fuente El Fresno',
       province: 'Ciudad Real',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13888,8 +11251,6 @@ export const Stations = [
       town: 'Malagón',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 39.164901,
-      lon: -3.859769,
     },
   },
   {
@@ -13899,8 +11260,6 @@ export const Stations = [
       town: 'Fernán Caballero',
       province: 'Ciudad Real',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13910,8 +11269,6 @@ export const Stations = [
       town: 'Ciudad Real',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 38.9853,
-      lon: -3.913633,
     },
   },
   {
@@ -13921,8 +11278,6 @@ export const Stations = [
       town: 'Poblete',
       province: 'Ciudad Real',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13932,8 +11287,6 @@ export const Stations = [
       town: 'Cañada De Calatrava',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 38.866672,
-      lon: -3.998035,
     },
   },
   {
@@ -13943,8 +11296,6 @@ export const Stations = [
       town: 'Caracuel De Calatrava',
       province: 'Ciudad Real',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -13954,19 +11305,16 @@ export const Stations = [
       town: 'Argamasilla De Calatrava',
       province: 'Ciudad Real',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Puertollano',
-    code: '37300',
+    code: '37700',
+    otherCodes: ['37300'],
     location: {
       town: 'Puertollano',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 38.69128,
-      lon: -4.111655,
     },
   },
   {
@@ -13976,19 +11324,15 @@ export const Stations = [
       town: 'Almodóvar Del Campo',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 38.659532,
-      lon: -4.211677,
     },
   },
   {
-    name: 'Brazatortas-Veredas',
+    name: 'Brazatortas - Veredas',
     code: '37302',
     location: {
       town: 'Brazatortas',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 38.668758,
-      lon: -4.316468,
     },
   },
   {
@@ -13998,30 +11342,24 @@ export const Stations = [
       town: 'Almodóvar Del Campo',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 38.704673,
-      lon: -4.472136,
     },
   },
   {
-    name: 'El Madronal-Fontanosa (APD)',
+    name: 'El Madronal - Fontanosa (APD)',
     code: '37304',
     location: {
       town: 'Almadenejos',
       province: 'Ciudad Real',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Almadenejos-Almadén',
+    name: 'Almadenejos - Almadén',
     code: '37305',
     location: {
       town: 'Almadenejos',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 38.740578,
-      lon: -4.730387,
     },
   },
   {
@@ -14031,8 +11369,6 @@ export const Stations = [
       town: 'Almadén',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 38.710844,
-      lon: -4.801504,
     },
   },
   {
@@ -14042,19 +11378,15 @@ export const Stations = [
       town: 'Chillón',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 38.720304,
-      lon: -4.851314,
     },
   },
   {
-    name: 'Guadalmez-Los Pedroches',
+    name: 'Guadalmez - Los Pedroches',
     code: '37308',
     location: {
       town: 'Guadalmez',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 38.69921,
-      lon: -4.929771,
     },
   },
   {
@@ -14064,8 +11396,6 @@ export const Stations = [
       town: 'Guadalmez',
       province: 'Córdoba',
       country: 'España',
-      lat: 38.714875,
-      lon: -5.074636,
     },
   },
   {
@@ -14075,8 +11405,6 @@ export const Stations = [
       town: 'Cabeza Del Buey',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.72389,
-      lon: -5.227067,
     },
   },
   {
@@ -14086,8 +11414,6 @@ export const Stations = [
       town: 'Cabeza Del Buey',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.696631,
-      lon: -5.290496,
     },
   },
   {
@@ -14097,8 +11423,6 @@ export const Stations = [
       town: 'Castuera',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.735021,
-      lon: -5.541637,
     },
   },
   {
@@ -14108,8 +11432,6 @@ export const Stations = [
       town: 'Quintana De La Serena',
       province: 'Badajoz',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -14119,8 +11441,6 @@ export const Stations = [
       town: 'Campanario',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.853395,
-      lon: -5.641415,
     },
   },
   {
@@ -14130,8 +11450,6 @@ export const Stations = [
       town: 'Magacela',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.910631,
-      lon: -5.717336,
     },
   },
   {
@@ -14141,8 +11459,6 @@ export const Stations = [
       town: 'Villanueva De La Serena',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.96886,
-      lon: -5.7965,
     },
   },
   {
@@ -14152,8 +11468,6 @@ export const Stations = [
       town: 'Don Benito',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.96695,
-      lon: -5.862923,
     },
   },
   {
@@ -14163,8 +11477,6 @@ export const Stations = [
       town: 'Medellín',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.934277,
-      lon: -5.972036,
     },
   },
   {
@@ -14174,8 +11486,6 @@ export const Stations = [
       town: 'Valdetorres',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.913301,
-      lon: -6.069407,
     },
   },
   {
@@ -14185,8 +11495,6 @@ export const Stations = [
       town: 'Guareña',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.896749,
-      lon: -6.128842,
     },
   },
   {
@@ -14196,8 +11504,6 @@ export const Stations = [
       town: 'Villagonzalo',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.865132,
-      lon: -6.206095,
     },
   },
   {
@@ -14207,8 +11513,6 @@ export const Stations = [
       town: 'Zarza (LA)',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.837775,
-      lon: -6.232229,
     },
   },
   {
@@ -14218,8 +11522,6 @@ export const Stations = [
       town: 'Don Álvaro',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.838467,
-      lon: -6.266745,
     },
   },
   {
@@ -14229,8 +11531,6 @@ export const Stations = [
       town: 'Mérida',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.921503,
-      lon: -6.343794,
     },
   },
   {
@@ -14240,8 +11540,6 @@ export const Stations = [
       town: 'Mérida',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.936414,
-      lon: -6.407929,
     },
   },
   {
@@ -14251,8 +11549,6 @@ export const Stations = [
       town: 'Garrovilla (LA)',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.915763,
-      lon: -6.47408,
     },
   },
   {
@@ -14262,8 +11558,6 @@ export const Stations = [
       town: 'Garrovilla (LA)',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.913757,
-      lon: -6.519185,
     },
   },
   {
@@ -14273,8 +11567,6 @@ export const Stations = [
       town: 'Montijo',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.913539,
-      lon: -6.598577,
     },
   },
   {
@@ -14284,19 +11576,15 @@ export const Stations = [
       town: 'Guadiana Del Caudillo',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.922099,
-      lon: -6.689998,
     },
   },
   {
-    name: 'Talavera La Real (APD-CGD)',
+    name: 'Talavera La Real (APD - CGD)',
     code: '37605',
     location: {
       town: 'Badajoz',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.934509,
-      lon: -6.806471,
     },
   },
   {
@@ -14306,8 +11594,6 @@ export const Stations = [
       town: 'Badajoz',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.890696,
-      lon: -6.981753,
     },
   },
   {
@@ -14317,19 +11603,15 @@ export const Stations = [
       town: 'Montijo',
       province: 'Badajoz',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Montijo-El Molino',
+    name: 'Montijo - El Molino',
     code: '37608',
     location: {
       town: 'Montijo',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.913973,
-      lon: -6.618281,
     },
   },
   {
@@ -14339,8 +11621,6 @@ export const Stations = [
       town: 'Garrovilla (LA)',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.915763,
-      lon: -6.47408,
     },
   },
   {
@@ -14350,8 +11630,6 @@ export const Stations = [
       town: 'Villanueva De Córdoba',
       province: 'Córdoba',
       country: 'España',
-      lat: 38.2554049,
-      lon: -4.570952,
     },
   },
   {
@@ -14361,8 +11639,6 @@ export const Stations = [
       town: 'Calamonte',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.886931,
-      lon: -6.382965,
     },
   },
   {
@@ -14372,8 +11648,6 @@ export const Stations = [
       town: 'Torremejía',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.787736,
-      lon: -6.37024,
     },
   },
   {
@@ -14383,8 +11657,6 @@ export const Stations = [
       town: 'Almendralejo',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.684662,
-      lon: -6.399815,
     },
   },
   {
@@ -14394,8 +11666,6 @@ export const Stations = [
       town: 'Villafranca De Los Barros',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.564402,
-      lon: -6.352048,
     },
   },
   {
@@ -14405,8 +11675,6 @@ export const Stations = [
       town: 'Santos De Maimona ',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.449724,
-      lon: -6.361749,
     },
   },
   {
@@ -14416,8 +11684,6 @@ export const Stations = [
       town: 'Zafra',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.424403,
-      lon: -6.410084,
     },
   },
   {
@@ -14427,8 +11693,6 @@ export const Stations = [
       town: 'Zafra',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.413635,
-      lon: -6.405083,
     },
   },
   {
@@ -14438,19 +11702,15 @@ export const Stations = [
       town: 'Puebla De Sancho Pérez',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.384232,
-      lon: -6.32297,
     },
   },
   {
-    name: 'Usagre-Bienvenida',
+    name: 'Usagre - Bienvenida',
     code: '40103',
     location: {
       town: 'Bienvenida',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.332809,
-      lon: -6.187722,
     },
   },
   {
@@ -14460,8 +11720,6 @@ export const Stations = [
       town: 'Villagarcía De La Torre',
       province: 'Badajoz',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -14471,8 +11729,6 @@ export const Stations = [
       town: 'Llerena',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.237,
-      lon: -6.009017,
     },
   },
   {
@@ -14482,8 +11738,6 @@ export const Stations = [
       town: 'Reina',
       province: 'Badajoz',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -14493,8 +11747,6 @@ export const Stations = [
       town: 'Fuente Del Arco',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.16353,
-      lon: -5.900484,
     },
   },
   {
@@ -14504,8 +11756,6 @@ export const Stations = [
       town: 'Guadalcanal',
       province: 'Sevilla',
       country: 'España',
-      lat: 38.090197,
-      lon: -5.803388,
     },
   },
   {
@@ -14515,8 +11765,6 @@ export const Stations = [
       town: 'Guadalcanal',
       province: 'Sevilla',
       country: 'España',
-      lat: 38.050533,
-      lon: -5.780971,
     },
   },
   {
@@ -14526,8 +11774,6 @@ export const Stations = [
       town: 'Alanís',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.996708,
-      lon: -5.758376,
     },
   },
   {
@@ -14537,8 +11783,6 @@ export const Stations = [
       town: 'Constantina',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.9327717,
-      lon: -5.7044058,
     },
   },
   {
@@ -14548,8 +11792,6 @@ export const Stations = [
       town: 'Pedroso (EL)',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.8624888,
-      lon: -5.7403111,
     },
   },
   {
@@ -14559,30 +11801,24 @@ export const Stations = [
       town: 'Pedroso (EL)',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.8373261,
-      lon: -5.7624477,
     },
   },
   {
-    name: 'Arenillas (APT-CGD)',
+    name: 'Arenillas (APT - CGD)',
     code: '40118',
     location: {
       town: 'Villanueva Del Río Y Minas',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.7009472,
-      lon: -5.7502583,
     },
   },
   {
-    name: 'Villanueva Del Río-Minas',
+    name: 'Villanueva Del Río - Minas',
     code: '40119',
     location: {
       town: 'Villanueva Del Río Y Minas',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.6616071,
-      lon: -5.712155,
     },
   },
   {
@@ -14592,8 +11828,6 @@ export const Stations = [
       town: 'Alcolea Del Río',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.6354388,
-      lon: -5.7308277,
     },
   },
   {
@@ -14603,19 +11837,15 @@ export const Stations = [
       town: 'Tocina',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.6092611,
-      lon: -5.7316916,
     },
   },
   {
-    name: 'Puebla De Sancho Perez (APD-CGD)',
+    name: 'Puebla De Sancho Perez (APD - CGD)',
     code: '42001',
     location: {
       town: 'Puebla De Sancho Pérez',
       province: 'Badajoz',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -14625,8 +11855,6 @@ export const Stations = [
       town: 'Medina De Las Torres',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.342817,
-      lon: -6.409128,
     },
   },
   {
@@ -14636,19 +11864,15 @@ export const Stations = [
       town: 'Valencia Del Ventoso',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.257812,
-      lon: -6.456206,
     },
   },
   {
-    name: 'Los Jarales-Bodonal (APD)',
+    name: 'Los Jarales - Bodonal (APD)',
     code: '42004',
     location: {
       town: 'Bodonal De La Sierra',
       province: 'Badajoz',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -14658,8 +11882,6 @@ export const Stations = [
       town: 'Fregenal De La Sierra',
       province: 'Badajoz',
       country: 'España',
-      lat: 38.167613,
-      lon: -6.637909,
     },
   },
   {
@@ -14669,8 +11891,6 @@ export const Stations = [
       town: 'Cumbres Mayores',
       province: 'Huelva',
       country: 'España',
-      lat: 38.053126,
-      lon: -6.631553,
     },
   },
   {
@@ -14680,30 +11900,24 @@ export const Stations = [
       town: 'Nava (LA)',
       province: 'Huelva',
       country: 'España',
-      lat: 37.977881,
-      lon: -6.769643,
     },
   },
   {
-    name: 'Jabugo-Galaroza',
+    name: 'Jabugo - Galaroza',
     code: '42008',
     location: {
       town: 'Jabugo',
       province: 'Huelva',
       country: 'España',
-      lat: 37.928243,
-      lon: -6.773908,
     },
   },
   {
-    name: 'Almonaster-Cortegana',
+    name: 'Almonaster - Cortegana',
     code: '42009',
     location: {
       town: 'Almonaster La Real',
       province: 'Huelva',
       country: 'España',
-      lat: 37.901174,
-      lon: -6.797372,
     },
   },
   {
@@ -14713,8 +11927,6 @@ export const Stations = [
       town: 'Almonaster La Real',
       province: 'Huelva',
       country: 'España',
-      lat: 37.857401,
-      lon: -6.850839,
     },
   },
   {
@@ -14724,8 +11936,6 @@ export const Stations = [
       town: 'Cortegana',
       province: 'Huelva',
       country: 'España',
-      lat: 37.787111,
-      lon: -6.873729,
     },
   },
   {
@@ -14735,19 +11945,15 @@ export const Stations = [
       town: 'Cerro De Andévalo (EL)',
       province: 'Huelva',
       country: 'España',
-      lat: 37.720339,
-      lon: -6.900554,
     },
   },
   {
-    name: 'El Cerro De Andevalo (APT-CGD)',
+    name: 'El Cerro De Andevalo (APT - CGD)',
     code: '42014',
     location: {
       town: 'Cerro De Andévalo (EL)',
       province: 'Huelva',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -14757,8 +11963,6 @@ export const Stations = [
       town: 'Calañas',
       province: 'Huelva',
       country: 'España',
-      lat: 37.652007,
-      lon: -6.875841,
     },
   },
   {
@@ -14768,8 +11972,6 @@ export const Stations = [
       town: 'Calañas',
       province: 'Huelva',
       country: 'España',
-      lat: 37.586219,
-      lon: -6.919938,
     },
   },
   {
@@ -14779,8 +11981,6 @@ export const Stations = [
       town: 'Calañas',
       province: 'Huelva',
       country: 'España',
-      lat: 37.516509,
-      lon: -6.953428,
     },
   },
   {
@@ -14790,8 +11990,6 @@ export const Stations = [
       town: 'Gibraleón',
       province: 'Huelva',
       country: 'España',
-      lat: 37.461864,
-      lon: -6.947533,
     },
   },
   {
@@ -14801,8 +11999,6 @@ export const Stations = [
       town: 'Gibraleón',
       province: 'Huelva',
       country: 'España',
-      lat: 37.36852,
-      lon: -6.96207,
     },
   },
   {
@@ -14812,8 +12008,6 @@ export const Stations = [
       town: 'Huelva',
       province: 'Huelva',
       country: 'España',
-      lat: 37.329852,
-      lon: -6.949716,
     },
   },
   {
@@ -14823,19 +12017,15 @@ export const Stations = [
       town: 'Gibraleón',
       province: 'Huelva',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Aljaraque (APD-CGD)',
+    name: 'Aljaraque (APD - CGD)',
     code: '42102',
     location: {
       town: 'Aljaraque',
       province: 'Huelva',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -14845,8 +12035,6 @@ export const Stations = [
       town: 'Cartaya',
       province: 'Huelva',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -14856,8 +12044,6 @@ export const Stations = [
       town: 'Lepe',
       province: 'Huelva',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -14867,8 +12053,6 @@ export const Stations = [
       town: 'Isla Cristina',
       province: 'Huelva',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -14878,8 +12062,6 @@ export const Stations = [
       town: 'Isla Cristina',
       province: 'Huelva',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -14889,8 +12071,6 @@ export const Stations = [
       town: 'Ayamonte',
       province: 'Huelva',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -14900,41 +12080,26 @@ export const Stations = [
       town: 'Gibraleón',
       province: 'Huelva',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'San Jeronimo',
-    code: '43000',
+    code: '50800',
+    otherCodes: ['43000'],
     location: {
       town: 'Sevilla',
-      province: 'Madrid',
-      country: 'España',
-      lat: 37.434667,
-      lon: -5.982378,
-    },
-  },
-  {
-    name: 'Camas',
-    code: '43001',
-    location: {
-      town: 'Valencina De La Concepción',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.418738,
-      lon: -6.04211,
     },
   },
   {
     name: 'Camas',
     code: '43002',
+    otherCodes: ['43001'],
     location: {
       town: 'Camas',
-      province: 'Madrid',
+      province: 'Sevilla',
       country: 'España',
-      lat: 37.4017138,
-      lon: -6.0371611,
     },
   },
   {
@@ -14944,19 +12109,15 @@ export const Stations = [
       town: 'Villanueva Del Ariscal',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.4070916,
-      lon: -6.1482194,
     },
   },
   {
-    name: 'Sanlucar La Mayor (APD-CGD)',
+    name: 'Sanlucar La Mayor (APD - CGD)',
     code: '43004',
     location: {
       town: 'Sanlúcar La Mayor',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.3814027,
-      lon: -6.1939333,
     },
   },
   {
@@ -14966,19 +12127,15 @@ export const Stations = [
       town: 'Benacazón',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.3567611,
-      lon: -6.2082805,
     },
   },
   {
-    name: 'Aznalcazar-Pilas (APT-CGD)',
+    name: 'Aznalcazar - Pilas (APT - CGD)',
     code: '43006',
     location: {
       town: 'Aznalcázar',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.309851,
-      lon: -6.251122,
     },
   },
   {
@@ -14988,8 +12145,6 @@ export const Stations = [
       town: 'Huévar Del Aljarafe',
       province: 'Huelva',
       country: 'España',
-      lat: 37.352797,
-      lon: -6.287964,
     },
   },
   {
@@ -14999,8 +12154,6 @@ export const Stations = [
       town: 'Carrión De Los Céspedes',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.368955,
-      lon: -6.335088,
     },
   },
   {
@@ -15010,8 +12163,6 @@ export const Stations = [
       town: 'Escacena Del Campo',
       province: 'Huelva',
       country: 'España',
-      lat: 37.397812,
-      lon: -6.39198,
     },
   },
   {
@@ -15021,8 +12172,6 @@ export const Stations = [
       town: 'Palma Del Condado (LA)',
       province: 'Huelva',
       country: 'España',
-      lat: 37.390665,
-      lon: -6.554444,
     },
   },
   {
@@ -15032,19 +12181,15 @@ export const Stations = [
       town: 'Villarrasa',
       province: 'Huelva',
       country: 'España',
-      lat: 37.386999,
-      lon: -6.598819,
     },
   },
   {
-    name: 'Niebla (APT-CGD)',
+    name: 'Niebla (APT - CGD)',
     code: '43013',
     location: {
       town: 'Niebla',
       province: 'Huelva',
       country: 'España',
-      lat: 37.358511,
-      lon: -6.681267,
     },
   },
   {
@@ -15054,8 +12199,6 @@ export const Stations = [
       town: 'Niebla',
       province: 'Huelva',
       country: 'España',
-      lat: 37.3587619,
-      lon: -6.6812578,
     },
   },
   {
@@ -15065,19 +12208,15 @@ export const Stations = [
       town: 'San Juan Del Puerto',
       province: 'Huelva',
       country: 'España',
-      lat: 37.326851,
-      lon: -6.762788,
     },
   },
   {
-    name: 'San Juan Del Puerto-Moguer',
+    name: 'San Juan Del Puerto - Moguer',
     code: '43018',
     location: {
       town: 'San Juan Del Puerto',
       province: 'Huelva',
       country: 'España',
-      lat: 37.308178,
-      lon: -6.847442,
     },
   },
   {
@@ -15087,8 +12226,6 @@ export const Stations = [
       town: 'Huelva',
       province: 'Huelva',
       country: 'España',
-      lat: 37.2525922,
-      lon: -6.9448154,
     },
   },
   {
@@ -15098,30 +12235,16 @@ export const Stations = [
       town: 'San Juan Del Puerto',
       province: 'Huelva',
       country: 'España',
-      lat: 37.311898,
-      lon: -6.841076,
-    },
-  },
-  {
-    name: 'Huelva - Mercancias (APD)',
-    code: '43023',
-    location: {
-      town: 'Huelva',
-      province: 'Huelva',
-      country: 'España',
-      lat: 37.26613,
-      lon: -6.912701,
     },
   },
   {
     name: 'Huelva - Mercancias (APD)',
     code: '43024',
+    otherCodes: ['43023'],
     location: {
       town: 'Huelva',
       province: 'Huelva',
       country: 'España',
-      lat: 37.260234,
-      lon: -6.917461,
     },
   },
   {
@@ -15131,8 +12254,6 @@ export const Stations = [
       town: 'Valencina De La Concepción',
       province: 'Madrid',
       country: 'España',
-      lat: 37.42963,
-      lon: -6.065401,
     },
   },
   {
@@ -15140,10 +12261,8 @@ export const Stations = [
     code: '43027',
     location: {
       town: 'Salteras',
-      province: undefined,
+      province: 'Sevilla',
       country: 'España',
-      lat: 37.4106611,
-      lon: -6.0988333,
     },
   },
   {
@@ -15153,8 +12272,6 @@ export const Stations = [
       town: 'Alicante/Alacant',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15164,8 +12281,6 @@ export const Stations = [
       town: 'Alicante/Alacant',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15175,8 +12290,6 @@ export const Stations = [
       town: 'Alicante/Alacant',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15186,8 +12299,6 @@ export const Stations = [
       town: 'Alicante/Alacant',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15197,8 +12308,6 @@ export const Stations = [
       town: 'Alicante/Alacant',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15208,8 +12317,6 @@ export const Stations = [
       town: 'Alicante/Alacant',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15219,8 +12326,6 @@ export const Stations = [
       town: 'Alicante/Alacant',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15230,8 +12335,6 @@ export const Stations = [
       town: 'Alicante/Alacant',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15241,8 +12344,6 @@ export const Stations = [
       town: 'Alicante/Alacant',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15252,8 +12353,6 @@ export const Stations = [
       town: 'Campello (EL)',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15263,8 +12362,6 @@ export const Stations = [
       town: 'Campello (EL)',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15274,8 +12371,6 @@ export const Stations = [
       town: 'Campello (EL)',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15285,8 +12380,6 @@ export const Stations = [
       town: 'Campello (EL)',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15296,8 +12389,6 @@ export const Stations = [
       town: 'Campello (EL)',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15307,8 +12398,6 @@ export const Stations = [
       town: 'Campello (EL)',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15318,8 +12407,6 @@ export const Stations = [
       town: 'Campello (EL)',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15329,8 +12416,6 @@ export const Stations = [
       town: 'Campello (EL)',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15340,8 +12425,6 @@ export const Stations = [
       town: 'Campello (EL)',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15351,8 +12434,6 @@ export const Stations = [
       town: 'Villajoyosa/Vila Joiosa (LA)',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15362,8 +12443,6 @@ export const Stations = [
       town: 'Villajoyosa/Vila Joiosa (LA)',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15373,8 +12452,6 @@ export const Stations = [
       town: 'Villajoyosa/Vila Joiosa (LA)',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15384,8 +12461,6 @@ export const Stations = [
       town: 'Villajoyosa/Vila Joiosa (LA)',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15395,8 +12470,6 @@ export const Stations = [
       town: 'Villajoyosa/Vila Joiosa (LA)',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15406,8 +12479,6 @@ export const Stations = [
       town: 'Villajoyosa/Vila Joiosa (LA)',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15417,8 +12488,6 @@ export const Stations = [
       town: 'Villajoyosa/Vila Joiosa (LA)',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15428,8 +12497,6 @@ export const Stations = [
       town: 'Benidorm',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15439,8 +12506,6 @@ export const Stations = [
       town: 'Benidorm',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15450,8 +12515,6 @@ export const Stations = [
       town: 'Benidorm',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15461,8 +12524,6 @@ export const Stations = [
       town: "Alfàs Del Pi (L')",
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15472,8 +12533,6 @@ export const Stations = [
       town: 'Alicante/Alacant',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15483,8 +12542,6 @@ export const Stations = [
       town: 'Altea',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15494,8 +12551,6 @@ export const Stations = [
       town: 'Altea',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15505,8 +12560,6 @@ export const Stations = [
       town: 'Altea',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15516,8 +12569,6 @@ export const Stations = [
       town: 'Altea',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15527,8 +12578,6 @@ export const Stations = [
       town: 'Calp',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15538,8 +12587,6 @@ export const Stations = [
       town: 'Benissa',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15549,8 +12596,6 @@ export const Stations = [
       town: 'Benissa',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15560,8 +12605,6 @@ export const Stations = [
       town: 'Teulada',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15571,8 +12614,6 @@ export const Stations = [
       town: 'Gata De Gorgos',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15582,8 +12623,6 @@ export const Stations = [
       town: 'Dénia',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15593,8 +12632,6 @@ export const Stations = [
       town: 'Dénia',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15604,8 +12641,6 @@ export const Stations = [
       town: 'Dénia',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15615,8 +12650,6 @@ export const Stations = [
       town: 'Dénia',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15626,8 +12659,6 @@ export const Stations = [
       town: 'San Javier',
       province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15637,8 +12668,6 @@ export const Stations = [
       town: 'San Javier',
       province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15648,8 +12677,6 @@ export const Stations = [
       town: 'San Javier',
       province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15659,8 +12686,6 @@ export const Stations = [
       town: 'San Javier',
       province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15670,8 +12695,6 @@ export const Stations = [
       town: 'San Pedro Del Pinatar',
       province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15681,8 +12704,6 @@ export const Stations = [
       town: 'San Pedro Del Pinatar',
       province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15692,8 +12713,6 @@ export const Stations = [
       town: 'Pilar De La Horadada',
       province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15703,8 +12722,6 @@ export const Stations = [
       town: 'Pilar De La Horadada',
       province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15714,8 +12731,6 @@ export const Stations = [
       town: 'Pilar De La Horadada',
       province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15725,8 +12740,6 @@ export const Stations = [
       town: 'Cartagena',
       province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15736,8 +12749,6 @@ export const Stations = [
       town: 'Molina De Segura',
       province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15747,8 +12758,6 @@ export const Stations = [
       town: 'Cartagena',
       province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15758,8 +12767,6 @@ export const Stations = [
       town: 'Cartagena',
       province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15769,8 +12776,6 @@ export const Stations = [
       town: 'Cartagena',
       province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15780,8 +12785,6 @@ export const Stations = [
       town: 'Cartagena',
       province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15791,8 +12794,6 @@ export const Stations = [
       town: 'Peníscola/Peñíscola',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15802,8 +12803,6 @@ export const Stations = [
       town: 'Gandia',
       province: 'Valencia/València',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15813,8 +12812,6 @@ export const Stations = [
       town: 'Valencia',
       province: 'Valencia/València',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15824,8 +12821,6 @@ export const Stations = [
       town: 'Gandia',
       province: 'Valencia/València',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15835,8 +12830,6 @@ export const Stations = [
       town: 'Cullera',
       province: 'Valencia/València',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15846,8 +12839,6 @@ export const Stations = [
       town: 'Cullera',
       province: 'Valencia/València',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15857,8 +12848,6 @@ export const Stations = [
       town: 'Archena',
       province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15868,8 +12857,6 @@ export const Stations = [
       town: 'Benicasim/Benicàssim',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -15879,8 +12866,6 @@ export const Stations = [
       town: 'Alcázar De San Juan',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 39.25557,
-      lon: -3.211234,
     },
   },
   {
@@ -15890,8 +12875,6 @@ export const Stations = [
       town: 'Alcázar De San Juan',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 39.169282,
-      lon: -3.232663,
     },
   },
   {
@@ -15901,8 +12884,6 @@ export const Stations = [
       town: 'Manzanares',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 39.08227,
-      lon: -3.253234,
     },
   },
   {
@@ -15912,19 +12893,15 @@ export const Stations = [
       town: 'Manzanares',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 39.005837,
-      lon: -3.370507,
     },
   },
   {
-    name: 'Consolacion-Villanueva De Fco.',
+    name: 'Consolacion - Villanueva De Fco.',
     code: '50101',
     location: {
       town: 'Valdepeñas',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 38.891071,
-      lon: -3.393735,
     },
   },
   {
@@ -15934,8 +12911,6 @@ export const Stations = [
       town: 'Valdepeñas',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 38.762868,
-      lon: -3.39572,
     },
   },
   {
@@ -15945,8 +12920,6 @@ export const Stations = [
       town: 'Santa Cruz De Mudela',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 38.644428,
-      lon: -3.451493,
     },
   },
   {
@@ -15956,19 +12929,15 @@ export const Stations = [
       town: 'Viso Del Marqués',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 38.575871,
-      lon: -3.493536,
     },
   },
   {
-    name: 'Almuradiel-Viso Del Marqués',
+    name: 'Almuradiel - Viso Del Marqués',
     code: '50202',
     location: {
       town: 'Almuradiel',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 38.514267,
-      lon: -3.501935,
     },
   },
   {
@@ -15978,8 +12947,6 @@ export const Stations = [
       town: 'Almuradiel',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 38.417671,
-      lon: -3.496937,
     },
   },
   {
@@ -15989,8 +12956,6 @@ export const Stations = [
       town: 'Santa Elena',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 38.374956,
-      lon: -3.506504,
     },
   },
   {
@@ -16000,8 +12965,6 @@ export const Stations = [
       town: 'Santa Elena',
       province: 'Jaén',
       country: 'España',
-      lat: 38.33197,
-      lon: -3.500305,
     },
   },
   {
@@ -16011,8 +12974,6 @@ export const Stations = [
       town: 'Vilches',
       province: 'Jaén',
       country: 'España',
-      lat: 38.284952,
-      lon: -3.478359,
     },
   },
   {
@@ -16022,8 +12983,6 @@ export const Stations = [
       town: 'Vilches',
       province: 'Jaén',
       country: 'España',
-      lat: 38.215742,
-      lon: -3.517576,
     },
   },
   {
@@ -16033,8 +12992,6 @@ export const Stations = [
       town: 'Vilches',
       province: 'Jaén',
       country: 'España',
-      lat: 38.180266,
-      lon: -3.543104,
     },
   },
   {
@@ -16044,19 +13001,15 @@ export const Stations = [
       town: 'Linares',
       province: 'Jaén',
       country: 'España',
-      lat: 38.136068,
-      lon: -3.558956,
     },
   },
   {
-    name: 'Linares-Baeza',
+    name: 'Linares - Baeza',
     code: '50300',
     location: {
       town: 'Linares',
       province: 'Jaén',
       country: 'España',
-      lat: 38.068864,
-      lon: -3.589396,
     },
   },
   {
@@ -16066,30 +13019,24 @@ export const Stations = [
       town: 'Linares',
       province: 'Jaén',
       country: 'España',
-      lat: 38.018881,
-      lon: -3.646379,
     },
   },
   {
-    name: 'Jabalquinto (APT-CGD)',
+    name: 'Jabalquinto (APT - CGD)',
     code: '50302',
     location: {
       town: 'Jabalquinto',
       province: 'Jaén',
       country: 'España',
-      lat: 37.997896,
-      lon: -3.721197,
     },
   },
   {
-    name: 'Mengibar-Las Palomeras (APT-CGD)',
+    name: 'Mengibar - Las Palomeras (APT - CGD)',
     code: '50303',
     location: {
       town: 'Jabalquinto',
       province: 'Jaén',
       country: 'España',
-      lat: 37.989722,
-      lon: -3.78801,
     },
   },
   {
@@ -16099,19 +13046,15 @@ export const Stations = [
       town: 'Espelúy',
       province: 'Jaén',
       country: 'España',
-      lat: 38.010247,
-      lon: -3.832726,
     },
   },
   {
-    name: 'Villanueva De La Reina (APT-CGD)',
+    name: 'Villanueva De La Reina (APT - CGD)',
     code: '50402',
     location: {
       town: 'Villanueva De La Reina',
       province: 'Jaén',
       country: 'España',
-      lat: 38.002572,
-      lon: -3.910638,
     },
   },
   {
@@ -16121,8 +13064,6 @@ export const Stations = [
       town: 'Andújar',
       province: 'Jaén',
       country: 'España',
-      lat: 38.028225,
-      lon: -4.066036,
     },
   },
   {
@@ -16132,19 +13073,15 @@ export const Stations = [
       town: 'Arjonilla',
       province: 'Jaén',
       country: 'España',
-      lat: 38.008255,
-      lon: -4.105985,
     },
   },
   {
-    name: 'Marmolejo (APT-CGD)',
+    name: 'Marmolejo (APT - CGD)',
     code: '50405',
     location: {
       town: 'Marmolejo',
       province: 'Jaén',
       country: 'España',
-      lat: 38.024107,
-      lon: -4.164395,
     },
   },
   {
@@ -16154,8 +13091,6 @@ export const Stations = [
       town: 'Marmolejo',
       province: 'Jaén',
       country: 'España',
-      lat: 38.009074,
-      lon: -4.209768,
     },
   },
   {
@@ -16165,8 +13100,6 @@ export const Stations = [
       town: 'Villa Del Río',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.981331,
-      lon: -4.283788,
     },
   },
   {
@@ -16176,8 +13109,6 @@ export const Stations = [
       town: 'Montoro',
       province: 'Córdoba',
       country: 'España',
-      lat: 38.007009,
-      lon: -4.384625,
     },
   },
   {
@@ -16187,8 +13118,6 @@ export const Stations = [
       town: 'Pedro Abad',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.961213,
-      lon: -4.426907,
     },
   },
   {
@@ -16198,19 +13127,15 @@ export const Stations = [
       town: 'Montoro',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.942373,
-      lon: -4.494639,
     },
   },
   {
-    name: 'Villafranca De Cordoba (APT-CGD)',
+    name: 'Villafranca De Cordoba (APT - CGD)',
     code: '50411',
     location: {
       town: 'Villafranca De Córdoba',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.944869,
-      lon: -4.54542,
     },
   },
   {
@@ -16220,8 +13145,6 @@ export const Stations = [
       town: 'Córdoba',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.910548,
-      lon: -4.605347,
     },
   },
   {
@@ -16231,8 +13154,6 @@ export const Stations = [
       town: 'Córdoba',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.922326,
-      lon: -4.694751,
     },
   },
   {
@@ -16242,8 +13163,6 @@ export const Stations = [
       town: 'Córdoba',
       province: 'Córdoba',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -16253,19 +13172,15 @@ export const Stations = [
       town: 'Córdoba',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.91256,
-      lon: -4.72086,
     },
   },
   {
-    name: 'Córdoba',
+    name: 'Córdoba - Julio Anguita',
     code: '50500',
     location: {
       town: 'Córdoba',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.888291,
-      lon: -4.789453,
     },
   },
   {
@@ -16275,8 +13190,6 @@ export const Stations = [
       town: 'Córdoba',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.870271,
-      lon: -4.838942,
     },
   },
   {
@@ -16286,19 +13199,15 @@ export const Stations = [
       town: 'Córdoba',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.847574,
-      lon: -4.915339,
     },
   },
   {
-    name: 'Almodovar Del Rio (APT-CGD)',
+    name: 'Almodovar Del Rio (APT - CGD)',
     code: '50503',
     location: {
       town: 'Almodóvar Del Río',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.806329,
-      lon: -5.019816,
     },
   },
   {
@@ -16308,19 +13217,15 @@ export const Stations = [
       town: 'Posadas',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.803986,
-      lon: -5.106325,
     },
   },
   {
-    name: 'Hornachuelos (APT-CGD)',
+    name: 'Hornachuelos (APT - CGD)',
     code: '50505',
     location: {
       town: 'Hornachuelos',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.76513,
-      lon: -5.223201,
     },
   },
   {
@@ -16330,8 +13235,6 @@ export const Stations = [
       town: 'Palma Del Río',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.718081,
-      lon: -5.29276,
     },
   },
   {
@@ -16341,8 +13244,6 @@ export const Stations = [
       town: 'Peñaflor',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.707502,
-      lon: -5.341609,
     },
   },
   {
@@ -16352,8 +13253,6 @@ export const Stations = [
       town: 'Lora Del Río',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.689675,
-      lon: -5.43304,
     },
   },
   {
@@ -16363,8 +13262,6 @@ export const Stations = [
       town: 'Lora Del Río',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.6613027,
-      lon: -5.5295472,
     },
   },
   {
@@ -16374,8 +13271,6 @@ export const Stations = [
       town: 'Lora Del Río',
       province: 'Sevilla',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -16385,8 +13280,6 @@ export const Stations = [
       town: 'Carmona',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.5813944,
-      lon: -5.6699222,
     },
   },
   {
@@ -16396,8 +13289,6 @@ export const Stations = [
       town: 'Tocina',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.5898444,
-      lon: -5.7261638,
     },
   },
   {
@@ -16407,8 +13298,6 @@ export const Stations = [
       town: 'Cantillana',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.5742444,
-      lon: -5.8031861,
     },
   },
   {
@@ -16418,8 +13307,6 @@ export const Stations = [
       town: 'Brenes',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.5462666,
-      lon: -5.8667722,
     },
   },
   {
@@ -16429,8 +13316,6 @@ export const Stations = [
       town: 'Rinconada (LA)',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.4800777,
-      lon: -5.9401246,
     },
   },
   {
@@ -16440,19 +13325,6 @@ export const Stations = [
       town: 'Rinconada (LA)',
       province: 'Madrid',
       country: 'España',
-      lat: 37.488,
-      lon: -5.9312,
-    },
-  },
-  {
-    name: 'San Jeronimo',
-    code: '50800',
-    location: {
-      town: 'Sevilla',
-      province: 'Sevilla',
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -16462,8 +13334,6 @@ export const Stations = [
       town: 'Sevilla',
       province: 'Sevilla',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -16473,8 +13343,6 @@ export const Stations = [
       town: 'Sevilla',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.3921277,
-      lon: -5.9752694,
     },
   },
   {
@@ -16484,8 +13352,6 @@ export const Stations = [
       town: 'Sevilla',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.403782,
-      lon: -5.9362556,
     },
   },
   {
@@ -16495,8 +13361,6 @@ export const Stations = [
       town: 'Sevilla',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.3708446,
-      lon: -5.9394732,
     },
   },
   {
@@ -16506,8 +13370,6 @@ export const Stations = [
       town: 'Sevilla',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.4078985,
-      lon: -6.0098499,
     },
   },
   {
@@ -16517,8 +13379,6 @@ export const Stations = [
       town: 'Sevilla',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.4172225,
-      lon: -6.0074834,
     },
   },
   {
@@ -16528,8 +13388,6 @@ export const Stations = [
       town: 'Sevilla',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.3775194,
-      lon: -5.9796,
     },
   },
   {
@@ -16539,19 +13397,15 @@ export const Stations = [
       town: 'Sevilla',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.3299833,
-      lon: -5.9637916,
     },
   },
   {
-    name: 'Los Merinales (APD-CGD)',
+    name: 'Los Merinales (APD - CGD)',
     code: '51102',
     location: {
       town: 'Dos Hermanas',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.308903,
-      lon: -5.969415,
     },
   },
   {
@@ -16561,8 +13415,6 @@ export const Stations = [
       town: 'Dos Hermanas',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.2872,
-      lon: -5.9235192,
     },
   },
   {
@@ -16572,8 +13424,6 @@ export const Stations = [
       town: 'Alcalá De Guadaíra',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.233076,
-      lon: -5.846742,
     },
   },
   {
@@ -16583,8 +13433,6 @@ export const Stations = [
       town: 'Sevilla',
       province: 'Sevilla',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -16594,8 +13442,6 @@ export const Stations = [
       town: 'Sevilla',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.3628,
-      lon: -5.9760111,
     },
   },
   {
@@ -16605,8 +13451,6 @@ export const Stations = [
       town: 'Sevilla',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.3214916,
-      lon: -5.9641861,
     },
   },
   {
@@ -16616,8 +13460,6 @@ export const Stations = [
       town: 'Dos Hermanas',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.2781444,
-      lon: -5.9104055,
     },
   },
   {
@@ -16625,10 +13467,8 @@ export const Stations = [
     code: '51113',
     location: {
       town: 'Sevilla',
-      province: undefined,
+      province: 'Sevilla',
       country: 'España',
-      lat: 37.33273,
-      lon: -5.964503,
     },
   },
   {
@@ -16638,8 +13478,6 @@ export const Stations = [
       town: 'Utrera',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.1845444,
-      lon: -5.7907966,
     },
   },
   {
@@ -16649,8 +13487,6 @@ export const Stations = [
       town: 'Utrera',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.092576,
-      lon: -5.859442,
     },
   },
   {
@@ -16660,8 +13496,6 @@ export const Stations = [
       town: 'Cabezas De San Juan (LAS)',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.0193453,
-      lon: -5.9465554,
     },
   },
   {
@@ -16671,8 +13505,6 @@ export const Stations = [
       town: 'Lebrija',
       province: 'Sevilla',
       country: 'España',
-      lat: 36.9299735,
-      lon: -6.0864165,
     },
   },
   {
@@ -16682,8 +13514,6 @@ export const Stations = [
       town: 'Cuervo De Sevilla (EL)',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.836476,
-      lon: -6.068743,
     },
   },
   {
@@ -16693,8 +13523,6 @@ export const Stations = [
       town: 'Jerez De La Frontera',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.751147,
-      lon: -6.066664,
     },
   },
   {
@@ -16704,8 +13532,6 @@ export const Stations = [
       town: 'Jerez De La Frontera',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.680029,
-      lon: -6.1264716,
     },
   },
   {
@@ -16715,8 +13541,6 @@ export const Stations = [
       town: 'Jerez De La Frontera',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.637562,
-      lon: -6.132032,
     },
   },
   {
@@ -16726,8 +13550,6 @@ export const Stations = [
       town: 'Puerto De Santa María (EL)',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.6037962,
-      lon: -6.2171641,
     },
   },
   {
@@ -16737,8 +13559,6 @@ export const Stations = [
       town: 'Puerto Real',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.5309277,
-      lon: -6.1861944,
     },
   },
   {
@@ -16748,8 +13568,6 @@ export const Stations = [
       town: 'San Fernando',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.4757694,
-      lon: -6.1940833,
     },
   },
   {
@@ -16759,8 +13577,6 @@ export const Stations = [
       town: 'Cádiz',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.5134777,
-      lon: -6.2770083,
     },
   },
   {
@@ -16770,41 +13586,33 @@ export const Stations = [
       town: 'Cádiz',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.5290083,
-      lon: -6.2882055,
     },
   },
   {
-    name: 'San Fernando-Bahía Sur',
+    name: 'San Fernando - Bahía Sur',
     code: '51406',
     location: {
       town: 'San Fernando',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.4680361,
-      lon: -6.2067638,
     },
   },
   {
-    name: 'Cadiz-Cortadura',
+    name: 'Cadiz - Cortadura',
     code: '51407',
     location: {
       town: 'Cádiz',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.4943222,
-      lon: -6.2682444,
     },
   },
   {
-    name: 'Cádiz-Estadio',
+    name: 'Cádiz - Estadio',
     code: '51409',
     location: {
       town: 'Cádiz',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.5028972,
-      lon: -6.2720638,
     },
   },
   {
@@ -16814,8 +13622,6 @@ export const Stations = [
       town: 'Cádiz',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.5215444,
-      lon: -6.28075,
     },
   },
   {
@@ -16825,8 +13631,6 @@ export const Stations = [
       town: 'Puerto Real',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.5446083,
-      lon: -6.199,
     },
   },
   {
@@ -16836,8 +13640,6 @@ export const Stations = [
       town: 'Puerto Real',
       province: 'Madrid',
       country: 'España',
-      lat: 36.5300472,
-      lon: -6.2050222,
     },
   },
   {
@@ -16847,184 +13649,150 @@ export const Stations = [
       town: 'Puerto De Santa María (EL)',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.5848055,
-      lon: -6.2160444,
     },
   },
   {
     name: 'Río Arillo',
     code: '51419',
     location: {
-      town: undefined,
+      town: 'San Fernando',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.457463,
-      lon: -6.224761,
     },
   },
   {
     name: 'Pelagatos',
     code: '51450',
     location: {
-      town: undefined,
+      town: 'San Fernando',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.408705,
-      lon: -6.134312,
     },
   },
   {
     name: 'La Hoya',
     code: '51451',
     location: {
-      town: undefined,
+      town: 'San Fernando',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.411233,
-      lon: -6.139086,
     },
   },
   {
     name: 'Reyes Católicos',
     code: '51452',
     location: {
-      town: undefined,
+      town: 'San Fernando',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.41438,
-      lon: -6.14318,
     },
   },
   {
     name: 'Nuestra Señora De Los Remedios',
     code: '51453',
     location: {
-      town: undefined,
+      town: 'San Fernando',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.420382,
-      lon: -6.144749,
     },
   },
   {
     name: 'Alameda Solano',
     code: '51454',
     location: {
-      town: undefined,
+      town: 'San Fernando',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.425359,
-      lon: -6.144507,
     },
   },
   {
     name: 'Marquesado',
     code: '51455',
     location: {
-      town: undefined,
+      town: 'San Fernando',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.428621,
-      lon: -6.143365,
     },
   },
   {
     name: 'Pinar De Los Franceses',
     code: '51456',
     location: {
-      town: undefined,
+      town: 'Chiclana De La Frontera',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.440507,
-      lon: -6.144541,
     },
   },
   {
     name: 'Tres Caminos',
     code: '51457',
     location: {
-      town: undefined,
+      town: 'Chiclana De La Frontera',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.466538,
-      lon: -6.175692,
     },
   },
   {
     name: 'Venta De Vargas',
     code: '51458',
     location: {
-      town: undefined,
+      town: 'Chiclana De La Frontera',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.467726,
-      lon: -6.191055,
     },
   },
   {
     name: 'Plaza De La Iglesia',
     code: '51459',
     location: {
-      town: undefined,
+      town: 'Chiclana De La Frontera',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.46615,
-      lon: -6.195786,
     },
   },
   {
     name: 'Plaza Del Rey',
     code: '51460',
     location: {
-      town: undefined,
+      town: 'Chiclana De La Frontera',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.463931,
-      lon: -6.198344,
     },
   },
   {
     name: 'Compañía De María',
     code: '51461',
     location: {
-      town: undefined,
+      town: 'Chiclana De La Frontera',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.460383,
-      lon: -6.201073,
     },
   },
   {
     name: 'Plaza Del Carmen',
     code: '51462',
     location: {
-      town: undefined,
+      town: 'Chiclana De La Frontera',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.458082,
-      lon: -6.203625,
     },
   },
   {
     name: 'Santo Entierro',
     code: '51463',
     location: {
-      town: undefined,
+      town: 'Chiclana De La Frontera',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.455906,
-      lon: -6.209612,
     },
   },
   {
     name: 'La Ardila',
     code: '51464',
     location: {
-      town: undefined,
+      town: 'San Fernando',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.45623,
-      lon: -6.216026,
     },
   },
   {
@@ -17034,19 +13802,15 @@ export const Stations = [
       town: 'Rota',
       province: 'Cádiz',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Pena Del Aguila (APD-CGD)',
+    name: 'Pena Del Aguila (APD - CGD)',
     code: '53005',
     location: {
       town: 'Rota',
       province: 'Cádiz',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -17056,8 +13820,6 @@ export const Stations = [
       town: 'Rota',
       province: 'Cádiz',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -17067,8 +13829,6 @@ export const Stations = [
       town: 'Chipiona',
       province: 'Cádiz',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -17078,8 +13838,6 @@ export const Stations = [
       town: 'Sanlúcar De Barrameda',
       province: 'Cádiz',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -17089,52 +13847,26 @@ export const Stations = [
       town: 'Sanlúcar De Barrameda',
       province: 'Cádiz',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Vista Hermosa',
-    code: '5301B',
-    location: {
-      town: 'Puerto De Santa María (EL)',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Vista Hermosa',
     code: '53011',
+    otherCodes: ['5301B'],
     location: {
       town: 'Puerto De Santa María (EL)',
       province: 'Cádiz',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Fuente Bravia',
-    code: '5302B',
-    location: {
-      town: 'Puerto De Santa María (EL)',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Fuente Bravia',
     code: '53021',
+    otherCodes: ['5302B'],
     location: {
       town: 'Puerto De Santa María (EL)',
       province: 'Cádiz',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -17144,8 +13876,6 @@ export const Stations = [
       town: 'Córdoba',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.833786,
-      lon: -4.834616,
     },
   },
   {
@@ -17155,8 +13885,6 @@ export const Stations = [
       town: 'Córdoba',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.798073,
-      lon: -4.759239,
     },
   },
   {
@@ -17166,8 +13894,6 @@ export const Stations = [
       town: 'Córdoba',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.779573,
-      lon: -4.687639,
     },
   },
   {
@@ -17177,8 +13903,6 @@ export const Stations = [
       town: 'Fernán-Núñez',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.70117,
-      lon: -4.666754,
     },
   },
   {
@@ -17188,8 +13912,6 @@ export const Stations = [
       town: 'Montemayor',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.638372,
-      lon: -4.656211,
     },
   },
   {
@@ -17199,8 +13921,6 @@ export const Stations = [
       town: 'Montilla',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.578851,
-      lon: -4.634112,
     },
   },
   {
@@ -17210,8 +13930,6 @@ export const Stations = [
       town: 'Aguilar De La Frontera',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.524558,
-      lon: -4.660724,
     },
   },
   {
@@ -17221,8 +13939,6 @@ export const Stations = [
       town: 'Puente Genil',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.470336,
-      lon: -4.689947,
     },
   },
   {
@@ -17232,8 +13948,6 @@ export const Stations = [
       town: 'Puente Genil',
       province: 'Córdoba',
       country: 'España',
-      lat: 37.395971,
-      lon: -4.752982,
     },
   },
   {
@@ -17243,8 +13957,6 @@ export const Stations = [
       town: 'Casariche',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.294559,
-      lon: -4.764386,
     },
   },
   {
@@ -17254,8 +13966,6 @@ export const Stations = [
       town: 'Roda De Andalucía (LA)',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.209294,
-      lon: -4.774976,
     },
   },
   {
@@ -17265,8 +13975,6 @@ export const Stations = [
       town: 'Fuente De Piedra',
       province: 'Málaga',
       country: 'España',
-      lat: 37.135307,
-      lon: -4.737967,
     },
   },
   {
@@ -17276,8 +13984,6 @@ export const Stations = [
       town: 'Roda De Andalucía (LA)',
       province: 'Málaga',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -17287,8 +13993,6 @@ export const Stations = [
       town: 'Antequera',
       province: 'Málaga',
       country: 'España',
-      lat: 37.037073,
-      lon: -4.727942,
     },
   },
   {
@@ -17298,8 +14002,6 @@ export const Stations = [
       town: 'Antequera',
       province: 'Málaga',
       country: 'España',
-      lat: 36.977273,
-      lon: -4.736442,
     },
   },
   {
@@ -17309,8 +14011,6 @@ export const Stations = [
       town: 'Álora',
       province: 'Málaga',
       country: 'España',
-      lat: 36.907335,
-      lon: -4.759258,
     },
   },
   {
@@ -17320,8 +14020,6 @@ export const Stations = [
       town: 'Álora',
       province: 'Málaga',
       country: 'España',
-      lat: 36.873306,
-      lon: -4.719433,
     },
   },
   {
@@ -17331,8 +14029,6 @@ export const Stations = [
       town: 'Álora',
       province: 'Málaga',
       country: 'España',
-      lat: 36.819825,
-      lon: -4.6994424,
     },
   },
   {
@@ -17342,8 +14038,6 @@ export const Stations = [
       town: 'Pizarra',
       province: 'Málaga',
       country: 'España',
-      lat: 36.7640611,
-      lon: -4.7116694,
     },
   },
   {
@@ -17353,8 +14047,6 @@ export const Stations = [
       town: 'Cártama',
       province: 'Málaga',
       country: 'España',
-      lat: 36.7331166,
-      lon: -4.6644194,
     },
   },
   {
@@ -17364,19 +14056,15 @@ export const Stations = [
       town: 'Cártama',
       province: 'Málaga',
       country: 'España',
-      lat: 36.7337555,
-      lon: -4.608232,
     },
   },
   {
-    name: 'Los Remedios (APD-CGD)',
+    name: 'Los Remedios (APD - CGD)',
     code: '54409',
     location: {
       town: 'Cártama',
       province: 'Málaga',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -17386,8 +14074,6 @@ export const Stations = [
       town: 'Málaga',
       province: 'Málaga',
       country: 'España',
-      lat: 36.7047333,
-      lon: -4.5456194,
     },
   },
   {
@@ -17397,19 +14083,16 @@ export const Stations = [
       town: 'Málaga',
       province: 'Málaga',
       country: 'España',
-      lat: 36.6985157,
-      lon: -4.4781625,
     },
   },
   {
     name: 'Málaga María Zambrano',
     code: '54413',
+    otherCodes: ['99170'],
     location: {
       town: 'Málaga',
       province: 'Málaga',
       country: 'España',
-      lat: 36.7113388,
-      lon: -4.4313888,
     },
   },
   {
@@ -17419,8 +14102,6 @@ export const Stations = [
       town: 'Málaga',
       province: 'Málaga',
       country: 'España',
-      lat: 36.71025,
-      lon: -4.432901,
     },
   },
   {
@@ -17430,8 +14111,6 @@ export const Stations = [
       town: 'Málaga',
       province: 'Málaga',
       country: 'España',
-      lat: 36.7011222,
-      lon: -4.4544444,
     },
   },
   {
@@ -17441,8 +14120,6 @@ export const Stations = [
       town: 'Málaga',
       province: 'Málaga',
       country: 'España',
-      lat: 36.6920138,
-      lon: -4.4838277,
     },
   },
   {
@@ -17452,8 +14129,6 @@ export const Stations = [
       town: 'Málaga',
       province: 'Málaga',
       country: 'España',
-      lat: 36.6843269,
-      lon: -4.496044,
     },
   },
   {
@@ -17463,8 +14138,6 @@ export const Stations = [
       town: 'Málaga',
       province: 'Málaga',
       country: 'España',
-      lat: 36.6757,
-      lon: -4.48725,
     },
   },
   {
@@ -17474,19 +14147,15 @@ export const Stations = [
       town: 'Málaga',
       province: 'Málaga',
       country: 'España',
-      lat: 36.6625115,
-      lon: -4.4802844,
     },
   },
   {
-    name: 'Campo D Golf-Campamento (APT)',
+    name: 'Campo D Golf - Campamento (APT)',
     code: '54507',
     location: {
       town: 'Málaga',
       province: 'Málaga',
       country: 'España',
-      lat: 36.65036,
-      lon: -4.482931,
     },
   },
   {
@@ -17496,8 +14165,6 @@ export const Stations = [
       town: 'Torremolinos',
       province: 'Málaga',
       country: 'España',
-      lat: 36.6418944,
-      lon: -4.4926472,
     },
   },
   {
@@ -17507,8 +14174,6 @@ export const Stations = [
       town: 'Torremolinos',
       province: 'Málaga',
       country: 'España',
-      lat: 36.6225361,
-      lon: -4.4995805,
     },
   },
   {
@@ -17518,8 +14183,6 @@ export const Stations = [
       town: 'Torremolinos',
       province: 'Málaga',
       country: 'España',
-      lat: 36.6098194,
-      lon: -4.5153694,
     },
   },
   {
@@ -17529,19 +14192,15 @@ export const Stations = [
       town: 'Benalmádena',
       province: 'Málaga',
       country: 'España',
-      lat: 36.5990583,
-      lon: -4.5362333,
     },
   },
   {
-    name: 'Torremuelle-Benalmadena (APT)',
+    name: 'Torremuelle - Benalmadena (APT)',
     code: '54512',
     location: {
       town: 'Benalmádena',
       province: 'Málaga',
       country: 'España',
-      lat: 36.5822333,
-      lon: -4.5671138,
     },
   },
   {
@@ -17551,8 +14210,6 @@ export const Stations = [
       town: 'Fuengirola',
       province: 'Málaga',
       country: 'España',
-      lat: 36.5701333,
-      lon: -4.593975,
     },
   },
   {
@@ -17562,8 +14219,6 @@ export const Stations = [
       town: 'Fuengirola',
       province: 'Málaga',
       country: 'España',
-      lat: 36.5649222,
-      lon: -4.6067666,
     },
   },
   {
@@ -17573,19 +14228,16 @@ export const Stations = [
       town: 'Fuengirola',
       province: 'Málaga',
       country: 'España',
-      lat: 36.554914,
-      lon: -4.614356,
     },
   },
   {
     name: 'Fuengirola',
-    code: '54516',
+    code: '58201',
+    otherCodes: ['54516', '5820B'],
     location: {
       town: 'Fuengirola',
       province: 'Málaga',
       country: 'España',
-      lat: 36.5429388,
-      lon: -4.6228027,
     },
   },
   {
@@ -17595,8 +14247,6 @@ export const Stations = [
       town: 'Málaga',
       province: 'Málaga',
       country: 'España',
-      lat: 36.7156668,
-      lon: -4.4287461,
     },
   },
   {
@@ -17606,8 +14256,6 @@ export const Stations = [
       town: 'Torremolinos',
       province: 'Málaga',
       country: 'España',
-      lat: 36.6450055,
-      lon: -4.4851111,
     },
   },
   {
@@ -17617,8 +14265,6 @@ export const Stations = [
       town: 'Torremolinos',
       province: 'Málaga',
       country: 'España',
-      lat: 36.6138388,
-      lon: -4.5091305,
     },
   },
   {
@@ -17628,8 +14274,6 @@ export const Stations = [
       town: 'Málaga',
       province: 'Málaga',
       country: 'España',
-      lat: 36.6561722,
-      lon: -4.4803138,
     },
   },
   {
@@ -17639,8 +14283,6 @@ export const Stations = [
       town: 'Campillos',
       province: 'Málaga',
       country: 'España',
-      lat: 37.032231,
-      lon: -4.863499,
     },
   },
   {
@@ -17650,19 +14292,15 @@ export const Stations = [
       town: 'Teba',
       province: 'Málaga',
       country: 'España',
-      lat: 36.994597,
-      lon: -4.923924,
     },
   },
   {
-    name: 'Almargen-Cañete La Real',
+    name: 'Almargen - Cañete La Real',
     code: '55003',
     location: {
       town: 'Almargen',
       province: 'Málaga',
       country: 'España',
-      lat: 37.000985,
-      lon: -5.020111,
     },
   },
   {
@@ -17672,8 +14310,6 @@ export const Stations = [
       town: 'Cañete La Real',
       province: 'Málaga',
       country: 'España',
-      lat: 36.981716,
-      lon: -5.073504,
     },
   },
   {
@@ -17683,8 +14319,6 @@ export const Stations = [
       town: 'Setenil De Las Bodegas',
       province: 'Málaga',
       country: 'España',
-      lat: 36.863423,
-      lon: -5.121375,
     },
   },
   {
@@ -17694,8 +14328,6 @@ export const Stations = [
       town: 'Arriate',
       province: 'Málaga',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -17705,8 +14337,6 @@ export const Stations = [
       town: 'Ronda',
       province: 'Málaga',
       country: 'España',
-      lat: 36.748401,
-      lon: -5.16197,
     },
   },
   {
@@ -17716,8 +14346,6 @@ export const Stations = [
       town: 'Arriate',
       province: 'Málaga',
       country: 'España',
-      lat: 36.7905949,
-      lon: -5.140757,
     },
   },
   {
@@ -17727,19 +14355,15 @@ export const Stations = [
       town: 'Ronda',
       province: 'Málaga',
       country: 'España',
-      lat: 36.759168,
-      lon: -5.198237,
     },
   },
   {
-    name: 'Benaoján-Montejaque',
+    name: 'Benaoján - Montejaque',
     code: '55010',
     location: {
       town: 'Benaoján',
       province: 'Málaga',
       country: 'España',
-      lat: 36.713753,
-      lon: -5.246366,
     },
   },
   {
@@ -17749,8 +14373,6 @@ export const Stations = [
       town: 'Jimera De Líbar',
       province: 'Málaga',
       country: 'España',
-      lat: 36.660678,
-      lon: -5.281473,
     },
   },
   {
@@ -17760,8 +14382,6 @@ export const Stations = [
       town: 'Cortes De La Frontera',
       province: 'Málaga',
       country: 'España',
-      lat: 36.597364,
-      lon: -5.332784,
     },
   },
   {
@@ -17771,8 +14391,6 @@ export const Stations = [
       town: 'Cortes De La Frontera',
       province: 'Málaga',
       country: 'España',
-      lat: 36.540372,
-      lon: -5.386825,
     },
   },
   {
@@ -17782,8 +14400,6 @@ export const Stations = [
       town: 'Jimena De La Frontera',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.467952,
-      lon: -5.418921,
     },
   },
   {
@@ -17793,8 +14409,6 @@ export const Stations = [
       town: 'Jimena De La Frontera',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.4242,
-      lon: -5.434113,
     },
   },
   {
@@ -17804,8 +14418,6 @@ export const Stations = [
       town: 'Castellar De La Frontera',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.284116,
-      lon: -5.423905,
     },
   },
   {
@@ -17815,19 +14427,15 @@ export const Stations = [
       town: 'Castellar De La Frontera',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.27751,
-      lon: -5.430529,
     },
   },
   {
-    name: 'San Roque-La Línea',
+    name: 'San Roque - La Línea',
     code: '55018',
     location: {
       town: 'San Roque',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.214482,
-      lon: -5.432399,
     },
   },
   {
@@ -17837,8 +14445,6 @@ export const Stations = [
       town: 'Barrios ',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.173998,
-      lon: -5.460801,
     },
   },
   {
@@ -17848,19 +14454,16 @@ export const Stations = [
       town: 'Algeciras',
       province: 'Cádiz',
       country: 'España',
-      lat: 36.126831,
-      lon: -5.451108,
     },
   },
   {
     name: 'Caudete',
-    code: '55555',
+    code: '60901',
+    otherCodes: ['55555'],
     location: {
       town: 'Caudete',
       province: 'Valencia/València',
       country: 'España',
-      lat: 38.7160461,
-      lon: -0.9589219,
     },
   },
   {
@@ -17870,8 +14473,6 @@ export const Stations = [
       town: 'Torreblascopedro',
       province: 'Jaén',
       country: 'España',
-      lat: 37.996319,
-      lon: -3.619581,
     },
   },
   {
@@ -17881,41 +14482,33 @@ export const Stations = [
       town: 'Begíjar',
       province: 'Jaén',
       country: 'España',
-      lat: 37.964793,
-      lon: -3.594563,
     },
   },
   {
-    name: 'Garciez-Jimena (APD-CGD)',
+    name: 'Garciez - Jimena (APD - CGD)',
     code: '56003',
     location: {
       town: 'Baeza',
       province: 'Jaén',
       country: 'España',
-      lat: 37.927745,
-      lon: -3.472165,
     },
   },
   {
-    name: 'Jódar-Úbeda',
+    name: 'Jódar - Úbeda',
     code: '56004',
     location: {
       town: 'Jódar',
       province: 'Jaén',
       country: 'España',
-      lat: 37.913343,
-      lon: -3.34892,
     },
   },
   {
-    name: 'Los Propios-Cazorla',
+    name: 'Los Propios - Cazorla',
     code: '56005',
     location: {
       town: 'Úbeda',
       province: 'Jaén',
       country: 'España',
-      lat: 37.892043,
-      lon: -3.282451,
     },
   },
   {
@@ -17925,8 +14518,6 @@ export const Stations = [
       town: 'Quesada',
       province: 'Jaén',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -17936,8 +14527,6 @@ export const Stations = [
       town: 'Cabra Del Santo Cristo',
       province: 'Jaén',
       country: 'España',
-      lat: 37.777147,
-      lon: -3.231719,
     },
   },
   {
@@ -17947,8 +14536,6 @@ export const Stations = [
       town: 'Cabra Del Santo Cristo',
       province: 'Jaén',
       country: 'España',
-      lat: 37.717148,
-      lon: -3.187103,
     },
   },
   {
@@ -17958,19 +14545,15 @@ export const Stations = [
       town: 'Cabra Del Santo Cristo',
       province: 'Jaén',
       country: 'España',
-      lat: 37.6567129,
-      lon: -3.262623,
     },
   },
   {
-    name: 'Huelma (APD-CGD)',
+    name: 'Huelma (APD - CGD)',
     code: '56010',
     location: {
       town: 'Huelma',
       province: 'Jaén',
       country: 'España',
-      lat: 37.61713,
-      lon: -3.296809,
     },
   },
   {
@@ -17980,8 +14563,6 @@ export const Stations = [
       town: 'Alamedilla',
       province: 'Granada',
       country: 'España',
-      lat: 37.580242,
-      lon: -3.302947,
     },
   },
   {
@@ -17991,8 +14572,6 @@ export const Stations = [
       town: 'Pedro Martínez',
       province: 'Granada',
       country: 'España',
-      lat: 37.5065699,
-      lon: -3.32074,
     },
   },
   {
@@ -18002,8 +14581,6 @@ export const Stations = [
       town: 'Morelábor',
       province: 'Granada',
       country: 'España',
-      lat: 37.431216,
-      lon: -3.310516,
     },
   },
   {
@@ -18013,8 +14590,6 @@ export const Stations = [
       town: 'Huélago',
       province: 'Granada',
       country: 'España',
-      lat: 37.403373,
-      lon: -3.252083,
     },
   },
   {
@@ -18024,8 +14599,6 @@ export const Stations = [
       town: 'Fonelas',
       province: 'Granada',
       country: 'España',
-      lat: 37.404257,
-      lon: -3.201912,
     },
   },
   {
@@ -18035,8 +14608,6 @@ export const Stations = [
       town: 'Benalúa',
       province: 'Granada',
       country: 'España',
-      lat: 37.345277,
-      lon: -3.163177,
     },
   },
   {
@@ -18046,8 +14617,6 @@ export const Stations = [
       town: 'Guadix',
       province: 'Granada',
       country: 'España',
-      lat: 37.316873,
-      lon: -3.127209,
     },
   },
   {
@@ -18057,8 +14626,6 @@ export const Stations = [
       town: 'Calahorra (LA)',
       province: 'Granada',
       country: 'España',
-      lat: 37.251132,
-      lon: -3.028275,
     },
   },
   {
@@ -18068,8 +14635,6 @@ export const Stations = [
       town: 'Huéneja',
       province: 'Granada',
       country: 'España',
-      lat: 37.22322,
-      lon: -2.956088,
     },
   },
   {
@@ -18079,8 +14644,6 @@ export const Stations = [
       town: 'Fiñana',
       province: 'Almería',
       country: 'España',
-      lat: 37.184647,
-      lon: -2.839757,
     },
   },
   {
@@ -18090,8 +14653,6 @@ export const Stations = [
       town: 'Abla',
       province: 'Almería',
       country: 'España',
-      lat: 37.169851,
-      lon: -2.77042,
     },
   },
   {
@@ -18101,8 +14662,6 @@ export const Stations = [
       town: 'María',
       province: 'Almería',
       country: 'España',
-      lat: 37.12555,
-      lon: -2.612359,
     },
   },
   {
@@ -18112,8 +14671,6 @@ export const Stations = [
       town: 'Nacimiento',
       province: 'Almería',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -18123,8 +14680,6 @@ export const Stations = [
       town: 'Gérgal',
       province: 'Almería',
       country: 'España',
-      lat: 37.108847,
-      lon: -2.591556,
     },
   },
   {
@@ -18134,19 +14689,15 @@ export const Stations = [
       town: 'Gérgal',
       province: 'Almería',
       country: 'España',
-      lat: 37.043668,
-      lon: -2.524542,
     },
   },
   {
-    name: 'Santa Fe-Alhama',
+    name: 'Santa Fe - Alhama',
     code: '56307',
     location: {
       town: 'Santa Fe De Mondújar',
       province: 'Almería',
       country: 'España',
-      lat: 36.974254,
-      lon: -2.539729,
     },
   },
   {
@@ -18156,30 +14707,24 @@ export const Stations = [
       town: 'Gádor',
       province: 'Almería',
       country: 'España',
-      lat: 36.951624,
-      lon: -2.487658,
     },
   },
   {
-    name: 'Benahadux-Pechina (APT-CGD)',
+    name: 'Benahadux - Pechina (APT - CGD)',
     code: '56309',
     location: {
       town: 'Benahadux',
       province: 'Almería',
       country: 'España',
-      lat: 36.924871,
-      lon: -2.455249,
     },
   },
   {
-    name: 'Huércal-Viator',
+    name: 'Huércal - Viator',
     code: '56310',
     location: {
       town: 'Huércal De Almería',
       province: 'Almería',
       country: 'España',
-      lat: 36.885155,
-      lon: -2.436718,
     },
   },
   {
@@ -18189,19 +14734,15 @@ export const Stations = [
       town: 'Almería',
       province: 'Almería',
       country: 'España',
-      lat: 36.834951,
-      lon: -2.455519,
     },
   },
   {
-    name: 'Pinar (APT-CGD)',
+    name: 'Pinar (APT - CGD)',
     code: '57002',
     location: {
       town: 'Píñar',
       province: 'Granada',
       country: 'España',
-      lat: 37.39907,
-      lon: -3.42384,
     },
   },
   {
@@ -18211,8 +14752,6 @@ export const Stations = [
       town: 'Iznalloz',
       province: 'Granada',
       country: 'España',
-      lat: 37.395852,
-      lon: -3.527947,
     },
   },
   {
@@ -18222,8 +14761,6 @@ export const Stations = [
       town: 'Deifontes',
       province: 'Granada',
       country: 'España',
-      lat: 37.335371,
-      lon: -3.587041,
     },
   },
   {
@@ -18233,8 +14770,6 @@ export const Stations = [
       town: 'Calicasas',
       province: 'Granada',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -18244,206 +14779,86 @@ export const Stations = [
       town: 'Albolote',
       province: 'Granada',
       country: 'España',
-      lat: 37.237925,
-      lon: -3.651508,
-    },
-  },
-  {
-    name: 'Fuengirola',
-    code: '5820B',
-    location: {
-      town: 'Fuengirola',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Fuengirola',
-    code: '58201',
-    location: {
-      town: 'Fuengirola',
-      province: 'Málaga',
-      country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Marbella',
-    code: '5822B',
-    location: {
-      town: 'Marbella',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Marbella',
     code: '58221',
+    otherCodes: ['5822B'],
     location: {
       town: 'Marbella',
       province: 'Málaga',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'San Pedro De Alcantara',
-    code: '5824B',
-    location: {
-      town: 'Marbella',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'San Pedro De Alcantara',
     code: '58241',
+    otherCodes: ['5824B'],
     location: {
       town: 'Marbella',
       province: 'Málaga',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Estepona',
-    code: '5826B',
-    location: {
-      town: 'Estepona',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Estepona',
     code: '58261',
+    otherCodes: ['5826B'],
     location: {
       town: 'Estepona',
       province: 'Málaga',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Santa Pola',
-    code: '5901B',
-    location: {
-      town: 'Santa Pola',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Santa Pola',
     code: '59011',
+    otherCodes: ['5901B'],
     location: {
       town: 'Santa Pola',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'La Marina',
-    code: '5902B',
-    location: {
-      town: 'Alicante/Alacant',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'La Marina',
     code: '59021',
+    otherCodes: ['5902B'],
     location: {
       town: 'Alicante/Alacant',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Guardamar Del Segura',
-    code: '5903B',
-    location: {
-      town: 'Guardamar Del Segura',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Guardamar Del Segura',
     code: '59031',
+    otherCodes: ['5903B'],
     location: {
       town: 'Guardamar Del Segura',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'La Mata',
-    code: '5904B',
-    location: {
-      town: 'Torrevieja',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'La Mata',
     code: '59041',
+    otherCodes: ['5904B'],
     location: {
       town: 'Torrevieja',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Torrevieja',
-    code: '5905B',
-    location: {
-      town: 'Torrevieja',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Torrevieja',
     code: '59051',
+    otherCodes: ['5905B'],
     location: {
       town: 'Torrevieja',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -18451,10 +14866,8 @@ export const Stations = [
     code: '5906B',
     location: {
       town: 'Alicante/Alacant',
-      province: undefined,
+      province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -18464,19 +14877,15 @@ export const Stations = [
       town: 'Alicante/Alacant',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Madrid Pta. Atocha - Almudena Grandes',
+    name: 'Madrid - Puerta de Atocha - Almudena Grandes',
     code: '60000',
     location: {
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.406442,
-      lon: -3.690886,
     },
   },
   {
@@ -18486,8 +14895,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.372441,
-      lon: -3.679537,
     },
   },
   {
@@ -18497,8 +14904,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   // {
@@ -18519,8 +14924,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3536351,
-      lon: -3.6839896,
     },
   },
   {
@@ -18530,8 +14933,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3319352,
-      lon: -3.6986743,
     },
   },
   {
@@ -18541,19 +14942,16 @@ export const Stations = [
       town: 'Getafe',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3054448,
-      lon: -3.7078159,
     },
   },
   {
     name: 'Pinto',
-    code: '60103',
+    code: '99203',
+    otherCodes: ['60103'],
     location: {
       town: 'Pinto',
       province: 'Madrid',
       country: 'España',
-      lat: 40.2427782,
-      lon: -3.7036626,
     },
   },
   {
@@ -18563,8 +14961,6 @@ export const Stations = [
       town: 'Valdemoro',
       province: 'Madrid',
       country: 'España',
-      lat: 40.1960018,
-      lon: -3.6649777,
     },
   },
   {
@@ -18574,8 +14970,6 @@ export const Stations = [
       town: 'Ciempozuelos',
       province: 'Madrid',
       country: 'España',
-      lat: 40.159074,
-      lon: -3.6101107,
     },
   },
   {
@@ -18585,8 +14979,6 @@ export const Stations = [
       town: 'Seseña',
       province: 'Madrid',
       country: 'España',
-      lat: 40.095994,
-      lon: -3.628755,
     },
   },
   {
@@ -18596,8 +14988,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3408068,
-      lon: -3.6839943,
     },
   },
   {
@@ -18607,8 +14997,6 @@ export const Stations = [
       town: 'Getafe',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3186333,
-      lon: -3.7100083,
     },
   },
   {
@@ -18618,8 +15006,6 @@ export const Stations = [
       town: 'San Martín De La Vega',
       province: 'Madrid',
       country: 'España',
-      lat: 40.23367,
-      lon: -3.596236,
     },
   },
   {
@@ -18629,8 +15015,6 @@ export const Stations = [
       town: 'San Martín De La Vega',
       province: 'Madrid',
       country: 'España',
-      lat: 40.219056,
-      lon: -3.567248,
     },
   },
   {
@@ -18640,30 +15024,24 @@ export const Stations = [
       town: 'Aranjuez',
       province: 'Madrid',
       country: 'España',
-      lat: 40.0348585,
-      lon: -3.6182315,
     },
   },
   {
-    name: 'Las Infantas (APD-CGD)',
+    name: 'Las Infantas (APD - CGD)',
     code: '60201',
     location: {
       town: 'Aranjuez',
       province: 'Madrid',
       country: 'España',
-      lat: 39.995709,
-      lon: -3.682401,
     },
   },
   {
-    name: 'Castillejo-Añover',
+    name: 'Castillejo - Añover',
     code: '60202',
     location: {
       town: 'Aranjuez',
       province: 'Madrid',
       country: 'España',
-      lat: 39.949634,
-      lon: -3.738774,
     },
   },
   {
@@ -18673,8 +15051,6 @@ export const Stations = [
       town: 'Villasequilla',
       province: 'Toledo',
       country: 'España',
-      lat: 39.879535,
-      lon: -3.728453,
     },
   },
   {
@@ -18684,8 +15060,6 @@ export const Stations = [
       town: 'Huerta De Valdecarábanos',
       province: 'Toledo',
       country: 'España',
-      lat: 39.818272,
-      lon: -3.646432,
     },
   },
   {
@@ -18695,8 +15069,6 @@ export const Stations = [
       town: 'Guardia (LA)',
       province: 'Toledo',
       country: 'España',
-      lat: 39.768411,
-      lon: -3.575458,
     },
   },
   {
@@ -18706,8 +15078,6 @@ export const Stations = [
       town: 'Tembleque',
       province: 'Toledo',
       country: 'España',
-      lat: 39.722958,
-      lon: -3.497354,
     },
   },
   {
@@ -18717,8 +15087,6 @@ export const Stations = [
       town: 'Romeral (EL)',
       province: 'Toledo',
       country: 'España',
-      lat: 39.694516,
-      lon: -3.430502,
     },
   },
   {
@@ -18728,8 +15096,6 @@ export const Stations = [
       town: 'Villacañas',
       province: 'Toledo',
       country: 'España',
-      lat: 39.622698,
-      lon: -3.33051,
     },
   },
   {
@@ -18739,8 +15105,6 @@ export const Stations = [
       town: 'Quero',
       province: 'Toledo',
       country: 'España',
-      lat: 39.504173,
-      lon: -3.266072,
     },
   },
   {
@@ -18750,8 +15114,6 @@ export const Stations = [
       town: 'Alcázar De San Juan',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 39.395628,
-      lon: -3.205744,
     },
   },
   {
@@ -18761,8 +15123,6 @@ export const Stations = [
       town: 'Campo De Criptana',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 39.394343,
-      lon: -3.117746,
     },
   },
   {
@@ -18772,8 +15132,6 @@ export const Stations = [
       town: 'Campo De Criptana',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 39.352971,
-      lon: -3.020942,
     },
   },
   {
@@ -18783,8 +15141,6 @@ export const Stations = [
       town: 'Tomelloso',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 39.333426,
-      lon: -2.949472,
     },
   },
   {
@@ -18794,8 +15150,6 @@ export const Stations = [
       town: 'Socuéllamos',
       province: 'Ciudad Real',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -18805,8 +15159,6 @@ export const Stations = [
       town: 'Socuéllamos',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 39.278776,
-      lon: -2.775571,
     },
   },
   {
@@ -18816,8 +15168,6 @@ export const Stations = [
       town: 'Villarrobledo',
       province: 'Albacete',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -18827,8 +15177,6 @@ export const Stations = [
       town: 'Villarrobledo',
       province: 'Albacete',
       country: 'España',
-      lat: 39.260868,
-      lon: -2.598621,
     },
   },
   {
@@ -18838,8 +15186,6 @@ export const Stations = [
       town: 'Minaya',
       province: 'Albacete',
       country: 'España',
-      lat: 39.240738,
-      lon: -2.348403,
     },
   },
   {
@@ -18849,8 +15195,6 @@ export const Stations = [
       town: 'Roda (LA)',
       province: 'Albacete',
       country: 'España',
-      lat: 39.199594,
-      lon: -2.162547,
     },
   },
   {
@@ -18860,19 +15204,15 @@ export const Stations = [
       town: 'Gineta (LA)',
       province: 'Albacete',
       country: 'España',
-      lat: 39.111665,
-      lon: -2.000155,
     },
   },
   {
-    name: 'Albacete-Los Llanos',
+    name: 'Albacete - Los Llanos',
     code: '60600',
     location: {
       town: 'Albacete',
       province: 'Albacete',
       country: 'España',
-      lat: 38.999384,
-      lon: -1.84845,
     },
   },
   {
@@ -18882,8 +15222,6 @@ export const Stations = [
       town: 'Chinchilla De Monte-Aragón',
       province: 'Albacete',
       country: 'España',
-      lat: 38.936516,
-      lon: -1.762751,
     },
   },
   {
@@ -18893,8 +15231,6 @@ export const Stations = [
       town: 'Chinchilla De Monte-Aragón',
       province: 'Albacete',
       country: 'España',
-      lat: 38.902867,
-      lon: -1.696235,
     },
   },
   {
@@ -18904,8 +15240,6 @@ export const Stations = [
       town: 'Chinchilla De Monte-Aragón',
       province: 'Albacete',
       country: 'España',
-      lat: 38.906166,
-      lon: -1.488535,
     },
   },
   {
@@ -18915,19 +15249,15 @@ export const Stations = [
       town: 'Bonete',
       province: 'Albacete',
       country: 'España',
-      lat: 38.900384,
-      lon: -1.356017,
     },
   },
   {
-    name: 'Alpera (APT-CGD)',
+    name: 'Alpera (APT - CGD)',
     code: '60705',
     location: {
       town: 'Alpera',
       province: 'Albacete',
       country: 'España',
-      lat: 38.938966,
-      lon: -1.252435,
     },
   },
   {
@@ -18937,8 +15267,6 @@ export const Stations = [
       town: 'Almansa',
       province: 'Albacete',
       country: 'España',
-      lat: 38.867822,
-      lon: -1.105446,
     },
   },
   {
@@ -18948,19 +15276,6 @@ export const Stations = [
       town: 'Villena',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.765344,
-      lon: -0.954244,
-    },
-  },
-  {
-    name: 'Caudete',
-    code: '60901',
-    location: {
-      town: 'Caudete',
-      province: 'Alicante/Alacant',
-      country: 'España',
-      lat: 38.716163,
-      lon: -0.959727,
     },
   },
   {
@@ -18970,8 +15285,6 @@ export const Stations = [
       town: 'Villena',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.631738,
-      lon: -0.867689,
     },
   },
   {
@@ -18981,8 +15294,6 @@ export const Stations = [
       town: 'Villena',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.590858,
-      lon: -0.856302,
     },
   },
   {
@@ -18992,8 +15303,6 @@ export const Stations = [
       town: 'Sax',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.544251,
-      lon: -0.813729,
     },
   },
   {
@@ -19003,19 +15312,15 @@ export const Stations = [
       town: 'Elda',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.484879,
-      lon: -0.80109,
     },
   },
   {
-    name: 'Monovar-Pinoso',
+    name: 'Monovar - Pinoso',
     code: '60906',
     location: {
       town: 'Monóvar/Monòver',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.440473,
-      lon: -0.816938,
     },
   },
   {
@@ -19025,8 +15330,6 @@ export const Stations = [
       town: 'Novelda',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.407086,
-      lon: -0.777744,
     },
   },
   {
@@ -19036,8 +15339,6 @@ export const Stations = [
       town: 'Monforte Del Cid',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.406205,
-      lon: -0.696335,
     },
   },
   {
@@ -19047,8 +15348,6 @@ export const Stations = [
       town: 'Agost',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.406204,
-      lon: -0.616885,
     },
   },
   {
@@ -19058,8 +15357,6 @@ export const Stations = [
       town: 'San Vicente Del Raspeig/Sant Vicent Del Raspeig',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.39756,
-      lon: -0.533883,
     },
   },
   {
@@ -19069,8 +15366,6 @@ export const Stations = [
       town: 'Alicante/Alacant',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.34445,
-      lon: -0.4950527,
     },
   },
   {
@@ -19078,10 +15373,8 @@ export const Stations = [
     code: '60913',
     location: {
       town: 'San Vicente Del Raspeig/Sant Vicent Del Raspeig',
-      province: undefined,
+      province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.3972495,
-      lon: -0.5326435,
     },
   },
   {
@@ -19091,19 +15384,15 @@ export const Stations = [
       town: 'Alicante/Alacant',
       province: 'Madrid',
       country: 'España',
-      lat: 38.3847998,
-      lon: -0.528108,
     },
   },
   {
-    name: 'Pozo-Canada (APT)',
+    name: 'Pozo - Canada (APT)',
     code: '61001',
     location: {
       town: 'Pozo Cañada',
       province: 'Albacete',
       country: 'España',
-      lat: 38.803467,
-      lon: -1.723635,
     },
   },
   {
@@ -19113,8 +15402,6 @@ export const Stations = [
       town: 'Hellín',
       province: 'Albacete',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -19124,19 +15411,15 @@ export const Stations = [
       town: 'Tobarra',
       province: 'Albacete',
       country: 'España',
-      lat: 38.718167,
-      lon: -1.683036,
     },
   },
   {
-    name: 'Tobarra (APT-CGD)',
+    name: 'Tobarra (APT - CGD)',
     code: '61004',
     location: {
       town: 'Tobarra',
       province: 'Albacete',
       country: 'España',
-      lat: 38.597026,
-      lon: -1.701276,
     },
   },
   {
@@ -19146,8 +15429,6 @@ export const Stations = [
       town: 'Hellín',
       province: 'Albacete',
       country: 'España',
-      lat: 38.508776,
-      lon: -1.688437,
     },
   },
   {
@@ -19157,8 +15438,6 @@ export const Stations = [
       town: 'Hellín',
       province: 'Albacete',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -19168,8 +15447,6 @@ export const Stations = [
       town: 'Hellín',
       province: 'Albacete',
       country: 'España',
-      lat: 38.402767,
-      lon: -1.630237,
     },
   },
   {
@@ -19179,8 +15456,6 @@ export const Stations = [
       town: 'Hellín',
       province: 'Albacete',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -19190,8 +15465,6 @@ export const Stations = [
       town: 'Calasparra',
       province: 'Murcia',
       country: 'España',
-      lat: 38.26926,
-      lon: -1.680109,
     },
   },
   {
@@ -19201,8 +15474,6 @@ export const Stations = [
       town: 'Cieza',
       province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -19212,8 +15483,6 @@ export const Stations = [
       town: 'Cieza',
       province: 'Murcia',
       country: 'España',
-      lat: 38.246609,
-      lon: -1.421702,
     },
   },
   {
@@ -19223,8 +15492,6 @@ export const Stations = [
       town: 'Abarán',
       province: 'Murcia',
       country: 'España',
-      lat: 38.228968,
-      lon: -1.337311,
     },
   },
   {
@@ -19234,30 +15501,24 @@ export const Stations = [
       town: 'Molina De Segura',
       province: 'Murcia',
       country: 'España',
-      lat: 38.13132,
-      lon: -1.236037,
     },
   },
   {
-    name: 'Lorqui-Ceuti (APD)',
+    name: 'Lorqui - Ceuti (APD)',
     code: '61016',
     location: {
       town: 'Lorquí',
       province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Alguazas-Molina',
+    name: 'Alguazas - Molina',
     code: '61017',
     location: {
       town: 'Alguazas',
       province: 'Murcia',
       country: 'España',
-      lat: 38.05562,
-      lon: -1.246423,
     },
   },
   {
@@ -19267,8 +15528,6 @@ export const Stations = [
       town: 'Torres De Cotillas (LAS)',
       province: 'Murcia',
       country: 'España',
-      lat: 38.028487,
-      lon: -1.236004,
     },
   },
   {
@@ -19278,8 +15537,6 @@ export const Stations = [
       town: 'Molina De Segura',
       province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -19289,8 +15546,6 @@ export const Stations = [
       town: 'Alcantarilla',
       province: 'Murcia',
       country: 'España',
-      lat: 37.97216,
-      lon: -1.215743,
     },
   },
   {
@@ -19300,8 +15555,6 @@ export const Stations = [
       town: 'Murcia',
       province: 'Murcia',
       country: 'España',
-      lat: 37.97465,
-      lon: -1.1299555,
     },
   },
   {
@@ -19311,8 +15564,6 @@ export const Stations = [
       town: 'Murcia',
       province: 'Murcia',
       country: 'España',
-      lat: 37.970765,
-      lon: -1.079938,
     },
   },
   {
@@ -19322,19 +15573,15 @@ export const Stations = [
       town: 'Murcia',
       province: 'Murcia',
       country: 'España',
-      lat: 37.984065,
-      lon: -1.051838,
     },
   },
   {
-    name: 'Alquerias-Santomera',
+    name: 'Alquerias - Santomera',
     code: '61300',
     location: {
       town: 'Murcia',
       province: 'Murcia',
       country: 'España',
-      lat: 37.99964,
-      lon: -1.026305,
     },
   },
   {
@@ -19344,41 +15591,33 @@ export const Stations = [
       town: 'Murcia',
       province: 'Murcia',
       country: 'España',
-      lat: 37.967841,
-      lon: -0.953564,
     },
   },
   {
-    name: 'Riquelme-Sucina',
+    name: 'Riquelme - Sucina',
     code: '61302',
     location: {
       town: 'Murcia',
       province: 'Murcia',
       country: 'España',
-      lat: 37.895665,
-      lon: -0.974839,
     },
   },
   {
-    name: 'Balsicas-Mar Menor',
+    name: 'Balsicas - Mar Menor',
     code: '61303',
     location: {
       town: 'Torre-Pacheco',
       province: 'Murcia',
       country: 'España',
-      lat: 37.81884,
-      lon: -0.950891,
     },
   },
   {
-    name: 'Torre-Pacheco',
+    name: 'Torre - Pacheco',
     code: '61304',
     location: {
       town: 'Torre-Pacheco',
       province: 'Murcia',
       country: 'España',
-      lat: 37.746905,
-      lon: -0.967078,
     },
   },
   {
@@ -19388,8 +15627,6 @@ export const Stations = [
       town: 'Cartagena',
       province: 'Murcia',
       country: 'España',
-      lat: 37.701465,
-      lon: -0.979639,
     },
   },
   {
@@ -19399,8 +15636,6 @@ export const Stations = [
       town: 'Cartagena',
       province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -19410,8 +15645,6 @@ export const Stations = [
       town: 'Cartagena',
       province: 'Murcia',
       country: 'España',
-      lat: 37.604967,
-      lon: -0.975122,
     },
   },
   {
@@ -19421,8 +15654,6 @@ export const Stations = [
       town: 'Beniel',
       province: 'Murcia',
       country: 'España',
-      lat: 38.0447361,
-      lon: -0.9994472,
     },
   },
   {
@@ -19432,8 +15663,6 @@ export const Stations = [
       town: 'Orihuela',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.0779194,
-      lon: -0.94445,
     },
   },
   {
@@ -19443,8 +15672,6 @@ export const Stations = [
       town: 'Callosa De Segura',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.1235694,
-      lon: -0.8732888,
     },
   },
   {
@@ -19454,8 +15681,6 @@ export const Stations = [
       town: 'San Isidro',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.1670972,
-      lon: -0.8383583,
     },
   },
   {
@@ -19465,8 +15690,6 @@ export const Stations = [
       town: 'Crevillent',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.2245805,
-      lon: -0.7817972,
     },
   },
   {
@@ -19476,8 +15699,6 @@ export const Stations = [
       town: 'Elche/Elx',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.2690055,
-      lon: -0.7063555,
     },
   },
   {
@@ -19487,8 +15708,6 @@ export const Stations = [
       town: 'Elche/Elx',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.2717784,
-      lon: -0.6952109,
     },
   },
   {
@@ -19498,19 +15717,15 @@ export const Stations = [
       town: 'Elche/Elx',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.2896027,
-      lon: -0.5825138,
     },
   },
   {
-    name: 'Elx-Mercancias',
+    name: 'Elx - Mercancias',
     code: '62108',
     location: {
       town: 'Elche/Elx',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.278534,
-      lon: -0.653687,
     },
   },
   {
@@ -19520,8 +15735,6 @@ export const Stations = [
       town: 'Alicante/Alacant',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.3287722,
-      lon: -0.5089444,
     },
   },
   {
@@ -19531,8 +15744,6 @@ export const Stations = [
       town: 'Font De La Figuera (LA)',
       province: 'Valencia/València',
       country: 'España',
-      lat: 38.802965,
-      lon: -0.871823,
     },
   },
   {
@@ -19542,8 +15753,6 @@ export const Stations = [
       town: 'Mogente/Moixent',
       province: 'Valencia/València',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -19553,19 +15762,15 @@ export const Stations = [
       town: 'Mogente/Moixent',
       province: 'Valencia/València',
       country: 'España',
-      lat: 38.8776138,
-      lon: -0.7536722,
     },
   },
   {
-    name: 'Vallada (APT-CGD)',
+    name: 'Vallada (APT - CGD)',
     code: '64004',
     location: {
       town: 'Vallada',
       province: 'Valencia/València',
       country: 'España',
-      lat: 38.9088166,
-      lon: -0.6902666,
     },
   },
   {
@@ -19575,8 +15780,6 @@ export const Stations = [
       town: 'Montesa',
       province: 'Valencia/València',
       country: 'España',
-      lat: 38.9428444,
-      lon: -0.6411055,
     },
   },
   {
@@ -19586,8 +15789,6 @@ export const Stations = [
       town: "Alcúdia De Crespins (L')",
       province: 'Valencia/València',
       country: 'España',
-      lat: 38.9690638,
-      lon: -0.5864111,
     },
   },
   {
@@ -19595,10 +15796,8 @@ export const Stations = [
     code: '64007',
     location: {
       town: 'Manuel',
-      province: undefined,
+      province: null,
       country: 'España',
-      lat: 39.0501935,
-      lon: -0.4778516,
     },
   },
   {
@@ -19608,19 +15807,15 @@ export const Stations = [
       town: 'Xàtiva',
       province: 'Valencia/València',
       country: 'España',
-      lat: 38.9920972,
-      lon: -0.5244888,
     },
   },
   {
-    name: "Manuel-L'Enova",
+    name: "Manuel - L'Enova",
     code: '64101',
     location: {
       town: 'Manuel',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.050156,
-      lon: -0.477618,
     },
   },
   {
@@ -19630,8 +15825,6 @@ export const Stations = [
       town: 'Pobla Llarga (LA)',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.083475,
-      lon: -0.4697027,
     },
   },
   {
@@ -19641,8 +15834,6 @@ export const Stations = [
       town: 'Carcaixent',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.1204694,
-      lon: -0.4543833,
     },
   },
   {
@@ -19652,8 +15843,6 @@ export const Stations = [
       town: 'Alzira',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.1531194,
-      lon: -0.4506,
     },
   },
   {
@@ -19663,19 +15852,15 @@ export const Stations = [
       town: 'Algemesí',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.1931111,
-      lon: -0.4409083,
     },
   },
   {
-    name: 'Benifaió-Almussafes',
+    name: 'Benifaió - Almussafes',
     code: '64107',
     location: {
       town: 'Benifaió',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.2842194,
-      lon: -0.42995,
     },
   },
   {
@@ -19685,8 +15870,6 @@ export const Stations = [
       town: 'Silla',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.3617388,
-      lon: -0.4149472,
     },
   },
   {
@@ -19696,8 +15879,6 @@ export const Stations = [
       town: 'Catarroja',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.3999611,
-      lon: -0.3991916,
     },
   },
   {
@@ -19707,19 +15888,15 @@ export const Stations = [
       town: 'Massanassa',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.4091638,
-      lon: -0.3953194,
     },
   },
   {
-    name: 'Alfafar-Benetússer',
+    name: 'Alfafar - Benetússer',
     code: '64203',
     location: {
       town: 'Alfafar',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.4223277,
-      lon: -0.3926,
     },
   },
   {
@@ -19729,8 +15906,6 @@ export const Stations = [
       town: 'Valencia',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.4669346,
-      lon: -0.3771842,
     },
   },
   {
@@ -19740,19 +15915,15 @@ export const Stations = [
       town: 'Meliana',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.5261277,
-      lon: -0.3237777,
     },
   },
   {
-    name: 'Valencia F.S.L-Hospital La Fe',
+    name: 'Valencia F.S.L - Hospital La Fe',
     code: '65002',
     location: {
       town: 'Valencia',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.4414666,
-      lon: -0.3698944,
     },
   },
   {
@@ -19762,8 +15933,6 @@ export const Stations = [
       town: 'Valencia',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.4689527,
-      lon: -0.3345694,
     },
   },
   {
@@ -19773,8 +15942,6 @@ export const Stations = [
       town: 'Alboraya',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.487725,
-      lon: -0.331565,
     },
   },
   {
@@ -19784,19 +15951,15 @@ export const Stations = [
       town: 'Albuixech',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.5433,
-      lon: -0.3205777,
     },
   },
   {
-    name: 'Massalfassar-Albuixech',
+    name: 'Massalfassar - Albuixech',
     code: '65006',
     location: {
       town: 'Massalfassar',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.5556333,
-      lon: -0.3182861,
     },
   },
   {
@@ -19806,8 +15969,6 @@ export const Stations = [
       town: 'Puig De Santa Maria (EL)',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.5882111,
-      lon: -0.3116472,
     },
   },
   {
@@ -19817,8 +15978,6 @@ export const Stations = [
       town: 'Puçol',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.6171903,
-      lon: -0.3048578,
     },
   },
   {
@@ -19828,8 +15987,6 @@ export const Stations = [
       town: 'Valencia',
       province: 'Valencia/València',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -19839,19 +15996,15 @@ export const Stations = [
       town: 'Valencia',
       province: 'Valencia/València',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Grao-Valencia',
+    name: 'Grao - Valencia',
     code: '65011',
     location: {
       town: 'Valencia',
       province: 'Valencia/València',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -19861,8 +16014,6 @@ export const Stations = [
       town: 'Valencia',
       province: 'Valencia/València',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -19872,8 +16023,6 @@ export const Stations = [
       town: 'Sagunto/Sagunt',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.6756611,
-      lon: -0.2715972,
     },
   },
   {
@@ -19883,8 +16032,6 @@ export const Stations = [
       town: 'Sagunto/Sagunt',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.7192801,
-      lon: -0.2397542,
     },
   },
   {
@@ -19894,8 +16041,6 @@ export const Stations = [
       town: 'Almenara',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 39.7487555,
-      lon: -0.2183805,
     },
   },
   {
@@ -19905,8 +16050,6 @@ export const Stations = [
       town: 'Llosa (LA)',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 39.7680118,
-      lon: -0.2030695,
     },
   },
   {
@@ -19916,8 +16059,6 @@ export const Stations = [
       town: 'Chilches/Xilxes',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 39.7825944,
-      lon: -0.1903333,
     },
   },
   {
@@ -19927,19 +16068,15 @@ export const Stations = [
       town: 'Nules',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 39.8208638,
-      lon: -0.1626861,
     },
   },
   {
-    name: 'Nules-La Vilavella',
+    name: 'Nules - La Vilavella',
     code: '65206',
     location: {
       town: 'Nules',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 39.8531222,
-      lon: -0.1527555,
     },
   },
   {
@@ -19949,8 +16086,6 @@ export const Stations = [
       town: 'Borriana/Burriana',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 39.8964287,
-      lon: -0.1038666,
     },
   },
   {
@@ -19960,8 +16095,6 @@ export const Stations = [
       town: 'Vila - Real',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 39.9330222,
-      lon: -0.0967722,
     },
   },
   {
@@ -19971,8 +16104,6 @@ export const Stations = [
       town: 'Almazora/Almassora',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 39.9548444,
-      lon: -0.0767722,
     },
   },
   {
@@ -19982,8 +16113,6 @@ export const Stations = [
       town: 'Castellón De La Plana/Castelló De La Plana',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 39.9882552,
-      lon: -0.0524126,
     },
   },
   {
@@ -19993,8 +16122,6 @@ export const Stations = [
       town: 'Castellón De La Plana/Castelló De La Plana',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 40.021305,
-      lon: -0.000923,
     },
   },
   {
@@ -20004,8 +16131,6 @@ export const Stations = [
       town: 'Benicasim/Benicàssim',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -20015,8 +16140,6 @@ export const Stations = [
       town: 'Benicasim/Benicàssim',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -20026,8 +16149,6 @@ export const Stations = [
       town: 'Oropesa Del Mar/Orpesa',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 40.092258,
-      lon: 0.139861,
     },
   },
   {
@@ -20037,8 +16158,6 @@ export const Stations = [
       town: 'Cabanes',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -20048,8 +16167,6 @@ export const Stations = [
       town: 'Torreblanca',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 40.212211,
-      lon: 0.198779,
     },
   },
   {
@@ -20059,8 +16176,6 @@ export const Stations = [
       town: 'Alcalà De Xivert',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -20070,8 +16185,6 @@ export const Stations = [
       town: 'Alcalà De Xivert',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 40.30469,
-      lon: 0.228717,
     },
   },
   {
@@ -20081,8 +16194,6 @@ export const Stations = [
       town: 'Santa Magdalena De Pulpis',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 40.358463,
-      lon: 0.29437,
     },
   },
   {
@@ -20092,19 +16203,15 @@ export const Stations = [
       town: 'Peníscola/Peñíscola',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Benicarló-Peñíscola',
+    name: 'Benicarló - Peñíscola',
     code: '65311',
     location: {
       town: 'Benicarló',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 40.427639,
-      lon: 0.415217,
     },
   },
   {
@@ -20114,19 +16221,15 @@ export const Stations = [
       town: 'Vinaròs',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 40.471682,
-      lon: 0.455727,
     },
   },
   {
-    name: 'Ulldecona - Alcanar-La Sénia',
+    name: 'Ulldecona - Alcanar - La Sénia',
     code: '65314',
     location: {
       town: 'Ulldecona',
       province: 'Tarragona',
       country: 'España',
-      lat: 40.595924,
-      lon: 0.44927,
     },
   },
   {
@@ -20136,8 +16239,6 @@ export const Stations = [
       town: 'Freginals',
       province: 'Tarragona',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -20147,8 +16248,6 @@ export const Stations = [
       town: 'Santa Bàrbara',
       province: 'Tarragona',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -20158,8 +16257,6 @@ export const Stations = [
       town: 'Tortosa',
       province: 'Tarragona',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -20169,8 +16266,6 @@ export const Stations = [
       town: 'Benicasim/Benicàssim',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 40.0579451,
-      lon: 0.0577646,
     },
   },
   {
@@ -20180,19 +16275,15 @@ export const Stations = [
       town: 'Tortosa',
       province: 'Tarragona',
       country: 'España',
-      lat: 40.807339,
-      lon: 0.522937,
     },
   },
   {
-    name: 'Camp-Redó',
+    name: 'Camp - Redó',
     code: '65401',
     location: {
       town: 'Tortosa',
       province: 'Tarragona',
       country: 'España',
-      lat: 40.759135,
-      lon: 0.555834,
     },
   },
   {
@@ -20202,30 +16293,24 @@ export const Stations = [
       town: "Aldea (L')",
       province: 'Tarragona',
       country: 'España',
-      lat: 40.753542,
-      lon: 0.614314,
     },
   },
   {
-    name: 'Camarles-Deltebre',
+    name: 'Camarles - Deltebre',
     code: '65403',
     location: {
       town: 'Camarles',
       province: 'Tarragona',
       country: 'España',
-      lat: 40.774757,
-      lon: 0.671647,
     },
   },
   {
-    name: "L'Ampolla - Perelló-Deltebre",
+    name: "L'Ampolla - Perelló - Deltebre",
     code: '65404',
     location: {
       town: "Ampolla (L')",
       province: 'Tarragona',
       country: 'España',
-      lat: 40.812011,
-      lon: 0.708221,
     },
   },
   {
@@ -20235,8 +16320,6 @@ export const Stations = [
       town: "Ametlla De Mar (L')",
       province: 'Tarragona',
       country: 'España',
-      lat: 40.886188,
-      lon: 0.800427,
     },
   },
   {
@@ -20246,8 +16329,6 @@ export const Stations = [
       town: "Vandellòs I L'Hospitalet De L'Infant",
       province: 'Tarragona',
       country: 'España',
-      lat: 40.98435,
-      lon: 0.905402,
     },
   },
   {
@@ -20257,30 +16338,25 @@ export const Stations = [
       town: "Vandellòs I L'Hospitalet De L'Infant",
       province: 'Tarragona',
       country: 'España',
-      lat: 40.995863,
-      lon: 0.920733,
     },
   },
   {
-    name: 'Mont-Roig Del Camp',
+    name: 'Mont - Roig Del Camp',
     code: '65408',
     location: {
       town: 'Mont-Roig Del Camp',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.044963,
-      lon: 0.990722,
     },
   },
   {
     name: 'Cambrils',
-    code: '65409',
+    code: '65422',
+    otherCodes: ['65409'],
     location: {
       town: 'Cambrils',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.081648,
-      lon: 1.046055,
     },
   },
   {
@@ -20290,8 +16366,6 @@ export const Stations = [
       town: 'Salou',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.077438,
-      lon: 1.129205,
     },
   },
   {
@@ -20301,8 +16375,6 @@ export const Stations = [
       town: 'Salou',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.08707,
-      lon: 1.145486,
     },
   },
   {
@@ -20312,8 +16384,6 @@ export const Stations = [
       town: 'Salou',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.107439,
-      lon: 1.206086,
     },
   },
   {
@@ -20323,8 +16393,6 @@ export const Stations = [
       town: 'Vila - Seca',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.107179,
-      lon: 1.230504,
     },
   },
   {
@@ -20334,19 +16402,6 @@ export const Stations = [
       town: "Vandellòs I L'Hospitalet De L'Infant",
       province: 'Tarragona',
       country: 'España',
-      lat: 40.995863,
-      lon: 0.920733,
-    },
-  },
-  {
-    name: 'Cambrils',
-    code: '65422',
-    location: {
-      town: 'Cambrils',
-      province: 'Tarragona',
-      country: 'España',
-      lat: 41.081648,
-      lon: 1.046055,
     },
   },
   {
@@ -20356,8 +16411,6 @@ export const Stations = [
       town: 'Valencia',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.465064,
-      lon: -0.377433,
     },
   },
   {
@@ -20367,8 +16420,6 @@ export const Stations = [
       town: 'Ontígola',
       province: 'Toledo',
       country: 'España',
-      lat: 40.000827,
-      lon: -3.572896,
     },
   },
   {
@@ -20378,8 +16429,6 @@ export const Stations = [
       town: 'Ocaña',
       province: 'Toledo',
       country: 'España',
-      lat: 39.964663,
-      lon: -3.48596,
     },
   },
   {
@@ -20389,8 +16438,6 @@ export const Stations = [
       town: 'Noblejas',
       province: 'Toledo',
       country: 'España',
-      lat: 39.972508,
-      lon: -3.442583,
     },
   },
   {
@@ -20400,8 +16447,6 @@ export const Stations = [
       town: 'Villarrubia De Santiago',
       province: 'Toledo',
       country: 'España',
-      lat: 39.966431,
-      lon: -3.367846,
     },
   },
   {
@@ -20411,8 +16456,6 @@ export const Stations = [
       town: 'Santa Cruz De La Zarza',
       province: 'Toledo',
       country: 'España',
-      lat: 39.97319,
-      lon: -3.180424,
     },
   },
   {
@@ -20422,8 +16465,6 @@ export const Stations = [
       town: 'Tarancón',
       province: 'Cuenca',
       country: 'España',
-      lat: 40.006502,
-      lon: -3.009691,
     },
   },
   {
@@ -20433,8 +16474,6 @@ export const Stations = [
       town: 'Huelves',
       province: 'Cuenca',
       country: 'España',
-      lat: 40.043534,
-      lon: -2.885692,
     },
   },
   {
@@ -20444,8 +16483,6 @@ export const Stations = [
       town: 'Paredes',
       province: 'Cuenca',
       country: 'España',
-      lat: 40.112329,
-      lon: -2.796578,
     },
   },
   {
@@ -20455,8 +16492,6 @@ export const Stations = [
       town: 'Vellisca',
       province: 'Cuenca',
       country: 'España',
-      lat: 40.112304,
-      lon: -2.79631,
     },
   },
   {
@@ -20466,8 +16501,6 @@ export const Stations = [
       town: 'Huete',
       province: 'Cuenca',
       country: 'España',
-      lat: 40.14711,
-      lon: -2.681597,
     },
   },
   {
@@ -20477,8 +16510,6 @@ export const Stations = [
       town: 'Huete',
       province: 'Cuenca',
       country: 'España',
-      lat: 40.153433,
-      lon: -2.568419,
     },
   },
   {
@@ -20488,8 +16519,6 @@ export const Stations = [
       town: 'Huete',
       province: 'Cuenca',
       country: 'España',
-      lat: 40.137194,
-      lon: -2.506921,
     },
   },
   {
@@ -20499,8 +16528,6 @@ export const Stations = [
       town: 'Villar Y Velasco',
       province: 'Cuenca',
       country: 'España',
-      lat: 40.155491,
-      lon: -2.408516,
     },
   },
   {
@@ -20510,8 +16537,6 @@ export const Stations = [
       town: 'Fuentenava De Jábaga',
       province: 'Cuenca',
       country: 'España',
-      lat: 40.169257,
-      lon: -2.357093,
     },
   },
   {
@@ -20521,8 +16546,6 @@ export const Stations = [
       town: 'Chillarón De Cuenca',
       province: 'Cuenca',
       country: 'España',
-      lat: 40.1029,
-      lon: -2.220966,
     },
   },
   {
@@ -20532,8 +16555,6 @@ export const Stations = [
       town: 'Fuente Obejuna',
       province: 'Cuenca',
       country: 'España',
-      lat: 40.06734,
-      lon: -2.136471,
     },
   },
   {
@@ -20543,8 +16564,6 @@ export const Stations = [
       town: 'Cuenca',
       province: 'Cuenca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -20554,8 +16573,6 @@ export const Stations = [
       town: 'Cañada Del Hoyo',
       province: 'Cuenca',
       country: 'España',
-      lat: 39.9845679,
-      lon: -1.974331,
     },
   },
   {
@@ -20565,8 +16582,6 @@ export const Stations = [
       town: 'Cañada Del Hoyo',
       province: 'Cuenca',
       country: 'España',
-      lat: 39.953841,
-      lon: -1.889552,
     },
   },
   {
@@ -20576,8 +16591,6 @@ export const Stations = [
       town: 'Carboneras De Guadazaón',
       province: 'Cuenca',
       country: 'España',
-      lat: 39.900058,
-      lon: -1.806833,
     },
   },
   {
@@ -20587,8 +16600,6 @@ export const Stations = [
       town: 'Arguisuelas',
       province: 'Cuenca',
       country: 'España',
-      lat: 39.83853,
-      lon: -1.812304,
     },
   },
   {
@@ -20598,8 +16609,6 @@ export const Stations = [
       town: 'Yémeda',
       province: 'Cuenca',
       country: 'España',
-      lat: 39.750898,
-      lon: -1.681895,
     },
   },
   {
@@ -20609,8 +16618,6 @@ export const Stations = [
       town: 'Víllora',
       province: 'Cuenca',
       country: 'España',
-      lat: 39.747023,
-      lon: -1.611002,
     },
   },
   {
@@ -20620,8 +16627,6 @@ export const Stations = [
       town: 'Enguídanos',
       province: 'Cuenca',
       country: 'España',
-      lat: 39.692155,
-      lon: -1.490186,
     },
   },
   {
@@ -20631,8 +16636,6 @@ export const Stations = [
       town: 'Camporrobles',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.644829,
-      lon: -1.402785,
     },
   },
   {
@@ -20642,8 +16645,6 @@ export const Stations = [
       town: 'Utiel',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.619169,
-      lon: -1.283678,
     },
   },
   {
@@ -20653,8 +16654,6 @@ export const Stations = [
       town: 'Utiel',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.571714,
-      lon: -1.203633,
     },
   },
   {
@@ -20664,8 +16663,6 @@ export const Stations = [
       town: 'Requena',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.5222444,
-      lon: -1.1503527,
     },
   },
   {
@@ -20675,8 +16672,6 @@ export const Stations = [
       town: 'Requena',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.4912,
-      lon: -1.104675,
     },
   },
   {
@@ -20686,8 +16681,6 @@ export const Stations = [
       town: 'Requena',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.4772611,
-      lon: -1.0115972,
     },
   },
   {
@@ -20697,8 +16690,6 @@ export const Stations = [
       town: 'Siete Aguas',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.4568638,
-      lon: -0.9030444,
     },
   },
   {
@@ -20708,8 +16699,6 @@ export const Stations = [
       town: 'Buñol',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.4542861,
-      lon: -0.8701861,
     },
   },
   {
@@ -20719,8 +16708,6 @@ export const Stations = [
       town: 'Buñol',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.427175,
-      lon: -0.7868888,
     },
   },
   {
@@ -20730,8 +16717,6 @@ export const Stations = [
       town: 'Chiva',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.4710444,
-      lon: -0.7228888,
     },
   },
   {
@@ -20741,8 +16726,6 @@ export const Stations = [
       town: 'Cheste',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.4908222,
-      lon: -0.6862916,
     },
   },
   {
@@ -20752,8 +16735,6 @@ export const Stations = [
       town: 'Loriguilla',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.4857027,
-      lon: -0.5673694,
     },
   },
   {
@@ -20763,8 +16744,6 @@ export const Stations = [
       town: 'Buñol',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.4955527,
-      lon: -0.6255277,
     },
   },
   {
@@ -20774,8 +16753,6 @@ export const Stations = [
       town: 'Aldaia',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.4610444,
-      lon: -0.4632388,
     },
   },
   {
@@ -20785,8 +16762,6 @@ export const Stations = [
       town: 'Valencia',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.4526833,
-      lon: -0.4058694,
     },
   },
   {
@@ -20796,19 +16771,15 @@ export const Stations = [
       town: 'Xirivella',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.4625527,
-      lon: -0.4321861,
     },
   },
   {
-    name: 'Cadrete (APT-CGD)',
+    name: 'Cadrete (APT - CGD)',
     code: '67003',
     location: {
       town: 'Zaragoza',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.566496,
-      lon: -0.967105,
     },
   },
   {
@@ -20818,30 +16789,24 @@ export const Stations = [
       town: 'María De Huerva',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.539759,
-      lon: -0.998082,
     },
   },
   {
-    name: 'Botorrita (APD-CGD)',
+    name: 'Botorrita (APD - CGD)',
     code: '67005',
     location: {
       town: 'Botorrita',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.50887,
-      lon: -1.040365,
     },
   },
   {
-    name: 'Muel-Mozota',
+    name: 'Muel - Mozota',
     code: '67006',
     location: {
       town: 'Muel',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.475966,
-      lon: -1.076725,
     },
   },
   {
@@ -20851,8 +16816,6 @@ export const Stations = [
       town: 'Muel',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.468946,
-      lon: -1.086394,
     },
   },
   {
@@ -20862,8 +16825,6 @@ export const Stations = [
       town: 'Longares',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.404787,
-      lon: -1.158791,
     },
   },
   {
@@ -20873,8 +16834,6 @@ export const Stations = [
       town: 'Cariñena',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.335586,
-      lon: -1.228422,
     },
   },
   {
@@ -20884,8 +16843,6 @@ export const Stations = [
       town: 'Encinacorba',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.28865,
-      lon: -1.278534,
     },
   },
   {
@@ -20895,8 +16852,6 @@ export const Stations = [
       town: 'Villarreal De Huerva',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.196498,
-      lon: -1.287096,
     },
   },
   {
@@ -20906,8 +16861,6 @@ export const Stations = [
       town: 'Villadoz',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.165482,
-      lon: -1.279339,
     },
   },
   {
@@ -20917,8 +16870,6 @@ export const Stations = [
       town: 'Badules',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.13951,
-      lon: -1.251572,
     },
   },
   {
@@ -20928,8 +16879,6 @@ export const Stations = [
       town: 'Villahermosa Del Campo',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.108492,
-      lon: -1.239803,
     },
   },
   {
@@ -20939,8 +16888,6 @@ export const Stations = [
       town: 'Ferreruela De Huerva',
       province: 'Teruel',
       country: 'España',
-      lat: 41.06387,
-      lon: -1.239384,
     },
   },
   {
@@ -20950,8 +16897,6 @@ export const Stations = [
       town: 'Calamocha',
       province: 'Teruel',
       country: 'España',
-      lat: 41.009293,
-      lon: -1.254641,
     },
   },
   {
@@ -20961,8 +16906,6 @@ export const Stations = [
       town: 'Calamocha',
       province: 'Teruel',
       country: 'España',
-      lat: 40.957681,
-      lon: -1.269087,
     },
   },
   {
@@ -20972,8 +16915,6 @@ export const Stations = [
       town: 'Calamocha',
       province: 'Teruel',
       country: 'España',
-      lat: 40.936721,
-      lon: -1.261733,
     },
   },
   {
@@ -20983,19 +16924,15 @@ export const Stations = [
       town: 'Calamocha',
       province: 'Teruel',
       country: 'España',
-      lat: 40.903864,
-      lon: -1.299841,
     },
   },
   {
-    name: 'Caminreal-Fuentes Claras',
+    name: 'Caminreal - Fuentes Claras',
     code: '67100',
     location: {
       town: 'Caminreal',
       province: 'Teruel',
       country: 'España',
-      lat: 40.85111,
-      lon: -1.33765,
     },
   },
   {
@@ -21005,19 +16942,16 @@ export const Stations = [
       town: 'Torrijo Del Campo',
       province: 'Teruel',
       country: 'España',
-      lat: 40.826012,
-      lon: -1.340498,
     },
   },
   {
     name: 'Monreal Del Campo',
-    code: '67102',
+    code: '67113',
+    otherCodes: ['67102'],
     location: {
       town: 'Monreal Del Campo',
       province: 'Teruel',
       country: 'España',
-      lat: 40.79121,
-      lon: -1.358874,
     },
   },
   {
@@ -21027,8 +16961,6 @@ export const Stations = [
       town: 'Villafranca Del Campo',
       province: 'Teruel',
       country: 'España',
-      lat: 40.683827,
-      lon: -1.357927,
     },
   },
   {
@@ -21038,8 +16970,6 @@ export const Stations = [
       town: 'Alba',
       province: 'Teruel',
       country: 'España',
-      lat: 40.618511,
-      lon: -1.332129,
     },
   },
   {
@@ -21049,8 +16979,6 @@ export const Stations = [
       town: 'Santa Eulalia',
       province: 'Teruel',
       country: 'España',
-      lat: 40.572917,
-      lon: -1.312995,
     },
   },
   {
@@ -21060,19 +16988,15 @@ export const Stations = [
       town: 'Cella',
       province: 'Teruel',
       country: 'España',
-      lat: 40.455266,
-      lon: -1.244329,
     },
   },
   {
-    name: 'Caude-Tablares (APD)',
+    name: 'Caude - Tablares (APD)',
     code: '67108',
     location: {
       town: 'Teruel',
       province: 'Teruel',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -21082,8 +17006,6 @@ export const Stations = [
       town: 'Teruel',
       province: 'Teruel',
       country: 'España',
-      lat: 40.408584,
-      lon: -1.193674,
     },
   },
   {
@@ -21093,19 +17015,6 @@ export const Stations = [
       town: 'Teruel',
       province: 'Teruel',
       country: 'España',
-      lat: 40.379049,
-      lon: -1.147944,
-    },
-  },
-  {
-    name: 'Monreal Del Campo',
-    code: '67113',
-    location: {
-      town: 'Monreal Del Campo',
-      province: 'Teruel',
-      country: 'España',
-      lat: 40.782321,
-      lon: -1.360792,
     },
   },
   {
@@ -21115,8 +17024,6 @@ export const Stations = [
       town: 'Teruel',
       province: 'Teruel',
       country: 'España',
-      lat: 40.341029,
-      lon: -1.110284,
     },
   },
   {
@@ -21126,8 +17033,6 @@ export const Stations = [
       town: 'Teruel',
       province: 'Teruel',
       country: 'España',
-      lat: 40.329766,
-      lon: -1.04033,
     },
   },
   {
@@ -21137,8 +17042,6 @@ export const Stations = [
       town: 'Puebla De Valverde (LA)',
       province: 'Teruel',
       country: 'España',
-      lat: 40.273092,
-      lon: -0.985079,
     },
   },
   {
@@ -21148,8 +17051,6 @@ export const Stations = [
       town: 'Puebla De Valverde (LA)',
       province: 'Teruel',
       country: 'España',
-      lat: 40.213424,
-      lon: -0.944674,
     },
   },
   {
@@ -21159,8 +17060,6 @@ export const Stations = [
       town: 'Sarrión',
       province: 'Teruel',
       country: 'España',
-      lat: 40.146339,
-      lon: -0.823631,
     },
   },
   {
@@ -21170,8 +17069,6 @@ export const Stations = [
       town: 'Albentosa',
       province: 'Teruel',
       country: 'España',
-      lat: 40.123142,
-      lon: -0.786145,
     },
   },
   {
@@ -21181,8 +17078,6 @@ export const Stations = [
       town: 'Rubielos De Mora',
       province: 'Teruel',
       country: 'España',
-      lat: 40.118006,
-      lon: -0.773463,
     },
   },
   {
@@ -21192,19 +17087,15 @@ export const Stations = [
       town: 'Barracas',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 40.01174,
-      lon: -0.696151,
     },
   },
   {
-    name: 'Toras-Bejis',
+    name: 'Toras - Bejis',
     code: '67209',
     location: {
       town: 'Torás',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 39.94654,
-      lon: -0.689131,
     },
   },
   {
@@ -21214,8 +17105,6 @@ export const Stations = [
       town: 'Caudiel',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 39.948937,
-      lon: -0.656586,
     },
   },
   {
@@ -21225,8 +17114,6 @@ export const Stations = [
       town: 'Caudiel',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 39.9473166,
-      lon: -0.5720277,
     },
   },
   {
@@ -21236,8 +17123,6 @@ export const Stations = [
       town: 'Jérica',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 39.9146309,
-      lon: -0.5689031,
     },
   },
   {
@@ -21247,19 +17132,15 @@ export const Stations = [
       town: 'Navajas',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 39.8740271,
-      lon: -0.5060235,
     },
   },
   {
-    name: 'Segorbe-Arrabal',
+    name: 'Segorbe - Arrabal',
     code: '67214',
     location: {
       town: 'Segorbe',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 39.85445,
-      lon: -0.4932694,
     },
   },
   {
@@ -21269,8 +17150,6 @@ export const Stations = [
       town: 'Segorbe',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 39.8469583,
-      lon: -0.4824138,
     },
   },
   {
@@ -21280,8 +17159,6 @@ export const Stations = [
       town: 'Algimia De Alfara',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.7460638,
-      lon: -0.3673135,
     },
   },
   {
@@ -21291,19 +17168,15 @@ export const Stations = [
       town: 'Soneja',
       province: 'Castellón/Castelló',
       country: 'España',
-      lat: 39.81255,
-      lon: -0.4318972,
     },
   },
   {
-    name: 'Algimia De Alfara - Torres-Torres',
+    name: 'Algimia De Alfara - Torres - Torres',
     code: '67220',
     location: {
       town: 'Algimia De Alfara',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.745657,
-      lon: -0.367563,
     },
   },
   {
@@ -21313,8 +17186,6 @@ export const Stations = [
       town: 'Estivella',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.7063753,
-      lon: -0.3483269,
     },
   },
   {
@@ -21324,8 +17195,6 @@ export const Stations = [
       town: 'Gilet',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.6792861,
-      lon: -0.3206055,
     },
   },
   {
@@ -21335,8 +17204,6 @@ export const Stations = [
       town: 'Massamagrell',
       province: 'Valencia/València',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -21346,8 +17213,6 @@ export const Stations = [
       town: 'Alboraya',
       province: 'Valencia/València',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -21357,8 +17222,6 @@ export const Stations = [
       town: 'Genovés',
       province: 'Valencia/València',
       country: 'España',
-      lat: 38.98773,
-      lon: -0.47988,
     },
   },
   {
@@ -21368,8 +17231,6 @@ export const Stations = [
       town: 'Benigànim',
       province: 'Valencia/València',
       country: 'España',
-      lat: 38.938499,
-      lon: -0.453424,
     },
   },
   {
@@ -21379,8 +17240,6 @@ export const Stations = [
       town: 'Pobla Del Duc (LA)',
       province: 'Valencia/València',
       country: 'España',
-      lat: 38.907606,
-      lon: -0.453386,
     },
   },
   {
@@ -21390,8 +17249,6 @@ export const Stations = [
       town: 'Montaverner',
       province: 'Valencia/València',
       country: 'España',
-      lat: 38.884135,
-      lon: -0.491619,
     },
   },
   {
@@ -21401,8 +17258,6 @@ export const Stations = [
       town: 'Bufali',
       province: 'Valencia/València',
       country: 'España',
-      lat: 38.867405,
-      lon: -0.510478,
     },
   },
   {
@@ -21412,8 +17267,6 @@ export const Stations = [
       town: 'Albaida',
       province: 'Valencia/València',
       country: 'España',
-      lat: 38.845645,
-      lon: -0.518129,
     },
   },
   {
@@ -21423,8 +17276,6 @@ export const Stations = [
       town: 'Agullent',
       province: 'Valencia/València',
       country: 'España',
-      lat: 38.830569,
-      lon: -0.551183,
     },
   },
   {
@@ -21434,8 +17285,6 @@ export const Stations = [
       town: 'Ontinyent',
       province: 'Valencia/València',
       country: 'España',
-      lat: 38.809692,
-      lon: -0.602457,
     },
   },
   {
@@ -21445,8 +17294,6 @@ export const Stations = [
       town: 'Agres',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.796829,
-      lon: -0.521744,
     },
   },
   {
@@ -21456,8 +17303,6 @@ export const Stations = [
       town: 'Cocentaina',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.740618,
-      lon: -0.446789,
     },
   },
   {
@@ -21467,8 +17312,6 @@ export const Stations = [
       town: 'Alcoy/Alcoi',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.709349,
-      lon: -0.470247,
     },
   },
   {
@@ -21478,8 +17321,6 @@ export const Stations = [
       town: 'Sollana',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.3029777,
-      lon: -0.3941055,
     },
   },
   {
@@ -21489,8 +17330,6 @@ export const Stations = [
       town: 'Sollana',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.2793083,
-      lon: -0.3793138,
     },
   },
   {
@@ -21500,19 +17339,16 @@ export const Stations = [
       town: 'Sueca',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.2055611,
-      lon: -0.307825,
     },
   },
   {
     name: 'Cullera',
-    code: '69104',
+    code: '69106',
+    otherCodes: ['69104'],
     location: {
       town: 'Cullera',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.1778305,
-      lon: -0.2632361,
     },
   },
   {
@@ -21522,19 +17358,6 @@ export const Stations = [
       town: 'Tavernes De La Valldigna',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.0790027,
-      lon: -0.2262833,
-    },
-  },
-  {
-    name: 'Cullera',
-    code: '69106',
-    location: {
-      town: 'Cullera',
-      province: 'Valencia/València',
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -21544,41 +17367,16 @@ export const Stations = [
       town: 'Xeraco',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.0262694,
-      lon: -0.2146694,
-    },
-  },
-  {
-    name: 'Gandia*',
-    code: '69108',
-    location: {
-      town: 'Gandia',
-      province: 'Valencia/València',
-      country: 'España',
-      lat: 38.983826,
-      lon: -0.180659,
-    },
-  },
-  {
-    name: 'Gandia',
-    code: '69109',
-    location: {
-      town: 'Gandia',
-      province: 'Valencia/València',
-      country: 'España',
-      lat: 38.994113,
-      lon: -0.155574,
     },
   },
   {
     name: 'Gandía',
     code: '69110',
+    otherCodes: ['69108', '69109'],
     location: {
       town: 'Gandia',
       province: 'Valencia/València',
       country: 'España',
-      lat: 38.9702805,
-      lon: -0.1797722,
     },
   },
   {
@@ -21588,8 +17386,6 @@ export const Stations = [
       town: 'Gandia',
       province: 'Valencia/València',
       country: 'España',
-      lat: 38.9913319,
-      lon: -0.1611829,
     },
   },
   {
@@ -21599,8 +17395,6 @@ export const Stations = [
       town: 'Xirivella',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.4636472,
-      lon: -0.4209361,
     },
   },
   {
@@ -21610,19 +17404,15 @@ export const Stations = [
       town: 'Quart De Poblet',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.481719,
-      lon: -0.442872,
     },
   },
   {
-    name: 'Manises (APT-CGD)',
+    name: 'Manises (APT - CGD)',
     code: '69202',
     location: {
       town: 'Manises',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.489516,
-      lon: -0.459067,
     },
   },
   {
@@ -21632,8 +17422,6 @@ export const Stations = [
       town: 'Manises',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.494295,
-      lon: -0.471502,
     },
   },
   {
@@ -21643,8 +17431,6 @@ export const Stations = [
       town: 'Manises',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.503594,
-      lon: -0.496037,
     },
   },
   {
@@ -21654,19 +17440,15 @@ export const Stations = [
       town: 'Manises',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.516056,
-      lon: -0.514475,
     },
   },
   {
-    name: 'Ribarroja Del Turia (APD-CGD)',
+    name: 'Ribarroja Del Turia (APD - CGD)',
     code: '69206',
     location: {
       town: 'Riba - Roja De Túria',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.544255,
-      lon: -0.570417,
     },
   },
   {
@@ -21676,8 +17458,6 @@ export const Stations = [
       town: 'Riba - Roja De Túria',
       province: 'Valencia/València',
       country: 'España',
-      lat: 39.537216,
-      lon: -0.54425,
     },
   },
   {
@@ -21687,19 +17467,16 @@ export const Stations = [
       town: 'Benaguasil',
       province: 'Valencia/València',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Vallecas',
-    code: '70001',
+    code: '70005',
+    otherCodes: ['70001'],
     location: {
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3820447,
-      lon: -3.6246888,
     },
   },
   {
@@ -21709,8 +17486,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3816176,
-      lon: -3.6679819,
     },
   },
   {
@@ -21720,52 +17495,25 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3760524,
-      lon: -3.6562354,
     },
   },
   {
-    name: 'Vallecas',
-    code: '70005',
-    location: {
-      town: 'Madrid',
-      province: 'Madrid',
-      country: 'España',
-      lat: 40.382364,
-      lon: -3.623042,
-    },
-  },
-  {
-    name: 'Sta.Eugenia',
-    code: '7006F',
-    location: {
-      town: 'Madrid',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Aguilas-Lb',
-    code: '7007 ',
+    name: 'Aguilas - Lb',
+    code: '7007',
     location: {
       town: 'Águilas',
-      province: null,
+      province: 'Murcia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Vicálvaro',
     code: '70100',
+    otherCodes: ['99204'],
     location: {
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.4012112,
-      lon: -3.5959811,
     },
   },
   {
@@ -21775,8 +17523,6 @@ export const Stations = [
       town: 'Coslada',
       province: 'Madrid',
       country: 'España',
-      lat: 40.442537,
-      lon: -3.5344609,
     },
   },
   {
@@ -21786,30 +17532,25 @@ export const Stations = [
       town: 'Torrejón De Ardoz',
       province: 'Madrid',
       country: 'España',
-      lat: 40.4547384,
-      lon: -3.4797415,
     },
   },
   {
-    name: 'Alcala De Henares',
+    name: 'Alcalá De Henares',
     code: '70103',
+    otherCodes: ['98103'],
     location: {
       town: 'Alcalá De Henares',
       province: 'Madrid',
       country: 'España',
-      lat: 40.4889113,
-      lon: -3.3662523,
     },
   },
   {
-    name: 'Meco (APD-CGD)',
+    name: 'Meco (APD - CGD)',
     code: '70104',
     location: {
       town: 'Meco',
       province: 'Madrid',
       country: 'España',
-      lat: 40.5344356,
-      lon: -3.2990455,
     },
   },
   {
@@ -21819,19 +17560,15 @@ export const Stations = [
       town: 'Azuqueca De Henares',
       province: 'Guadalajara',
       country: 'España',
-      lat: 40.5610437,
-      lon: -3.2653569,
     },
   },
   {
-    name: 'Alcalá Henares-Universidad (APD)',
+    name: 'Alcalá Henares - Universidad (APD)',
     code: '70107',
     location: {
       town: 'Alcalá De Henares',
       province: 'Madrid',
       country: 'España',
-      lat: 40.5052933,
-      lon: -3.3352443,
     },
   },
   {
@@ -21841,8 +17578,6 @@ export const Stations = [
       town: 'Coslada',
       province: 'Madrid',
       country: 'España',
-      lat: 40.423221,
-      lon: -3.5611137,
     },
   },
   {
@@ -21852,8 +17587,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.3869128,
-      lon: -3.6089604,
     },
   },
   {
@@ -21863,8 +17596,6 @@ export const Stations = [
       town: 'Alcalá De Henares',
       province: 'Madrid',
       country: 'España',
-      lat: 40.4804888,
-      lon: -3.3930758,
     },
   },
   {
@@ -21874,8 +17605,6 @@ export const Stations = [
       town: 'Yunquera De Henares',
       province: 'Madrid',
       country: 'España',
-      lat: 40.4638889,
-      lon: -3.4422222,
     },
   },
   {
@@ -21885,8 +17614,6 @@ export const Stations = [
       town: 'Guadalajara',
       province: 'Guadalajara',
       country: 'España',
-      lat: 40.6441032,
-      lon: -3.1822298,
     },
   },
   {
@@ -21896,8 +17623,6 @@ export const Stations = [
       town: 'Fontanar',
       province: 'Guadalajara',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -21907,8 +17632,6 @@ export const Stations = [
       town: 'Yunquera De Henares',
       province: 'Guadalajara',
       country: 'España',
-      lat: 40.747013,
-      lon: -3.163226,
     },
   },
   {
@@ -21918,8 +17641,6 @@ export const Stations = [
       town: 'Mohernando',
       province: 'Guadalajara',
       country: 'España',
-      lat: 40.770759,
-      lon: -3.158154,
     },
   },
   {
@@ -21929,8 +17650,6 @@ export const Stations = [
       town: 'Humanes',
       province: 'Guadalajara',
       country: 'España',
-      lat: 40.831273,
-      lon: -3.13886,
     },
   },
   {
@@ -21940,8 +17659,6 @@ export const Stations = [
       town: 'Mohernando',
       province: 'Guadalajara',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -21951,8 +17668,6 @@ export const Stations = [
       town: 'Espinosa De Henares',
       province: 'Guadalajara',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -21962,8 +17677,6 @@ export const Stations = [
       town: 'Copernal',
       province: 'Guadalajara',
       country: 'España',
-      lat: 40.909686,
-      lon: -3.073157,
     },
   },
   {
@@ -21973,8 +17686,6 @@ export const Stations = [
       town: 'Espinosa De Henares',
       province: 'Guadalajara',
       country: 'España',
-      lat: 40.90598,
-      lon: -3.014352,
     },
   },
   {
@@ -21984,8 +17695,6 @@ export const Stations = [
       town: 'Jadraque',
       province: 'Guadalajara',
       country: 'España',
-      lat: 40.930229,
-      lon: -2.935935,
     },
   },
   {
@@ -21995,8 +17704,6 @@ export const Stations = [
       town: 'Matillas',
       province: 'Guadalajara',
       country: 'España',
-      lat: 40.953808,
-      lon: -2.84326,
     },
   },
   {
@@ -22006,8 +17713,6 @@ export const Stations = [
       town: 'Baides',
       province: 'Guadalajara',
       country: 'España',
-      lat: 41.004864,
-      lon: -2.785635,
     },
   },
   {
@@ -22017,8 +17722,6 @@ export const Stations = [
       town: 'Sigüenza',
       province: 'Guadalajara',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -22028,8 +17731,6 @@ export const Stations = [
       town: 'Sigüenza',
       province: 'Guadalajara',
       country: 'España',
-      lat: 41.071417,
-      lon: -2.646407,
     },
   },
   {
@@ -22039,8 +17740,6 @@ export const Stations = [
       town: 'Sigüenza',
       province: 'Guadalajara',
       country: 'España',
-      lat: 41.104838,
-      lon: -2.601064,
     },
   },
   {
@@ -22050,8 +17749,6 @@ export const Stations = [
       town: 'Sigüenza',
       province: 'Guadalajara',
       country: 'España',
-      lat: 41.131802,
-      lon: -2.544694,
     },
   },
   {
@@ -22061,8 +17758,6 @@ export const Stations = [
       town: 'Medinaceli',
       province: 'Soria',
       country: 'España',
-      lat: 41.136617,
-      lon: -2.492952,
     },
   },
   {
@@ -22072,8 +17767,6 @@ export const Stations = [
       town: 'Medinaceli',
       province: 'Soria',
       country: 'España',
-      lat: 41.165207,
-      lon: -2.421241,
     },
   },
   {
@@ -22083,8 +17776,6 @@ export const Stations = [
       town: 'Almazán',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -22094,8 +17785,6 @@ export const Stations = [
       town: 'Arcos De Jalón',
       province: 'Soria',
       country: 'España',
-      lat: 41.215854,
-      lon: -2.278998,
     },
   },
   {
@@ -22105,8 +17794,6 @@ export const Stations = [
       town: 'Santa María De Huerta',
       province: 'Soria',
       country: 'España',
-      lat: 41.264421,
-      lon: -2.177525,
     },
   },
   {
@@ -22116,8 +17803,6 @@ export const Stations = [
       town: 'Monreal De Ariza',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.298767,
-      lon: -2.110448,
     },
   },
   {
@@ -22127,8 +17812,6 @@ export const Stations = [
       town: 'Ariza',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.3098,
-      lon: -2.059411,
     },
   },
   {
@@ -22138,8 +17821,6 @@ export const Stations = [
       town: 'Cetina',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.295978,
-      lon: -1.961811,
     },
   },
   {
@@ -22149,8 +17830,6 @@ export const Stations = [
       town: 'Alhama De Aragón',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.294398,
-      lon: -1.904454,
     },
   },
   {
@@ -22160,8 +17839,6 @@ export const Stations = [
       town: 'Bubierca',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.31719,
-      lon: -1.855198,
     },
   },
   {
@@ -22171,8 +17848,6 @@ export const Stations = [
       town: 'Ateca',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.324659,
-      lon: -1.785268,
     },
   },
   {
@@ -22182,8 +17857,6 @@ export const Stations = [
       town: 'Terrer',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.322218,
-      lon: -1.709254,
     },
   },
   {
@@ -22193,8 +17866,6 @@ export const Stations = [
       town: 'Calatayud',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.346692,
-      lon: -1.63868,
     },
   },
   {
@@ -22204,8 +17875,6 @@ export const Stations = [
       town: 'Calatayud',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.419902,
-      lon: -1.594086,
     },
   },
   {
@@ -22215,19 +17884,15 @@ export const Stations = [
       town: 'Calatayud',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.421676,
-      lon: -1.592127,
     },
   },
   {
-    name: 'Paracuellos-Sabiñán',
+    name: 'Paracuellos - Sabiñán',
     code: '70603',
     location: {
       town: 'Paracuellos De La Ribera',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.42931,
-      lon: -1.567483,
     },
   },
   {
@@ -22237,8 +17902,6 @@ export const Stations = [
       town: 'Sabiñán',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.443981,
-      lon: -1.571474,
     },
   },
   {
@@ -22248,8 +17911,6 @@ export const Stations = [
       town: 'Morés',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.478667,
-      lon: -1.566238,
     },
   },
   {
@@ -22259,8 +17920,6 @@ export const Stations = [
       town: 'Morés',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.477236,
-      lon: -1.540446,
     },
   },
   {
@@ -22270,8 +17929,6 @@ export const Stations = [
       town: 'Morata De Jalón',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.475467,
-      lon: -1.479721,
     },
   },
   {
@@ -22281,8 +17938,6 @@ export const Stations = [
       town: 'Ricla',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.501394,
-      lon: -1.40345,
     },
   },
   {
@@ -22292,8 +17947,6 @@ export const Stations = [
       town: 'Calatorao',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.528692,
-      lon: -1.360545,
     },
   },
   {
@@ -22303,8 +17956,6 @@ export const Stations = [
       town: 'Salillas De Jalón',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.56794,
-      lon: -1.325848,
     },
   },
   {
@@ -22314,19 +17965,15 @@ export const Stations = [
       town: 'Épila',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.60933,
-      lon: -1.301043,
     },
   },
   {
-    name: 'Rueda De Jalón-Lumpiaque',
+    name: 'Rueda De Jalón - Lumpiaque',
     code: '70704',
     location: {
       town: 'Rueda De Jalón',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.638892,
-      lon: -1.281667,
     },
   },
   {
@@ -22336,8 +17983,6 @@ export const Stations = [
       town: 'Plasencia De Jalón',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.68935,
-      lon: -1.234237,
     },
   },
   {
@@ -22347,19 +17992,15 @@ export const Stations = [
       town: 'Grisén',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.745261,
-      lon: -1.165924,
     },
   },
   {
-    name: 'Pinseque (APD-CGD)',
+    name: 'Pinseque (APD - CGD)',
     code: '70707',
     location: {
       town: 'Pinseque',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.743288,
-      lon: -1.091168,
     },
   },
   {
@@ -22367,10 +18008,8 @@ export const Stations = [
     code: '70715',
     location: {
       town: 'Bardallur',
-      province: undefined,
+      province: 'Zaragoza',
       country: 'España',
-      lat: 41.685433,
-      lon: -1.237998,
     },
   },
   {
@@ -22380,8 +18019,6 @@ export const Stations = [
       town: 'Zaragoza',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.72265,
-      lon: -1.020175,
     },
   },
   {
@@ -22391,19 +18028,15 @@ export const Stations = [
       town: 'Utebo',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.7105305,
-      lon: -0.9979222,
     },
   },
   {
-    name: 'Utebo-Monzalbarba',
+    name: 'Utebo - Monzalbarba',
     code: '70802',
     location: {
       town: 'Utebo',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.700301,
-      lon: -0.981193,
     },
   },
   {
@@ -22413,8 +18046,6 @@ export const Stations = [
       town: 'Zaragoza',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.6526636,
-      lon: -0.896165,
     },
   },
   {
@@ -22424,8 +18055,6 @@ export const Stations = [
       town: 'Zaragoza',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.644103,
-      lon: -0.891188,
     },
   },
   {
@@ -22435,19 +18064,16 @@ export const Stations = [
       town: 'Zaragoza',
       province: 'Zaragoza',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Zaragoza Delicias',
+    name: 'Zaragoza - Delicias',
     code: '71000',
+    otherCodes: ['04040'],
     location: {
       town: 'Zaragoza',
       province: 'Zaragoza',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -22457,8 +18083,6 @@ export const Stations = [
       town: 'Zaragoza',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.62977,
-      lon: -0.863064,
     },
   },
   {
@@ -22468,8 +18092,6 @@ export const Stations = [
       town: 'Zaragoza',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.601565,
-      lon: -0.823237,
     },
   },
   {
@@ -22479,8 +18101,6 @@ export const Stations = [
       town: 'Burgo De Ebro (EL)',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.566527,
-      lon: -0.739839,
     },
   },
   {
@@ -22490,8 +18110,6 @@ export const Stations = [
       town: 'Fuentes De Ebro',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.515065,
-      lon: -0.618625,
     },
   },
   {
@@ -22501,8 +18119,6 @@ export const Stations = [
       town: 'Pina De Ebro',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.480097,
-      lon: -0.557277,
     },
   },
   {
@@ -22512,8 +18128,6 @@ export const Stations = [
       town: 'Quinto',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.419528,
-      lon: -0.490673,
     },
   },
   {
@@ -22523,8 +18137,6 @@ export const Stations = [
       town: 'Gelsa',
       province: 'Zaragoza',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -22534,8 +18146,6 @@ export const Stations = [
       town: 'Zaida (LA)',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.320542,
-      lon: -0.427115,
     },
   },
   {
@@ -22545,8 +18155,6 @@ export const Stations = [
       town: 'Azaila',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.276178,
-      lon: -0.485823,
     },
   },
   {
@@ -22556,8 +18164,6 @@ export const Stations = [
       town: 'Puebla De Híjar (LA)',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.2244,
-      lon: -0.438595,
     },
   },
   {
@@ -22567,8 +18173,6 @@ export const Stations = [
       town: 'Samper De Calanda',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.182183,
-      lon: -0.368761,
     },
   },
   {
@@ -22578,8 +18182,6 @@ export const Stations = [
       town: 'Castelnou',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.212674,
-      lon: -0.289979,
     },
   },
   {
@@ -22589,8 +18191,6 @@ export const Stations = [
       town: 'Chiprana',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.231581,
-      lon: -0.154495,
     },
   },
   {
@@ -22600,8 +18200,6 @@ export const Stations = [
       town: 'Caspe',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.239738,
-      lon: -0.042701,
     },
   },
   {
@@ -22611,8 +18209,6 @@ export const Stations = [
       town: 'Caspe',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.230056,
-      lon: 0.070145,
     },
   },
   {
@@ -22622,8 +18218,6 @@ export const Stations = [
       town: 'Fabara',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.234405,
-      lon: 0.143284,
     },
   },
   {
@@ -22633,19 +18227,15 @@ export const Stations = [
       town: 'Nonaspe',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.213788,
-      lon: 0.242472,
     },
   },
   {
-    name: 'Faió-La Pobla De Massaluca (FAYÓN)',
+    name: 'Faió - La Pobla De Massaluca (FAYÓN)',
     code: '71208',
     location: {
       town: 'Pobla De Massaluca (LA)',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.225247,
-      lon: 0.350275,
     },
   },
   {
@@ -22655,8 +18245,6 @@ export const Stations = [
       town: "Riba - Roja D'Ebre",
       province: 'Tarragona',
       country: 'España',
-      lat: 41.248451,
-      lon: 0.480888,
     },
   },
   {
@@ -22666,8 +18254,6 @@ export const Stations = [
       town: 'Flix',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.229502,
-      lon: 0.540071,
     },
   },
   {
@@ -22677,8 +18263,6 @@ export const Stations = [
       town: 'Ascó',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.182479,
-      lon: 0.568964,
     },
   },
   {
@@ -22688,8 +18272,6 @@ export const Stations = [
       town: 'Garcia',
       province: 'Tarragona',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -22699,8 +18281,6 @@ export const Stations = [
       town: 'Móra La Nova',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.106374,
-      lon: 0.652893,
     },
   },
   {
@@ -22710,8 +18290,6 @@ export const Stations = [
       town: 'Guiamets (ELS)',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.093462,
-      lon: 0.747173,
     },
   },
   {
@@ -22721,19 +18299,15 @@ export const Stations = [
       town: 'Capçanes',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.102057,
-      lon: 0.78033,
     },
   },
   {
-    name: 'Marçà-Falset',
+    name: 'Marçà - Falset',
     code: '71303',
     location: {
       town: 'Marçà',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.130945,
-      lon: 0.810328,
     },
   },
   {
@@ -22743,30 +18317,24 @@ export const Stations = [
       town: 'Pradell De La Teixeta',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.13324,
-      lon: 0.858371,
     },
   },
   {
-    name: "Duesaigües-L'Argentera",
+    name: "Duesaigües - L'Argentera",
     code: '71305',
     location: {
       town: "Argentera (L')",
       province: 'Tarragona',
       country: 'España',
-      lat: 41.143776,
-      lon: 0.920942,
     },
   },
   {
-    name: 'Riudecanyes-Botarell',
+    name: 'Riudecanyes - Botarell',
     code: '71306',
     location: {
       town: 'Riudecanyes',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.140027,
-      lon: 0.975648,
     },
   },
   {
@@ -22776,8 +18344,6 @@ export const Stations = [
       town: 'Borges Del Camp (LES)',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.165525,
-      lon: 1.020774,
     },
   },
   {
@@ -22787,8 +18353,6 @@ export const Stations = [
       town: 'Reus',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.160524,
-      lon: 1.099979,
     },
   },
   {
@@ -22798,8 +18362,6 @@ export const Stations = [
       town: 'Vila - Seca',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.112744,
-      lon: 1.150389,
     },
   },
   {
@@ -22809,8 +18371,6 @@ export const Stations = [
       town: 'Canonja (LA)',
       province: 'Tarragona',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -22820,8 +18380,6 @@ export const Stations = [
       town: 'Tarragona',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.111624,
-      lon: 1.253214,
     },
   },
   {
@@ -22831,8 +18389,6 @@ export const Stations = [
       town: 'Tarragona',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.136446,
-      lon: 1.37453,
     },
   },
   {
@@ -22842,8 +18398,6 @@ export const Stations = [
       town: 'Torredembarra',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.142857,
-      lon: 1.40566,
     },
   },
   {
@@ -22853,8 +18407,6 @@ export const Stations = [
       town: 'Vendrell (EL)',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.186245,
-      lon: 1.526315,
     },
   },
   {
@@ -22864,8 +18416,6 @@ export const Stations = [
       town: 'Calafell',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.188736,
-      lon: 1.567244,
     },
   },
   {
@@ -22875,8 +18425,6 @@ export const Stations = [
       town: 'Calafell',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.192544,
-      lon: 1.607745,
     },
   },
   {
@@ -22886,8 +18434,6 @@ export const Stations = [
       town: 'Cunit',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.195912,
-      lon: 1.631307,
     },
   },
   {
@@ -22897,8 +18443,6 @@ export const Stations = [
       town: 'Cubelles',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.204112,
-      lon: 1.671807,
     },
   },
   {
@@ -22908,8 +18452,6 @@ export const Stations = [
       town: 'Vilanova I La Geltrú',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.219993,
-      lon: 1.733331,
     },
   },
   {
@@ -22919,8 +18461,6 @@ export const Stations = [
       town: 'Sitges',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.237757,
-      lon: 1.81694,
     },
   },
   {
@@ -22930,8 +18470,6 @@ export const Stations = [
       town: 'Sitges',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.240689,
-      lon: 1.860622,
     },
   },
   {
@@ -22941,8 +18479,6 @@ export const Stations = [
       town: 'Sitges',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.254712,
-      lon: 1.904007,
     },
   },
   {
@@ -22952,8 +18488,6 @@ export const Stations = [
       town: 'Castelldefels',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.2670124,
-      lon: 1.9567717,
     },
   },
   {
@@ -22963,8 +18497,6 @@ export const Stations = [
       town: 'Castelldefels',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.2785574,
-      lon: 1.9784252,
     },
   },
   {
@@ -22974,8 +18506,6 @@ export const Stations = [
       town: 'Gavà',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.304209,
-      lon: 2.012793,
     },
   },
   {
@@ -22985,8 +18515,6 @@ export const Stations = [
       town: 'Prat De Llobregat (EL)',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.330762,
-      lon: 2.088982,
     },
   },
   {
@@ -22996,8 +18524,6 @@ export const Stations = [
       town: "Hospitalet De Llobregat (L')",
       province: 'Barcelona',
       country: 'España',
-      lat: 41.354261,
-      lon: 2.115549,
     },
   },
   {
@@ -23007,8 +18533,6 @@ export const Stations = [
       town: 'Sant Boi De Lluçanès',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.309407,
-      lon: 2.0277,
     },
   },
   {
@@ -23018,8 +18542,6 @@ export const Stations = [
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.37922,
-      lon: 2.140624,
     },
   },
   {
@@ -23029,8 +18551,6 @@ export const Stations = [
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.392281,
-      lon: 2.164896,
     },
   },
   {
@@ -23040,41 +18560,16 @@ export const Stations = [
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.343759,
-      lon: 2.127389,
-    },
-  },
-  {
-    name: 'Barcelona - Morro',
-    code: '71902',
-    location: {
-      town: 'Barcelona',
-      province: 'Barcelona',
-      country: 'España',
-      lat: 41.364003,
-      lon: 2.171533,
-    },
-  },
-  {
-    name: 'Barcelona - Morro',
-    code: '71903',
-    location: {
-      town: 'Barcelona',
-      province: 'Barcelona',
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Barcelona - Morro',
     code: '71905',
+    otherCodes: ['71902', '71903'],
     location: {
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -23084,8 +18579,6 @@ export const Stations = [
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -23095,8 +18588,6 @@ export const Stations = [
       town: 'Morell (EL)',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.189664,
-      lon: 1.212844,
     },
   },
   {
@@ -23106,8 +18597,6 @@ export const Stations = [
       town: 'Secuita (LA)',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.193139,
-      lon: 1.263021,
     },
   },
   {
@@ -23117,8 +18606,6 @@ export const Stations = [
       town: 'Catllar (EL)',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.177314,
-      lon: 1.33679,
     },
   },
   {
@@ -23128,8 +18615,6 @@ export const Stations = [
       town: 'Riera De Gaià (LA)',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.171813,
-      lon: 1.357999,
     },
   },
   {
@@ -23139,8 +18624,6 @@ export const Stations = [
       town: 'Pobla De Montornès (LA)',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.180887,
-      lon: 1.414469,
     },
   },
   {
@@ -23150,8 +18633,6 @@ export const Stations = [
       town: 'Constantí',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.175237,
-      lon: 1.187004,
     },
   },
   {
@@ -23161,8 +18642,6 @@ export const Stations = [
       town: 'Roda De Barà',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.184052,
-      lon: 1.440153,
     },
   },
   {
@@ -23172,8 +18651,6 @@ export const Stations = [
       town: 'Roda De Barà',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.186315,
-      lon: 1.4551443,
     },
   },
   {
@@ -23183,8 +18660,6 @@ export const Stations = [
       town: 'Vendrell (EL)',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.220531,
-      lon: 1.537775,
     },
   },
   {
@@ -23194,8 +18669,6 @@ export const Stations = [
       town: "Arboç (L')",
       province: 'Tarragona',
       country: 'España',
-      lat: 41.273412,
-      lon: 1.600516,
     },
   },
   {
@@ -23205,19 +18678,6 @@ export const Stations = [
       town: 'Santa Margarida I Els Monjos',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.316708,
-      lon: 1.662007,
-    },
-  },
-  {
-    name: 'Vilafranca Del Penedes',
-    code: '72204',
-    location: {
-      town: 'Vilafranca Del Penedès',
-      province: 'Barcelona',
-      country: 'España',
-      lat: 41.344856,
-      lon: 1.703676,
     },
   },
   {
@@ -23227,19 +18687,15 @@ export const Stations = [
       town: 'Granada (LA)',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.370925,
-      lon: 1.725083,
     },
   },
   {
-    name: 'Lavern-Subirats (APD)',
+    name: 'Lavern - Subirats (APD)',
     code: '72206',
     location: {
       town: 'Subirats',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.395755,
-      lon: 1.768162,
     },
   },
   {
@@ -23249,8 +18705,6 @@ export const Stations = [
       town: "Sant Sadurní D'Anoia",
       province: 'Barcelona',
       country: 'España',
-      lat: 41.419824,
-      lon: 1.794186,
     },
   },
   {
@@ -23260,8 +18714,6 @@ export const Stations = [
       town: 'Gelida',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.4484539,
-      lon: 1.8654326,
     },
   },
   {
@@ -23271,8 +18723,6 @@ export const Stations = [
       town: 'Martorell',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.479459,
-      lon: 1.929874,
     },
   },
   {
@@ -23282,8 +18732,6 @@ export const Stations = [
       town: 'Castellbisbal',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.473263,
-      lon: 1.967619,
     },
   },
   {
@@ -23293,8 +18741,6 @@ export const Stations = [
       town: 'Papiol (EL)',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.435304,
-      lon: 2.002477,
     },
   },
   {
@@ -23304,8 +18750,6 @@ export const Stations = [
       town: 'Molins De Rei',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.409953,
-      lon: 2.020864,
     },
   },
   {
@@ -23315,8 +18759,6 @@ export const Stations = [
       town: 'Sant Feliu De Llobregat',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.383049,
-      lon: 2.048042,
     },
   },
   {
@@ -23326,8 +18768,6 @@ export const Stations = [
       town: 'Sant Joan Despí',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.368619,
-      lon: 2.060305,
     },
   },
   {
@@ -23337,8 +18777,6 @@ export const Stations = [
       town: 'Cornellà De Llobregat',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.357469,
-      lon: 2.070566,
     },
   },
   {
@@ -23348,8 +18786,6 @@ export const Stations = [
       town: 'Cornellà De Llobregat',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.359516,
-      lon: 2.085295,
     },
   },
   {
@@ -23359,8 +18795,6 @@ export const Stations = [
       town: "Hospitalet De Llobregat (L')",
       province: 'Barcelona',
       country: 'España',
-      lat: 41.364129,
-      lon: 2.100766,
     },
   },
   {
@@ -23370,8 +18804,6 @@ export const Stations = [
       town: 'Prat De Llobregat (EL)',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.303844,
-      lon: 2.07218,
     },
   },
   {
@@ -23381,8 +18813,6 @@ export const Stations = [
       town: 'Rubí',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.475318,
-      lon: 2.037135,
     },
   },
   {
@@ -23392,8 +18822,6 @@ export const Stations = [
       town: 'Sant Cugat Del Vallès',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.481295,
-      lon: 2.080439,
     },
   },
   {
@@ -23403,8 +18831,6 @@ export const Stations = [
       town: 'Cerdanyola Del Vallès',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.496992,
-      lon: 2.115035,
     },
   },
   {
@@ -23414,8 +18840,6 @@ export const Stations = [
       town: 'Santa Perpètua De Mogoda',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.5246497,
-      lon: 2.1877809,
     },
   },
   {
@@ -23425,8 +18849,6 @@ export const Stations = [
       town: 'Puigverd De Lleida',
       province: 'Lleida',
       country: 'España',
-      lat: 41.55365,
-      lon: 0.733058,
     },
   },
   {
@@ -23436,8 +18858,6 @@ export const Stations = [
       town: 'Juneda',
       province: 'Lleida',
       country: 'España',
-      lat: 41.543879,
-      lon: 0.825584,
     },
   },
   {
@@ -23447,8 +18867,6 @@ export const Stations = [
       town: 'Borges Blanques (LES)',
       province: 'Lleida',
       country: 'España',
-      lat: 41.521461,
-      lon: 0.877715,
     },
   },
   {
@@ -23458,8 +18876,6 @@ export const Stations = [
       town: 'Floresta (LA)',
       province: 'Lleida',
       country: 'España',
-      lat: 41.504263,
-      lon: 0.924303,
     },
   },
   {
@@ -23469,8 +18885,6 @@ export const Stations = [
       town: 'Vinaixa',
       province: 'Lleida',
       country: 'España',
-      lat: 41.425077,
-      lon: 0.970308,
     },
   },
   {
@@ -23480,8 +18894,6 @@ export const Stations = [
       town: 'Vimbodí I Poblet',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.40261,
-      lon: 1.046008,
     },
   },
   {
@@ -23491,8 +18903,6 @@ export const Stations = [
       town: "Espluga De Francolí (L')",
       province: 'Tarragona',
       country: 'España',
-      lat: 41.400525,
-      lon: 1.103389,
     },
   },
   {
@@ -23502,8 +18912,6 @@ export const Stations = [
       town: 'Montblanc',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.376648,
-      lon: 1.165431,
     },
   },
   {
@@ -23513,8 +18921,6 @@ export const Stations = [
       town: 'Vilaverd',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.337602,
-      lon: 1.176599,
     },
   },
   {
@@ -23524,8 +18930,6 @@ export const Stations = [
       town: 'Riba (LA)',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.318354,
-      lon: 1.181248,
     },
   },
   {
@@ -23535,8 +18939,6 @@ export const Stations = [
       town: 'Valls',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.30597,
-      lon: 1.197665,
     },
   },
   {
@@ -23546,8 +18948,6 @@ export const Stations = [
       town: 'Alcover',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.261658,
-      lon: 1.174228,
     },
   },
   {
@@ -23557,19 +18957,15 @@ export const Stations = [
       town: 'Selva Del Camp (LA)',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.210284,
-      lon: 1.144072,
     },
   },
   {
-    name: 'Gurrea De Gallego (APD-CGD)',
+    name: 'Gurrea De Gallego (APD - CGD)',
     code: '74001',
     location: {
       town: 'Gurrea De Gállego',
       province: 'Huesca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -23579,8 +18975,6 @@ export const Stations = [
       town: 'Vicién',
       province: 'Huesca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -23590,8 +18984,6 @@ export const Stations = [
       town: 'Huesca',
       province: 'Huesca',
       country: 'España',
-      lat: 42.133594,
-      lon: -0.409745,
     },
   },
   {
@@ -23601,8 +18993,6 @@ export const Stations = [
       town: 'Sotonera (LA)',
       province: 'Huesca',
       country: 'España',
-      lat: 42.204998,
-      lon: -0.559273,
     },
   },
   {
@@ -23612,19 +19002,15 @@ export const Stations = [
       town: 'Ayerbe',
       province: 'Huesca',
       country: 'España',
-      lat: 42.27561,
-      lon: -0.682569,
     },
   },
   {
-    name: 'Riglos-Concilio',
+    name: 'Riglos - Concilio',
     code: '74205',
     location: {
       town: 'Peñas De Riglos (LAS)',
       province: 'Huesca',
       country: 'España',
-      lat: 42.3165,
-      lon: -0.727461,
     },
   },
   {
@@ -23634,8 +19020,6 @@ export const Stations = [
       town: 'Peñas De Riglos (LAS)',
       province: 'Huesca',
       country: 'España',
-      lat: 42.344756,
-      lon: -0.731599,
     },
   },
   {
@@ -23645,8 +19029,6 @@ export const Stations = [
       town: 'Peñas De Riglos (LAS)',
       province: 'Huesca',
       country: 'España',
-      lat: 42.38039,
-      lon: -0.695647,
     },
   },
   {
@@ -23656,19 +19038,15 @@ export const Stations = [
       town: 'Jaca',
       province: 'Huesca',
       country: 'España',
-      lat: 42.403289,
-      lon: -0.643344,
     },
   },
   {
-    name: 'Caldearenas-Aquilué',
+    name: 'Caldearenas - Aquilué',
     code: '74209',
     location: {
       town: 'Caldearenas',
       province: 'Huesca',
       country: 'España',
-      lat: 42.397973,
-      lon: -0.499309,
     },
   },
   {
@@ -23678,8 +19056,6 @@ export const Stations = [
       town: 'Sabiñánigo',
       province: 'Huesca',
       country: 'España',
-      lat: 42.439924,
-      lon: -0.418195,
     },
   },
   {
@@ -23689,8 +19065,6 @@ export const Stations = [
       town: 'Sabiñánigo',
       province: 'Huesca',
       country: 'España',
-      lat: 42.520446,
-      lon: -0.373085,
     },
   },
   {
@@ -23700,8 +19074,6 @@ export const Stations = [
       town: 'Jaca',
       province: 'Huesca',
       country: 'España',
-      lat: 42.541871,
-      lon: -0.465102,
     },
   },
   {
@@ -23711,19 +19083,15 @@ export const Stations = [
       town: 'Jaca',
       province: 'Huesca',
       country: 'España',
-      lat: 42.578303,
-      lon: -0.539231,
     },
   },
   {
-    name: 'Castiello-Pueblo',
+    name: 'Castiello - Pueblo',
     code: '74214',
     location: {
       town: 'Castiello De Jaca',
       province: 'Huesca',
       country: 'España',
-      lat: 42.62811,
-      lon: -0.546291,
     },
   },
   {
@@ -23733,8 +19101,6 @@ export const Stations = [
       town: 'Castiello De Jaca',
       province: 'Huesca',
       country: 'España',
-      lat: 42.62811,
-      lon: -0.545025,
     },
   },
   {
@@ -23744,8 +19110,6 @@ export const Stations = [
       town: 'Villanúa',
       province: 'Huesca',
       country: 'España',
-      lat: 42.688745,
-      lon: -0.52346,
     },
   },
   {
@@ -23755,8 +19119,6 @@ export const Stations = [
       town: 'Canfranc',
       province: 'Huesca',
       country: 'España',
-      lat: 42.751471,
-      lon: -0.514641,
     },
   },
   {
@@ -23766,8 +19128,6 @@ export const Stations = [
       town: 'Alcoletge',
       province: 'Lleida',
       country: 'España',
-      lat: 41.654267,
-      lon: 0.685707,
     },
   },
   {
@@ -23777,8 +19137,6 @@ export const Stations = [
       town: 'Vilanova De La Barca',
       province: 'Lleida',
       country: 'España',
-      lat: 41.687381,
-      lon: 0.727898,
     },
   },
   {
@@ -23788,8 +19146,6 @@ export const Stations = [
       town: 'Térmens',
       province: 'Lleida',
       country: 'España',
-      lat: 41.716525,
-      lon: 0.763046,
     },
   },
   {
@@ -23799,8 +19155,6 @@ export const Stations = [
       town: 'Vallfogona De Balaguer',
       province: 'Lleida',
       country: 'España',
-      lat: 41.755751,
-      lon: 0.805612,
     },
   },
   {
@@ -23810,8 +19164,6 @@ export const Stations = [
       town: 'Balaguer',
       province: 'Lleida',
       country: 'España',
-      lat: 41.789333,
-      lon: 0.81475,
     },
   },
   {
@@ -23821,8 +19173,6 @@ export const Stations = [
       town: 'Os De Balaguer',
       province: 'Lleida',
       country: 'España',
-      lat: 41.823329,
-      lon: 0.812023,
     },
   },
   {
@@ -23832,8 +19182,6 @@ export const Stations = [
       town: 'Camarasa',
       province: 'Lleida',
       country: 'España',
-      lat: 41.866409,
-      lon: 0.832424,
     },
   },
   {
@@ -23843,8 +19191,6 @@ export const Stations = [
       town: 'Avellanes I Santa Linya (LES)',
       province: 'Lleida',
       country: 'España',
-      lat: 41.912066,
-      lon: 0.830305,
     },
   },
   {
@@ -23854,8 +19200,6 @@ export const Stations = [
       town: 'Avellanes I Santa Linya (LES)',
       province: 'Lleida',
       country: 'España',
-      lat: 41.931776,
-      lon: 0.852433,
     },
   },
   {
@@ -23865,19 +19209,15 @@ export const Stations = [
       town: 'Àger',
       province: 'Lleida',
       country: 'España',
-      lat: 42.006739,
-      lon: 0.851617,
     },
   },
   {
-    name: 'Cellers-Llimiana',
+    name: 'Cellers - Llimiana',
     code: '75111',
     location: {
       town: 'Castell De Mur',
       province: 'Lleida',
       country: 'España',
-      lat: 42.058699,
-      lon: 0.882868,
     },
   },
   {
@@ -23887,19 +19227,15 @@ export const Stations = [
       town: 'Sant Esteve De La Sarga',
       province: 'Lleida',
       country: 'España',
-      lat: 42.101419,
-      lon: 0.888047,
     },
   },
   {
-    name: 'Palau-Puigcercos',
+    name: 'Palau - Puigcercos',
     code: '75113',
     location: {
       town: 'Tremp',
       province: 'Lleida',
       country: 'España',
-      lat: 42.146955,
-      lon: 0.892441,
     },
   },
   {
@@ -23909,8 +19245,6 @@ export const Stations = [
       town: 'Tremp',
       province: 'Lleida',
       country: 'España',
-      lat: 42.167364,
-      lon: 0.891137,
     },
   },
   {
@@ -23920,8 +19254,6 @@ export const Stations = [
       town: 'Salàs De Pallars',
       province: 'Lleida',
       country: 'España',
-      lat: 42.206845,
-      lon: 0.940447,
     },
   },
   {
@@ -23931,8 +19263,6 @@ export const Stations = [
       town: 'Pobla De Segur (LA)',
       province: 'Lleida',
       country: 'España',
-      lat: 42.239854,
-      lon: 0.966107,
     },
   },
   {
@@ -23942,8 +19272,6 @@ export const Stations = [
       town: 'Salomó',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.223474,
-      lon: 1.376617,
     },
   },
   {
@@ -23953,19 +19281,15 @@ export const Stations = [
       town: 'Vilabella',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.240312,
-      lon: 1.315601,
     },
   },
   {
-    name: 'Nulles-Bràfim',
+    name: 'Nulles - Bràfim',
     code: '76003',
     location: {
       town: 'Nulles',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.250306,
-      lon: 1.297449,
     },
   },
   {
@@ -23975,19 +19299,15 @@ export const Stations = [
       town: 'Valls',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.28963,
-      lon: 1.258734,
     },
   },
   {
-    name: 'Montcada I Reixac-Sant Joan (APD)',
+    name: 'Montcada I Reixac - Sant Joan (APD)',
     code: '77001',
     location: {
       town: 'Montcada I Reixac',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.482028,
-      lon: 2.184993,
     },
   },
   {
@@ -23997,8 +19317,6 @@ export const Stations = [
       town: 'Montcada I Reixac',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.496658,
-      lon: 2.182072,
     },
   },
   {
@@ -24008,19 +19326,15 @@ export const Stations = [
       town: 'Santa Perpètua De Mogoda',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.521426,
-      lon: 2.193917,
     },
   },
   {
-    name: 'Mollet-Santa Rosa',
+    name: 'Mollet - Santa Rosa',
     code: '77004',
     location: {
       town: 'Mollet Del Vallès',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.535064,
-      lon: 2.205846,
     },
   },
   {
@@ -24030,19 +19344,15 @@ export const Stations = [
       town: 'Parets Del Vallès',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.560527,
-      lon: 2.255996,
     },
   },
   {
-    name: 'Granollers-Canovelles',
+    name: 'Granollers - Canovelles',
     code: '77006',
     location: {
       town: 'Granollers',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.6113633,
-      lon: 2.2769926,
     },
   },
   {
@@ -24052,8 +19362,6 @@ export const Stations = [
       town: 'Franqueses Del Vallès (LES)',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.624639,
-      lon: 2.298077,
     },
   },
   {
@@ -24063,8 +19371,6 @@ export const Stations = [
       town: 'Franqueses Del Vallès (LES)',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.643738,
-      lon: 2.296369,
     },
   },
   {
@@ -24074,8 +19380,6 @@ export const Stations = [
       town: 'Garriga (LA)',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.684575,
-      lon: 2.288761,
     },
   },
   {
@@ -24085,8 +19389,6 @@ export const Stations = [
       town: 'Figaró-Montmany',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.7233684,
-      lon: 2.271161,
     },
   },
   {
@@ -24096,8 +19398,6 @@ export const Stations = [
       town: 'Sant Martí De Centelles',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.760542,
-      lon: 2.24972,
     },
   },
   {
@@ -24107,8 +19407,6 @@ export const Stations = [
       town: 'Centelles',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.797834,
-      lon: 2.223428,
     },
   },
   {
@@ -24118,8 +19416,6 @@ export const Stations = [
       town: 'Balenyà',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.843129,
-      lon: 2.250218,
     },
   },
   {
@@ -24129,19 +19425,15 @@ export const Stations = [
       town: 'Balenyà',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.852564,
-      lon: 2.264253,
     },
   },
   {
-    name: 'Taradell-Mont-Rodon(APD)',
+    name: 'Taradell - Mont - Rodon(APD)',
     code: '77108',
     location: {
       town: 'Taradell',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.880198,
-      lon: 2.257857,
     },
   },
   {
@@ -24151,8 +19443,6 @@ export const Stations = [
       town: 'Vic',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.930805,
-      lon: 2.248776,
     },
   },
   {
@@ -24162,8 +19452,6 @@ export const Stations = [
       town: 'Manlleu',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.998912,
-      lon: 2.269314,
     },
   },
   {
@@ -24173,8 +19461,6 @@ export const Stations = [
       town: 'Torelló',
       province: 'Barcelona',
       country: 'España',
-      lat: 42.05217,
-      lon: 2.259369,
     },
   },
   {
@@ -24184,8 +19470,6 @@ export const Stations = [
       town: 'Sant Vicenç De Torelló',
       province: 'Barcelona',
       country: 'España',
-      lat: 42.065014,
-      lon: 2.241286,
     },
   },
   {
@@ -24195,8 +19479,6 @@ export const Stations = [
       town: 'Sant Quirze De Besora',
       province: 'Barcelona',
       country: 'España',
-      lat: 42.104658,
-      lon: 2.216977,
     },
   },
   {
@@ -24206,8 +19488,6 @@ export const Stations = [
       town: 'Montesquiu',
       province: 'Girona',
       country: 'España',
-      lat: 42.130061,
-      lon: 2.203924,
     },
   },
   {
@@ -24217,8 +19497,6 @@ export const Stations = [
       town: 'Ripoll',
       province: 'Girona',
       country: 'España',
-      lat: 42.195536,
-      lon: 2.195977,
     },
   },
   {
@@ -24228,8 +19506,6 @@ export const Stations = [
       town: 'Sant Joan De Les Abadesses',
       province: 'Girona',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -24239,8 +19515,6 @@ export const Stations = [
       town: 'Campdevànol',
       province: 'Girona',
       country: 'España',
-      lat: 42.221558,
-      lon: 2.165877,
     },
   },
   {
@@ -24250,19 +19524,16 @@ export const Stations = [
       town: 'Campelles',
       province: 'Girona',
       country: 'España',
-      lat: 42.296473,
-      lon: 2.163875,
     },
   },
   {
     name: 'Ribes De Freser',
-    code: '77303',
+    code: '97006',
+    otherCodes: ['77303'],
     location: {
       town: 'Ribes De Freser',
       province: 'Girona',
       country: 'España',
-      lat: 42.301158,
-      lon: 2.166078,
     },
   },
   {
@@ -24272,8 +19543,6 @@ export const Stations = [
       town: 'Planoles',
       province: 'Girona',
       country: 'España',
-      lat: 42.313559,
-      lon: 2.103078,
     },
   },
   {
@@ -24283,8 +19552,6 @@ export const Stations = [
       town: 'Toses',
       province: 'Girona',
       country: 'España',
-      lat: 42.324189,
-      lon: 2.029728,
     },
   },
   {
@@ -24294,19 +19561,15 @@ export const Stations = [
       town: 'Alp',
       province: 'Girona',
       country: 'España',
-      lat: 42.344529,
-      lon: 1.956006,
     },
   },
   {
-    name: 'Urtx-Alp (APT)',
+    name: 'Urtx - Alp (APT)',
     code: '77307',
     location: {
       town: 'Alp',
       province: 'Girona',
       country: 'España',
-      lat: 42.375375,
-      lon: 1.899526,
     },
   },
   {
@@ -24316,8 +19579,6 @@ export const Stations = [
       town: 'Fontanals De Cerdanya',
       province: 'Girona',
       country: 'España',
-      lat: 42.398028,
-      lon: 1.915327,
     },
   },
   {
@@ -24327,8 +19588,6 @@ export const Stations = [
       town: 'Puigcerdà',
       province: 'Girona',
       country: 'España',
-      lat: 42.428908,
-      lon: 1.924085,
     },
   },
   {
@@ -24338,8 +19597,6 @@ export const Stations = [
       town: 'La Tour De Caro',
       province: 'Girona',
       country: 'España',
-      lat: 42.458629,
-      lon: 1.904703,
     },
   },
   {
@@ -24349,8 +19606,6 @@ export const Stations = [
       town: 'Zaragoza',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.722429,
-      lon: -0.84318,
     },
   },
   {
@@ -24360,19 +19615,6 @@ export const Stations = [
       town: 'Villanueva De Gállego',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.76551,
-      lon: -0.822204,
-    },
-  },
-  {
-    name: undefined,
-    code: '78006',
-    location: {
-      town: 'Zaragoza',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -24382,8 +19624,6 @@ export const Stations = [
       town: 'Zuera',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.877166,
-      lon: -0.764172,
     },
   },
   {
@@ -24393,8 +19633,6 @@ export const Stations = [
       town: 'Zuera',
       province: 'Zaragoza',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -24404,8 +19642,6 @@ export const Stations = [
       town: 'Almudévar',
       province: 'Huesca',
       country: 'España',
-      lat: 41.996714,
-      lon: -0.643622,
     },
   },
   {
@@ -24415,8 +19651,6 @@ export const Stations = [
       town: 'Tardienta',
       province: 'Huesca',
       country: 'España',
-      lat: 41.975716,
-      lon: -0.538223,
     },
   },
   {
@@ -24426,19 +19660,15 @@ export const Stations = [
       town: 'Grañén',
       province: 'Huesca',
       country: 'España',
-      lat: 41.938033,
-      lon: -0.369329,
     },
   },
   {
-    name: 'Marcen-Poleñino',
+    name: 'Marcen - Poleñino',
     code: '78202',
     location: {
       town: 'Tramaced',
       province: 'Huesca',
       country: 'España',
-      lat: 41.881911,
-      lon: -0.283456,
     },
   },
   {
@@ -24448,19 +19678,15 @@ export const Stations = [
       town: 'Sariñena',
       province: 'Huesca',
       country: 'España',
-      lat: 41.817529,
-      lon: -0.17076,
     },
   },
   {
-    name: 'Tormillo-Lastanosa (APT)',
+    name: 'Tormillo - Lastanosa (APT)',
     code: '78204',
     location: {
       town: 'Peralta De Alcofea',
       province: 'Huesca',
       country: 'España',
-      lat: 41.848936,
-      lon: -0.036765,
     },
   },
   {
@@ -24470,19 +19696,15 @@ export const Stations = [
       town: 'Monzón',
       province: 'Huesca',
       country: 'España',
-      lat: 41.906333,
-      lon: 0.148187,
     },
   },
   {
-    name: 'Monzón-Río Cinca',
+    name: 'Monzón - Río Cinca',
     code: '78301',
     location: {
       town: 'Monzón',
       province: 'Huesca',
       country: 'España',
-      lat: 41.913679,
-      lon: 0.196939,
     },
   },
   {
@@ -24492,19 +19714,15 @@ export const Stations = [
       town: 'Binéfar',
       province: 'Huesca',
       country: 'España',
-      lat: 41.849768,
-      lon: 0.291478,
     },
   },
   {
-    name: 'Tamarite-Altorricon',
+    name: 'Tamarite - Altorricon',
     code: '78303',
     location: {
       town: 'Tamarite De Litera',
       province: 'Huesca',
       country: 'España',
-      lat: 41.777729,
-      lon: 0.37775,
     },
   },
   {
@@ -24514,8 +19732,6 @@ export const Stations = [
       town: 'Almacelles',
       province: 'Lleida',
       country: 'España',
-      lat: 41.730983,
-      lon: 0.44618,
     },
   },
   {
@@ -24525,8 +19741,6 @@ export const Stations = [
       town: 'Lleida',
       province: 'Lleida',
       country: 'España',
-      lat: 41.686021,
-      lon: 0.476872,
     },
   },
   {
@@ -24536,8 +19750,6 @@ export const Stations = [
       town: 'Lleida',
       province: 'Lleida',
       country: 'España',
-      lat: 41.620696,
-      lon: 0.632669,
     },
   },
   {
@@ -24547,19 +19759,15 @@ export const Stations = [
       town: 'Lleida',
       province: 'Lleida',
       country: 'España',
-      lat: 41.626481,
-      lon: 0.714829,
     },
   },
   {
-    name: "Bell-Lloc D'Urgell",
+    name: "Bell - Lloc D'Urgell",
     code: '78402',
     location: {
       town: "Bell-Lloc D'Urgell",
       province: 'Lleida',
       country: 'España',
-      lat: 41.631619,
-      lon: 0.781547,
     },
   },
   {
@@ -24569,8 +19777,6 @@ export const Stations = [
       town: 'Mollerussa',
       province: 'Lleida',
       country: 'España',
-      lat: 41.631779,
-      lon: 0.896775,
     },
   },
   {
@@ -24580,8 +19786,6 @@ export const Stations = [
       town: 'Golmés',
       province: 'Lleida',
       country: 'España',
-      lat: 41.635929,
-      lon: 0.930863,
     },
   },
   {
@@ -24591,8 +19795,6 @@ export const Stations = [
       town: 'Castellnou De Seana',
       province: 'Lleida',
       country: 'España',
-      lat: 41.637464,
-      lon: 0.967736,
     },
   },
   {
@@ -24602,8 +19804,6 @@ export const Stations = [
       town: 'Bellpuig',
       province: 'Lleida',
       country: 'España',
-      lat: 41.632545,
-      lon: 1.012993,
     },
   },
   {
@@ -24613,8 +19813,6 @@ export const Stations = [
       town: 'Anglesola',
       province: 'Lleida',
       country: 'España',
-      lat: 41.646448,
-      lon: 1.079192,
     },
   },
   {
@@ -24624,8 +19822,6 @@ export const Stations = [
       town: 'Tàrrega',
       province: 'Lleida',
       country: 'España',
-      lat: 41.650387,
-      lon: 1.138963,
     },
   },
   {
@@ -24635,8 +19831,6 @@ export const Stations = [
       town: 'Cervera',
       province: 'Lleida',
       country: 'España',
-      lat: 41.673611,
-      lon: 1.274773,
     },
   },
   {
@@ -24646,8 +19840,6 @@ export const Stations = [
       town: 'Sant Guim De Freixenet',
       province: 'Lleida',
       country: 'España',
-      lat: 41.655924,
-      lon: 1.42053,
     },
   },
   {
@@ -24657,8 +19849,6 @@ export const Stations = [
       town: 'Sant Martí Sesgueioles',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.701217,
-      lon: 1.486204,
     },
   },
   {
@@ -24668,19 +19858,15 @@ export const Stations = [
       town: 'Calaf',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.730334,
-      lon: 1.515097,
     },
   },
   {
-    name: 'Seguers-Sant Pere Sallavinera',
+    name: 'Seguers - Sant Pere Sallavinera',
     code: '78504',
     location: {
       town: 'Sant Pere Sallavinera',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.747991,
-      lon: 1.574167,
     },
   },
   {
@@ -24690,8 +19876,6 @@ export const Stations = [
       town: 'Aguilar De Segarra',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.738917,
-      lon: 1.62372,
     },
   },
   {
@@ -24701,8 +19885,6 @@ export const Stations = [
       town: 'Rajadell',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.733159,
-      lon: 1.696275,
     },
   },
   {
@@ -24712,8 +19894,6 @@ export const Stations = [
       town: 'Manresa',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.720129,
-      lon: 1.82899,
     },
   },
   {
@@ -24723,8 +19903,6 @@ export const Stations = [
       town: 'Manresa',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.68947,
-      lon: 1.840609,
     },
   },
   {
@@ -24734,8 +19912,6 @@ export const Stations = [
       town: 'Sant Vicenç De Castellet',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.675787,
-      lon: 1.858073,
     },
   },
   {
@@ -24745,19 +19921,15 @@ export const Stations = [
       town: 'Sant Vicenç De Castellet',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.667899,
-      lon: 1.863451,
     },
   },
   {
-    name: 'Castellbell I El Vilar-Monistrol Monts',
+    name: 'Castellbell I El Vilar - Monistrol Monts',
     code: '78605',
     location: {
       town: 'Castellbell I El Vilar',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.628059,
-      lon: 1.869875,
     },
   },
   {
@@ -24767,19 +19939,15 @@ export const Stations = [
       town: 'Vacarisses',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.6019242,
-      lon: 1.8918433,
     },
   },
   {
-    name: 'Vacarisses-Torreblanca',
+    name: 'Vacarisses - Torreblanca',
     code: '78607',
     location: {
       town: 'Vacarisses',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.577138,
-      lon: 1.921807,
     },
   },
   {
@@ -24789,8 +19957,6 @@ export const Stations = [
       town: 'Olesa De Montserrat',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.560993,
-      lon: 1.930327,
     },
   },
   {
@@ -24800,8 +19966,6 @@ export const Stations = [
       town: 'Viladecavalls',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.565479,
-      lon: 1.954342,
     },
   },
   {
@@ -24811,8 +19975,6 @@ export const Stations = [
       town: 'Viladecavalls',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.568123,
-      lon: 1.975712,
     },
   },
   {
@@ -24822,8 +19984,6 @@ export const Stations = [
       town: 'Terrassa',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.570159,
-      lon: 2.019075,
     },
   },
   {
@@ -24833,8 +19993,6 @@ export const Stations = [
       town: 'Terrassa',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.566146,
-      lon: 2.053035,
     },
   },
   {
@@ -24844,8 +20002,6 @@ export const Stations = [
       town: 'Sabadell',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.564031,
-      lon: 2.075185,
     },
   },
   {
@@ -24855,8 +20011,6 @@ export const Stations = [
       town: 'Sabadell',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.53662,
-      lon: 2.105617,
     },
   },
   {
@@ -24866,8 +20020,6 @@ export const Stations = [
       town: 'Sabadell',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.549572,
-      lon: 2.114757,
     },
   },
   {
@@ -24877,8 +20029,6 @@ export const Stations = [
       town: 'Barberà Del Vallès',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.507162,
-      lon: 2.127558,
     },
   },
   {
@@ -24888,30 +20038,24 @@ export const Stations = [
       town: 'Cerdanyola Del Vallès',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.492582,
-      lon: 2.14763,
     },
   },
   {
-    name: 'Montcada I Reixac-Santa María',
+    name: 'Montcada I Reixac - Santa María',
     code: '78707',
     location: {
       town: 'Montcada I Reixac',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.481232,
-      lon: 2.166922,
     },
   },
   {
-    name: 'Montcada I Reixac-Manresa',
+    name: 'Montcada I Reixac - Manresa',
     code: '78708',
     location: {
       town: 'Montcada I Reixac',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.483996,
-      lon: 2.185513,
     },
   },
   {
@@ -24921,8 +20065,6 @@ export const Stations = [
       town: 'Sabadell',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.562871,
-      lon: 2.087794,
     },
   },
   {
@@ -24932,8 +20074,6 @@ export const Stations = [
       town: 'Terrassa',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.567261,
-      lon: 2.041561,
     },
   },
   {
@@ -24943,8 +20083,6 @@ export const Stations = [
       town: 'Montcada I Reixac',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.468992,
-      lon: 2.178904,
     },
   },
   {
@@ -24954,8 +20092,6 @@ export const Stations = [
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.460945,
-      lon: 2.181042,
     },
   },
   {
@@ -24965,8 +20101,6 @@ export const Stations = [
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.430893,
-      lon: 2.183095,
     },
   },
   {
@@ -24976,8 +20110,6 @@ export const Stations = [
       town: 'Vilanova I La Geltrú',
       province: 'Barcelona',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -24987,8 +20119,6 @@ export const Stations = [
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.391864,
-      lon: 2.180076,
     },
   },
   {
@@ -24998,8 +20128,6 @@ export const Stations = [
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.386726,
-      lon: 2.166458,
     },
   },
   {
@@ -25009,30 +20137,16 @@ export const Stations = [
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.422638,
-      lon: 2.187262,
     },
   },
   {
     name: 'Barcelona - Sagrera',
     code: '79002',
+    otherCodes: ['79003'],
     location: {
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.422389,
-      lon: 2.194623,
-    },
-  },
-  {
-    name: 'Barcelona - Sagre',
-    code: '79003',
-    location: {
-      town: 'Barcelona',
-      province: 'Barcelona',
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -25042,8 +20156,6 @@ export const Stations = [
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.435807,
-      lon: 2.193572,
     },
   },
   {
@@ -25053,19 +20165,15 @@ export const Stations = [
       town: 'Montcada I Reixac',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.483833,
-      lon: 2.188193,
     },
   },
   {
-    name: 'Mollet-Sant Fost',
+    name: 'Mollet - Sant Fost',
     code: '79006',
     location: {
       town: 'Mollet Del Vallès',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.530069,
-      lon: 2.215485,
     },
   },
   {
@@ -25075,8 +20183,6 @@ export const Stations = [
       town: 'Montmeló',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.5519598,
-      lon: 2.2517501,
     },
   },
   {
@@ -25086,8 +20192,6 @@ export const Stations = [
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.41745,
-      lon: 2.192893,
     },
   },
   {
@@ -25097,8 +20201,6 @@ export const Stations = [
       town: 'Llagosta (LA)',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.510428,
-      lon: 2.19974,
     },
   },
   {
@@ -25108,8 +20210,6 @@ export const Stations = [
       town: 'Granollers',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.594528,
-      lon: 2.29107,
     },
   },
   {
@@ -25119,8 +20219,6 @@ export const Stations = [
       town: 'Cardedeu',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.6354891,
-      lon: 2.3576977,
     },
   },
   {
@@ -25130,8 +20228,6 @@ export const Stations = [
       town: 'Llinars Del Vallès',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.636058,
-      lon: 2.403675,
     },
   },
   {
@@ -25141,8 +20237,6 @@ export const Stations = [
       town: 'Santa Maria De Palautordera',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.670899,
-      lon: 2.452823,
     },
   },
   {
@@ -25152,8 +20246,6 @@ export const Stations = [
       town: 'Sant Celoni',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.686024,
-      lon: 2.491262,
     },
   },
   {
@@ -25163,8 +20255,6 @@ export const Stations = [
       town: 'Gualba',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.714078,
-      lon: 2.533778,
     },
   },
   {
@@ -25174,8 +20264,6 @@ export const Stations = [
       town: 'Riells I Viabrea',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.723357,
-      lon: 2.560075,
     },
   },
   {
@@ -25185,8 +20273,6 @@ export const Stations = [
       town: 'Hostalric',
       province: 'Girona',
       country: 'España',
-      lat: 41.747657,
-      lon: 2.632175,
     },
   },
   {
@@ -25196,30 +20282,24 @@ export const Stations = [
       town: 'Granollers',
       province: 'Barcelona',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Les Franqueses-Granollers Nord',
+    name: 'Les Franqueses - Granollers Nord',
     code: '79109',
     location: {
       town: 'Franqueses Del Vallès (LES)',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.617306,
-      lon: 2.292859,
     },
   },
   {
-    name: 'Maçanet-Massanes',
+    name: 'Maçanet - Massanes',
     code: '79200',
     location: {
       town: 'Massanes',
       province: 'Girona',
       country: 'España',
-      lat: 41.778657,
-      lon: 2.678775,
     },
   },
   {
@@ -25229,8 +20309,6 @@ export const Stations = [
       town: 'Sils',
       province: 'Girona',
       country: 'España',
-      lat: 41.807683,
-      lon: 2.74486,
     },
   },
   {
@@ -25240,8 +20318,6 @@ export const Stations = [
       town: 'Caldes De Malavella',
       province: 'Girona',
       country: 'España',
-      lat: 41.841098,
-      lon: 2.800765,
     },
   },
   {
@@ -25251,8 +20327,6 @@ export const Stations = [
       town: 'Riudellots De La Selva',
       province: 'Girona',
       country: 'España',
-      lat: 41.896232,
-      lon: 2.811599,
     },
   },
   {
@@ -25262,30 +20336,16 @@ export const Stations = [
       town: 'Fornells De La Selva',
       province: 'Girona',
       country: 'España',
-      lat: 41.935157,
-      lon: 2.809732,
-    },
-  },
-  {
-    name: 'Girona',
-    code: '79206',
-    location: {
-      town: 'Girona',
-      province: 'Girona',
-      country: 'España',
-      lat: 41.953481,
-      lon: 2.80536,
     },
   },
   {
     name: 'Girona',
     code: '79300',
+    otherCodes: ['79206'],
     location: {
       town: 'Girona',
       province: 'Girona',
       country: 'España',
-      lat: 41.979303,
-      lon: 2.817006,
     },
   },
   {
@@ -25295,19 +20355,15 @@ export const Stations = [
       town: 'Celrà',
       province: 'Girona',
       country: 'España',
-      lat: 42.02723,
-      lon: 2.874969,
     },
   },
   {
-    name: 'Bordils-Juià',
+    name: 'Bordils - Juià',
     code: '79302',
     location: {
       town: 'Bordils',
       province: 'Girona',
       country: 'España',
-      lat: 42.037068,
-      lon: 2.915255,
     },
   },
   {
@@ -25317,8 +20373,6 @@ export const Stations = [
       town: 'Flaçà',
       province: 'Girona',
       country: 'España',
-      lat: 42.047596,
-      lon: 2.957506,
     },
   },
   {
@@ -25328,8 +20382,6 @@ export const Stations = [
       town: 'Sant Jordi Desvalls',
       province: 'Girona',
       country: 'España',
-      lat: 42.068319,
-      lon: 2.964533,
     },
   },
   {
@@ -25339,8 +20391,6 @@ export const Stations = [
       town: 'Saus, Camallera I Llampaies',
       province: 'Girona',
       country: 'España',
-      lat: 42.122359,
-      lon: 2.965448,
     },
   },
   {
@@ -25350,8 +20400,6 @@ export const Stations = [
       town: 'Sant Miquel De Fluvià',
       province: 'Girona',
       country: 'España',
-      lat: 42.172087,
-      lon: 2.989663,
     },
   },
   {
@@ -25361,8 +20409,6 @@ export const Stations = [
       town: 'Garrigàs',
       province: 'Girona',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -25372,8 +20418,6 @@ export const Stations = [
       town: 'Vilamalla',
       province: 'Girona',
       country: 'España',
-      lat: 42.216202,
-      lon: 2.977874,
     },
   },
   {
@@ -25383,8 +20427,6 @@ export const Stations = [
       town: 'Figueres',
       province: 'Girona',
       country: 'España',
-      lat: 42.265065,
-      lon: 2.968787,
     },
   },
   {
@@ -25394,8 +20436,6 @@ export const Stations = [
       town: 'Peralada',
       province: 'Girona',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -25405,8 +20445,6 @@ export const Stations = [
       town: 'Vilajuïga',
       province: 'Girona',
       country: 'España',
-      lat: 42.325739,
-      lon: 3.085385,
     },
   },
   {
@@ -25416,8 +20454,6 @@ export const Stations = [
       town: 'Llançà',
       province: 'Girona',
       country: 'España',
-      lat: 42.3665949,
-      lon: 3.148987,
     },
   },
   {
@@ -25427,8 +20463,6 @@ export const Stations = [
       town: 'Colera',
       province: 'Girona',
       country: 'España',
-      lat: 42.391779,
-      lon: 3.149228,
     },
   },
   {
@@ -25438,8 +20472,6 @@ export const Stations = [
       town: 'Colera',
       province: 'Girona',
       country: 'España',
-      lat: 42.407068,
-      lon: 3.154262,
     },
   },
   {
@@ -25449,8 +20481,6 @@ export const Stations = [
       town: 'Portbou',
       province: 'Girona',
       country: 'España',
-      lat: 42.424494,
-      lon: 3.157858,
     },
   },
   {
@@ -25460,8 +20490,6 @@ export const Stations = [
       town: 'Portbou',
       province: 'Girona',
       country: 'España',
-      lat: 42.441476,
-      lon: 3.163259,
     },
   },
   {
@@ -25471,8 +20499,6 @@ export const Stations = [
       town: 'Figueres',
       province: 'Girona',
       country: 'España',
-      lat: 42.26459,
-      lon: 2.967444,
     },
   },
   {
@@ -25482,8 +20508,6 @@ export const Stations = [
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.384089,
-      lon: 2.187004,
     },
   },
   {
@@ -25493,8 +20517,6 @@ export const Stations = [
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -25504,8 +20526,6 @@ export const Stations = [
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -25515,8 +20535,6 @@ export const Stations = [
       town: 'Sant Adrià De Besòs',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.424665,
-      lon: 2.230761,
     },
   },
   {
@@ -25526,8 +20544,6 @@ export const Stations = [
       town: 'Badalona',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.445802,
-      lon: 2.249257,
     },
   },
   {
@@ -25537,19 +20553,15 @@ export const Stations = [
       town: 'Montgat',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.463418,
-      lon: 2.271692,
     },
   },
   {
-    name: 'Montgat-Nord (P)',
+    name: 'Montgat - Nord (P)',
     code: '79406',
     location: {
       town: 'Montgat',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.468941,
-      lon: 2.286615,
     },
   },
   {
@@ -25559,8 +20571,6 @@ export const Stations = [
       town: 'Masnou (EL)',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.477702,
-      lon: 2.314362,
     },
   },
   {
@@ -25570,8 +20580,6 @@ export const Stations = [
       town: 'Masnou (EL)',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.483293,
-      lon: 2.337839,
     },
   },
   {
@@ -25581,8 +20589,6 @@ export const Stations = [
       town: 'Premià De Mar',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.488348,
-      lon: 2.357075,
     },
   },
   {
@@ -25592,8 +20598,6 @@ export const Stations = [
       town: 'Vilassar De Mar',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.501746,
-      lon: 2.392842,
     },
   },
   {
@@ -25603,8 +20607,6 @@ export const Stations = [
       town: 'Cabrera De Mar',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.5065238,
-      lon: 2.3992054,
     },
   },
   {
@@ -25614,8 +20616,6 @@ export const Stations = [
       town: 'Mataró',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.533245,
-      lon: 2.445797,
     },
   },
   {
@@ -25625,8 +20625,6 @@ export const Stations = [
       town: 'Sant Andreu De Llavaneres',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.55596,
-      lon: 2.50184,
     },
   },
   {
@@ -25636,8 +20634,6 @@ export const Stations = [
       town: "Caldes D'Estrac",
       province: 'Barcelona',
       country: 'España',
-      lat: 41.569216,
-      lon: 2.527982,
     },
   },
   {
@@ -25647,8 +20643,6 @@ export const Stations = [
       town: 'Arenys De Mar',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.578795,
-      lon: 2.552336,
     },
   },
   {
@@ -25658,8 +20652,6 @@ export const Stations = [
       town: 'Canet De Mar',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.587123,
-      lon: 2.583146,
     },
   },
   {
@@ -25669,8 +20661,6 @@ export const Stations = [
       town: 'Sant Pol De Mar',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.600184,
-      lon: 2.627001,
     },
   },
   {
@@ -25680,8 +20670,6 @@ export const Stations = [
       town: 'Calella',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.614691,
-      lon: 2.666203,
     },
   },
   {
@@ -25691,8 +20679,6 @@ export const Stations = [
       town: 'Pineda De Mar',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.622203,
-      lon: 2.693515,
     },
   },
   {
@@ -25702,8 +20688,6 @@ export const Stations = [
       town: 'Malgrat De Mar',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.642728,
-      lon: 2.744502,
     },
   },
   {
@@ -25713,8 +20697,6 @@ export const Stations = [
       town: 'Blanes',
       province: 'Girona',
       country: 'España',
-      lat: 41.672594,
-      lon: 2.769389,
     },
   },
   {
@@ -25724,8 +20706,6 @@ export const Stations = [
       town: 'Tordera',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.70643,
-      lon: 2.721235,
     },
   },
   {
@@ -25735,8 +20715,6 @@ export const Stations = [
       town: 'Santa Susanna',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.629763,
-      lon: 2.714036,
     },
   },
   {
@@ -25746,8 +20724,6 @@ export const Stations = [
       town: 'Altsasu/Alsasua',
       province: 'Navarra',
       country: 'España',
-      lat: 42.893283,
-      lon: -2.167429,
     },
   },
   {
@@ -25757,19 +20733,15 @@ export const Stations = [
       town: 'Bakaiku',
       province: 'Navarra',
       country: 'España',
-      lat: 42.896816,
-      lon: -2.104842,
     },
   },
   {
-    name: 'Etxarri-Aranatz',
+    name: 'Etxarri - Aranatz',
     code: '80003',
     location: {
       town: 'Etxarri-Aranatz',
       province: 'Navarra',
       country: 'España',
-      lat: 42.911138,
-      lon: -2.071245,
     },
   },
   {
@@ -25779,30 +20751,24 @@ export const Stations = [
       town: 'Lakuntza',
       province: 'Navarra',
       country: 'España',
-      lat: 42.926537,
-      lon: -2.026265,
     },
   },
   {
-    name: 'Uharte-Arakil',
+    name: 'Uharte - Arakil',
     code: '80005',
     location: {
       town: 'Uharte-Arakil',
       province: 'Navarra',
       country: 'España',
-      lat: 42.920606,
-      lon: -1.974814,
     },
   },
   {
-    name: 'Hiriberri-Arakil/Villanueva De Ar',
+    name: 'Hiriberri - Arakil/Villanueva De Ar',
     code: '80006',
     location: {
       town: 'Hiriberri/Villanueva De Aezkoa',
       province: 'Navarra',
       country: 'España',
-      lat: 42.914445,
-      lon: -1.894125,
     },
   },
   {
@@ -25812,8 +20778,6 @@ export const Stations = [
       town: 'Arakil',
       province: 'Navarra',
       country: 'España',
-      lat: 42.908735,
-      lon: -1.832427,
     },
   },
   {
@@ -25823,8 +20787,6 @@ export const Stations = [
       town: 'Iza/Itza',
       province: 'Navarra',
       country: 'España',
-      lat: 42.850051,
-      lon: -1.74827,
     },
   },
   {
@@ -25834,8 +20796,6 @@ export const Stations = [
       town: 'Pamplona/Iruña',
       province: 'Navarra',
       country: 'España',
-      lat: 42.824877,
-      lon: -1.661419,
     },
   },
   {
@@ -25845,8 +20805,6 @@ export const Stations = [
       town: 'Cizur',
       province: 'Navarra',
       country: 'España',
-      lat: 42.797463,
-      lon: -1.67747,
     },
   },
   {
@@ -25856,19 +20814,15 @@ export const Stations = [
       town: 'Noáin (VALLE DE ELORZ)/Noain (ELORTZIBAR)',
       province: 'Navarra',
       country: 'España',
-      lat: 42.754878,
-      lon: -1.636491,
     },
   },
   {
-    name: 'Biurrun-Campanas',
+    name: 'Biurrun - Campanas',
     code: '80104',
     location: {
       town: 'Biurrun-Olcoz',
       province: 'Navarra',
       country: 'España',
-      lat: 42.689669,
-      lon: -1.65337,
     },
   },
   {
@@ -25878,8 +20832,6 @@ export const Stations = [
       town: 'Unzué/Untzue',
       province: 'Navarra',
       country: 'España',
-      lat: 42.656321,
-      lon: -1.649899,
     },
   },
   {
@@ -25889,19 +20841,15 @@ export const Stations = [
       town: 'Garínoain',
       province: 'Navarra',
       country: 'España',
-      lat: 42.598655,
-      lon: -1.650581,
     },
   },
   {
-    name: 'Pueyo (APD-CGD)',
+    name: 'Pueyo (APD - CGD)',
     code: '80107',
     location: {
       town: 'Pueyo',
       province: 'Navarra',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -25911,8 +20859,6 @@ export const Stations = [
       town: 'Tafalla',
       province: 'Navarra',
       country: 'España',
-      lat: 42.525756,
-      lon: -1.671467,
     },
   },
   {
@@ -25922,8 +20868,6 @@ export const Stations = [
       town: 'Olite/Erriberri',
       province: 'Navarra',
       country: 'España',
-      lat: 42.484989,
-      lon: -1.649964,
     },
   },
   {
@@ -25933,8 +20877,6 @@ export const Stations = [
       town: 'Beire',
       province: 'Navarra',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -25944,8 +20886,6 @@ export const Stations = [
       town: 'Pitillas',
       province: 'Navarra',
       country: 'España',
-      lat: 42.425092,
-      lon: -1.630686,
     },
   },
   {
@@ -25955,8 +20895,6 @@ export const Stations = [
       town: 'Murillo El Cuende',
       province: 'Navarra',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -25966,8 +20904,6 @@ export const Stations = [
       town: 'Caparroso',
       province: 'Navarra',
       country: 'España',
-      lat: 42.379415,
-      lon: -1.646494,
     },
   },
   {
@@ -25977,8 +20913,6 @@ export const Stations = [
       town: 'Marcilla',
       province: 'Navarra',
       country: 'España',
-      lat: 42.334851,
-      lon: -1.717418,
     },
   },
   {
@@ -25988,8 +20922,6 @@ export const Stations = [
       town: 'Villafranca',
       province: 'Navarra',
       country: 'España',
-      lat: 42.280734,
-      lon: -1.745716,
     },
   },
   {
@@ -25999,8 +20931,6 @@ export const Stations = [
       town: 'Milagro',
       province: 'Navarra',
       country: 'España',
-      lat: 42.242615,
-      lon: -1.734594,
     },
   },
   {
@@ -26010,19 +20940,15 @@ export const Stations = [
       town: 'Cadreita',
       province: 'Navarra',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'San Felices (APT-CGD)',
+    name: 'San Felices (APT - CGD)',
     code: '81001',
     location: {
       town: 'Haro',
-      province: 'Rioja, La',
+      province: 'La Rioja',
       country: 'España',
-      lat: 42.621671,
-      lon: -2.84582,
     },
   },
   {
@@ -26030,10 +20956,8 @@ export const Stations = [
     code: '81002',
     location: {
       town: 'Haro',
-      province: 'Rioja, La',
+      province: 'La Rioja',
       country: 'España',
-      lat: 42.583635,
-      lon: -2.849396,
     },
   },
   {
@@ -26041,10 +20965,8 @@ export const Stations = [
     code: '81003',
     location: {
       town: 'Briones',
-      province: 'Rioja, La',
+      province: 'La Rioja',
       country: 'España',
-      lat: 42.544947,
-      lon: -2.779605,
     },
   },
   {
@@ -26052,10 +20974,8 @@ export const Stations = [
     code: '81004',
     location: {
       town: 'San Asensio',
-      province: 'Rioja, La',
+      province: 'La Rioja',
       country: 'España',
-      lat: 42.519816,
-      lon: -2.746394,
     },
   },
   {
@@ -26063,10 +20983,8 @@ export const Stations = [
     code: '81005',
     location: {
       town: 'Cenicero',
-      province: 'Rioja, La',
+      province: 'La Rioja',
       country: 'España',
-      lat: 42.485718,
-      lon: -2.627968,
     },
   },
   {
@@ -26074,10 +20992,8 @@ export const Stations = [
     code: '81006',
     location: {
       town: 'Fuenmayor',
-      province: 'Rioja, La',
+      province: 'La Rioja',
       country: 'España',
-      lat: 42.488022,
-      lon: -2.570922,
     },
   },
   {
@@ -26085,10 +21001,8 @@ export const Stations = [
     code: '81007',
     location: {
       town: 'Logroño',
-      province: 'Rioja, La',
+      province: 'La Rioja',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26096,10 +21010,8 @@ export const Stations = [
     code: '81010',
     location: {
       town: 'Cenicero',
-      province: 'Rioja, La',
+      province: 'La Rioja',
       country: 'España',
-      lat: 42.485295,
-      lon: -2.630829,
     },
   },
   {
@@ -26107,10 +21019,8 @@ export const Stations = [
     code: '81011',
     location: {
       town: 'Haro',
-      province: 'Rioja, La',
+      province: 'La Rioja',
       country: 'España',
-      lat: 42.577529,
-      lon: -2.842814,
     },
   },
   {
@@ -26118,10 +21028,8 @@ export const Stations = [
     code: '81100',
     location: {
       town: 'Logroño',
-      province: 'Rioja, La',
+      province: 'La Rioja',
       country: 'España',
-      lat: 42.457459,
-      lon: -2.442193,
     },
   },
   {
@@ -26129,10 +21037,8 @@ export const Stations = [
     code: '81101',
     location: {
       town: 'Agoncillo',
-      province: 'Rioja, La',
+      province: 'La Rioja',
       country: 'España',
-      lat: 42.44977,
-      lon: -2.330121,
     },
   },
   {
@@ -26140,10 +21046,8 @@ export const Stations = [
     code: '81102',
     location: {
       town: 'Agoncillo',
-      province: 'Rioja, La',
+      province: 'La Rioja',
       country: 'España',
-      lat: 42.443585,
-      lon: -2.291701,
     },
   },
   {
@@ -26151,10 +21055,8 @@ export const Stations = [
     code: '81103',
     location: {
       town: 'Arrúbal',
-      province: 'Rioja, La',
+      province: 'La Rioja',
       country: 'España',
-      lat: 42.430394,
-      lon: -2.256918,
     },
   },
   {
@@ -26162,21 +21064,17 @@ export const Stations = [
     code: '81105',
     location: {
       town: 'Alcanadre',
-      province: 'Rioja, La',
+      province: 'La Rioja',
       country: 'España',
-      lat: 42.407437,
-      lon: -2.122094,
     },
   },
   {
-    name: 'Féculas-Navarra',
+    name: 'Féculas - Navarra',
     code: '81106',
     location: {
       town: 'Lodosa',
-      province: 'Rioja, La',
+      province: 'La Rioja',
       country: 'España',
-      lat: 42.411148,
-      lon: -2.098196,
     },
   },
   {
@@ -26184,10 +21082,8 @@ export const Stations = [
     code: '81107',
     location: {
       town: 'Lodosa',
-      province: 'Rioja, La',
+      province: 'La Rioja',
       country: 'España',
-      lat: 42.380316,
-      lon: -2.071494,
     },
   },
   {
@@ -26195,10 +21091,8 @@ export const Stations = [
     code: '81108',
     location: {
       town: 'Calahorra',
-      province: 'Rioja, La',
+      province: 'La Rioja',
       country: 'España',
-      lat: 42.310458,
-      lon: -1.957755,
     },
   },
   {
@@ -26206,10 +21100,8 @@ export const Stations = [
     code: '81109',
     location: {
       town: 'Rincón De Soto',
-      province: 'Rioja, La',
+      province: 'La Rioja',
       country: 'España',
-      lat: 42.230011,
-      lon: -1.847473,
     },
   },
   {
@@ -26217,10 +21109,8 @@ export const Stations = [
     code: '81110',
     location: {
       town: 'Alfaro',
-      province: 'Rioja, La',
+      province: 'La Rioja',
       country: 'España',
-      lat: 42.186525,
-      lon: -1.747985,
     },
   },
   {
@@ -26230,19 +21120,15 @@ export const Stations = [
       town: 'Castejón',
       province: 'Navarra',
       country: 'España',
-      lat: 42.172719,
-      lon: -1.692114,
     },
   },
   {
-    name: 'Arguedas-Muscaria (APD)',
+    name: 'Arguedas - Muscaria (APD)',
     code: '81201',
     location: {
       town: 'Arguedas',
       province: 'Navarra',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26252,8 +21138,6 @@ export const Stations = [
       town: 'Tudela',
       province: 'Navarra',
       country: 'España',
-      lat: 42.059434,
-      lon: -1.597931,
     },
   },
   {
@@ -26263,8 +21147,6 @@ export const Stations = [
       town: 'Ribaforada',
       province: 'Navarra',
       country: 'España',
-      lat: 41.997038,
-      lon: -1.515097,
     },
   },
   {
@@ -26274,8 +21156,6 @@ export const Stations = [
       town: 'Buñuel',
       province: 'Navarra',
       country: 'España',
-      lat: 41.970333,
-      lon: -1.485102,
     },
   },
   {
@@ -26285,8 +21165,6 @@ export const Stations = [
       town: 'Cortes',
       province: 'Navarra',
       country: 'España',
-      lat: 41.915076,
-      lon: -1.420439,
     },
   },
   {
@@ -26296,8 +21174,6 @@ export const Stations = [
       town: 'Gallur',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.867164,
-      lon: -1.321342,
     },
   },
   {
@@ -26307,8 +21183,6 @@ export const Stations = [
       town: 'Luceni',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.826116,
-      lon: -1.243536,
     },
   },
   {
@@ -26318,8 +21192,6 @@ export const Stations = [
       town: 'Pedrola',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.805198,
-      lon: -1.201673,
     },
   },
   {
@@ -26329,8 +21201,6 @@ export const Stations = [
       town: 'Cabañas De Ebro',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.788065,
-      lon: -1.167533,
     },
   },
   {
@@ -26340,8 +21210,6 @@ export const Stations = [
       town: 'Alagón',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.771422,
-      lon: -1.112771,
     },
   },
   {
@@ -26351,8 +21219,6 @@ export const Stations = [
       town: 'Joyosa (LA)',
       province: 'Zaragoza',
       country: 'España',
-      lat: 41.751331,
-      lon: -1.072945,
     },
   },
   {
@@ -26362,8 +21228,6 @@ export const Stations = [
       town: 'Cervera De La Cañada',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26373,8 +21237,6 @@ export const Stations = [
       town: 'Villarroya De La Sierra',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26384,8 +21246,6 @@ export const Stations = [
       town: 'Clarés De Ribota',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26395,8 +21255,6 @@ export const Stations = [
       town: 'Malanquilla',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26406,8 +21264,6 @@ export const Stations = [
       town: 'Torrelapaja',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26417,8 +21273,6 @@ export const Stations = [
       town: 'Torrubia De Soria',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26428,8 +21282,6 @@ export const Stations = [
       town: 'Torrubia De Soria',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26439,30 +21291,24 @@ export const Stations = [
       town: 'Portillo De Soria',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Albocabe-Gomara - Almenar (APT-CGD)',
+    name: 'Albocabe - Gomara - Almenar (APT - CGD)',
     code: '82009',
     location: {
       town: 'Gómara',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Cabrejas Del Campo (APD-CGD)',
+    name: 'Cabrejas Del Campo (APD - CGD)',
     code: '82010',
     location: {
       town: 'Cabrejas Del Campo',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26472,8 +21318,6 @@ export const Stations = [
       town: 'Candilichera',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26483,8 +21327,6 @@ export const Stations = [
       town: 'Alconaba',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26494,8 +21336,6 @@ export const Stations = [
       town: 'Soria',
       province: 'Soria',
       country: 'España',
-      lat: 41.754754,
-      lon: -2.476537,
     },
   },
   {
@@ -26505,8 +21345,6 @@ export const Stations = [
       town: 'Soria',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26516,8 +21354,6 @@ export const Stations = [
       town: 'Cidones',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26527,8 +21363,6 @@ export const Stations = [
       town: 'Otero De Herreros',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26538,8 +21372,6 @@ export const Stations = [
       town: 'Abejar',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26549,8 +21381,6 @@ export const Stations = [
       town: 'Cabrejas Del Pinar',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26560,8 +21390,6 @@ export const Stations = [
       town: 'Soria',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26571,8 +21399,6 @@ export const Stations = [
       town: 'Navaleno',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26582,8 +21408,6 @@ export const Stations = [
       town: 'San Leonardo De Yagüe',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26593,8 +21417,6 @@ export const Stations = [
       town: 'Hontoria Del Pinar',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26604,8 +21426,6 @@ export const Stations = [
       town: 'Rabanera Del Pinar',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26615,8 +21435,6 @@ export const Stations = [
       town: 'Cabezón De La Sierra',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26626,8 +21444,6 @@ export const Stations = [
       town: 'Castrillo De La Reina',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26637,8 +21453,6 @@ export const Stations = [
       town: 'Salas De Los Infantes',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26648,8 +21462,6 @@ export const Stations = [
       town: 'Revilla Y Ahedo (LA)',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26659,19 +21471,15 @@ export const Stations = [
       town: 'Barbadillo Del Mercado',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Cascajares-Hortiguela (APD)',
+    name: 'Cascajares - Hortiguela (APD)',
     code: '82116',
     location: {
       town: 'Cascajares De La Sierra',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26681,8 +21489,6 @@ export const Stations = [
       town: 'Campolara',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26692,8 +21498,6 @@ export const Stations = [
       town: 'Revilla Del Campo',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26703,8 +21507,6 @@ export const Stations = [
       town: 'Ausines ',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26714,8 +21516,6 @@ export const Stations = [
       town: 'Modúbar De La Emparedada',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26725,8 +21525,6 @@ export const Stations = [
       town: 'Modúbar De La Emparedada',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26736,8 +21534,6 @@ export const Stations = [
       town: 'Cardeñadijo',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26747,8 +21543,6 @@ export const Stations = [
       town: 'Alfoz De Quintanadueñas',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26758,30 +21552,24 @@ export const Stations = [
       town: 'Merindad De Río Ubierna',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Villaverde-Penahorada (APD)',
+    name: 'Villaverde - Penahorada (APD)',
     code: '82203',
     location: {
       town: 'Merindad De Río Ubierna',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Penahorada (APT-CGD)',
+    name: 'Penahorada (APT - CGD)',
     code: '82204',
     location: {
       town: 'Merindad De Río Ubierna',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26791,8 +21579,6 @@ export const Stations = [
       town: 'Merindad De Río Ubierna',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26802,8 +21588,6 @@ export const Stations = [
       town: 'Carcedo De Bureba',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26813,8 +21597,6 @@ export const Stations = [
       town: 'Poza De La Sal',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26824,30 +21606,24 @@ export const Stations = [
       town: 'Poza De La Sal',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Terminon-Castellanos (APD)',
+    name: 'Terminon - Castellanos (APD)',
     code: '82209',
     location: {
       town: 'Oña',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Ona (APT-CGD)',
+    name: 'Ona (APT - CGD)',
     code: '82210',
     location: {
       town: 'Oña',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26857,8 +21633,6 @@ export const Stations = [
       town: 'Trespaderne',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26868,8 +21642,6 @@ export const Stations = [
       town: 'Merindad De Cuesta - Urria',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26879,30 +21651,24 @@ export const Stations = [
       town: 'Merindad De Cuesta - Urria',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Medina De Pomar (APT-CGD)',
+    name: 'Medina De Pomar (APT - CGD)',
     code: '82214',
     location: {
       town: 'Medina De Pomar',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Villarcayo-Horna',
+    name: 'Villarcayo - Horna',
     code: '82215',
     location: {
       town: 'Villarcayo De Merindad De Castilla La Vieja',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26912,8 +21678,6 @@ export const Stations = [
       town: 'Velilla De La Sierra',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26921,10 +21685,8 @@ export const Stations = [
     code: '83002',
     location: {
       town: 'Turin',
-      province: undefined,
-      country: 'España',
-      lat: 45.07396,
-      lon: 7.667588,
+      province: null,
+      country: 'Italia',
     },
   },
   {
@@ -26934,8 +21696,6 @@ export const Stations = [
       town: 'Aldealpozo',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26945,8 +21705,6 @@ export const Stations = [
       town: 'Valdegeña',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -26954,10 +21712,8 @@ export const Stations = [
     code: '83005',
     location: {
       town: 'Bardonecchia',
-      province: undefined,
-      country: 'España',
-      lat: 45.076301,
-      lon: 6.709685,
+      province: null,
+      country: 'Italia',
     },
   },
   {
@@ -26967,8 +21723,6 @@ export const Stations = [
       town: 'Ólvega',
       province: 'Soria',
       country: 'España',
-      lat: 41.805168,
-      lon: -1.997724,
     },
   },
   {
@@ -26978,8 +21732,6 @@ export const Stations = [
       town: 'Ágreda',
       province: 'Soria',
       country: 'España',
-      lat: 41.852168,
-      lon: -1.925923,
     },
   },
   {
@@ -26987,10 +21739,8 @@ export const Stations = [
     code: '83008',
     location: {
       town: 'Novara',
-      province: undefined,
-      country: 'España',
-      lat: 45.4508192,
-      lon: 8.62521171,
+      province: null,
+      country: 'Italia',
     },
   },
   {
@@ -27000,8 +21750,6 @@ export const Stations = [
       town: 'Cervera Del Río Alhama',
       province: 'Soria',
       country: 'España',
-      lat: 41.975168,
-      lon: -1.863223,
     },
   },
   {
@@ -27011,8 +21759,6 @@ export const Stations = [
       town: 'Fitero',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27022,8 +21768,6 @@ export const Stations = [
       town: 'Cintruénigo',
       province: 'Soria',
       country: 'España',
-      lat: 42.082468,
-      lon: -1.797623,
     },
   },
   {
@@ -27033,8 +21777,6 @@ export const Stations = [
       town: 'Corella',
       province: 'Soria',
       country: 'España',
-      lat: 42.106768,
-      lon: -1.770622,
     },
   },
   {
@@ -27042,10 +21784,8 @@ export const Stations = [
     code: '83111',
     location: {
       town: 'Milán',
-      province: undefined,
-      country: 'España',
-      lat: 45.48529,
-      lon: 9.203453,
+      province: null,
+      country: 'Italia',
     },
   },
   {
@@ -27053,10 +21793,8 @@ export const Stations = [
     code: '83441',
     location: {
       town: 'Modena',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Italia',
     },
   },
   {
@@ -27066,8 +21804,6 @@ export const Stations = [
       town: 'Miño De Medinaceli',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27077,8 +21813,6 @@ export const Stations = [
       town: 'Alcubilla De Las Peñas',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27088,8 +21822,6 @@ export const Stations = [
       town: 'Adradas',
       province: 'Soria',
       country: 'España',
-      lat: 41.350963,
-      lon: -2.467061,
     },
   },
   {
@@ -27099,8 +21831,6 @@ export const Stations = [
       town: 'Miño De Medinaceli',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27110,8 +21840,6 @@ export const Stations = [
       town: 'Taroda',
       province: 'Soria',
       country: 'España',
-      lat: 41.439805,
-      lon: -2.469695,
     },
   },
   {
@@ -27121,8 +21849,6 @@ export const Stations = [
       town: 'Almazán',
       province: 'Soria',
       country: 'España',
-      lat: 41.489019,
-      lon: -2.525375,
     },
   },
   {
@@ -27132,8 +21858,6 @@ export const Stations = [
       town: 'Matamala De Almazán',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27143,8 +21867,6 @@ export const Stations = [
       town: 'Tardelcuende',
       province: 'Soria',
       country: 'España',
-      lat: 41.593525,
-      lon: -2.639337,
     },
   },
   {
@@ -27154,8 +21876,6 @@ export const Stations = [
       town: 'Quintana Redonda',
       province: 'Soria',
       country: 'España',
-      lat: 41.639726,
-      lon: -2.609682,
     },
   },
   {
@@ -27165,8 +21885,6 @@ export const Stations = [
       town: 'Rábanos ',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27176,8 +21894,6 @@ export const Stations = [
       town: 'Monteagudo De Las Vicarías',
       province: 'Zaragoza',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27187,8 +21903,6 @@ export const Stations = [
       town: 'Almaluez',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27198,8 +21912,6 @@ export const Stations = [
       town: 'Morón De Almazán',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27207,21 +21919,17 @@ export const Stations = [
     code: '85031',
     location: {
       town: 'Berna',
-      province: undefined,
-      country: 'España',
-      lat: 46.94909,
-      lon: 7.438323,
+      province: null,
+      country: 'Suiza',
     },
   },
   {
-    name: 'Almazan-Dehesa',
+    name: 'Almazan - Dehesa',
     code: '85101',
     location: {
       town: 'Almazán',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27231,8 +21939,6 @@ export const Stations = [
       town: 'Velamazán',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27242,19 +21948,15 @@ export const Stations = [
       town: 'Berlanga De Duero',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Quintanas De Gormaz (APD-CGD)',
+    name: 'Quintanas De Gormaz (APD - CGD)',
     code: '85105',
     location: {
       town: 'Quintanas De Gormaz',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27264,8 +21966,6 @@ export const Stations = [
       town: 'Burgo De Osma - Ciudad De Osma',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27275,8 +21975,6 @@ export const Stations = [
       town: 'San Esteban De Gormaz',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27286,8 +21984,6 @@ export const Stations = [
       town: 'San Esteban De Gormaz',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27297,8 +21993,6 @@ export const Stations = [
       town: 'Langa De Duero',
       province: 'Soria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27308,8 +22002,6 @@ export const Stations = [
       town: 'Vadocondes',
       province: 'Burgos',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27317,10 +22009,8 @@ export const Stations = [
     code: '85200',
     location: {
       town: 'Zurich',
-      province: undefined,
-      country: 'España',
-      lat: 47.378156,
-      lon: 8.540239,
+      province: null,
+      country: 'Suiza',
     },
   },
   {
@@ -27330,8 +22020,6 @@ export const Stations = [
       town: 'Berlangas De Roa',
       province: 'Burgos',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27341,8 +22029,6 @@ export const Stations = [
       town: 'Roa',
       province: 'Burgos',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27352,8 +22038,6 @@ export const Stations = [
       town: 'San Martín De Rubiales',
       province: 'Valladolid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27363,8 +22047,6 @@ export const Stations = [
       town: 'Peñafiel',
       province: 'Valladolid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27374,8 +22056,6 @@ export const Stations = [
       town: 'Quintanilla De Arriba',
       province: 'Valladolid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27385,8 +22065,6 @@ export const Stations = [
       town: 'Quintanilla De Onésimo',
       province: 'Valladolid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27396,8 +22074,6 @@ export const Stations = [
       town: 'Sardón De Duero',
       province: 'Valladolid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27407,8 +22083,6 @@ export const Stations = [
       town: 'Traspinedo',
       province: 'Valladolid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27418,8 +22092,6 @@ export const Stations = [
       town: 'Tudela De Duero',
       province: 'Valladolid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27429,19 +22101,15 @@ export const Stations = [
       town: 'Laguna De Duero',
       province: 'Valladolid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Valladolid-La Esperanza (APT)',
+    name: 'Valladolid - La Esperanza (APT)',
     code: '85215',
     location: {
       town: 'Valladolid',
       province: 'Valladolid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27449,10 +22117,8 @@ export const Stations = [
     code: '85410',
     location: {
       town: 'Fribourg',
-      province: undefined,
-      country: 'España',
-      lat: 46.803071,
-      lon: 7.151198,
+      province: null,
+      country: 'Suiza',
     },
   },
   {
@@ -27460,10 +22126,8 @@ export const Stations = [
     code: '85444',
     location: {
       town: 'Geneve',
-      province: undefined,
-      country: 'España',
-      lat: 46.210101,
-      lon: 6.142817,
+      province: null,
+      country: 'Suiza',
     },
   },
   {
@@ -27471,10 +22135,8 @@ export const Stations = [
     code: '85550',
     location: {
       town: 'Lausanne',
-      province: undefined,
-      country: 'España',
-      lat: 46.517237,
-      lon: 6.629262,
+      province: null,
+      country: 'Suiza',
     },
   },
   {
@@ -27484,8 +22146,6 @@ export const Stations = [
       town: 'Paracuellos De Jiloca',
       province: 'Zaragoza',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27495,8 +22155,6 @@ export const Stations = [
       town: 'Maluenda',
       province: 'Zaragoza',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27506,8 +22164,6 @@ export const Stations = [
       town: 'Morata De Jiloca',
       province: 'Zaragoza',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27517,8 +22173,6 @@ export const Stations = [
       town: 'Fuentes De Jiloca',
       province: 'Zaragoza',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27528,19 +22182,15 @@ export const Stations = [
       town: 'Villafeliche',
       province: 'Zaragoza',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Murero-Manchones (APD)',
+    name: 'Murero - Manchones (APD)',
     code: '86006',
     location: {
       town: 'Murero',
       province: 'Zaragoza',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27550,8 +22200,6 @@ export const Stations = [
       town: 'Manchones',
       province: 'Zaragoza',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27561,8 +22209,6 @@ export const Stations = [
       town: 'Daroca',
       province: 'Zaragoza',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27572,8 +22218,6 @@ export const Stations = [
       town: 'Villanueva De Jiloca',
       province: 'Teruel',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27583,19 +22227,15 @@ export const Stations = [
       town: 'San Martín Del Río',
       province: 'Teruel',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Baguena (APD-CGD)',
+    name: 'Baguena (APD - CGD)',
     code: '86011',
     location: {
       town: 'Báguena',
       province: 'Teruel',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27605,8 +22245,6 @@ export const Stations = [
       town: 'Burbáguena',
       province: 'Teruel',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27616,19 +22254,15 @@ export const Stations = [
       town: 'Calamocha',
       province: 'Teruel',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Calamocha - Vega (APD-CGD)',
+    name: 'Calamocha - Vega (APD - CGD)',
     code: '86014',
     location: {
       town: 'Calamocha',
       province: 'Teruel',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27638,8 +22272,6 @@ export const Stations = [
       town: 'Calamocha',
       province: 'Teruel',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -27649,19 +22281,15 @@ export const Stations = [
       town: 'Fuentes Claras',
       province: 'Teruel',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Orleans-Les.Aubrais',
+    name: 'Orleans - Les.Aubrais',
     code: '87004',
     location: {
       town: 'Orleans',
-      province: undefined,
-      country: 'España',
-      lat: 47.926832,
-      lon: 1.906758,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -27669,54 +22297,35 @@ export const Stations = [
     code: '87007',
     location: {
       town: 'St. Pierre Des Corps',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
-    name: 'Paris-Austerlitz',
+    name: 'Paris - Austerlitz',
     code: '87011',
     location: {
       town: 'Paris',
       province: null,
-      country: 'España',
-      lat: 48.8424,
-      lon: 2.3664,
+      country: 'Francia',
     },
   },
   {
-    name: 'Paris-Tolbiac',
+    name: 'Paris - Tolbiac',
     code: '87016',
     location: {
       town: 'Paris',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
-    name: undefined,
-    code: '87018',
-    location: {
-      town: null,
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Dijon-Ville',
+    name: 'Dijon - Ville',
     code: '87025',
     location: {
       town: 'Dijon-Ville',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -27724,10 +22333,8 @@ export const Stations = [
     code: '87034',
     location: {
       town: 'Limoges',
-      province: undefined,
-      country: 'España',
-      lat: 45.836245,
-      lon: 1.267419,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -27735,10 +22342,8 @@ export const Stations = [
     code: '87041',
     location: {
       town: 'Grenoble',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -27746,10 +22351,8 @@ export const Stations = [
     code: '87044',
     location: {
       town: 'Brive',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -27757,10 +22360,8 @@ export const Stations = [
     code: '87048',
     location: {
       town: 'Lyon',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -27768,10 +22369,8 @@ export const Stations = [
     code: '87049',
     location: {
       town: 'Lyon',
-      province: undefined,
-      country: 'España',
-      lat: 45.7485434,
-      lon: 4.8231329,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -27779,10 +22378,8 @@ export const Stations = [
     code: '87052',
     location: {
       town: 'Dax',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -27790,10 +22387,8 @@ export const Stations = [
     code: '87058',
     location: {
       town: 'Bordeaux',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -27801,10 +22396,8 @@ export const Stations = [
     code: '87059',
     location: {
       town: 'Aix Les Bains',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -27812,10 +22405,8 @@ export const Stations = [
     code: '87066',
     location: {
       town: 'Chambery',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -27823,10 +22414,8 @@ export const Stations = [
     code: '87067',
     location: {
       town: 'Valence',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -27834,10 +22423,8 @@ export const Stations = [
     code: '87076',
     location: {
       town: 'Angouleme',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -27845,10 +22432,8 @@ export const Stations = [
     code: '87078',
     location: {
       town: 'Beziers',
-      province: undefined,
-      country: 'España',
-      lat: 43.336221,
-      lon: 3.218973,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -27856,10 +22441,8 @@ export const Stations = [
     code: '87079',
     location: {
       town: 'Toulouse',
-      province: undefined,
-      country: 'España',
-      lat: 43.611439,
-      lon: 1.454144,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -27867,10 +22450,8 @@ export const Stations = [
     code: '87081',
     location: {
       town: 'Poitiers',
-      province: undefined,
-      country: 'España',
-      lat: 46.5822042,
-      lon: 0.33300161,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -27878,10 +22459,8 @@ export const Stations = [
     code: '87083',
     location: {
       town: 'Bellegarde',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -27890,9 +22469,7 @@ export const Stations = [
     location: {
       town: 'Narbona',
       province: null,
-      country: 'España',
-      lat: 43.190253,
-      lon: 3.005716,
+      country: 'Francia',
     },
   },
   {
@@ -27900,21 +22477,18 @@ export const Stations = [
     code: '87089',
     location: {
       town: 'Marseille',
-      province: undefined,
-      country: 'España',
-      lat: 43.30349,
-      lon: 5.382236,
+      province: null,
+      country: 'Francia',
     },
   },
   {
-    name: 'Montpellier Sud De France',
+    name: 'Montpellier Sud de France',
     code: '87100',
+    otherCodes: ['87010'],
     location: {
       town: 'Montpellier',
       province: null,
-      country: 'España',
-      lat: 43.5951821,
-      lon: 3.9216961,
+      country: 'Francia',
     },
   },
   {
@@ -27922,32 +22496,26 @@ export const Stations = [
     code: '87101',
     location: {
       town: 'Nimes',
-      province: undefined,
-      country: 'España',
-      lat: 43.8168789,
-      lon: 4.3617439,
+      province: null,
+      country: 'Francia',
     },
   },
   {
-    name: 'Aime-La - Plagne',
+    name: 'Aime - La - Plagne',
     code: '87150',
     location: {
       town: 'Aime-La - Plagne',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
-    name: 'Montpellier Saint-Roch',
+    name: 'Montpellier Saint - Roch',
     code: '87173',
     location: {
       town: 'Montpellier',
       province: null,
-      country: 'España',
-      lat: 43.604852,
-      lon: 3.880491,
+      country: 'Francia',
     },
   },
   {
@@ -27955,10 +22523,8 @@ export const Stations = [
     code: '87175',
     location: {
       town: 'Sete',
-      province: undefined,
-      country: 'España',
-      lat: 43.412808,
-      lon: 3.69641,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -27966,10 +22532,8 @@ export const Stations = [
     code: '87176',
     location: {
       town: 'Carcasonne',
-      province: undefined,
-      country: 'España',
-      lat: 43.218142,
-      lon: 2.351832,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -27977,10 +22541,8 @@ export const Stations = [
     code: '87187',
     location: {
       town: 'Guethary',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -27988,21 +22550,17 @@ export const Stations = [
     code: '87192',
     location: {
       town: 'Saint Jean De Luz',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
-    name: 'Biarritz-La Negresse',
+    name: 'Biarritz - La Negresse',
     code: '87206',
     location: {
       town: 'Biarritz-La Negresse',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -28010,10 +22568,8 @@ export const Stations = [
     code: '87242',
     location: {
       town: 'Modane',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -28021,10 +22577,8 @@ export const Stations = [
     code: '87246',
     location: {
       town: 'Moutiers',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -28032,10 +22586,8 @@ export const Stations = [
     code: '87249',
     location: {
       town: 'Bourg St.Maurice',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -28043,10 +22595,8 @@ export const Stations = [
     code: '87287',
     location: {
       town: 'Agde',
-      province: undefined,
-      country: 'España',
-      lat: 43.317424,
-      lon: 3.466125,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -28054,10 +22604,8 @@ export const Stations = [
     code: '87302',
     location: {
       town: 'Nimes',
-      province: undefined,
-      country: 'España',
-      lat: 43.832291,
-      lon: 4.365845,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -28065,10 +22613,8 @@ export const Stations = [
     code: '87303',
     location: {
       town: 'Lyon',
-      province: undefined,
-      country: 'España',
-      lat: 45.760281,
-      lon: 4.859801,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -28076,10 +22622,8 @@ export const Stations = [
     code: '87374',
     location: {
       town: 'Perpignan',
-      province: undefined,
-      country: 'España',
-      lat: 42.696421,
-      lon: 2.880381,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -28087,10 +22631,8 @@ export const Stations = [
     code: '87402',
     location: {
       town: 'Avignon',
-      province: undefined,
-      country: 'España',
-      lat: 43.94173,
-      lon: 4.80529,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -28098,10 +22640,8 @@ export const Stations = [
     code: '87546',
     location: {
       town: 'Blois',
-      province: undefined,
-      country: 'España',
-      lat: 47.585435,
-      lon: 1.323735,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -28109,10 +22649,8 @@ export const Stations = [
     code: '87554',
     location: {
       town: 'Chatellerault',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -28121,20 +22659,16 @@ export const Stations = [
     location: {
       town: 'Chessy',
       province: null,
-      country: 'España',
-      lat: null,
-      lon: null,
+      country: 'Francia',
     },
   },
   {
-    name: 'Lyon Saint-Exupery Tgv',
+    name: 'Lyon Saint - Exupery Tgv',
     code: '87720',
     location: {
       town: 'Lyon',
-      province: undefined,
-      country: 'España',
-      lat: 45.7209127,
-      lon: 5.0732481,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -28142,10 +22676,8 @@ export const Stations = [
     code: '87810',
     location: {
       town: 'Valence',
-      province: undefined,
-      country: 'España',
-      lat: 44.991545,
-      lon: 4.978703,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -28153,10 +22685,8 @@ export const Stations = [
     code: '87814',
     location: {
       town: 'Avignon',
-      province: undefined,
-      country: 'España',
-      lat: 43.921938,
-      lon: 4.785813,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -28164,10 +22694,8 @@ export const Stations = [
     code: '87900',
     location: {
       town: 'Bayonne',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -28175,10 +22703,8 @@ export const Stations = [
     code: '87912',
     location: {
       town: 'Aix En Provence',
-      province: undefined,
-      country: 'España',
-      lat: 43.455268,
-      lon: 5.31723,
+      province: null,
+      country: 'Francia',
     },
   },
   {
@@ -28188,8 +22714,6 @@ export const Stations = [
       town: 'Queralbs',
       province: 'Girona',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -28199,8 +22723,6 @@ export const Stations = [
       town: 'Gandia',
       province: 'Valencia/València',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -28210,8 +22732,6 @@ export const Stations = [
       town: 'Aranjuez',
       province: 'Madrid',
       country: 'España',
-      lat: 39.936932,
-      lon: -3.790229,
     },
   },
   {
@@ -28221,8 +22741,6 @@ export const Stations = [
       town: 'Toledo',
       province: 'Toledo',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -28232,8 +22750,6 @@ export const Stations = [
       town: 'Toledo',
       province: 'Toledo',
       country: 'España',
-      lat: 39.862272,
-      lon: -4.011244,
     },
   },
   {
@@ -28243,8 +22759,6 @@ export const Stations = [
       town: 'Marbella',
       province: 'Málaga',
       country: 'España',
-      lat: 36.519532,
-      lon: -4.892532,
     },
   },
   {
@@ -28254,8 +22768,6 @@ export const Stations = [
       town: 'Estepona',
       province: 'Málaga',
       country: 'España',
-      lat: 36.4303924,
-      lon: -5.1297807,
     },
   },
   {
@@ -28265,8 +22777,6 @@ export const Stations = [
       town: 'Dénia',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.837466,
-      lon: 0.105721,
     },
   },
   {
@@ -28276,8 +22786,6 @@ export const Stations = [
       town: 'Daimiel',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 39.061553,
-      lon: -3.604213,
     },
   },
   {
@@ -28287,8 +22795,6 @@ export const Stations = [
       town: 'Almagro',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 38.895323,
-      lon: -3.709777,
     },
   },
   {
@@ -28298,8 +22804,6 @@ export const Stations = [
       town: 'Miguelturra',
       province: 'Ciudad Real',
       country: 'España',
-      lat: 38.969744,
-      lon: -3.891072,
     },
   },
   {
@@ -28307,10 +22811,8 @@ export const Stations = [
     code: '94007',
     location: {
       town: 'Ermensinde',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Porto',
+      country: 'Portugal',
     },
   },
   {
@@ -28318,10 +22820,8 @@ export const Stations = [
     code: '94014',
     location: {
       town: 'Trofa',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Porto',
+      country: 'Portugal',
     },
   },
   {
@@ -28329,10 +22829,8 @@ export const Stations = [
     code: '94018',
     location: {
       town: 'Farmalicao',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Braga',
+      country: 'Portugal',
     },
   },
   {
@@ -28340,10 +22838,8 @@ export const Stations = [
     code: '94021',
     location: {
       town: 'Nine',
-      province: undefined,
-      country: 'España',
-      lat: 41.45534,
-      lon: -8.54513,
+      province: 'Braga',
+      country: 'Portugal',
     },
   },
   {
@@ -28351,10 +22847,8 @@ export const Stations = [
     code: '94024',
     location: {
       town: 'Barcelos',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Braga',
+      country: 'Portugal',
     },
   },
   {
@@ -28362,10 +22856,8 @@ export const Stations = [
     code: '94029',
     location: {
       town: 'Barroselas',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Viana Do Castelo',
+      country: 'Portugal',
     },
   },
   {
@@ -28373,10 +22865,8 @@ export const Stations = [
     code: '94033',
     location: {
       town: 'Viana Da Castelo',
-      province: undefined,
-      country: 'España',
-      lat: 41.69517,
-      lon: -8.83134,
+      province: 'Viana Do Castelo',
+      country: 'Portugal',
     },
   },
   {
@@ -28384,10 +22874,8 @@ export const Stations = [
     code: '94038',
     location: {
       town: 'Ancora Praia',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Viana Do Castelo',
+      country: 'Portugal',
     },
   },
   {
@@ -28395,10 +22883,8 @@ export const Stations = [
     code: '94042',
     location: {
       town: 'Caminha',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Viana Do Castelo',
+      country: 'Portugal',
     },
   },
   {
@@ -28406,10 +22892,8 @@ export const Stations = [
     code: '94048',
     location: {
       town: 'Vila Nova De Cerveira',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Viana Do Castelo',
+      country: 'Portugal',
     },
   },
   {
@@ -28417,10 +22901,8 @@ export const Stations = [
     code: '94333',
     location: {
       town: 'Castelo De Vide',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Portalegre',
+      country: 'Portugal',
     },
   },
   {
@@ -28428,32 +22910,28 @@ export const Stations = [
     code: '94334',
     location: {
       town: 'Vale Do Peso',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Portalegre',
+      country: 'Portugal',
     },
   },
   {
-    name: 'Ponte Do Sor',
+    name: 'Ponte Sor',
     code: '94335',
+    otherCodes: ['55293'],
     location: {
       town: 'Ponte Do Sor',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Portalegre',
+      country: 'Portugal',
     },
   },
   {
     name: 'Abrantes',
-    code: '94336',
+    code: '94707',
+    otherCodes: ['94336', '52001'],
     location: {
       town: 'Abrantes',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Santarém',
+      country: 'Portugal',
     },
   },
   {
@@ -28461,21 +22939,18 @@ export const Stations = [
     code: '94337',
     location: {
       town: 'Torre Das Vargen',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Santarém',
+      country: 'Portugal',
     },
   },
   {
     name: 'Marvao',
-    code: '94339',
+    code: '94757',
+    otherCodes: ['94339'],
     location: {
       town: 'Marvao',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Portalegre',
+      country: 'Portugal',
     },
   },
   {
@@ -28483,10 +22958,8 @@ export const Stations = [
     code: '94341',
     location: {
       town: 'Estarreja',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Aveiro',
+      country: 'Portugal',
     },
   },
   {
@@ -28494,10 +22967,8 @@ export const Stations = [
     code: '94342',
     location: {
       town: 'Ovar',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Aveiro',
+      country: 'Portugal',
     },
   },
   {
@@ -28505,10 +22976,8 @@ export const Stations = [
     code: '94343',
     location: {
       town: 'Aveiro',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Aveiro',
+      country: 'Portugal',
     },
   },
   {
@@ -28516,10 +22985,8 @@ export const Stations = [
     code: '94344',
     location: {
       town: 'Espinho',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Porto',
+      country: 'Portugal',
     },
   },
   {
@@ -28527,10 +22994,8 @@ export const Stations = [
     code: '94345',
     location: {
       town: 'Vila Nova De Gaia',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Porto',
+      country: 'Portugal',
     },
   },
   {
@@ -28538,10 +23003,8 @@ export const Stations = [
     code: '94346',
     location: {
       town: 'O Porto Campaña',
-      province: undefined,
-      country: 'España',
-      lat: 41.1489,
-      lon: -8.58544,
+      province: 'Porto',
+      country: 'Portugal',
     },
   },
   {
@@ -28549,43 +23012,28 @@ export const Stations = [
     code: '94347',
     location: {
       town: 'Curia',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Aveiro',
+      country: 'Portugal',
     },
   },
   {
     name: 'Entroncamento',
     code: '94362',
+    otherCodes: ['34009', '94428'],
     location: {
       town: 'Entroncamento',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Fatima',
-    code: '94363',
-    location: {
-      town: 'Fatima',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Santarém',
+      country: 'Portugal',
     },
   },
   {
     name: 'Pombal',
-    code: '94364',
+    code: '94438',
+    otherCodes: ['94364'],
     location: {
       town: 'Pombal',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Leiria',
+      country: 'Portugal',
     },
   },
   {
@@ -28593,65 +23041,38 @@ export const Stations = [
     code: '94365',
     location: {
       town: 'Coimbra',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Coimbra',
+      country: 'Portugal',
     },
   },
   {
     name: 'Pampilhosa',
-    code: '94366',
+    code: '94456',
+    otherCodes: ['94366'],
     location: {
       town: 'Pampilhosa',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Aveiro',
+      country: 'Portugal',
     },
   },
   {
     name: 'Mangualde',
-    code: '94367',
+    code: '94536',
+    otherCodes: ['94367'],
     location: {
       town: 'Mangualde',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Viseu',
+      country: 'Portugal',
     },
   },
   {
     name: 'Guarda',
-    code: '94368',
+    code: '94551',
+    otherCodes: ['94368'],
     location: {
       town: 'Guarda',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Villar-Formoso',
-    code: '94369',
-    location: {
-      town: 'Villar-Formoso',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Santaren',
-    code: '94371',
-    location: {
-      town: 'Santaren',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Guarda',
+      country: 'Portugal',
     },
   },
   {
@@ -28659,10 +23080,8 @@ export const Stations = [
     code: '94373',
     location: {
       town: 'Albegaria',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Aveiro',
+      country: 'Portugal',
     },
   },
   {
@@ -28670,10 +23089,8 @@ export const Stations = [
     code: '94374',
     location: {
       town: 'Vermoil',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Leiria',
+      country: 'Portugal',
     },
   },
   {
@@ -28681,10 +23098,8 @@ export const Stations = [
     code: '94375',
     location: {
       town: 'Soure',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Coimbra',
+      country: 'Portugal',
     },
   },
   {
@@ -28692,10 +23107,8 @@ export const Stations = [
     code: '94376',
     location: {
       town: 'Alfarelos',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Coimbra',
+      country: 'Portugal',
     },
   },
   {
@@ -28703,10 +23116,8 @@ export const Stations = [
     code: '94377',
     location: {
       town: 'Mortagua',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Viseu',
+      country: 'Portugal',
     },
   },
   {
@@ -28714,21 +23125,18 @@ export const Stations = [
     code: '94378',
     location: {
       town: 'Santa Comba - Dao',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Viseu',
+      country: 'Portugal',
     },
   },
   {
     name: 'Nelas',
-    code: '94379',
+    code: '94534',
+    otherCodes: ['94379'],
     location: {
       town: 'Nelas',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Viseu',
+      country: 'Portugal',
     },
   },
   {
@@ -28736,32 +23144,8 @@ export const Stations = [
     code: '94381',
     location: {
       town: 'Gouveia',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Celorico Da Beira',
-    code: '94382',
-    location: {
-      town: 'Celorico Da Beira',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Vila Franca Des Naves',
-    code: '94383',
-    location: {
-      town: 'Vila Franca Des Naves',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Guarda',
+      country: 'Portugal',
     },
   },
   {
@@ -28769,10 +23153,8 @@ export const Stations = [
     code: '94384',
     location: {
       town: 'Cerdeira',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: 'Guarda',
+      country: 'Portugal',
     },
   },
   {
@@ -28780,10 +23162,8 @@ export const Stations = [
     code: '94401',
     location: {
       town: 'Lisboa',
-      province: undefined,
-      country: 'España',
-      lat: 38.713531,
-      lon: -9.123389,
+      province: 'Lisboa',
+      country: 'Portugal',
     },
   },
   {
@@ -28791,43 +23171,28 @@ export const Stations = [
     code: '94404',
     location: {
       town: 'Lisboa',
-      province: undefined,
-      country: 'España',
-      lat: 38.767785,
-      lon: -9.09812,
+      province: 'Lisboa',
+      country: 'Portugal',
     },
   },
   {
-    name: 'Santarem',
+    name: 'Santarém',
     code: '94424',
+    otherCodes: ['94371'],
     location: {
-      town: 'Santaren',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Entroncamt',
-    code: '94428',
-    location: {
-      town: 'Entroncamt',
-      province: undefined,
-      country: 'España',
-      lat: 39.461693,
-      lon: -8.474901,
+      town: 'Santarém',
+      province: 'Santarém',
+      country: 'Portugal',
     },
   },
   {
     name: 'Fátima',
     code: '94432',
+    otherCodes: ['94363'],
     location: {
       town: 'Fatima',
-      province: undefined,
-      country: 'España',
-      lat: 39.6533667,
-      lon: -8.4936547,
+      province: 'Santarém',
+      country: 'Portugal',
     },
   },
   {
@@ -28835,43 +23200,17 @@ export const Stations = [
     code: '94434',
     location: {
       town: 'Caxarias',
-      province: undefined,
-      country: 'España',
-      lat: 39.71438,
-      lon: -8.54516,
-    },
-  },
-  {
-    name: 'Pombal',
-    code: '94438',
-    location: {
-      town: 'Pombal',
-      province: undefined,
-      country: 'España',
-      lat: 39.916525,
-      lon: -8.629916,
+      province: 'Santarém',
+      country: 'Portugal',
     },
   },
   {
     name: 'Coímbra - B',
     code: '94452',
     location: {
-      town: 'Móstoles',
-      province: undefined,
-      country: 'España',
-      lat: 40.224721,
-      lon: -8.440568,
-    },
-  },
-  {
-    name: 'Pampilhosa',
-    code: '94456',
-    location: {
-      town: 'Pampilhosa',
-      province: undefined,
-      country: 'España',
-      lat: 40.3384689,
-      lon: -8.4314274,
+      town: 'Coimbra',
+      province: 'Coimbra',
+      country: 'Portugal',
     },
   },
   {
@@ -28879,98 +23218,38 @@ export const Stations = [
     code: '94524',
     location: {
       town: 'Santa Comba - Dao',
-      province: undefined,
-      country: 'España',
-      lat: 40.3910301,
-      lon: -8.1243789,
+      province: 'Viseu',
+      country: 'Portugal',
     },
   },
   {
-    name: 'Nelas',
-    code: '94534',
-    location: {
-      town: 'Nelas',
-      province: undefined,
-      country: 'España',
-      lat: 40.530379,
-      lon: -7.849855,
-    },
-  },
-  {
-    name: 'Mangualde',
-    code: '94536',
-    location: {
-      town: 'Mangualde',
-      province: undefined,
-      country: 'España',
-      lat: 40.586419,
-      lon: -7.759352,
-    },
-  },
-  {
-    name: 'Celorico-Beira',
+    name: 'Celorico Da Beira',
     code: '94543',
+    otherCodes: ['94382'],
     location: {
       town: 'Celorico-Beira',
-      province: undefined,
-      country: 'España',
-      lat: 40.665169,
-      lon: -7.382405,
+      province: 'Guarda',
+      country: 'Portugal',
     },
   },
   {
     name: 'Vila Franca Das Naves',
     code: '94546',
+    otherCodes: ['94383'],
     location: {
       town: 'Vila Franca Das Naves',
-      province: undefined,
-      country: 'España',
-      lat: 40.7246609,
-      lon: -7.2581729,
-    },
-  },
-  {
-    name: 'Guarda',
-    code: '94551',
-    location: {
-      town: 'Guarda',
-      province: undefined,
-      country: 'España',
-      lat: 40.5518551,
-      lon: -7.2396469,
+      province: 'Guarda',
+      country: 'Portugal',
     },
   },
   {
     name: 'Vilar Formoso',
     code: '94563',
+    otherCodes: ['94369'],
     location: {
       town: 'Vilar Formoso',
-      province: undefined,
-      country: 'España',
-      lat: 40.6061516,
-      lon: -6.8297919,
-    },
-  },
-  {
-    name: 'Abrantes',
-    code: '94707',
-    location: {
-      town: 'Abrantes',
-      province: undefined,
-      country: 'España',
-      lat: 39.440431,
-      lon: -8.194497,
-    },
-  },
-  {
-    name: 'Marvao',
-    code: '94757',
-    location: {
-      town: 'Marvao',
-      province: undefined,
-      country: 'España',
-      lat: 39.4493999,
-      lon: -7.3684144,
+      province: 'Guarda',
+      country: 'Portugal',
     },
   },
   {
@@ -28980,85 +23259,36 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Madrid - Peñuelas',
-    code: '95003',
-    location: {
-      town: 'Madrid',
-      province: 'Madrid',
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Madrid - Peñuelas',
     code: '95005',
+    otherCodes: ['95003'],
     location: {
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Museo-Ferrocar.',
-    code: '95100',
-    location: {
-      town: 'Madrid',
-      province: 'Madrid',
-      country: 'España',
-      lat: 40.4003471,
-      lon: -3.6928278,
-    },
-  },
-  {
-    name: 'Madrid - Abroñiga',
-    code: '95104',
-    location: {
-      town: 'Madrid',
-      province: 'Madrid',
-      country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Madrid - Abroñiga',
-    code: '95105',
-    location: {
-      town: 'Madrid',
-      province: 'Madrid',
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Madrid - Abroñiga',
     code: '95106',
+    otherCodes: ['95104', '95105'],
     location: {
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Rodalies',
-    code: '97000',
+    code: '97010',
+    otherCodes: ['97000'],
     location: {
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.37952,
-      lon: 2.140624,
     },
   },
   {
@@ -29068,85 +23298,53 @@ export const Stations = [
       town: 'Alp',
       province: 'Girona',
       country: 'España',
-      lat: 42.344684,
-      lon: 1.955856,
     },
   },
   {
     name: 'Sara Baras',
     code: '97002',
     location: {
-      town: null,
-      province: 'Barcelona',
+      town: 'Vila-seca',
+      province: 'Tarragona',
       country: 'España',
-      lat: 41.38737,
-      lon: 2.168856,
     },
   },
   {
     name: 'Terracota',
     code: '97003',
     location: {
-      town: null,
-      province: 'Barcelona',
+      town: 'Vila-seca',
+      province: 'Tarragona',
       country: 'España',
-      lat: 41.38737,
-      lon: 2.168856,
     },
   },
   {
     name: 'Portave.Ferrari',
     code: '97004',
     location: {
-      town: null,
-      province: 'Barcelona',
+      town: 'Vila-seca',
+      province: 'Tarragona',
       country: 'España',
-      lat: 41.0847081,
-      lon: 1.1492886,
     },
   },
   {
-    name: 'Vilafranca Del Penedés',
+    name: 'Vilafranca Del Penedès',
     code: '97005',
+    otherCodes: ['72204'],
     location: {
       town: 'Vilafranca Del Penedès',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.3448584,
-      lon: 1.7036746,
-    },
-  },
-  {
-    name: 'Ribes De Freser',
-    code: '97006',
-    location: {
-      town: 'Ribes De Freser',
-      province: 'Barcelona',
-      country: 'España',
-      lat: 42.3001391,
-      lon: 2.1659766,
     },
   },
   {
     name: 'Barcelona',
-    code: '97007',
+    code: '97014',
+    otherCodes: ['97007', '97008'],
     location: {
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.37922,
-      lon: 2.140624,
-    },
-  },
-  {
-    name: 'Barcelona',
-    code: '97008',
-    location: {
-      town: 'Barcelona',
-      province: 'Barcelona',
-      country: 'España',
-      lat: 41.37922,
-      lon: 2.140624,
     },
   },
   {
@@ -29156,19 +23354,6 @@ export const Stations = [
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.3870194,
-      lon: 2.1678584,
-    },
-  },
-  {
-    name: 'Rodalies',
-    code: '97010',
-    location: {
-      town: 'Barcelona',
-      province: 'Barcelona',
-      country: 'España',
-      lat: 41.37922,
-      lon: 2.140624,
     },
   },
   {
@@ -29178,19 +23363,15 @@ export const Stations = [
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Ribes De Freser-Skitren Nuria',
+    name: 'Ribes De Freser - Skitren Nuria',
     code: '97012',
     location: {
       town: 'Ribes De Freser',
       province: 'Barcelona',
       country: 'España',
-      lat: 42.3001391,
-      lon: 2.1659766,
     },
   },
   {
@@ -29200,19 +23381,6 @@ export const Stations = [
       town: 'Caldes De Malavella',
       province: 'Girona',
       country: 'España',
-      lat: 41.841098,
-      lon: 2.800765,
-    },
-  },
-  {
-    name: 'Barcelona',
-    code: '97014',
-    location: {
-      town: 'Barcelona',
-      province: 'Barcelona',
-      country: 'España',
-      lat: 41.37922,
-      lon: 2.140624,
     },
   },
   {
@@ -29222,19 +23390,15 @@ export const Stations = [
       town: 'Salou',
       province: 'Barcelona',
       country: 'España',
-      lat: 41.0889239,
-      lon: 1.1398316,
     },
   },
   {
     name: 'Ferraryland',
     code: '97016',
     location: {
-      town: null,
-      province: 'Barcelona',
+      town: 'Vila-seca',
+      province: 'Tarragona',
       country: 'España',
-      lat: 41.0847081,
-      lon: 1.1492886,
     },
   },
   {
@@ -29244,19 +23408,15 @@ export const Stations = [
       town: "Sant Sadurní D'Anoia",
       province: 'Barcelona',
       country: 'España',
-      lat: 41.419824,
-      lon: 1.794186,
     },
   },
   {
     name: 'Caribe Park',
     code: '97018',
     location: {
-      town: undefined,
-      province: 'Barcelona',
+      town: 'Vila-seca',
+      province: 'Tarragona',
       country: 'España',
-      lat: 41.0875559,
-      lon: 1.1517695,
     },
   },
   {
@@ -29266,8 +23426,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.4954011,
-      lon: -3.7260638,
     },
   },
   {
@@ -29277,8 +23435,6 @@ export const Stations = [
       town: 'Rozas De Madrid (LAS)',
       province: 'Madrid',
       country: 'España',
-      lat: 40.510827,
-      lon: -3.855407,
     },
   },
   {
@@ -29288,8 +23444,6 @@ export const Stations = [
       town: 'Canencia',
       province: 'Madrid',
       country: 'España',
-      lat: 40.499662,
-      lon: -3.709016,
     },
   },
   {
@@ -29299,8 +23453,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.488298,
-      lon: -3.6946827,
     },
   },
   {
@@ -29310,8 +23462,6 @@ export const Stations = [
       town: 'Jávea/Xàbia',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.786635,
-      lon: 0.165425,
     },
   },
   // {
@@ -29332,8 +23482,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.482071,
-      lon: -3.645725,
     },
   },
   {
@@ -29343,8 +23491,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.484794,
-      lon: -3.662886,
     },
   },
   {
@@ -29354,41 +23500,24 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.441172,
-      lon: -3.584229,
     },
   },
   {
-    name: 'Alcalá De Henares',
-    code: '98103',
-    location: {
-      town: 'Alcalá De Henares',
-      province: 'Madrid',
-      country: 'España',
-      lat: 40.489027,
-      lon: -3.365765,
-    },
-  },
-  {
-    name: 'Monzón-Bus',
+    name: 'Monzón - Bus',
     code: '98147',
     location: {
       town: 'Monzón',
       province: 'Huesca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Binéfar-Bus',
+    name: 'Binéfar - Bus',
     code: '98148',
     location: {
       town: 'Binéfar',
       province: 'Huesca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -29398,8 +23527,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.482,
-      lon: -3.616292,
     },
   },
   {
@@ -29409,8 +23536,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.49174,
-      lon: -3.593473,
     },
   },
   {
@@ -29420,8 +23545,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.406528,
-      lon: -3.689373,
     },
   },
   {
@@ -29431,74 +23554,60 @@ export const Stations = [
       town: 'Santa Pola',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.19635,
-      lon: -0.561425,
     },
   },
   {
-    name: 'Los Arenales-Bus',
+    name: 'Los Arenales - Bus',
     code: '99002',
     location: {
       town: 'Elche/Elx',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.250061,
-      lon: -0.517078,
     },
   },
   {
-    name: 'Altet-Bus',
+    name: 'Altet - Bus',
     code: '99003',
     location: {
       town: 'Elche/Elx',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.27344,
-      lon: -0.539331,
     },
   },
   {
-    name: 'Gran Alacant-Bus',
+    name: 'Gran Alacant - Bus',
     code: '99004',
     location: {
       town: 'Santa Pola',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Barbastro-Bus',
+    name: 'Barbastro - Bus',
     code: '99100',
     location: {
       town: 'Barbastro',
       province: 'Huesca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Graus-Bus',
+    name: 'Graus - Bus',
     code: '99101',
     location: {
       town: 'Graus',
       province: 'Huesca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Benasque-Bus',
+    name: 'Benasque - Bus',
     code: '99102',
     location: {
       town: 'Benasque',
       province: 'Huesca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -29508,41 +23617,33 @@ export const Stations = [
       town: 'Jaca',
       province: 'Huesca',
       country: 'España',
-      lat: 42.578303,
-      lon: -0.539231,
     },
   },
   {
-    name: 'Candanchú-Bus',
+    name: 'Candanchú - Bus',
     code: '99104',
     location: {
       town: 'Aisa',
       province: 'Huesca',
       country: 'España',
-      lat: 42.7816879,
-      lon: -0.5392978,
     },
   },
   {
-    name: 'Astún-Bus',
+    name: 'Astún - Bus',
     code: '99105',
     location: {
       town: 'Jaca',
       province: 'Huesca',
       country: 'España',
-      lat: 42.808951,
-      lon: -0.5092514,
     },
   },
   {
-    name: 'Biescas-Bus',
+    name: 'Biescas - Bus',
     code: '99106',
     location: {
       town: 'Biescas',
       province: 'Huesca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -29552,74 +23653,60 @@ export const Stations = [
       town: 'Panticosa',
       province: 'Huesca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Formigal-Bus',
+    name: 'Formigal - Bus',
     code: '99108',
     location: {
       town: 'Sallent De Gállego',
       province: 'Huesca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Sanxenxo-Bus',
+    name: 'Sanxenxo - Bus',
     code: '99109',
     location: {
       town: 'Sanxenxo',
       province: 'Pontevedra',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Ogrove-Bus',
+    name: 'Ogrove - Bus',
     code: '99110',
     location: {
       town: 'Grove (O)',
       province: 'Pontevedra',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Cangas-Bus',
+    name: 'Cangas - Bus',
     code: '99111',
     location: {
       town: 'Cangas',
       province: 'Pontevedra',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Bueu-Bus',
+    name: 'Bueu - Bus',
     code: '99112',
     location: {
       town: 'Bueu',
       province: 'Pontevedra',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Sabiñánigo-Bus',
+    name: 'Sabiñánigo - Bus',
     code: '99113',
     location: {
       town: 'Sabiñánigo',
       province: 'Huesca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -29627,32 +23714,26 @@ export const Stations = [
     code: '99114',
     location: {
       town: 'Andorra',
-      province: undefined,
+      province: 'Lleida',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Aguadulce-Bus',
+    name: 'Aguadulce - Bus',
     code: '99115',
     location: {
       town: 'Aguadulce',
       province: 'Almería',
       country: 'España',
-      lat: 36.813794,
-      lon: -2.573875,
     },
   },
   {
-    name: 'Roquetas-Bus',
+    name: 'Roquetas - Bus',
     code: '99116',
     location: {
       town: 'Roquetas De Mar',
       province: 'Almería',
       country: 'España',
-      lat: 36.767655,
-      lon: -2.616089,
     },
   },
   {
@@ -29662,19 +23743,15 @@ export const Stations = [
       town: 'Ourense',
       province: 'Ourense',
       country: 'España',
-      lat: 42.350389,
-      lon: -7.872777,
     },
   },
   {
-    name: 'Muros-Bus',
+    name: 'Muros - Bus',
     code: '99118',
     location: {
       town: 'Tomiño',
       province: 'Pontevedra',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -29684,8 +23761,6 @@ export const Stations = [
       town: 'Fisterra',
       province: 'Pontevedra',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -29695,19 +23770,15 @@ export const Stations = [
       town: 'Torrevieja',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Benidorm-Bus',
+    name: 'Benidorm - Bus',
     code: '99121',
     location: {
       town: 'Benidorm',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.5495136,
-      lon: -0.1294635,
     },
   },
   {
@@ -29717,41 +23788,33 @@ export const Stations = [
       town: 'Torrevieja',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Benidorm- Playa - Bus',
+    name: 'Benidorm - Playa - Bus',
     code: '99123',
     location: {
       town: 'Benidorm',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Tánger Med-Barco',
+    name: 'Tánger Med - Barco',
     code: '99124',
     location: {
       town: 'Tanger',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Marruecos',
     },
   },
   {
-    name: 'Tánger Ville-Barco',
+    name: 'Tánger Ville - Barco',
     code: '99125',
     location: {
       town: 'Tanger',
-      province: undefined,
-      country: 'España',
-      lat: null,
-      lon: null,
+      province: null,
+      country: 'Marruecos',
     },
   },
   {
@@ -29759,21 +23822,8 @@ export const Stations = [
     code: '99126',
     location: {
       town: 'Ceuta',
-      province: undefined,
+      province: 'Ceuta',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Cáceres.',
-    code: '99127',
-    location: {
-      town: 'Cáceres',
-      province: 'Cáceres',
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -29783,30 +23833,16 @@ export const Stations = [
       town: 'Mérida',
       province: 'Cáceres',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
     name: 'Museo Ferrocarril',
     code: '99129',
+    otherCodes: ['95100'],
     location: {
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Antequera Santa Ana',
-    code: '99130',
-    location: {
-      town: 'Antequera',
-      province: 'Málaga',
-      country: 'España',
-      lat: 37.069881,
-      lon: -4.719014,
     },
   },
   {
@@ -29816,8 +23852,6 @@ export const Stations = [
       town: 'Ponferrada',
       province: 'León',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -29827,30 +23861,24 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.421264,
-      lon: -3.720095,
     },
   },
   {
-    name: 'Morales Del Vino-Bus',
+    name: 'Morales Del Vino - Bus',
     code: '99133',
     location: {
       town: 'Morales Del Vino',
       province: 'Zamora',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Corrales Del Vino-Bus',
+    name: 'Corrales Del Vino - Bus',
     code: '99134',
     location: {
       town: 'Corrales Del Vino',
       province: 'Zamora',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -29860,41 +23888,33 @@ export const Stations = [
       town: 'Corrales Del Vino',
       province: 'Zamora',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Cubo De La Tierra Del Vino-Bus',
+    name: 'Cubo De La Tierra Del Vino - Bus',
     code: '99136',
     location: {
       town: 'Cubo De Tierra Del Vino (EL)',
       province: 'Zamora',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'C.P.Topas-Bus',
+    name: 'C.P.Topas - Bus',
     code: '99137',
     location: {
       town: 'Topas',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Calzada De Valdunciel-Bus',
+    name: 'Calzada De Valdunciel - Bus',
     code: '99138',
     location: {
       town: 'Calzada De Valdunciel',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -29904,12 +23924,10 @@ export const Stations = [
       town: 'Villares De La Reina',
       province: 'Salamanca',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   // {
-  //   name: 'Madrid - Chamartín-Clara Campoamor',
+  //   name: 'Madrid - Chamartín - Clara Campoamor',
   //   code: '99140',
   //   location: {
   //     town: 'Madrid',
@@ -29920,25 +23938,21 @@ export const Stations = [
   //   },
   // },
   {
-    name: 'Toro-Bus',
+    name: 'Toro - Bus',
     code: '99141',
     location: {
       town: 'Toro',
       province: 'Zamora',
       country: 'España',
-      lat: 41.5252924,
-      lon: -5.3906417,
     },
   },
   {
-    name: 'Guardamar-Bus',
+    name: 'Guardamar - Bus',
     code: '99142',
     location: {
       town: 'Guardamar Del Segura',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -29946,21 +23960,17 @@ export const Stations = [
     code: '99143',
     location: {
       town: 'Coruña (A)',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.352761,
-      lon: -8.409755,
     },
   },
   {
-    name: 'Puertollano-Turístico',
+    name: 'Puertollano - Turístico',
     code: '99144',
     location: {
       town: 'Puertollano',
       province: 'Ciudad Real',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -29970,19 +23980,15 @@ export const Stations = [
       town: 'Plasencia',
       province: 'Cáceres',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Badajoz-Turístico',
+    name: 'Badajoz - Turístico',
     code: '99146',
     location: {
       town: 'Badajoz',
       province: 'Badajoz',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -29992,30 +23998,24 @@ export const Stations = [
       town: 'Sevilla',
       province: 'Sevilla',
       country: 'España',
-      lat: 37.3921277,
-      lon: -5.9752694,
     },
   },
   {
-    name: 'Faro-Bus',
+    name: 'Faro - Bus',
     code: '99150',
     location: {
       town: 'Faro',
       province: 'Huelva',
       country: 'España',
-      lat: 37.0230071,
-      lon: -7.9522988,
     },
   },
   {
-    name: 'Faro Aeropuerto-Bus',
+    name: 'Faro Aeropuerto - Bus',
     code: '99151',
     location: {
       town: 'Faro',
       province: 'Huelva',
       country: 'España',
-      lat: 37.0213553,
-      lon: -7.9775991,
     },
   },
   {
@@ -30025,52 +24025,42 @@ export const Stations = [
       town: 'Albufeira',
       province: 'Huelva',
       country: 'España',
-      lat: 37.0898479,
-      lon: -8.2514095,
     },
   },
   {
-    name: 'Portimao-Bus',
+    name: 'Portimao - Bus',
     code: '99153',
     location: {
       town: 'Portimao',
       province: 'Huelva',
       country: 'España',
-      lat: 37.1468463,
-      lon: -8.5379397,
     },
   },
   {
-    name: 'Lagos-Bus',
+    name: 'Lagos - Bus',
     code: '99154',
     location: {
       town: 'Lagos',
       province: 'Huelva',
       country: 'España',
-      lat: 37.103993,
-      lon: -8.6786254,
     },
   },
   {
     name: 'Tavira - Bus',
     code: '99155',
     location: {
-      town: undefined,
-      province: 'Huelva',
-      country: 'España',
-      lat: 37.1296646,
-      lon: -7.6553327,
+      town: 'Tavira',
+      province: null,
+      country: 'Portugal',
     },
   },
   {
-    name: 'Vila Real De San Antonio-Bus',
+    name: 'Vila Real De San Antonio - Bus',
     code: '99156',
     location: {
-      town: undefined,
-      province: 'Huelva',
-      country: 'España',
-      lat: null,
-      lon: null,
+      town: 'Vila Real De Santo António',
+      province: null,
+      country: 'Portugal',
     },
   },
   {
@@ -30080,30 +24070,24 @@ export const Stations = [
       town: 'Villajoyosa/Vila Joiosa (LA)',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Cuéllar-Bus',
+    name: 'Cuéllar - Bus',
     code: '99158',
     location: {
       town: 'Cuéllar',
       province: 'Segovia',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
-    name: 'Santiago-Turístico',
+    name: 'Santiago - Turístico',
     code: '99159',
     location: {
       town: 'Santiago De Compostela',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 42.870842,
-      lon: -8.544697,
     },
   },
   {
@@ -30113,8 +24097,6 @@ export const Stations = [
       town: 'Valderredible',
       province: 'Cantabria',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -30124,8 +24106,6 @@ export const Stations = [
       town: 'Pontevedra',
       province: 'Pontevedra',
       country: 'España',
-      lat: 42.421969,
-      lon: -8.635546,
     },
   },
   {
@@ -30135,8 +24115,6 @@ export const Stations = [
       town: 'Huesca',
       province: 'Huesca',
       country: 'España',
-      lat: 42.133594,
-      lon: -0.409745,
     },
   },
   {
@@ -30146,52 +24124,33 @@ export const Stations = [
       town: 'Tarragona',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.111624,
-      lon: 1.253214,
     },
   },
   {
-    name: 'Salou-Bus',
+    name: 'Salou - Bus',
     code: '99164',
     location: {
       town: 'Salou',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.077438,
-      lon: 1.129205,
     },
   },
   {
-    name: 'Reus-Bus',
+    name: 'Reus - Bus',
     code: '99165',
     location: {
       town: 'Reus',
       province: 'Tarragona',
       country: 'España',
-      lat: 41.160524,
-      lon: 1.099979,
     },
   },
   {
-    name: 'Pinto-Tur',
+    name: 'Pinto - Tur',
     code: '99166',
     location: {
       town: 'Pinto',
       province: 'Madrid',
       country: 'España',
-      lat: 40.242802,
-      lon: -3.703665,
-    },
-  },
-  {
-    name: 'Málaga María Zambrano',
-    code: '99170',
-    location: {
-      town: 'Málaga',
-      province: 'Málaga',
-      country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -30201,52 +24160,42 @@ export const Stations = [
       town: 'Salamanca',
       province: 'Salamanca',
       country: 'España',
-      lat: 40.972235,
-      lon: -5.64899,
     },
   },
   {
-    name: 'Gijón-Turístico',
+    name: 'Gijón - Turístico',
     code: '99172',
     location: {
       town: 'Gijón',
       province: 'Asturias',
       country: 'España',
-      lat: 43.535175,
-      lon: -5.698318,
     },
   },
   {
-    name: 'Oviedo-Tur',
+    name: 'Oviedo - Tur',
     code: '99173',
     location: {
       town: 'Oviedo',
       province: 'Asturias',
       country: 'España',
-      lat: 43.366841,
-      lon: -5.854263,
     },
   },
   {
-    name: 'Ferrol-Tur',
+    name: 'Ferrol - Tur',
     code: '99174',
     location: {
       town: 'Ferrol',
-      province: 'Coruña, A',
+      province: 'A Coruña',
       country: 'España',
-      lat: 43.4880349,
-      lon: -8.231143,
     },
   },
   {
     name: 'Mira',
     code: '99176',
     location: {
-      town: undefined,
+      town: 'Mira',
       province: 'Cuenca',
       country: 'España',
-      lat: 39.6772839,
-      lon: -1.4785474,
     },
   },
   {
@@ -30256,8 +24205,6 @@ export const Stations = [
       town: 'León',
       province: 'León',
       country: 'España',
-      lat: 42.60232,
-      lon: -5.57504,
     },
   },
   {
@@ -30267,8 +24214,6 @@ export const Stations = [
       town: 'Vigo',
       province: 'Pontevedra',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -30278,8 +24223,6 @@ export const Stations = [
       town: 'Barcelona',
       province: 'Barcelona',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -30289,19 +24232,15 @@ export const Stations = [
       town: 'Soria',
       province: 'Soria',
       country: 'España',
-      lat: 41.754754,
-      lon: -2.476537,
     },
   },
   {
-    name: 'Calpe-Bus',
+    name: 'Calpe - Bus',
     code: '99181',
     location: {
       town: 'Calp',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.6467749,
-      lon: 0.0439675,
     },
   },
   {
@@ -30311,8 +24250,6 @@ export const Stations = [
       town: 'Altea',
       province: 'Alicante/Alacant',
       country: 'España',
-      lat: 38.5947571,
-      lon: -0.0500207,
     },
   },
   {
@@ -30322,30 +24259,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
-    },
-  },
-  {
-    name: 'Pinto',
-    code: '99203',
-    location: {
-      town: 'Pinto',
-      province: 'Madrid',
-      country: 'España',
-      lat: 40.242802,
-      lon: -3.703665,
-    },
-  },
-  {
-    name: 'Vicálvaro',
-    code: '99204',
-    location: {
-      town: 'Madrid',
-      province: 'Madrid',
-      country: 'España',
-      lat: 40.401279,
-      lon: -3.595966,
     },
   },
   {
@@ -30355,8 +24268,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.399009,
-      lon: -3.744219,
     },
   },
   {
@@ -30366,19 +24277,6 @@ export const Stations = [
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.399009,
-      lon: -3.744219,
-    },
-  },
-  {
-    name: 'El Escorial',
-    code: '99207',
-    location: {
-      town: 'Escorial (EL)',
-      province: 'Madrid',
-      country: 'España',
-      lat: 40.585278,
-      lon: -4.132534,
     },
   },
   {
@@ -30388,30 +24286,24 @@ export const Stations = [
       town: 'Cercedilla',
       province: 'Madrid',
       country: 'España',
-      lat: 40.737541,
-      lon: -4.066387,
     },
   },
   {
-    name: 'Aranjuez-Motín',
+    name: 'Aranjuez - Motín',
     code: '99209',
     location: {
       town: 'Aranjuez',
       province: 'Madrid',
       country: 'España',
-      lat: 40.034761,
-      lon: -3.618262,
     },
   },
   {
-    name: 'Aranjuez-Fresa',
+    name: 'Aranjuez - Fresa',
     code: '99210',
     location: {
       town: 'Aranjuez',
       province: 'Madrid',
       country: 'España',
-      lat: 40.034761,
-      lon: -3.618262,
     },
   },
   {
@@ -30421,63 +24313,51 @@ export const Stations = [
       town: 'Alcalá De Henares',
       province: 'Madrid',
       country: 'España',
-      lat: 40.489027,
-      lon: -3.365765,
     },
   },
   {
-    name: 'Sol-The Hole',
+    name: 'Sol - The Hole',
     code: '99212',
     location: {
-      town: null,
+      town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 0.0,
-      lon: 0.0,
     },
   },
   {
     name: 'Wildlife',
     code: '99213',
     location: {
-      town: null,
+      town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.423313,
-      lon: -3.69098,
     },
   },
   {
-    name: 'Sol-Familia Addams',
+    name: 'Sol - Familia Addams',
     code: '99214',
     location: {
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.421264,
-      lon: -3.720095,
     },
   },
   {
-    name: 'Embajadores-Festival Magia',
+    name: 'Embajadores - Festival Magia',
     code: '99215',
     location: {
       town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.40453,
-      lon: -3.702484,
     },
   },
   {
     name: 'Sol - King Of Pop',
     code: '99216',
     location: {
-      town: null,
+      town: 'Madrid',
       province: 'Madrid',
       country: 'España',
-      lat: 40.416845,
-      lon: -3.702851,
     },
   },
   {
@@ -30487,8 +24367,6 @@ export const Stations = [
       town: 'Andorra',
       province: 'Pontevedra',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -30498,8 +24376,6 @@ export const Stations = [
       town: 'Cercedilla',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -30509,8 +24385,6 @@ export const Stations = [
       town: 'Navacerrada',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -30520,8 +24394,6 @@ export const Stations = [
       town: 'Rascafría',
       province: 'Madrid',
       country: 'España',
-      lat: null,
-      lon: null,
     },
   },
   {
@@ -30531,8 +24403,177 @@ export const Stations = [
       town: 'Andorra',
       province: 'Lleida',
       country: 'España',
-      lat: 42.7026613,
-      lon: 0.7943517,
+    },
+  },
+  {
+    name: 'La Sagrera AV',
+    code: '04320',
+    location: {
+      town: 'Barcelona',
+      province: 'Barcelona',
+      country: 'España',
+    },
+  },
+  {
+    name: 'La Felguera - Langreo Centro',
+    code: '05426',
+    location: {
+      town: 'Langreo',
+      province: 'Asturias',
+      country: 'España',
+    },
+  },
+  {
+    name: 'Ariz',
+    code: '05713',
+    location: {
+      town: 'Basauri',
+      province: 'Bizkaia',
+      country: 'España',
+    },
+  },
+  {
+    name: 'Majarabique - Estación',
+    code: '50709',
+    location: {
+      town: 'Sevilla',
+      province: 'Sevilla',
+      country: 'España',
+    },
+  },
+  {
+    name: 'Barquinha',
+    code: '51045',
+    location: {
+      town: 'Vila Nova da Barquinha',
+      province: 'Santarém',
+      country: 'Portugal',
+    },
+  },
+  {
+    name: 'Praia Ribat',
+    code: '51128',
+    location: {
+      town: 'Constância',
+      province: 'Santarém',
+      country: 'Portugal',
+    },
+  },
+  {
+    name: 'St. Margarida',
+    code: '51185',
+    location: {
+      town: 'Constância',
+      province: 'Santarém',
+      country: 'Portugal',
+    },
+  },
+  {
+    name: 'Tramagal',
+    code: '51243',
+    location: {
+      town: 'Abrantes',
+      province: 'Santarém',
+      country: 'Portugal',
+    },
+  },
+  {
+    name: 'Chiclana de la Frontera',
+    code: '51466',
+    location: {
+      town: 'Chiclana de la Frontera',
+      province: 'Cádiz',
+      country: 'España',
+    },
+  },
+  {
+    name: 'Bemposta',
+    code: '55129',
+    location: {
+      town: 'Abrantes',
+      province: 'Santarém',
+      country: 'Portugal',
+    },
+  },
+  {
+    name: 'Crato',
+    code: '56267',
+    location: {
+      town: 'Crato',
+      province: 'Portalegre',
+      country: 'Portugal',
+    },
+  },
+  {
+    name: 'Portalegre',
+    code: '57000',
+    location: {
+      town: 'Portalegre',
+      province: 'Portalegre',
+      country: 'Portugal',
+    },
+  },
+  {
+    name: 'Assumar',
+    code: '57117',
+    location: {
+      town: 'Monforte',
+      province: 'Portalegre',
+      country: 'Portugal',
+    },
+  },
+  {
+    name: 'Arronches',
+    code: '57174',
+    location: {
+      town: 'Arronches',
+      province: 'Portalegre',
+      country: 'Portugal',
+    },
+  },
+  {
+    name: 'Santa Eulália',
+    code: '57307',
+    location: {
+      town: 'Elvas',
+      province: 'Portalegre',
+      country: 'Portugal',
+    },
+  },
+  {
+    name: 'Elvas',
+    code: '57497',
+    location: {
+      town: 'Elvas',
+      province: 'Portalegre',
+      country: 'Portugal',
+    },
+  },
+  {
+    name: 'Albal',
+    code: '64210',
+    location: {
+      town: 'Albal',
+      province: 'Valencia/València',
+      country: 'España',
+    },
+  },
+  {
+    name: 'Paris Gare de Lyon',
+    code: '87013',
+    location: {
+      town: 'París',
+      province: null,
+      country: 'Francia',
+    },
+  },
+  {
+    name: 'Paris Montparnasse',
+    code: '87391',
+    location: {
+      town: 'París',
+      province: null,
+      country: 'Francia',
     },
   },
 ]

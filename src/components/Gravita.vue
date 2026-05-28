@@ -17,10 +17,13 @@ const props = defineProps([
   'showNumber',
   'maxShowStops',
   'showAllTrains',
+  'showAlerts',
   'platformFilter',
   'platformLocation',
   'platformLocationRight',
   'platformLocationLeft',
+  'platformLocationForwardLeft',
+  'platformLocationForwardRight',
   'platformTrigger',
   'trafficFilter',
   'companyFilter',
@@ -28,42 +31,83 @@ const props = defineProps([
   'showComposition',
   'showPlatformPreview',
   'showClosedCheckIn',
+  'showAlightingOnly',
   'platformArrangement',
   'platformMode',
   'showObservation',
+  'sectorizationMode',
   'subtitle',
   'fontSize',
   'customFilter',
   'stopFilter',
+  // Simulation-only props — control sendBoardData behaviour, NOT passed to iframe URL
+  'simulateClosedCheckIn',
+  'simulateAlightingOnly',
+  'simulateAlertType',
+  'simulatePlatformRouting',
+  'simulateAccessOpeningMargin',
 ])
 
 const emit = defineEmits(['data', 'status'])
 
 const status = ref('connecting')
 const lastMessageRaw = ref(null)
+const iframeKey = ref(0)
 let connection = null
+// Platforms known from the last SignalR message. Updated in sendBoardData.
+// Plain (non-reactive) so it doesn't trigger iframeSrc recomputes on every message.
+let knownPlatforms = []
+let lastReceivedAt = 0
+let healthCheckTimer = null
+let isReconnecting = false
 
 const board = ref(null)
 
+const connectionStationCode = computed(() => {
+  return props.stationCode ? `PRE-ECM-${props.stationCode}` : null
+})
+
 const iframeSrc = computed(() => {
   const paramsObj = {
-    rutaRecursos: '../../../recursos',
     IdEstacion: props.stationCode,
     'estimated-time-traffics': 'C',
     'countdown-traffics': 'C',
-
-    'pin-position': '10,130',
-    'pin-style': 'stairs_down_right,lift_down',
   }
 
   // Add all other props that are not undefined, converting camelCase to kebab-case
+  // Simulation-only props are excluded — they only affect sendBoardData, not the iframe URL.
+  const simulationOnlyProps = [
+    'simulateClosedCheckIn',
+    'simulateAlightingOnly',
+    'simulateAlertType',
+    'simulatePlatformRouting',
+    'simulateAccessOpeningMargin',
+  ]
   Object.keys(props).forEach((key) => {
-    if (key !== 'stationCode' && props[key] !== undefined) {
+    if (key !== 'stationCode' && props[key] !== undefined && !simulationOnlyProps.includes(key)) {
       // Convert camelCase to kebab-case for URL params
       const paramKey = key.replace(/([A-Z])/g, '-$1').toLowerCase()
       paramsObj[paramKey] = props[key]
     }
   })
+
+  // ====================================================================
+  // SIMULATION: platform-routing + pin position/style
+  // Controlled by simulatePlatformRouting prop. When enabled, adds a
+  // hardcoded routing example for vías 1 and 2 so the walking-direction
+  // SVG diagram can be previewed, plus the pin position and style params
+  // needed to render the composition pin on the platform diagram.
+  // ====================================================================
+  if (props.simulatePlatformRouting) {
+    // Build routing for every known platform: even-index → Right, odd-index → Left.
+    // Falls back to a minimal example if no live data has arrived yet.
+    const routing = knownPlatforms.length
+      ? knownPlatforms.map((p, i) => `${p}:${i % 2 === 0 ? 'R' : 'L'}250`).join(',')
+      : '1:R250,2:L150'
+    paramsObj['platform-routing'] = routing
+    paramsObj['pin-position'] = '10,130'
+    paramsObj['pin-style'] = 'stairs_down_right,lift_down'
+  }
 
   const params = new URLSearchParams(paramsObj)
 
@@ -103,19 +147,30 @@ function sendBoardData(msg) {
       }
     })
 
-    // Add platform dimensions to each platform
-    Object.keys(existingPlatforms).forEach((platformKey) => {
-      existingPlatforms[platformKey] = {
-        ...existingPlatforms[platformKey],
-        platform_start: 0,
-        platform_end: 150,
-        track_start: 0,
-        track_end: 150,
-        sectors: existingPlatforms[platformKey]?.sectors || [],
-      }
-    })
+    // Add fake platform dimensions — only when simulating, so real API values are preserved.
+    if (props.simulatePlatformRouting) {
+      Object.keys(existingPlatforms).forEach((platformKey) => {
+        existingPlatforms[platformKey] = {
+          ...existingPlatforms[platformKey],
+          platform_start: 0,
+          platform_end: 150,
+          track_start: 0,
+          track_end: 150,
+          sectors: existingPlatforms[platformKey]?.sectors || [],
+        }
+      })
+    }
 
     data.station_settings.platforms = existingPlatforms
+
+    // Keep a sorted list of known platforms so the simulation can generate
+    // routing entries for every platform, not just the hardcoded 1 and 2.
+    const sortedKeys = Object.keys(existingPlatforms).sort((a, b) => {
+      const na = parseInt(a)
+      const nb = parseInt(b)
+      return !isNaN(na) && !isNaN(nb) ? na - nb : a.localeCompare(b)
+    })
+    if (sortedKeys.length) knownPlatforms = sortedKeys
   }
 
   data?.trains?.forEach((train) => {
@@ -143,43 +198,148 @@ function sendBoardData(msg) {
     // Ensure train has a sectors property
     train.sectors = train.sectors || []
 
-    // fake composition
-    train.orientation_out = 'left'
-    train.stopping_point = 30
-    train.stopping_point_reference = 'left'
+    // ====================================================================
+    // SIMULATION: stopping_point / stopping_point_reference + composition
+    // Controlled by simulatePlatformRouting — enabled together with routing
+    // and pin position so the full platform diagram can be previewed.
+    // ====================================================================
+    if (props.simulatePlatformRouting) {
+      train.stopping_point = 30
+      train.stopping_point_reference = 'left'
 
-    if (train?.commercial_id?.[0]?.product != 'CERCAN') {
-      train.composition = [
-        [
-          { type: 'A', length: 100, number: '01' },
-          { type: 'C', length: 100, number: '02' },
-          { type: 'C', length: 100, info: ['bar'] },
-          { type: 'A', length: 100, number: '06' },
-        ],
-        [
-          { type: 'A', length: 100, number: '07' },
-          { type: 'C', length: 100, number: '08' },
-          { type: 'C', length: 100, info: ['accessible'] },
-          { type: 'A', length: 100, number: '10' },
-        ],
-      ]
-    } else {
-      train.composition = [
-        [
-          { type: 'A', length: 100, info: ['medium_occupancy'] },
-          { type: 'C', length: 100, info: ['low_occupancy'] },
-          { type: 'C', length: 100, info: ['low_occupancy'] },
-          { type: 'A', length: 100, info: ['low_occupancy'] },
-        ],
-        [
-          { type: 'A', length: 100, info: ['high_occupancy'] },
-          { type: 'C', length: 100, info: ['high_occupancy'] },
-          { type: 'C', length: 100, info: ['medium_occupancy'] },
-          { type: 'A', length: 100, info: ['high_occupancy'] },
-        ],
-      ]
+      if (train?.commercial_id?.[0]?.product != 'CERCAN') {
+        train.composition = [
+          [
+            { type: 'A', length: 100, number: '01' },
+            { type: 'C', length: 100, number: '02' },
+            { type: 'C', length: 100, info: ['bar'] },
+            { type: 'A', length: 100, number: '06' },
+          ],
+          [
+            { type: 'A', length: 100, number: '07' },
+            { type: 'C', length: 100, number: '08' },
+            { type: 'C', length: 100, info: ['accessible'] },
+            { type: 'A', length: 100, number: '10' },
+          ],
+        ]
+      } else {
+        train.composition = [
+          [
+            { type: 'A', length: 100, info: ['medium_occupancy'] },
+            { type: 'C', length: 100, info: ['low_occupancy'] },
+            { type: 'C', length: 100, info: ['low_occupancy'] },
+            { type: 'A', length: 100, info: ['low_occupancy'] },
+          ],
+          [
+            { type: 'A', length: 100, info: ['high_occupancy'] },
+            { type: 'C', length: 100, info: ['high_occupancy'] },
+            { type: 'C', length: 100, info: ['medium_occupancy'] },
+            { type: 'A', length: 100, info: ['high_occupancy'] },
+          ],
+        ]
+      }
     }
   })
+
+  // ====================================================================
+  // SIMULATION: check_in = "closed" (odd trains) + class_stop = "alighting_only" (even trains)
+  // Applies per-index so both effects are visible at once when both are
+  // enabled. Odd-indexed trains (1, 3, 5…) get check_in = "closed";
+  // even-indexed trains (0, 2, 4…) get class_stop = "alighting_only".
+  // Only trains that already have an assigned platform are affected.
+  // ====================================================================
+  if (props.simulateClosedCheckIn || props.simulateAlightingOnly) {
+    data?.trains?.forEach((t, i) => {
+      if (!t.platform?.trim()) return
+      if (props.simulateClosedCheckIn && i % 2 !== 0) t.check_in = 'closed'
+      if (props.simulateAlightingOnly && i % 2 === 0) t.class_stop = 'alighting_only'
+    })
+  }
+
+  // ====================================================================
+  // SIMULATION: departures_access_opening_margin / arrivals_access_opening_margin
+  // Injects a cycling opening margin (minutes before departure/arrival) so
+  // the Gravita library renders the "access will open at HH:MM" clock icon
+  // instead of the access-code list. Four different values cycle per train
+  // index to exercise both the "still pending" (clock shown) and the
+  // "already open" (access codes shown) states depending on actual train time.
+  // ====================================================================
+  if (props.simulateAccessOpeningMargin) {
+    const dMargins = [15, 30, 60, 90]
+    const aMargins = [20, 45, 75, 110]
+    data?.trains?.forEach((t, i) => {
+      t.departures_access_opening_margin = dMargins[i % 4]
+      t.arrivals_access_opening_margin = aMargins[i % 4]
+    })
+  }
+
+  // ====================================================================
+  // SIMULATION: station_alerts
+  // Injects two alerts to exercise all rendering features:
+  //
+  //   alert 1 — no filter, no lines: always visible; tests basic layout,
+  //             icon, header/description scroll and language cycling.
+  //
+  //   alert 2 — has `lines` (C1, C3a line badges rendered in the header)
+  //             and a `filter.platforms` that restricts it to the first
+  //             known platform. Tests badge rendering + filter logic.
+  //             (If the monitor has no matching platform the alert is
+  //             hidden by the library — that itself is useful to verify.)
+  //
+  // Full alert schema:
+  //   id        string   — unique, URL-encoded internally by the library
+  //   level     string   — "warning" | "info" | "works" | "severe"
+  //                        warning/severe → disruption.svg (red)
+  //                        info/works     → information|works.svg (blue)
+  //   lines     string[] — Cercanías line codes; each becomes an <img>
+  //                        src: https://info.adif.es/assets/gravita/lines/<code>.svg
+  //   filter    object   — optional; alert only shown when monitor matches
+  //                        { traffic_types, companies, products, accesses, platforms }
+  //   message   object   — keyed by language code (ESP/ENG/CAT/EUS/GAL)
+  //                        each value: { header: string, description: string }
+  // ====================================================================
+  if (props.simulateAlertType) {
+    const alertContent = {
+      warning: {
+        lines: ['C02CERMAD', 'C05CERMAD'],
+        header: 'Líneas C-2 y C-5 cortadas',
+        description:
+          'Se interrumpe la circulación en las líneas C-2 y C-5 por incidencia en la vía. Se habilitan servicios de bus alternativos.',
+      },
+      info: {
+        lines: [],
+        header: 'Retrasos generalizados en todas las líneas',
+        description:
+          'Se prevén retrasos de hasta 20 minutos en todos los servicios por saturación de la red. Consulte los paneles informativos.',
+      },
+      works: {
+        lines: [],
+        header: 'Obras de mejora en la estación',
+        description:
+          'La estación se encuentra en obras de renovación de infraestructuras. Pueden verse afectados algunos accesos y andenes hasta finales de mes.',
+      },
+      severe: {
+        lines: [],
+        header: 'Cierre total de la red ferroviaria',
+        description:
+          'Se ha decretado el cierre total de la red por causa de fuerza mayor. No habrá circulación hasta nuevo aviso de las autoridades competentes.',
+      },
+    }
+    const content = alertContent[props.simulateAlertType] ?? alertContent.info
+    data.station_alerts = [
+      {
+        id: 'sim_alert_1',
+        level: props.simulateAlertType,
+        ...(content.lines.length ? { lines: content.lines } : {}),
+        message: {
+          ESP: {
+            header: content.header,
+            description: content.description,
+          },
+        },
+      },
+    ]
+  }
 
   emit('data', data)
 
@@ -189,7 +349,42 @@ function sendBoardData(msg) {
   )
 }
 
+// 5-minute stale threshold
+const STALE_MS = 5 * 60 * 1000
+
+async function reconnect() {
+  if (!props.stationCode || !connection || isReconnecting) return
+  isReconnecting = true
+  try {
+    if (connection.state !== signalR.HubConnectionState.Disconnected) {
+      await connection.stop()
+    }
+    await connection.start()
+    await connection.invoke('JoinInfo', connectionStationCode.value)
+    await connection.invoke('GetLastMessage', connectionStationCode.value)
+    status.value = 'online'
+  } catch (err) {
+    console.error('[SignalR] Reconnect failed:', err)
+    status.value = 'error'
+  } finally {
+    isReconnecting = false
+  }
+}
+
+async function checkHealth() {
+  if (!props.stationCode || !connection) return
+  const isDisconnected = connection.state === signalR.HubConnectionState.Disconnected
+  const isStale = lastReceivedAt > 0 && Date.now() - lastReceivedAt > STALE_MS
+  if (isDisconnected || isStale) {
+    console.warn(
+      `[SignalR] Health check: ${isDisconnected ? 'disconnected' : 'stale'} — reconnecting`,
+    )
+    await reconnect()
+  }
+}
+
 function handleIncoming(raw) {
+  lastReceivedAt = Date.now()
   status.value = 'connected'
 
   // Prevent recursive calls by checking if we're already processing the same data
@@ -226,10 +421,11 @@ onMounted(async () => {
 
   try {
     await connection.start()
-    await connection.invoke('JoinInfo', `ECM-${props.stationCode}`)
-    await connection.invoke('GetLastMessage', `ECM-${props.stationCode}`)
+    await connection.invoke('JoinInfo', connectionStationCode.value)
+    await connection.invoke('GetLastMessage', connectionStationCode.value)
 
     status.value = 'online'
+    healthCheckTimer = setInterval(checkHealth, 60_000)
   } catch (err) {
     console.error('[SignalR] error:', err)
     status.value = 'error'
@@ -241,8 +437,8 @@ watch(
   async () => {
     await connection?.stop()
     await connection.start()
-    await connection.invoke('JoinInfo', `ECM-${props.stationCode}`)
-    await connection.invoke('GetLastMessage', `ECM-${props.stationCode}`)
+    await connection.invoke('JoinInfo', connectionStationCode.value)
+    await connection.invoke('GetLastMessage', connectionStationCode.value)
   },
 )
 
@@ -253,7 +449,26 @@ watch(
   },
 )
 
+// Reload the iframe when simulation props change so the Gravita library
+// re-initialises with the new data. simulatePlatformRouting already reloads
+// via iframeSrc; the rest use iframeKey to force Vue to recreate the element.
+watch(
+  () => [
+    props.simulateClosedCheckIn,
+    props.simulateAlightingOnly,
+    props.simulateAlertType,
+    props.simulatePlatformRouting,
+    props.simulateAccessOpeningMargin,
+  ],
+  () => {
+    iframeKey.value++
+  },
+  { flush: 'post' },
+)
+
 onBeforeUnmount(() => {
+  clearInterval(healthCheckTimer)
+  healthCheckTimer = null
   connection?.stop()
   connection = null
   status.value = 'disconnected'
@@ -268,7 +483,13 @@ onBeforeUnmount(() => {
         <span class="loader-text" v-if="!props.stationCode">Selecciona estación</span>
       </div>
     </div>
-    <iframe ref="board" v-if="status !== 'error'" :src="iframeSrc" @load="handleBoardLoad"></iframe>
+    <iframe
+      ref="board"
+      v-if="status !== 'error'"
+      :key="iframeKey"
+      :src="iframeSrc"
+      @load="handleBoardLoad"
+    ></iframe>
   </div>
 </template>
 

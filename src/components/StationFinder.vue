@@ -20,7 +20,7 @@
       <input
         id="station-search"
         v-model="searchQuery"
-        @focus="showDropdown = true"
+        @focus="onInputFocus"
         @blur="hideDropdown"
         type="text"
         placeholder="Buscar estación..."
@@ -44,12 +44,28 @@
           <div>
             <div class="font-medium">{{ station.name }}</div>
             <div class="text-sm text-slate-400">
-              {{ station.location.town }}, {{ station.location.province }}
+              {{ locationLabel(station.location) }}
             </div>
           </div>
           <div class="text-xs text-slate-500 font-mono">{{ station.code }}</div>
         </div>
       </div>
+    </div>
+    <div v-if="popularStationObjects.length > 0" class="flex flex-wrap gap-2 mt-2">
+      <button
+        v-for="station in popularStationObjects"
+        :key="station.code"
+        @mousedown.prevent="selectStation(station)"
+        type="button"
+        class="inline-flex items-center px-2 py-1.5 rounded-lg text-xs cursor-pointer transition-all"
+        :class="
+          selectedStation?.code === station.code
+            ? 'bg-dark-green text-dark-blue'
+            : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+        "
+      >
+        {{ station.title }}
+      </button>
     </div>
   </div>
 </template>
@@ -58,7 +74,7 @@
 import { ref, computed } from 'vue'
 import SearchIcon from './icons/SearchIcon.vue'
 import ClearIcon from './icons/ClearIcon.vue'
-import { Stations } from '../constants'
+import { Stations, PopularStations } from '../constants'
 
 const props = defineProps({
   modelValue: String,
@@ -127,11 +143,44 @@ const clearStation = () => {
   emit('station-cleared')
 }
 
+const onInputFocus = () => {
+  if (selectedStation.value) {
+    searchQuery.value = ''
+  }
+  showDropdown.value = true
+}
+
 const hideDropdown = () => {
   setTimeout(() => {
     showDropdown.value = false
+    // Restore station name if user left without selecting
+    if (selectedStation.value && !searchQuery.value) {
+      searchQuery.value = selectedStation.value.name
+    }
   }, 200)
 }
+
+const locationLabel = (loc) => {
+  const parts = []
+  if (loc.town && loc.province && loc.town !== loc.province) {
+    parts.push(loc.town, loc.province)
+  } else if (loc.province) {
+    parts.push(loc.province)
+  } else if (loc.town) {
+    parts.push(loc.town)
+  }
+  if (loc.country && loc.country !== 'España') {
+    parts.push(loc.country)
+  }
+  return parts.join(', ')
+}
+
+const popularStationObjects = computed(() =>
+  PopularStations.map(({ title, code }) => {
+    const station = Stations.find((s) => s.code === code)
+    return station ? { ...station, title } : null
+  }).filter(Boolean),
+)
 
 // Watch for external changes to modelValue
 import { watch } from 'vue'
