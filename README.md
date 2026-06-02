@@ -30,7 +30,7 @@ npm install
 npm run dev
 ```
 
-> ADIF está bloqueando que su sitio se pueda argar a través de iframes diferentes a su dominio por lo que para probar este sitio hay que abrirlo en un navegador que deshabilite esta restricción (por ejemplo con `--disable-web-security` en Chrome) o usar una extensión que permita cargar iframes de otros dominios.
+> ADIF está bloqueando que su sitio se pueda cargar a través de iframes diferentes a su dominio por lo que para probar este sitio hay que abrirlo en un navegador que deshabilite esta restricción (por ejemplo con `--disable-web-security` en Chrome) o usar una extensión que permita cargar iframes de otros dominios.
 
 ## 📝 Nota Legal
 
