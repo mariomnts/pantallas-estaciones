@@ -30,6 +30,8 @@ npm install
 npm run dev
 ```
 
+> ADIF está bloqueando que su sitio se pueda argar a través de iframes diferentes a su dominio por lo que para probar este sitio hay que abrirlo en un navegador que deshabilite esta restricción (por ejemplo con `--disable-web-security` en Chrome) o usar una extensión que permita cargar iframes de otros dominios.
+
 ## 📝 Nota Legal
 
 Este proyecto es **no oficial** y **no está afiliado con ADIF**. Se ha creado con propósito educacional para demostrar las capacidades del sistema de información a viajeros. La previsualización incluida muestra contenido servido directamente por ADIF, esta web solo permite configurar los parámetros de visualización. Marca, logotipos y datos mostrados en el panel son propiedad de ADIF.

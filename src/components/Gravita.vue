@@ -69,6 +69,7 @@ const connectionStationCode = computed(() => {
 
 const iframeSrc = computed(() => {
   const paramsObj = {
+    rutaRecursos: '../../../recursos',
     IdEstacion: props.stationCode,
     'estimated-time-traffics': 'C',
     'countdown-traffics': 'C',
