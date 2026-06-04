@@ -1,6 +1,6 @@
-# 🚂 Pantallas Estaciones
+# Pantallas Estaciones ADIF 🚂 🖥️
 
-Un configurador no oficial para el sistema de información a viajeros de las estaciones de ADIF.
+Un configurador no oficial para el sistema de información a viajeros (SIV) de las estaciones de ADIF.
 
 ![Website](/public/card.png)
 
