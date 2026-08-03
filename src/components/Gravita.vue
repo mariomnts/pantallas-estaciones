@@ -64,7 +64,7 @@ let isReconnecting = false
 const board = ref(null)
 
 const connectionStationCode = computed(() => {
-  return props.stationCode ? `PRE-ECM-${props.stationCode}` : null
+  return props.stationCode ? `PRO-ECM-${props.stationCode}` : null
 })
 
 const iframeSrc = computed(() => {

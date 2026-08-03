@@ -77,7 +77,7 @@
         >
           <div class="w-1.5 h-1.5 bg-red-300 rounded-full animate-pulse"></div>
           <span class="text-red-300 text-md"
-            >ADIF todavía no proporciona datos para esta estación</span
+            >ADIF todavía no proporciona datos o está bloqueando esta conexión</span
           >
         </div>
       </div>
