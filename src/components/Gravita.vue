@@ -60,6 +60,7 @@ let knownPlatforms = []
 let lastReceivedAt = 0
 let healthCheckTimer = null
 let isReconnecting = false
+let isChangingStation = false
 
 const board = ref(null)
 
@@ -120,13 +121,21 @@ const iframeSrc = computed(() => {
 function handleBoardLoad() {
   if (lastMessageRaw.value) {
     setTimeout(() => {
-      sendBoardData(lastMessageRaw.value)
+      sendBoardData(JSON.parse(lastMessageRaw.value))
     }, 300)
   }
 }
 
-function sendBoardData(msg) {
-  const data = JSON.parse(msg)
+function clearBoardData() {
+  lastMessageRaw.value = null
+  knownPlatforms = []
+  lastReceivedAt = 0
+  emit('data', null)
+  // Recreate the iframe so it cannot retain the previous station's board.
+  iframeKey.value++
+}
+
+function sendBoardData(data) {
 
   // Extract platforms from trains and add to station settings if not already present
   if (data?.trains && data?.station_settings) {
@@ -352,10 +361,34 @@ function sendBoardData(msg) {
 
 // 5-minute stale threshold
 const STALE_MS = 5 * 60 * 1000
+const RETRY_DELAYS_MS = [3_000, 6_000]
+let retryTimer = null
+let retryAttempt = 0
+
+function cancelRetries() {
+  clearTimeout(retryTimer)
+  retryTimer = null
+  retryAttempt = 0
+}
+
+function scheduleRetry() {
+  if (!props.stationCode || retryTimer || retryAttempt >= RETRY_DELAYS_MS.length) return
+
+  const delay = RETRY_DELAYS_MS[retryAttempt]
+  retryAttempt++
+  status.value = 'reconnecting'
+  console.warn(`[SignalR] Retrying connection in ${delay / 1000} seconds (${retryAttempt}/2)`)
+
+  retryTimer = setTimeout(async () => {
+    retryTimer = null
+    await reconnect()
+  }, delay)
+}
 
 async function reconnect() {
   if (!props.stationCode || !connection || isReconnecting) return
   isReconnecting = true
+  status.value = 'reconnecting'
   try {
     if (connection.state !== signalR.HubConnectionState.Disconnected) {
       await connection.stop()
@@ -363,10 +396,10 @@ async function reconnect() {
     await connection.start()
     await connection.invoke('JoinInfo', connectionStationCode.value)
     await connection.invoke('GetLastMessage', connectionStationCode.value)
-    status.value = 'online'
   } catch (err) {
     console.error('[SignalR] Reconnect failed:', err)
     status.value = 'error'
+    scheduleRetry()
   } finally {
     isReconnecting = false
   }
@@ -385,20 +418,31 @@ async function checkHealth() {
 }
 
 function handleIncoming(raw) {
-  lastReceivedAt = Date.now()
-  status.value = 'connected'
-
-  // Prevent recursive calls by checking if we're already processing the same data
-  if (lastMessageRaw.value === raw) {
-    return
-  }
-
   try {
-    sendBoardData(raw)
+    const data = JSON.parse(raw)
+
+    // A message from a connection that is being replaced can arrive after the
+    // station changes. Never render it on the newly selected station's board.
+    const messageStationCode = data?.station_settings?.code
+    if (messageStationCode && String(messageStationCode) !== String(props.stationCode)) {
+      console.warn('[SignalR] Ignoring data for a different station:', messageStationCode)
+      return
+    }
+
+    lastReceivedAt = Date.now()
+    status.value = 'connected'
+    cancelRetries()
+
+    // Prevent recursive calls by checking if we're already processing the same data
+    if (lastMessageRaw.value === raw) {
+      return
+    }
+
+    sendBoardData(data)
     lastMessageRaw.value = raw
 
     if (!import.meta.env.PROD) {
-      console.log('>', JSON.parse(raw))
+      console.log('>', data)
     }
   } catch (error) {
     console.error('[Gravita] Error parsing incoming data:', error)
@@ -418,6 +462,36 @@ onMounted(async () => {
   connection.on('ReceiveMessage', handleIncoming)
   connection.on('ReceiveError', (error) => {
     console.error('[SignalR] ReceiveError:', error)
+    clearBoardData()
+    status.value = 'error'
+    scheduleRetry()
+  })
+  connection.onreconnecting((error) => {
+    console.warn('[SignalR] Reconnecting:', error)
+    status.value = 'reconnecting'
+  })
+  connection.onreconnected(async () => {
+    try {
+      await connection.invoke('JoinInfo', connectionStationCode.value)
+      await connection.invoke('GetLastMessage', connectionStationCode.value)
+    } catch (err) {
+      console.error('[SignalR] Failed to rejoin after reconnecting:', err)
+      clearBoardData()
+      status.value = 'error'
+      scheduleRetry()
+    }
+  })
+  connection.onclose((error) => {
+    if (isChangingStation) return
+
+    if (error) {
+      // SignalR reports server-side close errors (including the client timeout
+      // OperationCanceledException) here, rather than through ReceiveError.
+      console.error('[SignalR] Connection closed with an error:', error)
+      clearBoardData()
+      status.value = 'error'
+      scheduleRetry()
+    }
   })
 
   try {
@@ -425,21 +499,36 @@ onMounted(async () => {
     await connection.invoke('JoinInfo', connectionStationCode.value)
     await connection.invoke('GetLastMessage', connectionStationCode.value)
 
-    status.value = 'online'
     healthCheckTimer = setInterval(checkHealth, 60_000)
   } catch (err) {
     console.error('[SignalR] error:', err)
     status.value = 'error'
+    scheduleRetry()
   }
 })
 
 watch(
   () => props.stationCode,
   async () => {
-    await connection?.stop()
-    await connection.start()
-    await connection.invoke('JoinInfo', connectionStationCode.value)
-    await connection.invoke('GetLastMessage', connectionStationCode.value)
+    if (!connection || !props.stationCode) return
+
+    cancelRetries()
+    clearBoardData()
+    status.value = 'connecting'
+    isChangingStation = true
+    try {
+      await connection.stop()
+      await connection.start()
+      await connection.invoke('JoinInfo', connectionStationCode.value)
+      await connection.invoke('GetLastMessage', connectionStationCode.value)
+    } catch (err) {
+      console.error('[SignalR] Failed to change station:', err)
+      clearBoardData()
+      status.value = 'error'
+      scheduleRetry()
+    } finally {
+      isChangingStation = false
+    }
   },
 )
 
@@ -470,6 +559,7 @@ watch(
 onBeforeUnmount(() => {
   clearInterval(healthCheckTimer)
   healthCheckTimer = null
+  cancelRetries()
   connection?.stop()
   connection = null
   status.value = 'disconnected'
@@ -478,10 +568,12 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="gravita-container">
-    <div class="loader-container">
+    <div v-if="status !== 'connected'" class="loader-container">
       <div class="loader-content">
         <Logo class="loader-logo" />
-        <span class="loader-text" v-if="!props.stationCode">Selecciona estación</span>
+        <span class="loader-text" v-if="props.stationCode && status === 'error'">No se han podido cargar los datos de ADIF</span>
+        <span class="loader-text" v-else-if="props.stationCode && status === 'reconnecting'">Reconectando con ADIF…</span>
+        <span class="loader-text" v-else-if="props.stationCode">Cargando datos de ADIF…</span>
       </div>
     </div>
     <iframe

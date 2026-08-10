@@ -18,12 +18,14 @@
         </div>
       </div>
 
-      <div v-if="!adifStatus || adifStatus === 'connecting'">
+      <div v-if="!adifStatus || ['connecting', 'reconnecting'].includes(adifStatus)">
         <div class="pt-2 border-t border-slate-600">
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
             <div class="flex items-center space-x-1.5">
               <div class="w-1.5 h-1.5 rounded-full animate-pulse bg-orange-400"></div>
-              <span class="text-xs text-orange-400">Conectando</span>
+              <span class="text-xs text-orange-400">
+                {{ adifStatus === 'reconnecting' ? 'Reconectando' : 'Cargando datos' }}
+              </span>
             </div>
           </div>
         </div>
