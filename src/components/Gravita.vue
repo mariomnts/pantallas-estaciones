@@ -424,7 +424,14 @@ function handleIncoming(raw) {
     // A message from a connection that is being replaced can arrive after the
     // station changes. Never render it on the newly selected station's board.
     const messageStationCode = data?.station_settings?.code
-    if (messageStationCode && String(messageStationCode) !== String(props.stationCode)) {
+    // SignalR returns numeric station codes without their leading zeroes.
+    // Compare their canonical numeric representations while still rejecting
+    // messages for genuinely different stations.
+    const normalizeStationCode = (code) => String(code).replace(/^0+(?=\d)/, '')
+    if (
+      messageStationCode &&
+      normalizeStationCode(messageStationCode) !== normalizeStationCode(props.stationCode)
+    ) {
       console.warn('[SignalR] Ignoring data for a different station:', messageStationCode)
       return
     }
