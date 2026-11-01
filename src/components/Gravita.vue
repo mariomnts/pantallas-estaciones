@@ -74,7 +74,7 @@ let boardResizeObserver = null
 const board = ref(null)
 
 const connectionStationCode = computed(() => {
-  return props.stationCode ? `PRO-ECM-${props.stationCode}` : null
+  return props.stationCode ? `dnv3-gravita-${props.stationCode}` : null
 })
 
 const iframeSrc = computed(() => {
